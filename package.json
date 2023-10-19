@@ -5,8 +5,7 @@
     "express": "4.18.2",
     "morgan": "1.10.0",
     "openai": "4.12.4",
-    "socket.io": "4.7.2",
-    "ws": "^8.14.2"
+    "socket.io": "4.7.2"
   },
   "description": "Site para mostrar todos os serviços de beleza que nossa clinica oferece",
   "keywords": [],
@@ -14,7 +13,7 @@
   "main": "app.js",
   "name": "clinica-micropigmentacao",
   "scripts": {
-    "dev": "node --watch ./server-microAngel/app.js"
+    "start": "node --watch ./server-microAngel/app.js"
   },
   "type": "module",
   "version": "1.0.0"
