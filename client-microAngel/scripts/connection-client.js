@@ -42,7 +42,7 @@ function directMessages() {
 
         //Conetar com o server
 
-        const socket = io()
+        const socket = io(clinicamicropigmentacaoangel.railway.internal)
 
         socket.on('connect', () => {
             socket.emit('message', message); // Envie uma mensagem ao servidor
