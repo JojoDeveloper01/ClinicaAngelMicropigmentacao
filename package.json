@@ -10,7 +10,7 @@
   "description": "Site para mostrar todos os serviços de beleza que nossa clinica oferece",
   "keywords": [],
   "license": "ISC",
-  "main": "./server-microAngel/app.js",
+  "main": "app.js",
   "name": "clinica_micropigmentacao",
   "scripts": {
     "start": "node --watch ./server-microAngel/app.js"
