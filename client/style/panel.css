@@ -1,0 +1,150 @@
+.distorted {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.209);
+    backdrop-filter: blur(10px);
+    /* Aplica um desfoque aos elementos de fundo */
+    opacity: 1;
+    /* Define a opacidade do elemento */
+}
+
+.sideBar {
+    background-color: rgb(255, 252, 239);
+    display: none;
+    position: fixed;
+    justify-content: center;
+
+    
+    top: -1px;
+    right: -500px;
+
+    height: 100vh;
+    padding: 20px;
+
+    animation: openPanel 0.5s forwards;
+    animation: closePanel 0.5s forwards;
+
+    overflow: hidden;
+
+    z-index: 999;
+}
+
+@keyframes openPanel {
+    0% {
+        right: -500px;
+        /* Inicia fora da tela à direita */
+    }
+
+    100% {
+        right: 0;
+        /* Termina na posição inicial */
+    }
+}
+
+.btn-close {
+    /*fechar painel*/
+    font-size: 25px;
+    float: right;
+    margin: 5px;
+}
+
+@keyframes closePanel {
+    0% {
+        right: 0;
+        /* Inicia na posicao tela cheia*/
+    }
+
+    100% {
+        right: -600px;
+        /* Termina atras da tela direita*/
+    }
+}
+
+/*
+.d-flex {
+    height: 60px;
+    margin: 65px 10px;
+    margin-bottom: 20px;
+}
+*/
+
+.nav-panel {
+    margin: 90px 1em;
+    margin-bottom: 0;
+    padding: 0;
+
+    height: 70vh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.nav-panel li {
+    margin: 20px 0;
+}
+
+.nav-panel li a {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    opacity: 0.7;
+    margin-right: 10px;
+}
+
+.nav-panel li span {
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+
+    padding: 0;
+    margin: 0;
+    width: 25px;
+
+    position: relative;
+    writing-mode: vertical-rl;
+    transition: transform 0.4s ease;
+}
+
+.nav-panel li span.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-nav {
+    display: none;
+    padding: 5px;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.4s ease;
+    transform-origin: top;
+}
+
+.dropdown-nav.open {
+    transition: max-height 0.4s ease;
+}
+
+.dropdown-nav li {
+    margin: 10px 0;
+}
+
+.dropdown-nav li a {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    opacity: 0.5;
+
+    word-wrap: break-word;
+}
+
+#sm-tel {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    margin-bottom: 25px;
+}

@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Transforme sua aparência com a Micropigmentação: Realce suas características com segurança na nossa clínica especializada. Agende agora para um look incrível!">
+
+  <link rel="stylesheet" href="style/all-for-one.css">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/panel.css">
+  <link rel="stylesheet" href="style/responsiveWebsite.css">
+  <link rel="stylesheet" href="style/body1-css.css"
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/image/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/image/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/image/icons/favicon-16x16.png">
+  <link rel="manifest" href="assets/image/icons/site.webmanifest">
+  <title>Clínica Micropigmentação</title>
+</head>
+
+<body>
+
+  <div class="bt-float">
+    <button id="bt-top"><i class="fa-solid fa-arrow-up fa-xl" style="color: #00000098;"></i></i></button>
+    <button id="chat-micro" onclick="openChat()"><i class="fa-regular fa-message fa-xl"></i></button>
+
+    <div class="boxChat">
+      <div class="header-chat">
+        <img src="assets/image/icons/logoSakura.webp" width="45" height="45">
+        <p>Info Chat</p>
+        <span onclick="quitChat()"><i class="fa-solid fa-x fa-lg"></i></span>
+      </div>
+      <div class="chat-conversation">
+
+
+      </div>
+      <div class="footer-chat">
+        <input name="writeMessage" type="text" class="write-message" placeholder="Escreva a sua dúvida aqui" />
+        <i class="fa-solid fa-paper-plane fa-lg" id="sendMessage"></i>
+      </div>
+    </div>
+  </div>
+
+  <!--************************TELEMOVEIS E TABLETS*********************-->
+
+  <header>
+    <div class="top-section">
+      <a href="#reservar" class="block-appointment">
+        <p>MARCAR CONSULTA</p>
+      </a>
+    </div>
+
+    <div class="menuStart">
+      <div class="ctro-logo">
+        <a href="index.html" class="logo">
+          <picture>
+            <source media="(max-width: 317px)" srcset="assets/image/icons/logoSakura.webp">
+            <img src="assets/image/icons/LogoClinicaMicropigmentacao.webp" alt="Logo de Clinica Micropigmentação">
+          </picture>
+        </a>
+      </div>
+
+      <div class="end-menu">
+        <div class="block-icons">
+          <a href="https://wa.me/351935407895?text=Ola! Tenho uma duvida!" class="block-call-icone">
+            <img src="style/icons/phone1.svg" alt="Contactar com Angel, uma especialista em micropigmentação">
+          </a>
+          <button class="block-menuNav-icone" onclick="showPanel(document.querySelector('.distorted'))">
+            <img src="style/icons/menu.svg" alt="Menu de secções do site">
+          </button>
+        </div>
+      </div>
+
+      <nav>
+        <!--PAINEL NAV ABAIXO-->
+        <div class="distorted" onclick="exitdistorted()"></div>
+        <div class="sideBar">
+          <button type="button" class="btn-close" aria-label="Close"
+            onclick="quitPanel(document.querySelector('.distorted'))"></button>
+
+          <!--<form class="d-flex" role="search">
+            <input class="form-control" type="search" id="search" placeholder="Procurar" aria-label="Search">
+            </form>-->
+          <!--*******************NAVBAR-TELEMOVEIS*************************-->
+          <ul class="nav-panel">
+            <li><a href="index.html" onclick="exitdistorted()">INÍCIO</a></li>
+            <li><a href="#sobre-nos" onclick="exitdistorted()">SOBRE NÓS</a></li>
+
+            <li>
+              <a href="#servicos" onclick="exitdistorted()" class="dropdownActive">SERVIÇOS</a>
+              <span onclick="ser('dropdown1', this)">></span>
+              <ul class="dropdown1 dropdown-nav">
+                <li><a href="#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO SOBRANCELHAS</a></li>
+                <li><a href="#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO BOCA</a></li>
+                <li><a href="#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO OLHOS</a></li>
+              </ul>
+            </li>
+
+
+            <li>
+              <a href="#perguntas" onclick="exitdistorted()" class="dropdownActive">PERGUNTAS</a>
+              <span onclick="ask('dropdown4', this)">></span>
+              <ul class="dropdown4 dropdown-nav">
+                <li><a href="#pg1" onclick="exitdistorted()">O QUE É MICROPIGMENTAÇÃO?</a></li>
+                <li><a href="#pg2" onclick="exitdistorted()">A MICROPIGMENTAÇÃO DÓI?</a></li>
+                <li><a href="#pg3" onclick="exitdistorted()">QUANTO TEMPO DURA A MICROPIGMENTAÇÃO?</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#testemunhas" onclick="exitdistorted()">TESTEMUNHAS</a></li>
+
+            <!--<li><a href="#">CONTACTOS</a></li>-->
+
+          </ul>
+
+          <ul class="social-midia" id="sm-tel">
+            <li><a href="https://www.facebook.com/angelmicropigmentacion" target="_blank"><i
+                  class="fa-brands fa-facebook fa-xl"></i></a></li>
+            <li><a
+                href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
+                target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
+            <li><a href="https://www.facebook.com/aangelmicropigmentacao" target="_blank"><i
+                  class="fa-brands fa-facebook fa-xl"></i></a></li>
+            <li><a href="https://www.instagram.com/aangelmicropigmentacao/" target="_blank"><i
+                  class="fa fa-instagram fa-xl"></i></a></li>
+            <li><a href="https://www.youtube.com/@angelmicropigmentacion4389" target="_blank"><i
+                  class="fa fa-youtube fa-xl"></i></a></li>
+          </ul>
+        </div>
+
+
+        <!--***********************Laptop, PC, TV **********************-->
+
+        <ul class="navOptions">
+          <ul class="line1-menubar">
+            <a href="index.html">
+              <li>
+                <div class="select here"></div>
+                <p>INÍCIO</p>
+              </li>
+            </a>
+
+            <a href="#sobre-nos">
+              <li>
+                <div class="select"></div>
+                <p>SOBRE NÓS</p>
+              </li>
+            </a>
+            <!--
+              <a href="duvidas.html">
+               <li>
+                 <div class="select"></div>
+                 <div>DUVIDAS</div>
+               </li>
+              </a>-->
+            <a href="#contactos">
+              <li>
+                <div class="select"></div>
+                <p>CONTACTOS</p>
+              </li>
+            </a>
+          </ul>
+          <ul class="line2-menubar">
+
+            <li onmouseover="showDropdown('dropdownPC1')" onmouseout="hideDropdown('dropdownPC1')">
+              <a href="#servicos">
+                <div class="select-drop"></div>
+                <p>SERVIÇOS</p>
+              </a>
+              <div class="dropdown-PCnav dropdownPC1" onmouseover="showDropdown('dropdownPC1')"
+                onmouseout="hideDropdown('dropdownPC1')">
+                <a href="#servicos">Micropigmentação Sobrancelhas</a>
+                <a href="#servicos">Micropigmentação Labial</a>
+                <a href="#servicos">Micropigmentação Olhos</a>
+              </div>
+            </li>
+            <!--
+              <li  onmouseover="showDropdown('dropdownPC2')" onmouseout="hideDropdown('dropdownPC2')">
+                <div class="select"></div>
+                <a href="loja.html" >LOJA</a>
+                <div class="dropdownPC2 dropdown-PCnav" onmouseover="showDropdown('dropdownPC2')"
+                  onmouseout="hideDropdown('dropdownPC2')">
+                  <a href="#">PRODUCT 1</a>
+                  <a href="#">PRODUCT 2</a>
+                  <a href="#">PRODUCT 3</a>
+                  <a href="#">PRODUCT 3</a>
+                </div>
+                </il>
+            -->
+
+            <li onmouseover="showDropdown('dropdownPC2')" onmouseout="hideDropdown('dropdownPC2')">
+              <a href="#perguntas">
+                <div class="select-drop"></div>
+                <p>PERGUNTAS</p>
+              </a>
+              <div class="dropdown-PCnav dropdownPC2" onmouseover="showDropdown('dropdownPC2')"
+                onmouseout="hideDropdown('dropdownPC2')">
+                <a href="#pg1">O que é micropigmentação?</a>
+                <a href="#pg2">A micropigmentação dói?</a>
+                <a href="#pg3">Quanto tempo dura a micropigmentação?</a>
+              </div>
+            </li>
+
+            <a href="#testemunhas">
+              <li>
+                <div class="select"></div>
+                <p>TESTEMUNHAS</p>
+              </li>
+            </a>
+          </ul>
+
+        </ul>
+        <!--
+          <form class="d-flex search-margin" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>-->
+
+      </nav>
+      <ul class="social-midia" id="sm-PC">
+        <li><a href="https://www.facebook.com/angelmicropigmentacion" target="_blank"><i
+              class="fa-brands fa-facebook fa-xl"></i></a></li>
+        <li><a
+            href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
+            target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
+        <li><a href="https://www.facebook.com/aangelmicropigmentacao" target="_blank"><i
+              class="fa-brands fa-facebook fa-xl"></i></a></li>
+        <li><a href="https://www.instagram.com/aangelmicropigmentacao/" target="_blank"><i
+              class="fa fa-instagram fa-xl"></i></a></li>
+        <li><a href="https://www.youtube.com/@angelmicropigmentacion4389" target="_blank"><i
+              class="fa fa-youtube fa-xl"></i></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="slideHome">
+
+      <div id="slideHomeTarget" class="carousel carousel-dark slide">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active" data-bs-interval="1000">
+            <div class="ctro-itemS">
+              <picture>
+                <source srcset="assets/image/servicos/micro-sobran.avif">
+                <source srcset="assets/image/servicos/micro-sobran.webp">
+                <img src="assets/image/servicos/micro-sobran.jpeg"
+                  alt="mulher com uma linda micropigmentação de sobrancelhas" class="slide-img simg">
+                <span class="text-contra"><a
+                    href="https://br.freepik.com/fotos-gratis/o-lindo-rosto-feminino-a-pele-perfeita-e-limpa-do-rosto-em-branco-a-beleza-cuidados-pele-tratamento-saude-spa-conceito-cosmetico_15859618.htm#&position=3&from_view=search&track=ais"
+                    target="_blank">Freepik</a> Image</span>
+              </picture>
+
+              <div class="fondo-distor fd">
+                <div class="texto-carousel">
+                  <h2>MICROPIGMENTAÇÃO SOBRANCELHAS</h2>
+                  <p>A micropigmentação de sobrancelhas é um tratamento estético avançado que usa pigmentos
+                    para realçar e
+                    preencher as sobrancelhas, proporcionando um aspeto natural e atraente. Esqueça a maquilhagem diária
+                    e
+                    desfrute de sobrancelhas perfeitas em todas as ocasiões!</p>
+                  <p id="tiny-p">
+                    Realce natural e duradouro, dispensando maquilhagem diária. Diga adeus à maquilhagem diária e
+                    desfrute
+                    de sobrancelhas impecáveis em todas as situações!
+                  </p>
+
+                  <a href="#reservar">
+                    <button class="border-slide">
+                      <div class="reser-buttonS">MARCAR RESERVA</div>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="2000">
+            <div class="ctro-itemS">
+              <picture>
+                <source srcset="assets/image/servicos/micro-labial-freepik.avif">
+                <source srcset="assets/image/servicos/micro-labial-freepik.webp">
+                <img src="assets/image/servicos/micro-labial-freepik.jpeg"
+                  alt="mulher com uma linda micropigmentação labial" class="slide-img simg1">
+                <span class="text-contra"><a
+                    href="https://br.freepik.com/fotos-gratis/feche-o-retrato-de-mulher-com-pele-hidratada_27370315.htm#&position=0&from_view=search&track=ais"
+                    target="_blank">Freepik</a> Image</span>
+              </picture>
+
+              <div class="fondo-distor fd1">
+                <div class="texto-carousel">
+                  <h2>MICROPIGMENTAÇÃO LABIAL</h2>
+                  <p>Descubra a micropigmentação labial, uma arte que realça sua beleza única com contorno e cor
+                    perfeitos.
+                    Diga adeus ao batom constante e acolha lábios impecáveis em todas as ocasiões. Agende sua
+                    transformação labial e confie na experiência dos profissionais para um sorriso irresistível que
+                    perdura!</p>
+                  <p id="tiny-p">
+                    Descubra a micropigmentação labial, realce natural, lábios perfeitos. Despreocupe-se com retoques e
+                    aproveite a beleza duradoura. Seus lábios, sua confiança, sempre deslumbrantes!
+                  </p>
+
+                  <a href="#reservar">
+                    <button class="border-slide">
+                      <div class="reser-buttonS">MARCAR RESERVA</div>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="carousel-item" data-bs-interval="1000">
+            <div class="ctro-itemS">
+              <div class="fondo-distor fd2">
+                <div class="texto-carousel tc1">
+                  <h2>LIMPEZA FACIAL</h2>
+                  <p> A limpeza facial é um ritual de cuidado que rejuvenesce a sua pele, removendo impurezas e
+                    proporcionando um brilho saudável e radiante. Descubra o segredo para uma pele luminosa e
+                    revitalizada
+                    com a nossa limpeza facial especializada!</p>
+                  <p id="tiny-p">
+                    A limpeza facial revitaliza sua pele, removendo impurezas para um brilho saudável. Experimente a
+                    nossa
+                    especialidade em cuidado facial!
+                  </p>
+
+                  <a href="#reservar">
+                    <button class="border-slide">
+                      <div class="reser-buttonS">MARCAR RESERVA</div>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <picture>
+                <source srcset="assets/image/servicos/limpezaFacial.avif">
+                <source srcset="assets/image/servicos/limpezaFacial.webp">
+                <img src="assets/image/servicos/limpezaFacial.jpeg" alt="Homem a fazer-se uma limpeza facial"
+                  class="slide-img simg2">
+                <span id="text-contra"><a
+                    href="https://br.freepik.com/fotos-gratis/mulher-visitando-cosmetologista-e-fazendo-procedimentos-de-rejuvenescimento_12178259.htm#query=limpeza%20facial&position=5&from_view=search&track=ais"
+                    target="_blank">Freepik</a> Image</span>
+              </picture>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="ctro-itemS">
+              <div class="fondo-distor fd3">
+                <div class="texto-carousel tc1">
+                  <h2>LIFTING DE PESTANAS</h2>
+                  <p> O lifting de pestanas é um procedimento revolucionário que realça e curva naturalmente as suas
+                    pestanas, abrindo o olhar e eliminando a necessidade de recorrer ao uso constante de máscars.
+                    Descubra um olhar cativante e deslumbrante com o nosso especializado lifting de pestanas!</p>
+                  <p id="tiny-p">
+                    O lifting de pestanas realça e curva naturalmente, abrindo o olhar e eliminando a necessidade de
+                    máscaras. Descubra um olhar cativante com o nosso especializado lifting de pestanas!
+                  </p>
+
+                  <a href="#reservar">
+                    <button class="border-slide">
+                      <div class="reser-buttonS">MARCAR RESERVA</div>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <picture>
+                <source srcset="assets/image/servicos/lifting-pestanas.avif">
+                <source srcset="assets/image/servicos/lifting-pestanas.webp">
+                <img src="assets/image/servicos/lifting-pestanas.jpeg" alt="Mulher a fazer-se um lifting de Pestanas"
+                  class="slide-img simg2">
+                <span><a
+                    href="https://br.freepik.com/fotos-gratis/mao-de-alto-angulo-com-luva-segurando-o-pincel_30944924.htm#query=lifting%20pestanas&position=36&from_view=search&track=ais"
+                    target="_blank">Freepik</a> Image</span>
+              </picture>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slideHomeTarget" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slideHomeTarget" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="sobre-nos" class="nossoTeam">
+      <h1>ESPECIALISTA EM MICROPIGMENTAÇÃO</h1>
+
+      <div id="carouselTeam" class="carousel carousel-dark slide">
+        <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active" data-bs-interval="1000">
+            <div class="dimension-total">
+              <picture>
+                <source srcset="assets/image/profissionais/AngelFotodePerfil.avif">
+                <source srcset="assets/image/profissionais/AngelFotodePerfil.webp">
+                <img src="assets/image/profissionais/AngelFotodePerfil.jpeg"
+                  alt="Foto da profissional de micropigmentação Angel" class="fickleHere" id="imgTeam"
+                  data-animation="fade">
+              </picture>
+              <div class="carousel-caption">
+                <p>
+                  Sou a <b>Angel</b>, da Colômbia, e há 9 anos escolhi Portugal como a minha casa. Sou casada e
+                  mãe
+                  de 3 rapazes. Inicialmente, formei-me em Técnico em Enfermagem em 2010, mas em 2014 decidi seguir a
+                  área
+                  da micropigmentação e apaixonei-me pela profissão. Investi em diversos cursos, incluindo com
+                  profissionais
+                  conceituados no Brasil.
+                  <br><br>
+                  Descobri que a minha verdadeira paixão é realçar a beleza natural das pessoas com maquilhagem
+                  semipermanente. Espero poder ajudar-te a sentires-te mais confiante e bonito(a) com os meus
+                  procedimentos
+                  de micropigmentação. Vem conhecer o meu trabalho em breve!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sb-hover"></div>
+      <!--<a href="#reservar" class="saiba-mais">SAIBA MAIS</a>-->
+    </section>
+
+    <section id="contactos" class="locais">
+      <div class="separar-titu">
+        <h1><a href="https://goo.gl/maps/tEzHUdfcu7NyqigL8" target="_blank">AREEIRO</a></h1>
+        <h2>|</h2>
+        <h1><a href="https://goo.gl/maps/7LJNApWVJKzsMmUH8" target="_blank">PÓVOA</a></h1>
+      </div>
+
+      <div class="position-local">
+        <div class="localCtro">
+          <a href="https://goo.gl/maps/tEzHUdfcu7NyqigL8" target="_blank">
+            <picture>
+              <source srcset="assets/image/local/localAreeiro.avif">
+              <source srcset="assets/image/local/localAreeiro.webp">
+              <img src="assets/image/local/localAreeiro.jpeg" alt="Local Areeiro">
+            </picture>
+          </a>
+          <p>
+            <b>*Antes de visitar nossas instalações, entre em contato conosco</b>
+            <br>
+            Morada:
+            <a href="https://goo.gl/maps/tEzHUdfcu7NyqigL8" target="_blank">Avenida João XXI 25, Lisboa</a>
+            <br>
+            Telemóvel: <a
+              href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
+              target="_blank">935 407 895</a>
+            <br>
+            E-mail:
+            <a href="mailto:Balcboni@angelmicropigmentação.com" target="_blank"
+              id="phone-tiny">balcboni@angelmicropigmentação.com</a>
+          </p>
+        </div>
+
+        <div class="localCtro">
+          <a href="https://goo.gl/maps/R4RpzfBGRcL3p5jV8" target="_blank">
+            <picture>
+              <source srcset="assets/image/local/localPovoa.avif">
+              <source srcset="assets/image/local/localPovoa.webp">
+              <img src="assets/image/local/localPovoa.jpg" alt="Local Póvoa">
+            </picture>
+          </a>
+          <p>
+            <b>*Antes de visitar nossas instalações, entre em contato conosco</b>
+            <br>
+            Morada:
+            <a href="https://goo.gl/maps/R4RpzfBGRcL3p5jV8" target="_blank"> Rua José Nogueira Vaz 16, Póvoa de Santa
+              Iria</a>
+            <br>
+            Telemóvel:
+            <a href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+umatarget+duvida%21&amp;type=phone_number&amp;app_absent=0"
+              target="_blank">935 407 895
+            </a>
+            <br>
+            E-mail:
+            <a href="mailto:balcboni@angelmicropigmentação.com" target="_blank" id="phone-tiny">
+              balcboni@angelmicropigmentação.com</a>
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="servicos" class="nossos-servicos">
+      <h1>NOSSOS SERVIÇOS</h1>
+
+      <div id="carouselSer" class="carousel carousel-dark slide pcSlide">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro-Sobrancelhas.avif">
+                  <source srcset="assets/image/servicos/micro-Sobrancelhas.webp">
+                  <img src="assets/image/servicos/micro-Sobrancelhas.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação Sobrancelhas</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro-Labial.avif">
+                  <source srcset="assets/image/servicos/micro-Labial.webp">
+                  <img src="assets/image/servicos/micro-Labial.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação Labial</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/microOlhos.avif">
+                  <source srcset="assets/image/servicos/microOlhos.webp">
+                  <img src="assets/image/servicos/microOlhos.jpg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação de Olhos</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro-capilar.avif">
+                  <source srcset="assets/image/servicos/micro-capilar.webp">
+                  <img src="assets/image/servicos/micro-capilar.jpg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação Capilar</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro_Areola.avif">
+                  <source srcset="assets/image/servicos/micro_Areola.webp">
+                  <img src="assets/image/servicos/micro_Areola.jpg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação Aréola</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro-cicatriz.avif">
+                  <source srcset="assets/image/servicos/micro-cicatriz.webp">
+                  <img src="assets/image/servicos/micro-cicatriz.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação para Camuflar Cicatrizes</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/remocaoMicro.avif">
+                  <source srcset="assets/image/servicos/remocaoMicro.webp">
+                  <img src="assets/image/servicos/remocaoMicro.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Remoção de Micropigmentação</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/remocao_de_tatuagens.avif">
+                  <source srcset="assets/image/servicos/remocao_de_tatuagens.webp">
+                  <img src="assets/image/servicos/remocao_de_tatuagens.jpg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Remoção de Tatuagens</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/limpezaFacial.avif">
+                  <source srcset="assets/image/servicos/limpezaFacial.webp">
+                  <img src="assets/image/servicos/limpezaFacial.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Limpeza Facial</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/depilacaoFIoFio.avif">
+                  <source srcset="assets/image/servicos/depilacaoFIoFio.webp">
+                  <img src="assets/image/servicos/depilacaoFIoFio.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Depilação Sobrancelhas com Linha</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/liftingPestanas.avif">
+                  <source srcset="assets/image/servicos/liftingPestanas.webp">
+                  <img src="assets/image/servicos/liftingPestanas.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Lifting de Pestanas</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/liftingFacial.avif">
+                  <source srcset="assets/image/servicos/liftingFacial.webp">
+                  <img src="assets/image/servicos/liftingFacial.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Lifting facial</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/liftingcorpo.avif">
+                  <source srcset="assets/image/servicos/liftingcorpo.webp">
+                  <img src="assets/image/servicos/liftingcorpo.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Lifting Corpo</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/massagemCorpo.avif">
+                  <source srcset="assets/image/servicos/massagemCorpo.webp">
+                  <img src="assets/image/servicos/massagemCorpo.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Massagem Corpo Inteiro</h2>
+                </div>
+              </div>
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/massagemJapones.avif">
+                  <source srcset="assets/image/servicos/massagemJapones.webp">
+                  <img src="assets/image/servicos/massagemJapones.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Massagem Facial Japonesa</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nextSer">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselSer" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselSer" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <a href="#reservar" class="saiba-mais-ser">SAIBA MAIS</a>
+        </div>
+      </div>
+
+      <!--PARA TELEMOVEIS-->
+
+      <div id="carouselSerM" class="carousel serT carousel-dark slide mobileSlide">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro-Sobrancelhas.avif">
+                  <source srcset="assets/image/servicos/micro-Sobrancelhas.webp">
+                  <img src="assets/image/servicos/micro-Sobrancelhas.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação Sobrancelhas</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro-Labial.avif">
+                  <source srcset="assets/image/servicos/micro-Labial.webp">
+                  <img src="assets/image/servicos/micro-Labial.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação Labial</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/microOlhos.avif">
+                  <source srcset="assets/image/servicos/microOlhos.webp">
+                  <img src="assets/image/servicos/microOlhos.jpg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação Olhos</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro-capilar.avif">
+                  <source srcset="assets/image/servicos/micro-capilar.webp">
+                  <img src="assets/image/servicos/micro-capilar.jpg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação Capilar</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro_Areola.avif">
+                  <source srcset="assets/image/servicos/micro_Areola.webp">
+                  <img src="assets/image/servicos/micro_Areola.jpg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação Aréola</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/micro-cicatriz.avif">
+                  <source srcset="assets/image/servicos/micro-cicatriz.webp">
+                  <img src="assets/image/servicos/micro-cicatriz.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Micropigmentação para Camuflar Cicatrizes</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/remocaoMicro.avif">
+                  <source srcset="assets/image/servicos/remocaoMicro.webp">
+                  <img src="assets/image/servicos/remocaoMicro.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Remoção de Micropigmentação</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/remocao_de_tatuagens.avif">
+                  <source srcset="assets/image/servicos/remocao_de_tatuagens.webp">
+                  <img src="assets/image/servicos/remocao_de_tatuagens.jpg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Remoção de Tatuagens</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/limpezaFacial.avif">
+                  <source srcset="assets/image/servicos/limpezaFacial.webp">
+                  <img src="assets/image/servicos/limpezaFacial.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">limpeza Facial</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/depilacaoFIoFio.avif">
+                  <source srcset="assets/image/servicos/depilacaoFIoFio.webp">
+                  <img src="assets/image/servicos/depilacaoFIoFio.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Depilação Sobrancelhas com Linha</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/liftingPestanas.avif">
+                  <source srcset="assets/image/servicos/liftingPestanas.webp">
+                  <img src="assets/image/servicos/liftingPestanas.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Lifting de Pestanas</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/liftingFacial.avif">
+                  <source srcset="assets/image/servicos/liftingFacial.webp">
+                  <img src="assets/image/servicos/liftingFacial.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Lifting Facial</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/liftingcorpo.avif">
+                  <source srcset="assets/image/servicos/liftingcorpo.webp">
+                  <img src="assets/image/servicos/liftingcorpo.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Lifting Corpo</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/massagemCorpo.avif">
+                  <source srcset="assets/image/servicos/massagemCorpo.webp">
+                  <img src="assets/image/servicos/massagemCorpo.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Massagem Corpo Inteiro</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dimension-total-ser">
+              <div class="card">
+                <picture>
+                  <source srcset="assets/image/servicos/massagemJapones.avif">
+                  <source srcset="assets/image/servicos/massagemJapones.webp">
+                  <img src="assets/image/servicos/massagemJapones.jpeg" class="card-img-top" alt="...">
+                </picture>
+                <div class="card-body">
+                  <h2 class="card-text">Massagem Facial Japonesa</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nextSer">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselSerM" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselSerM" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <a href="#reservar" class="saiba-mais-ser">SAIBA MAIS</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reserve-ja">
+      <div class="ctro-reser">
+        <h1>RESERVE O SEU MOMENTO DE BELEZA</h1>
+        <p>Agende uma consulta e deixe-se cuidar pelos nossos profissionais especializados</p>
+      </div>
+      <a href="#reservar"><button class="border-rb">
+          <div class="reser-button">MARCAR RESERVA</div>
+        </button>
+      </a>
+    </section>
+
+    <section id="perguntas" class="perguntas-fq">
+
+      <h1>PERGUNTAS FREQUENTES</h1>
+      <div class="box-pfq">
+        <div id="pg1" class="pre-fq-box">
+          <div class="mesmo-tam">
+            <h2>O que é micropigmentação?</h2>
+            <p>A micropigmentação é uma técnica estética que consiste em implantar pigmentos na pele para realçar
+              características faciais, como sobrancelhas, lábios e linha do olhos.</p>
+          </div>
+          <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+        </div>
+        <div id="pg2" class="pre-fq-box">
+          <div class="mesmo-tam">
+            <h2>A micropigmentação dói?</h2>
+            <p>A dor pode variar de pessoa para pessoa, mas em geral, a micropigmentação é bem tolerada. Geralmente, é
+              aplicado um creme anestésico antes do procedimento para minimizar o desconforto.</p>
+          </div>
+          <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+        </div>
+        <div id="pg3" class="pre-fq-box">
+          <div class="mesmo-tam">
+            <h2>Quanto tempo dura a micropigmentação?</h2>
+            <p>A duração da micropigmentação pode variar dependendo do tipo de tratamento e dos cuidados após o
+              procedimento. Em média, os resultados podem durar de 1 a 3 anos.</p>
+          </div>
+          <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+        </div>
+      </div>
+
+      <!--VER-MAIS-->
+
+      <div class="ctro-vermais">
+        <span class="ver-maisP" onclick="pre_fq('fq-vermais', this)">VER MAIS <div id="pfq1">></div>
+        </span>
+      </div>
+      <div class="fq-vermais" id="dropdown-pfq">
+
+        <div class="box-pfq">
+          <div class="pre-fq-box">
+            <div class="mesmo-tam">
+              <h2>É possível corrigir micropigmentação mal feita?</h2>
+              <p>Sim, em alguns casos é possível corrigir ou remover a micropigmentação mal feita através de
+                procedimentos específicos.</p>
+            </div>
+            <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+          </div>
+
+          <div class="pre-fq-box">
+            <div class="mesmo-tam">
+              <h2>Quanto tempo leva cicatrizar após a micropigmentação?</h2>
+              <p>O tempo de cicatrização pode variar, mas em geral, leva cerca de 1 a 2 semanas para a pele se recuperar
+                completamente.</p>
+            </div>
+            <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+          </div>
+          <div class="pre-fq-box">
+            <div class="mesmo-tam">
+              <h2>Quanto custa a micropigmentação?</h2>
+              <p>O custo da micropigmentação pode variar dependendo da região e do profissional escolhido. É
+                importante fazer uma pesquisa e obter orçamentos antes de realizar o procedimento.</p>
+            </div>
+            <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testemunhas" class="testemunhos">
+
+      <h1>TESTEMUNHAS</h1>
+
+      <div class="ctro-testbox">
+        <div class="box-test">
+          <a href="https://goo.gl/maps/TeFJimsdnqERmXu47" target="_blank" class="ctro-img-nome">
+            <img
+              src="https://lh3.googleusercontent.com/a-/AD_cMMSBmXHxzJdkKtigT8vpUiQAD6yHfRNfZd3mADgtU0DEkQ=w36-h36-p-rp-mo-br100"
+              alt="Foto da clienta Soraia Araujo que fez Micropigmentação">
+            <h6>Soraia Araujo<br>⭐⭐⭐⭐⭐</h6>
+          </a>
+          <hr class="linha-test">
+          <div class="ctro-test-p">
+            <p>
+              <b>Recomendo a todos os clientes interessados!</b><br><br>
+              "Já tive o privilégio de ser atendida pela Angel duas vezes e recomendo a todos os clientes interessados
+              em tratamentos.<br><br> Além de muito simpática, é uma profissional excelente. Parabéns 🩷🙏👏"
+            </p>
+          </div>
+        </div>
+        <div class="box-test">
+          <a href="https://goo.gl/maps/ggPsTNNPZAiW8avq8" target="_blank" class="ctro-img-nome">
+            <img
+              src="https://lh3.googleusercontent.com/a/AAcHTtdb5Gr3W8ZHUkZzPLtGaP6l6OfcnwL72HSLyQlgZlbv=w36-h36-p-rp-mo-br100"
+              alt="Foto da clienta Lia Mercado que fez Micropigmentação">
+            <h6>Lia Mercado<br>⭐⭐⭐⭐⭐</h6>
+          </a>
+          <hr class="linha-test">
+          <div class="ctro-test-p">
+            <p>
+              <b>¡La recomiendo al 100%, la amarán!</b><br><br>
+              "Angel, una profesional excelente y maravillosa. Gracias a ella, ahora tengo pestañas y me siento
+              totalmente satisfecha. ¡La recomiendo al 100%! Es excepcional... Ha dado vida a mi rostro con las
+              pestañas, y me siento feliz y satisfecha. Sus manos son maravillosas en la micropigmentación de labios,
+              cejas y delineado de ojos. ¡La recomiendo al 100%! La amarán!"
+            </p>
+          </div>
+        </div>
+        <div class="box-test">
+          <a href="https://goo.gl/maps/BvkGtjoKuqNhbyyK9" target="_blank" class="ctro-img-nome">
+            <img
+              src="https://lh3.googleusercontent.com/a-/AD_cMMSA-Kk6N0DQUF5-vTwkeOJf45XtA8pEDQ3BAi0yL-xvuxc=w36-h36-p-rp-mo-br100"
+              alt="Foto da clienta Liliana Monteiro que fez Micropigmentação">
+            <h6>Liliana Monteiro<br>⭐⭐⭐⭐⭐</h6>
+          </a>
+          <hr class="linha-test">
+          <div class="ctro-test-p">
+            <p>
+              <b>A Angel é brilhante e muito querida!</b><br><br>
+              "Um trabalho excelente e um atendimento também de 5 estrelas. Adorei. Aconselho a marcarem uma sessão.
+              <br><br>
+              Eu fiz Micropigmentação das sobrancelhas e ficou perfeito e muito natural, todos me elogiaram."
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="formulario" id="reservar">
+      <div class="form-box">
+        <h1>CONTACTE<span>-NOS</span></h1>
+
+        <div class="contact-wrapperF">
+          <div class="contact-form">
+            <h3>Marque uma consulta ou Pergunte-nos a sua dúvida</h3>
+            <form id="form-reserva" action="https://formspree.io/f/mknljrkk" method="POST">
+              <p>
+                <label for="nome">Nome Completo</label>
+                <input type="text" name="nome" id="nome" autocomplete="given-name">
+              </p>
+              <p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" autocomplete="email">
+              </p>
+              <p>
+                <label for="telemovel">Número de Telemóvel</label>
+                <input type="number" name="telemovel" id="telemovel" autocomplete="tel">
+              </p>
+              <p>
+                <label for="assunto">Assunto</label>
+                <input type="text" name="assunto" id="assunto">
+              </p>
+              <p class="block">
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" rows="3"></textarea>
+              </p>
+              <p class="block">
+                <button type="submit">
+                  Enviar
+                </button>
+              </p>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h4>Contactos Adicionais</h4>
+            <div><i class="fa-solid fa-location-dot"></i><a href="https://goo.gl/maps/cYxcvHsE3dmLaPj46"
+                target="_blank">Póvoa de Santa Iria</a></div>
+            <div><i class="fa-solid fa-location-dot"></i><a
+                href="https://www.google.com/maps/place/clinica+de+Micropigmentação+angel+balcboni/@38.7423967,-9.1389141,17z/data=!3m1!5s0xd1933a5c939bbc7:0xac2ee535a9277ced!4m15!1m8!3m7!1s0xd1933a5c910017f:0xb568b2a8ee56e037!2sAv.+Jo%C3%A3o+XXI+25,+1000-303+Lisboa!3b1!8m2!3d38.7423967!4d-9.1389141!16s%2Fg%2F11c27psndz!3m5!1s0xd19337f4bfb8f55:0x3ed8bc3894b5ca15!8m2!3d38.7423967!4d-9.1389141!16s%2Fg%2F11n_yr3_bj?entry=ttu"
+                target="_blank">Roma-Areeiro</a></div>
+            <div><i class="fas fa-phone"></i><a
+                href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
+                target="_blank">(+351)
+                935 407 895</a></div>
+            <div><i class="fas fa-envelope-open-text"></i><a id="mail-form"
+                href="mailto:Balcboni@AngelMicropigmentação.com" target="_blank">balcboni@angelmicropigmentação.com</a>
+            </div>
+            <br>
+            <p>Bem-vindos à Clínica Angel Micropigmentação, onde nossa missão é realçar a beleza de cada pessoa,
+              proporcionando autoconfiança e satisfação. Nossos especialistas estão prontos para transformar seus
+              sorrisos e ressaltar sua melhor versão. Descubra a arte da micropigmentação feita com maestria e
+              sinta-se mais confiante e radiante. Venha nos visitar e descubra a verdadeira magia da beleza!
+            </p>
+          </div>
+        </div>
+      </div>
+      <script>
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          // Validar se os campos obrigatórios estão preenchidos
+          const nome = document.getElementById('nome').value;
+          const email = document.getElementById('email').value;
+          const mensagem = document.getElementById('mensagem').value;
+          const telemovel = document.getElementById('telemovel').value;
+
+          if (!nome || !mensagem) {
+            alert('Por favor, preencha todos os campos "Nome" e "Mensagem".');
+            return;
+          }
+          else {
+            if (!email && !telemovel) {
+              if (!telemovel || !email) {
+                alert('Por favor, preencha os campos "email" ou "telemovel".');
+                return;
+              }
+            }
+          }
+
+          // Submeter o formulário para o Formspree
+          form.submit();
+        });
+      </script>
+    </section>
+
+  </main>
+  <footer>
+    <div class="footer-content">
+      <h3>CLÍNICA MICROPIGMENTAÇÃO</h3>
+      <p>Descubra a beleza que brilha dentro de você, irradiando confiança e amor próprio a cada passo do caminho!</p>
+      <div class="socials">
+        <li><a href="https://www.facebook.com/angelmicropigmentacion" target="_blank"><i
+              class="fa-brands fa-facebook fa-xl"></i></a></li>
+        <li><a
+            href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
+            target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
+        <li><a href="https://www.facebook.com/aangelMicropigmentacao" target="_blank"><i
+              class="fa-brands fa-facebook fa-xl"></i></a></li>
+        <li><a href="https://www.instagram.com/aangelMicropigmentacao/" target="_blank"><i
+              class="fa fa-instagram fa-xl"></i></a></li>
+        <li><a href="https://www.youtube.com/@angelmicropigmentacion4389" target="_blank"><i
+              class="fa fa-youtube fa-xl"></i></a></li>
+      </div>
+    </div>
+    <hr class="linha-footer">
+    <div class="footer-bottom">
+      <p>&copy; 2023 Clinica Micropigmentação | <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        <br>Desenvolvido por <span>J-set</span>
+      </p>
+    </div>
+  </footer>
+
+  <!--Scrpts de fora para ajudar com o funcionamento site-->
+
+  <script src="scripts/codeJ.js"></script>
+  <script type="module" src="scripts/connection-client.js"></script>
+  <script src="https://kit.fontawesome.com/5e2d559914.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

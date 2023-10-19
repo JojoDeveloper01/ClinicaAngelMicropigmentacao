@@ -1,0 +1,222 @@
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 99999;   
+}
+
+/********** TElA PARA TELEMOVEIS ****************/
+
+.top-section {
+  background-color: #888888;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+.block-appointment {
+  background-color: var(--corRoxo);
+  opacity: 0.8;
+  text-align: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.block-appointment p {
+  position: relative;
+  margin-top: 9px;
+
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.menuStart {
+  background-color: var(--corBranca);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.178);
+  display: flex;
+  align-items: center;
+}
+
+.ctro-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end-menu {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.block-icons {
+  background-color: #a0a0a0;
+  display: flex;
+
+  height: 100%;
+  justify-self: flex-end;
+}
+
+.block-call-icone {
+  background-color: var(--corBranca);
+  opacity: 0.8;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.block-menuNav-icone {
+  background-color: var(--corRoxo);
+  opacity: 0.8;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.block-icons img {
+  opacity: 0.5;
+  height: 40%;
+  width: 50%;
+}
+
+/*****************************************************************TElA PARA TPCs ***************** ****************************************************/
+
+/*Para todos, menos os PCs, TVs*/
+
+nav {
+  background-color: #ac7c5400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navOptions {
+  background-color: rgba(0, 255, 255, 0);
+  display: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.navOptions li {
+  background-color: #88888800;
+  text-align: center;
+
+  width: 125px;
+  height: 25px;
+}
+
+.navOptions li p {
+  color: rgb(0, 0, 0);
+  opacity: 0.6;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.line1-menubar,
+.line2-menubar {
+  background-color: rgba(76, 0, 255, 0);
+  display: flex;
+  padding: 0;
+}
+
+/*blocos de selecionar*/
+
+.here {
+  border: 1px solid #dddddd;
+}
+
+.select,
+.select-drop {
+  background-color: transparent;
+  position: absolute;
+  width: 125px;
+  height: 25px;
+
+  z-index: 9999;
+}
+
+.select-drop {
+  height: 67px;
+}
+
+.select:hover,
+.select-drop:hover {
+  background-color: #ef83f363;
+}
+
+.dropdown-PCnav {
+  background-color: var(--corRoxo);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.264);
+
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 270px;
+  height: auto;
+
+  left: -50%;
+  bottom: -65%;
+
+  z-index: 99999;
+}
+
+.dropdown-PCnav a {
+  position: relative;
+
+  color: #000000;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+
+  width: 100%;
+  height: 83%;
+  padding: 12px 10px;
+  margin: 0;
+}
+
+.dropdown-PCnav a:hover {
+  background-color: var(--corBranca);
+  color: #000000;
+  opacity: 1;
+}
+
+#sm-PC {
+  display: none;
+}
+
+.social-midia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+}
+
+.social-midia li {
+  margin: 0 7px;
+}
+
+.social-midia a {
+  color: #686868;
+}
+
+.social-midia a:hover {
+  color: var(--corRoxo);
+}
+

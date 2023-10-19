@@ -1,0 +1,662 @@
+/************Slides a passarem automaticamente para mostrar varias coisas do site*************/
+
+.slideHome {
+    position: relative;
+}
+
+.carousel button {
+    z-index: 99;
+}
+
+.ctro-itemS {
+    width: 100vw;
+    height: calc(100vh - var(--height-itemS));
+}
+
+picture .simg2 {
+    transform: scaleX(-1);
+}
+
+.ctro-itemS .text-contra {
+    left: inherit;
+    right: 51%;
+}
+
+.ctro-itemS span {
+    color: #9e5b31;
+    opacity: 0.7;
+    position: absolute;
+    left: 51%;
+    bottom: 1%;
+    width: 110px;
+    height: 20px;
+}
+
+.ctro-itemS span a {
+    color: #44342a;
+    opacity: 0.7;
+}
+
+.fondo-distor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9;
+}
+
+.fd {
+    background-image: linear-gradient(to left, #ffffff, #E9CCB7, #D8AD8E);
+}
+
+.fd1 {
+    background-image: linear-gradient(to left, #ffffff, #d8a5a3, #c07774);
+}
+
+.fd2 {
+    background-image: linear-gradient(to right, #ffffff, #d1af96, #ac7b54);
+}
+
+.fd3 {
+    background-image: linear-gradient(to right, #ffffff, #e0bcad, #C98568);
+}
+
+.texto-carousel {
+    background-color: #e0985d00;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    user-select: none;
+    color: #000000;
+    opacity: 0.8;
+}
+
+.texto-carousel h2 {
+    text-align: center;
+}
+
+#tiny-p {
+    display: none;
+}
+
+/*button-marcar*/
+
+.texto-carousel a {
+    display: flex;
+
+    align-items: center;
+    width: auto;
+    height: 50px;
+}
+
+.border-slide {
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    border: 1px solid #000000;
+}
+
+.reser-buttonS {
+    color: #000000;
+}
+
+
+/*-----NOSSO TEAM-----*/
+
+.nossoTeam {
+    background-color: var(--corRoxo);
+    position: relative;
+    width: 100vw;
+
+    padding: 40px 0;
+}
+
+.nossoTeam h1 {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+.dimension-total {
+    background-color: #4b4b4b00;
+    padding: 0 8vw;
+}
+
+.dimension-total img {
+    position: relative;
+    object-fit: cover;
+}
+
+.dimension-total .carousel-caption {
+    position: relative;
+    text-align: left;
+    font-size: calc(0.5vw + 0.7em);
+    opacity: 0.8;
+    left: 0;
+    margin: 40px 0 0 0;
+    padding: 0;
+}
+
+/*
+.saiba-mais {
+    color: rgba(0, 0, 0, 0.664);
+
+
+    position: relative;
+    text-align: center;
+
+    letter-spacing: 1px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 0;
+
+    z-index: 99;
+}
+
+
+.saiba-mais:hover {
+    font-weight: bold;
+}
+*/
+
+/*Localizacoes dos espcos disponiveis*/
+
+.locais {
+    background-color: var(--corBranca);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+    padding: 100px 0 0 0;
+}
+
+.separar-titu {
+    display: flex;
+}
+
+.locais h1 {
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.locais h2 {
+    font-size: 40px;
+    opacity: 0.6;
+}
+
+.position-local {
+    display: flex;
+    justify-content: center;
+
+    margin: 60px 0 0 0;
+}
+
+.localCtro {
+    background-color: var(--corRoxo);
+    display: flex;
+    align-items: center;
+}
+
+.localCtro p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 85%;
+    padding:40px;
+    margin: 0;
+}
+
+.localCtro p a {
+    color: rgb(37, 56, 109);
+}
+
+.localCtro p a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.localCtro b {
+    opacity: 0.8;
+}
+
+/*--------------Nossos Servicos-----------*/
+
+.nossos-servicos {
+    background-color: var(--corBranca);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    padding: 0 0 9.5vh 0;
+}
+
+.pcSlide,
+.mobileSlide {
+    width: 100%;
+}
+
+.dimension-total-ser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.card {
+    margin: 0 15px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: var(--corBranca);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+
+    padding: 0;
+}
+
+.card-text {
+    font-size: 14px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.nextSer{
+  z-index: 9;
+}
+
+.saiba-mais-ser {
+    color: rgba(0, 0, 0, 0.664);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.saiba-mais-ser:hover {
+    font-weight: bold;
+}
+
+/*--------------RESERVVE JA-----------*/
+
+.reserve-ja {
+    background-color: var(--corRoxo);
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+}
+
+.reserve-ja h1 {
+    color: var(--corBranca);
+    font-weight: bold;
+
+    position: relative;
+    margin: 2vw 0 0 0;
+}
+
+.reserve-ja p {
+    color: var(--corBranca);
+    opacity: 0.9;
+    margin: 1.5vh 0 3vh 0;
+}
+
+.border-rb {
+    background-color: transparent;
+    position: relative;
+    display: flex;
+
+    border: 1px solid var(--corBranca);
+    transition: padding 0.3s ease;
+
+    padding: min(3.5vh, 9vh);
+}
+
+.border-rb:hover {
+    background-color: var(--corBranca);
+    padding: min(4vh, 10vw);
+}
+
+.border-rb:hover .reser-button {
+    background-color: var(--corBranca);
+    color: var(--corRoxo);
+}
+
+.reser-button {
+    color: var(--corBranca);
+    font-weight: bold;
+}
+
+/*********PREGUNTAS FREQUENTES***********/
+
+.perguntas-fq {
+    background-color: var(--corBranca);
+    position: relative;
+    width: 100vw;
+    padding: 3vw;
+    padding-bottom: 15vh;
+}
+
+.perguntas-fq h1 {
+    color: var(--corRoxo);
+    opacity: 1;
+    text-align: center;
+    margin: 10vh 0 5vh 0;
+}
+
+.box-pfq {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.pre-fq-box {
+    background-color: antiquewhite;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+
+    width: min(100%, 20rem);
+}
+
+.mesmo-tam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 19rem;
+}
+
+.pre-fq-box h2 {
+    text-align: center;
+}
+
+.pre-fq-box p {
+    margin: 30px 0;
+}
+
+.pre-fq-box a {
+    font-size: 0.8em;
+    position: relative;
+    bottom: 0;
+}
+
+.ctro-vermais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5vh 0;
+}
+
+.ver-maisP {
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s ease;
+}
+
+.fq-vermais {
+    display: none;
+    padding: 5px;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.5s ease;
+}
+
+#pfq1 {
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+
+    margin: 0 5px;
+    width: 25px;
+
+    position: relative;
+    writing-mode: vertical-rl;
+    transition: transform 0.4s ease;
+    z-index: 1;
+}
+
+
+.ver-maisP.open #pfq1 {
+    transform: rotate(180deg);
+}
+
+#dropdown-pfq {
+    display: none;
+}
+
+/*TESTEMUNHAS*/
+
+.testemunhos {
+    background-color: var(--corRoxo);
+    position: relative;
+    width: 100vw;
+    padding: 50px 0;
+}
+
+.testemunhos h1 {
+    color: var(--corBranca);
+    text-align: center;
+    font-weight: bold;
+
+    margin: 5vh 0 8vh 0;
+}
+
+.ctro-testbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.box-test a {
+    color: #4b4b4b;
+}
+
+.ctro-img-nome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctro-img-nome img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.ctro-img-nome h6 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.linha-test {
+    margin: 3vh 0 2vh 0;
+    border: 1px solid #000;
+
+    width: 150px;
+}
+
+.ctro-test-p {
+    display: flex;
+    justify-content: center;
+}
+
+.ctro-test-p p {
+    opacity: 0.8;
+    height: 18rem;
+    margin: 2vh 0 0 0;
+}
+
+/*----------FORMULARIO------------*/
+
+.formulario {
+    background-color: var(--corBranca);
+    width: 100vw;
+    padding: 2vh 0 3vh 0;
+}
+
+.formulario a {
+    color: #4b4b4b;
+}
+
+.formulario a:hover {
+    color: #161616;
+}
+
+.form-box {
+    background-color: transparent;
+
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    padding-bottom: 100px;
+}
+
+.formulario h1 {
+    text-align: center;
+    color: var(--corRoxo);
+    margin: 60px 0;
+    font-weight: bold;
+}
+
+.formulario span {
+    color: #4b4b4b;
+}
+
+.contact-wrapperF {
+    box-shadow: 0 0 20px 0 #a1a1a196;
+}
+
+.contact-wrapperF>* {
+    padding: 1em;
+}
+
+.contact-form {
+    background: var(--corRoxo);
+}
+
+.contact-form h3 {
+    color: #161616cb;
+    font-size: 25px;
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;    
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #4b4b4b;
+    border-bottom: 1px solid #4b4b4b;
+
+
+}
+
+.contact-form form button {
+    background: #4b4b4b;
+    color: var(--corBranca);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: var(--corBranca);
+    color: #4b4b4b;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* CONTACT INFO */
+
+.contact-info {
+    background: var(--corBranca);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+    text-align: left;
+    margin: 0 0 1rem 0;
+}
+
+#mail-form {
+    word-wrap: break-word;
+}
