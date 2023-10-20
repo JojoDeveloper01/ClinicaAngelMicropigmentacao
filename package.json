@@ -13,7 +13,7 @@
   "main": "app.js",
   "name": "clinica_micropigmentacao",
   "scripts": {
-    "start": "node --watch ./server-microAngel/app.js"
+    "start": "node ./server-microAngel/app.js"
   },
   "type": "module",
   "version": "1.0.0"
