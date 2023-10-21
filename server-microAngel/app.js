@@ -39,8 +39,9 @@ app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/client-microAngel/index.html');
 });
 
-server.listen(port, '0.0.0.0', () => {
+server.listen(port, '0.0.0.0',  () => {
     console.log(`Servidor ouvindo na porta ${port}`);
 });
+
 
 
