@@ -41,16 +41,36 @@ function directMessages() {
         chatConversation.appendChild(messageUser);
 
         //Conetar com o server
+        /*
+                const socket = io()
+        
+                socket.on('connect', () => {
+                    socket.emit('message', message); // Envie uma mensagem ao servidor
+                });
+        
+                socket.on('response', (data) => {
+                    gptResponse(data); // Manipule a resposta do servidor
+                });
+        */
 
-        const socket = io()
 
-        socket.on('connect', () => {
-            socket.emit('message', message); // Envie uma mensagem ao servidor
-        });
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/send-message", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
 
-        socket.on('response', (data) => {
-            gptResponse(data); // Manipule a resposta do servidor
-        });
+        // Definir o callback para lidar com a resposta do servidor
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                console.log(response)
+                gptResponse(response.message)
+            }
+        };
+
+        // Enviar a mensagem ao servidor como um objeto JSON
+        const data = JSON.stringify({ message: message });
+        xhr.send(data);
+
 
         function gptResponse(message) {
             const messageBot = document.createElement('div');
