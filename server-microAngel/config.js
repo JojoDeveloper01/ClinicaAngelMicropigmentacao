@@ -1,7 +1,3 @@
-import dotenv from 'dotenv'
-
-dotenv.config()
-
 const config = {
     MODEL: 'gpt-3.5-turbo',
     MAX_TOKENS: 500,
