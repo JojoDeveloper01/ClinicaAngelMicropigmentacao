@@ -11,7 +11,7 @@ const app = express();
 const server = createServer(app)
 const io = new Server(server)
 // Carregue as variáveis de ambiente do arquivo .env
-const port = config.PORT || 5001;
+const port = config.PORT
 
 io.on('connection', (socket) => {
     console.log('User was connected to the IA chat');
@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/client-microAngel/index.html');
 });
 
-server.listen(port, '0.0.0.0',  () => {
+server.listen(port, '0.0.0.0', () => {
     console.log(`Servidor ouvindo na porta ${port}`);
 });
 

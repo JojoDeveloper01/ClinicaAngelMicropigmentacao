@@ -2,7 +2,7 @@ import config from './config.js';
 import OpenAIApi from "openai";
 
 const openai = new OpenAIApi({
-    apiKey: config.OPENAI_API_KEY,
+    apiKey:config.OPENAI_API_KEY,
 });
 
 async function getOpenAIResponse(userMessage) {

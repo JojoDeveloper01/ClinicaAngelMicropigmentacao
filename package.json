@@ -8,12 +8,18 @@
     "socket.io": "4.7.2"
   },
   "description": "Site para mostrar todos os serviços de beleza que nossa clinica oferece",
+  "devDependencies": {
+    "standard": "17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  },
   "keywords": [],
   "license": "ISC",
   "main": "app.js",
   "name": "clinica_micropigmentacao",
   "scripts": {
-    "start": "node ./server-microAngel/app.js"
+    "start": "node --watch ./server-microAngel/app.js"
   },
   "type": "module",
   "version": "1.0.0"
