@@ -1,7 +1,5 @@
 @media only screen and (min-width: 0) and (max-width: 600px) {
 
-  /*Header*/
-
   .menuStart {
     height: 70px;
   }
@@ -12,21 +10,10 @@
     width: 70px;
   }
 
-  /*
-  #search {
-    width: 85vw;
-    height: 60px;
-    margin-top: 60px;
-    margin-left: 8px;
-  }
-*/
   .dropdown-nav li a {
     font-size: 13px;
   }
 
-  /************Slides a passarem automaticamente para mostrar varias coisas do site*************/
-
-  /*Slides*/
 
   .ctro-itemS {
     margin-top: 110px;
@@ -68,8 +55,6 @@
     padding: 20px;
   }
 
-  /*------Sobre Nos---------*/
-
   .dimension-total img {
     left: 50%;
     transform: translateX(-50%);
@@ -77,7 +62,6 @@
     height: 35vh;
   }
 
-  /*Localizacoes dos espcos disponiveis*/
 
   .separar-titu {
     flex-direction: column;
@@ -104,8 +88,6 @@
     height: 40vh;
   }
 
-  /*-------------Nossos servicos-----------*/
-
   .pcSlide {
     display: none;
   }
@@ -127,8 +109,6 @@
     bottom: 50%;
   }
 
-  /***********FAZER RESERVA!!!!**************/
-
   .reserve-ja {
     flex-direction: column;
     padding: 5vw;
@@ -147,13 +127,9 @@
     font-size: 1em;
   }
 
-  /*PERGUNTAS FREQUENTES*/
-
   .pre-fq-box {
     margin: 10px 0 10px 0;
   }
-
-  /*testemunhas*/
 
   .box-test {
     margin: 4vh 3vw;
@@ -167,7 +143,7 @@
     background-color: #d9909000;
   }
 
-  .bt-float button{
+  .bt-float button {
     width: 40px;
     height: 40px;
   }
@@ -188,8 +164,6 @@
     width: 100vw;
   }
 
-  /*Home slide*/
-
   picture .slide-img,
   .fondo-distor {
     height: 50%;
@@ -199,8 +173,6 @@
     padding: 15px;
   }
 
-  /*Localization*/
-
   .localCtro img {
     height: 30vh;
   }
@@ -208,8 +180,6 @@
   #phone-tiny {
     font-size: 1.5vh;
   }
-
-  /*testemunhos*/
 
   .box-test {
     margin-bottom: 10vh;
@@ -222,7 +192,7 @@
     background-color: rgba(250, 0, 187, 0);
   }
 
-  .bt-float button{
+  .bt-float button {
     width: 40px;
     height: 40px;
   }
@@ -255,8 +225,6 @@
     width: 80vw;
   }
 
-  /*bottao slides home*/
-
   picture .slide-img,
   .fondo-distor {
     height: 50%;
@@ -266,25 +234,17 @@
     padding: 13px;
   }
 
-  /*Local*/
-
   #phone-tiny {
     font-size: 1.6vh;
   }
 
 }
 
-/*--------------------------------------------
-Extra small devices (phones, 600px and down) 
----------------------------------------------
-*/
-
 @media only screen and (min-width: 455px) and (max-width: 600px) {
   * {
     background-color: rgba(0, 255, 255, 0);
   }
 
-  /*HEADER*/
 
   .logo picture img {
     width: 256px;
@@ -292,19 +252,13 @@ Extra small devices (phones, 600px and down)
     margin-left: 20px;
   }
 
-  /*Localizacoes dos espcos disponiveis*/
-
   .localCtro,
   .localCtro img {
     width: 80vw;
   }
 
-
-
 }
 
-/* Small devices (portrait     visibility: visible;
-tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) {
 
   * {
@@ -324,8 +278,6 @@ tablets and large phones, 600px and up) */
     height: 95px;
     width: 350px;
   }
-
-  /************Slides a passarem automaticamente para mostrar varias coisas do site*************/
 
   picture .slide-img {
     width: 100vw;
@@ -376,16 +328,12 @@ tablets and large phones, 600px and up) */
     padding: 25px;
   }
 
-  /*----Nosso team-----*/
-
   .dimension-total img {
     left: 50%;
     transform: translateX(-50%);
     width: 35vw;
     height: 40vh;
   }
-
-  /*Localizacoes dos espcos disponiveis*/
 
   .separar-titu {
     justify-content: center;
@@ -412,8 +360,6 @@ tablets and large phones, 600px and up) */
     height: 40vh;
   }
 
-  /*-------------Nossos servicoes-----------*/
-
   .pcSlide {
     display: none;
   }
@@ -435,8 +381,6 @@ tablets and large phones, 600px and up) */
     bottom: -13%;
   }
 
-  /*Reservar*/
-
   .reserve-ja {
     flex-direction: column;
     padding: 5vw;
@@ -448,8 +392,6 @@ tablets and large phones, 600px and up) */
     padding: 0 2.5em;
   }
 
-  /*PERGUNTAS FREQUENTES*/
-
   .pre-fq-box h2 {
     font-size: 1.3em;
   }
@@ -458,15 +400,12 @@ tablets and large phones, 600px and up) */
     margin: 10px;
   }
 
-  /*testemunhas*/
-
   .box-test {
     margin: 4vh 3vw;
   }
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
   * {
@@ -486,8 +425,6 @@ tablets and large phones, 600px and up) */
     margin: 50px 35px;
   }
 
-  /*----Nosso team-----*/
-
   .dimension-total {
     display: flex;
     align-items: center;
@@ -500,8 +437,6 @@ tablets and large phones, 600px and up) */
     left: 0;
     margin-left: 100px;
   }
-
-  /*Localizacoes dos espcos disponiveis*/
 
   .position-local {
     flex-direction: row;
@@ -521,8 +456,6 @@ tablets and large phones, 600px and up) */
   .localCtro p {
     height: 35vh;
   }
-
-  /*-------------Nossos servicoes-----------*/
 
   .mobileSlide {
     display: none;
@@ -547,8 +480,6 @@ tablets and large phones, 600px and up) */
     bottom: 50%;
   }
 
-  /***********FAZER RESERVA!!!!**************/
-
   .reserve-ja {
     text-align: left;
     flex-direction: inherit;
@@ -566,8 +497,6 @@ tablets and large phones, 600px and up) */
     padding: 0;
   }
 
-  /*---FORMULARIO---*/
-
   .contact-wrapperF {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -584,11 +513,6 @@ tablets and large phones, 600px and up) */
   }
 
 }
-
-/*-----------------------------------------------
-Large devices (laptops/desktops, 992px and up) 
---------------------------------------------------
-*/
 
 @media only screen and (min-width: 992px) {
 
@@ -629,17 +553,6 @@ Large devices (laptops/desktops, 992px and up)
     width: 500px;
     height: 30px;
   }
-
-  /*.d-flex {
-    position: absolute;
-    right: 0;
-    top: 58%;
-    width: 200px;
-    margin-right: 30px;
-    margin-top: -40px;
-  }*/
-
-  /************Slides a passarem automaticamente para mostrar varias coisas do site*************/
 
   .ctro-itemS {
     display: flex;
@@ -698,14 +611,10 @@ Large devices (laptops/desktops, 992px and up)
     padding: 35px;
   }
 
-  /*Sobre-Nos*/
-
   .dimension-total img {
     width: 15vw;
     height: 43vh;
   }
-
-  /*LOCALIZACOES*/
 
   .localCtro {
     width: 35vw;
@@ -715,8 +624,6 @@ Large devices (laptops/desktops, 992px and up)
     width: 35vw;
     height: 40vh;
   }
-
-  /*NOSSOS SERVISOS*/
 
   .card {
     width: 30vw;
@@ -730,8 +637,6 @@ Large devices (laptops/desktops, 992px and up)
     bottom: -10%;
   }
 
-  /***********FAZER RESERVA!!!!**************/
-
   .reserve-ja {
     padding: 3vh;
   }
@@ -744,13 +649,9 @@ Large devices (laptops/desktops, 992px and up)
     font-size: 1vw;
   }
 
-  /*perguntas frequentes*/
-
   .pre-fq-box {
     margin: 25px;
   }
-
-  /*TESTEMUNHAS*/
 
   .ctro-testbox {
     display: flex;
@@ -760,11 +661,6 @@ Large devices (laptops/desktops, 992px and up)
 
 }
 
-/* 
----------------------------------------------------------
-Extra large devices (large laptops and desktops, 1500px and up)
--------------------------------------------------------
-*/
 @media only screen and (min-width: 1500px) {
 
   * {
@@ -783,8 +679,6 @@ Extra large devices (large laptops and desktops, 1500px and up)
     flex-direction: row;
   }
 
-  /************Slides a passarem automaticamente para mostrar varias coisas do site*************/
-
   .imgPC {
     display: flex;
   }
@@ -792,8 +686,6 @@ Extra large devices (large laptops and desktops, 1500px and up)
   .imgPRE {
     display: none;
   }
-
-  /*Localizacoes dos espcos disponiveis*/
 
   .localCtro {
     flex-direction: row;
@@ -805,8 +697,6 @@ Extra large devices (large laptops and desktops, 1500px and up)
     width: 22.5vw;
     height: 35vh;
   }
-
-  /*SERVICOS*/
 
   .card {
     width: 20vw;

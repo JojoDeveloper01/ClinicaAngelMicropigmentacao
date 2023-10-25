@@ -7,25 +7,6 @@ import config from './config.js';
 const app = express();
 const port = config.PORT
 
-/*
-io.on('connection', (socket) => {
-    console.log('User was connected to the IA chat');
-
-    socket.on('message', async (message) => {
-        console.log("User's message:", message);
-        const response = await openaiR.getOpenAIResponse(message);
-
-        // Enviar a resposta para o cliente
-        socket.emit('response', response);
-        console.log("ChatAI's message:", response);
-    });
-
-    socket.on('disconnect', () => {
-        console.log('User was disconnected from the IA chat');
-    });
-});
-*/
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

@@ -1,28 +1,24 @@
-//Mensagens com IA cliente
-import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
-
 const messageInput = document.querySelector('.write-message');
 const sendMessages = document.getElementById('sendMessage');
 const chatConversation = document.querySelector('.chat-conversation');
-const messagesM = []; // Inicialize uma matriz para armazenar mensagens
+const messagesM = [];
 
 let isWaitingForResponse = false;
 
 function directMessages() {
     if (isWaitingForResponse) {
-        return; // Se já estiver esperando uma resposta, não permita o envio de mensagens adicionais.
+        return;
     }
 
     const message = messageInput.value.trim();
 
-    if (message !== '') { // Verifica se a mensagem não está vazia
+    if (message !== '') {
         isWaitingForResponse = true;
 
-        // Desabilite a entrada de mensagem e o botão de envio
         messageInput.disabled = true;
         sendMessages.disabled = true;
 
-        messagesM.push(message); // Adicione a mensagem à matriz
+        messagesM.push(message);
 
 
         const messageUser = document.createElement('div');
@@ -34,40 +30,38 @@ function directMessages() {
           <p class="userName">User</p>
       </div>
       <p class="chat">${message}</p>
-      <hr class="space-hr">
-  `;
+      <hr class="space-hr">`;
 
         messageUser.innerHTML = innerHTML;
         chatConversation.appendChild(messageUser);
 
-        //Conetar com o server
-        /*
-                const socket = io()
-        
-                socket.on('connect', () => {
-                    socket.emit('message', message); // Envie uma mensagem ao servidor
-                });
-        
-                socket.on('response', (data) => {
-                    gptResponse(data); // Manipule a resposta do servidor
-                });
-        */
+        const waitingMessage = document.createElement('span');
+        waitingMessage.classList.add('waiting-response');
 
+        const typing = `<div>
+        <div class="typing-indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>`;
+
+        waitingMessage.innerHTML = typing;
+        chatConversation.appendChild(waitingMessage);
 
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "/send-message", true);
         xhr.setRequestHeader("Content-Type", "application/json");
 
-        // Definir o callback para lidar com a resposta do servidor
         xhr.onload = function () {
             if (xhr.status === 200) {
                 const response = JSON.parse(xhr.responseText);
                 console.log(response)
                 gptResponse(response.message)
+
+                chatConversation.removeChild(waitingMessage);
             }
         };
 
-        // Enviar a mensagem ao servidor como um objeto JSON
         const data = JSON.stringify({ message: message });
         xhr.send(data);
 
@@ -82,19 +76,19 @@ function directMessages() {
             <p class="userName">Clinica GPT</p>
         </div>
         <p class="chat">${message}</p>
-        <hr class="space-hr">
-    `;
+        <hr class="space-hr">`;
+
             messageBot.innerHTML = innerHTML;
             chatConversation.appendChild(messageBot);
 
-            // Habilitar a entrada de mensagem e o botão de envio
             messageInput.disabled = false;
             sendMessages.disabled = false;
             isWaitingForResponse = false;
+            chatConversation.scrollTop = chatConversation.scrollHeight;
         }
 
-        chatConversation.scrollTop = chatConversation.scrollHeight;
         messageInput.value = '';
+        chatConversation.scrollTop = chatConversation.scrollHeight;
     }
 }
 

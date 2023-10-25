@@ -8,9 +8,7 @@
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.209);
     backdrop-filter: blur(10px);
-    /* Aplica um desfoque aos elementos de fundo */
     opacity: 1;
-    /* Define a opacidade do elemento */
 }
 
 .sideBar {
@@ -37,17 +35,14 @@
 @keyframes openPanel {
     0% {
         right: -500px;
-        /* Inicia fora da tela à direita */
     }
 
     100% {
         right: 0;
-        /* Termina na posição inicial */
     }
 }
 
 .btn-close {
-    /*fechar painel*/
     font-size: 25px;
     float: right;
     margin: 5px;
@@ -56,22 +51,12 @@
 @keyframes closePanel {
     0% {
         right: 0;
-        /* Inicia na posicao tela cheia*/
     }
 
     100% {
         right: -600px;
-        /* Termina atras da tela direita*/
     }
 }
-
-/*
-.d-flex {
-    height: 60px;
-    margin: 65px 10px;
-    margin-bottom: 20px;
-}
-*/
 
 .nav-panel {
     margin: 90px 1em;

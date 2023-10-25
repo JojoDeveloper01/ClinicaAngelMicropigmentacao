@@ -1,44 +1,18 @@
-//Observer
-
-//import { console } from "console";
-
-/*const fickleAni = document.querySelectorAll("picture");
-
-function fickleAnimation(entries) {
-  entries.forEach(entry => {
-    const fickle = entry.target.querySelector("img");
-    fickle.classList.toggle("showAni", entry.isIntersecting);
-  });
-}
-const options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: .25
-}
-
-const observer = new IntersectionObserver(fickleAnimation, options);
-
-fickleAni.forEach(fickle => {
-  observer.observe(fickle);
-})
- */
-//Panel
-
 function showPanel(element) {
   var panel = document.querySelector(".sideBar");
 
   element.style.display = "block";
   panel.style.display = "block";
-  panel.style.animation = 'openPanel 0.5s forwards'; //animacao abrir painel
+  panel.style.animation = 'openPanel 0.5s forwards';
 }
 
 function quitPanel(element) {
   var panel = document.querySelector(".sideBar");
 
-  panel.style.animation = 'closePanel 0.5s forwards'; //animacao fechar painel
+  panel.style.animation = 'closePanel 0.5s forwards';
   setTimeout(function () {
     panel.style.display = "none";
-  }, 500); // atraso para que o painel seja desativado depois da animacao ser feita
+  }, 500);
   setTimeout(function () {
     element.style.display = "none";
   }, 150);
@@ -61,7 +35,6 @@ function screenSizePC() {
 window.onload = screenSizePC;
 window.onresize = screenSizePC;
 
-//Dropdown-nav do menu do painel
 
 function toggleDropdown(className, element) {
   var dropdownList = document.getElementsByClassName(className);
@@ -77,7 +50,7 @@ function toggleDropdown(className, element) {
       dropdown.classList.add('open');
     }
   }
-  // Rotação do ícone
+
   element.classList.toggle('rotated');
 }
 
@@ -98,7 +71,7 @@ function ser(className, element) {
 
   open_close(style, object);
 
-  toggleDropdown(className, element); // Chama a função toggleDropdown para abrir/fechar o dropdown e aplicar a rotação
+  toggleDropdown(className, element);
 
   element.classList.toggle('open');
 }
@@ -110,7 +83,7 @@ function blog(className, element) {
 
   open_close(style, object);
 
-  toggleDropdown(className, element); // Chama a função toggleDropdown para abrir/fechar o dropdown e aplicar a rotação
+  toggleDropdown(className, element); 
 
   element.classList.toggle('open');
 }
@@ -121,7 +94,7 @@ function loja(className, element) {
 
   open_close(style, object);
 
-  toggleDropdown(className, element); // Chama a função toggleDropdown para abrir/fechar o dropdown e aplicar a rotação
+  toggleDropdown(className, element); 
 
   element.classList.toggle('open');
 }
@@ -132,12 +105,10 @@ function ask(className, element) {
 
   open_close(style, object);
 
-  toggleDropdown(className, element); // Chama a função toggleDropdown para abrir/fechar o dropdown e aplicar a rotação
+  toggleDropdown(className, element); 
 
   element.classList.toggle('open');
 }
-
-//VER MAIS -- PERGUNTAS FREQUENTES
 
 function pre_fq(className, element) {
   var object = document.querySelector(".fq-vermais");
@@ -145,12 +116,11 @@ function pre_fq(className, element) {
 
   open_close(style, object);
 
-  toggleDropdown(className, element); // Chama a função toggleDropdown para abrir/fechar o dropdown e aplicar a rotação
+  toggleDropdown(className, element); 
 
   element.classList.toggle('open');
 }
 
-//PARA MENU-BAR VISTA, DE PC
 
 function showDropdown(className) {
   var dropdown = document.querySelector('.' + className);
@@ -162,13 +132,10 @@ function hideDropdown(className) {
   dropdown.style.display = 'none';
 }
 
-//Rolagem para o topo
 
-// Obtém o botão e a janela de visualização
 var btTop = document.getElementById("bt-top");
 var scroll = document.documentElement;
 
-// Mostra o botão quando o usuário rolar 400px para baixo a partir do topo
 window.onscroll = function () {
   if (scroll.scrollTop > 150) {
     btTop.style.display = "block";
@@ -177,9 +144,8 @@ window.onscroll = function () {
   }
 };
 
-// Rolamento suave ao topo quando o botão é clicado
 btTop.addEventListener("click", function () {
-  scrollToTop(100); // Tempo de animação (em milissegundos)
+  scrollToTop(100);
 });
 
 function scrollToTop(duration) {

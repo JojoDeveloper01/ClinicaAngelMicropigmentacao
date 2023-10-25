@@ -1,5 +1,3 @@
-/************Slides a passarem automaticamente para mostrar varias coisas do site*************/
-
 .slideHome {
     position: relative;
 }
@@ -82,8 +80,6 @@ picture .simg2 {
     display: none;
 }
 
-/*button-marcar*/
-
 .texto-carousel a {
     display: flex;
 
@@ -102,9 +98,6 @@ picture .simg2 {
 .reser-buttonS {
     color: #000000;
 }
-
-
-/*-----NOSSO TEAM-----*/
 
 .nossoTeam {
     background-color: var(--corRoxo);
@@ -139,31 +132,6 @@ picture .simg2 {
     margin: 40px 0 0 0;
     padding: 0;
 }
-
-/*
-.saiba-mais {
-    color: rgba(0, 0, 0, 0.664);
-
-
-    position: relative;
-    text-align: center;
-
-    letter-spacing: 1px;
-
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px 0;
-
-    z-index: 99;
-}
-
-
-.saiba-mais:hover {
-    font-weight: bold;
-}
-*/
-
-/*Localizacoes dos espcos disponiveis*/
 
 .locais {
     background-color: var(--corBranca);
@@ -210,7 +178,7 @@ picture .simg2 {
     justify-content: center;
 
     font-size: 85%;
-    padding:40px;
+    padding: 40px;
     margin: 0;
 }
 
@@ -225,8 +193,6 @@ picture .simg2 {
 .localCtro b {
     opacity: 0.8;
 }
-
-/*--------------Nossos Servicos-----------*/
 
 .nossos-servicos {
     background-color: var(--corBranca);
@@ -278,8 +244,8 @@ picture .simg2 {
     text-align: center;
 }
 
-.nextSer{
-  z-index: 9;
+.nextSer {
+    z-index: 9;
 }
 
 .saiba-mais-ser {
@@ -292,8 +258,6 @@ picture .simg2 {
 .saiba-mais-ser:hover {
     font-weight: bold;
 }
-
-/*--------------RESERVVE JA-----------*/
 
 .reserve-ja {
     background-color: var(--corRoxo);
@@ -345,8 +309,6 @@ picture .simg2 {
     color: var(--corBranca);
     font-weight: bold;
 }
-
-/*********PREGUNTAS FREQUENTES***********/
 
 .perguntas-fq {
     background-color: var(--corBranca);
@@ -455,7 +417,6 @@ picture .simg2 {
     display: none;
 }
 
-/*TESTEMUNHAS*/
 
 .testemunhos {
     background-color: var(--corRoxo);
@@ -526,8 +487,6 @@ picture .simg2 {
     height: 18rem;
     margin: 2vh 0 0 0;
 }
-
-/*----------FORMULARIO------------*/
 
 .formulario {
     background-color: var(--corBranca);
@@ -606,7 +565,7 @@ picture .simg2 {
 .contact-form form button,
 .contact-form form input,
 .contact-form form textarea {
-    width: 100%;    
+    width: 100%;
     padding: .7em;
     border: none;
     background: none;
@@ -632,8 +591,6 @@ picture .simg2 {
     transition: background-color 1s ease-out;
     outline: 0;
 }
-
-/* CONTACT INFO */
 
 .contact-info {
     background: var(--corBranca);

@@ -9,8 +9,6 @@ header {
   z-index: 99999;   
 }
 
-/********** TElA PARA TELEMOVEIS ****************/
-
 .top-section {
   background-color: #888888;
   display: flex;
@@ -88,9 +86,6 @@ header {
   width: 50%;
 }
 
-/*****************************************************************TElA PARA TPCs ***************** ****************************************************/
-
-/*Para todos, menos os PCs, TVs*/
 
 nav {
   background-color: #ac7c5400;
@@ -130,8 +125,6 @@ nav {
   display: flex;
   padding: 0;
 }
-
-/*blocos de selecionar*/
 
 .here {
   border: 1px solid #dddddd;

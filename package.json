@@ -4,8 +4,7 @@
     "dotenv": "16.3.1",
     "express": "4.18.2",
     "morgan": "1.10.0",
-    "openai": "4.12.4",
-    "socket.io": "4.7.2"
+    "openai": "4.12.4"
   },
   "description": "Site para mostrar todos os serviços de beleza que nossa clinica oferece",
   "devDependencies": {
