@@ -3,7 +3,8 @@
 Website para marcar reservas de serviços de beleza, principalmente serviços de micropigmentação.
 
 ## Contexto do Website:
-Na Micropigmentação Angel, a nossa missão é realçar a beleza de cada pessoa, proporcionando autoconfiança e satisfação. Os nossos especialistas estão prontos para transformar o seu sorriso e realçar a sua melhor versão. Descubra a arte da micropigmentação feita com maestria e sinta-se mais confiante e radiante. Venha visitar-nos e descubra a verdadeira magia da beleza!
+Micropigmentação Angel é uma empresa especializada em serviços de micropigmentação, remoção de micro, tratamento de manchas e tatuagens. Os profissionais da Micropigmentação Angel são altamente qualificados e utilizam técnicas avançadas, bem como equipamentos de última geração, para oferecer resultados de alta qualidade aos clientes. A micropigmentação é uma técnica que consiste em implantar pigmentos na pele para corrigir imperfeições e realçar características faciais, tais como sobrancelhas, lábios e olhos. 
+A empresa tem como missão auxiliar os seus clientes a atingir a sua melhor versão, proporcionando resultados naturais e duradouros.
 
 #### O Website foi criado com:
 - HTML
