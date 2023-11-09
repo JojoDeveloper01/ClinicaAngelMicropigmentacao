@@ -6,4 +6,4 @@ const config = {
     PORT: process.env.PORT,
 };
 
-export default config;l19   
+export default config;
