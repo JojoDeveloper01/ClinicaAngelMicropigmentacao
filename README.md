@@ -1,11 +1,12 @@
 # <a href="https://clinicamicropigmentacao.up.railway.app/" target="_blank"> Micropigmentação Angel </a>
-Site: https://clinicamicropigmentacao.up.railway.app/
 
-Website para marcar reservas de serviços de beleza, principalmente serviços de micropigmentação.
-
-## Contexto do Website:
-Micropigmentação Angel é uma empresa especializada em serviços de micropigmentação, remoção de micro, tratamento de manchas e tatuagens. Os profissionais da Micropigmentação Angel são altamente qualificados e utilizam técnicas avançadas, bem como equipamentos de última geração, para oferecer resultados de alta qualidade aos clientes. A micropigmentação é uma técnica que consiste em implantar pigmentos na pele para corrigir imperfeições e realçar características faciais, tais como sobrancelhas, lábios e olhos. 
-A empresa tem como missão auxiliar os seus clientes a atingir a sua melhor versão, proporcionando resultados naturais e duradouros.
+Website de Estética/Micropigmentação Projeto de website/plataforma dedicado à micropigmentação
+estética e serviços de beleza. Neste projeto, os utilizadores podem explorar uma variedade de serviços de
+beleza, solicitar orçamentos personalizados e esclarecer dúvidas através de um sistema de mensagens
+integrado. O destaque deste projeto é a inclusão de um chatbot com IA personalizada, que fornece
+respostas informativas e acessíveis a qualquer momento. Este projeto demonstra a minha capacidade de
+desenvolver soluções completas e inovadoras para melhorar a experiência dos clientes na área de beleza e
+bem-estar 
 
 #### O Website foi criado com as seguintes tecnologias:
 - HTML
@@ -13,3 +14,5 @@ A empresa tem como missão auxiliar os seus clientes a atingir a sua melhor vers
 - JavaScript
 - Node.js
 - RailWay
+
+Site: <a href="https://clinicamicropigmentacao.up.railway.app">Micropigmentação Angel</a>
