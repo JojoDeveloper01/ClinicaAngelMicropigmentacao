@@ -68,7 +68,7 @@ body a {
 .boxChat {
   background-color: var(--corBranca);
   border: 2px solid #00000031;
-  border-radius: 5%;
+  border-radius: 3%;
   cursor: default;
 
   display: none;
@@ -346,13 +346,17 @@ footer {
   text-transform: capitalize;
 }
 
-.footer-bottom span {
+.footer-bottom a {
   color: #000;
   opacity: 0.8;
   font-weight: bold;
   text-transform: uppercase;
 }
 
+.footer-bottom a:hover {
+  opacity: 1;
+  font-weight: bolder;
+}
 
 .politica-de-privacidade {
   background-color: var(--corBranca);

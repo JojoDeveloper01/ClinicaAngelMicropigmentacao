@@ -109,7 +109,7 @@ picture .simg2 {
 
 .nossoTeam h1 {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0;
     opacity: 0.7;
 }
 
@@ -123,7 +123,8 @@ picture .simg2 {
     object-fit: cover;
 }
 
-.dimension-total .carousel-caption {
+.dimension-total .caption {
+    color: #000;
     position: relative;
     text-align: left;
     font-size: calc(0.5vw + 0.7em);
@@ -172,13 +173,17 @@ picture .simg2 {
     align-items: center;
 }
 
+.localCtro img {
+    object-fit: cover;
+}
+
 .localCtro p {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     font-size: 85%;
-    padding: 40px;
+    padding: 40px 30px;
     margin: 0;
 }
 
@@ -265,7 +270,7 @@ picture .simg2 {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     width: 100vw;
 }
@@ -572,8 +577,6 @@ picture .simg2 {
     outline: 0;
     color: #4b4b4b;
     border-bottom: 1px solid #4b4b4b;
-
-
 }
 
 .contact-form form button {

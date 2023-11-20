@@ -33,7 +33,7 @@ async function getOpenAIResponse(userMessage) {
         function replaceLinks(text) {
             const urlPattern = /(https?:\/\/[^\s]+)/g;
             return text.replace(urlPattern, (match) => {
-                return `<a href="${match}" target="_blank">${match}</a>`;
+                return `<a href="${match}" target="_blank" style="color:#5D5EF3;">${match}</a>`;
             });
         }
 
@@ -43,10 +43,11 @@ async function getOpenAIResponse(userMessage) {
             const phoneNumberPattern = /\b\d{3} \d{3} \d{3}\b/g;
             return text.replace(phoneNumberPattern, (match) => {
                 const whatsappLink = `https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0`;
-                return `<a href="${whatsappLink}" target="_blank">935407895</a>`;
+                return `<a href="${whatsappLink}" target="_blank" style="color:#5D5EF3;">935407895</a>`;
             });
         }
-
+    
+        responseContent = responseContent.replace(/-/g, "<br>-");
         responseContent = replaceNum(responseContent);
 
         return responseContent;

@@ -4,6 +4,27 @@
     height: 70px;
   }
 
+  .logo {
+    display: none;
+  }
+
+  .minitel {
+    display: block;
+    font-family: 'Vollkorn', serif;
+    font-size: 2.5vh;
+    font-weight: 900;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 25px;
+
+    margin-left: 20px;
+  }
+
+  .minitel span {
+    color: #e62fec;
+  }
+
   .block-call-icone,
   .block-menuNav-icone {
     height: 70px;
@@ -13,7 +34,6 @@
   .dropdown-nav li a {
     font-size: 13px;
   }
-
 
   .ctro-itemS {
     margin-top: 110px;
@@ -153,13 +173,6 @@
     right: -35%;
   }
 
-  .logo picture img {
-    max-width: 100px;
-    height: 56px;
-    position: relative;
-    left: 2.5em;
-  }
-
   .sideBar {
     width: 100vw;
   }
@@ -201,26 +214,6 @@
     width: 90vw;
   }
 
-  .ctro-logo {
-    width: 100%;
-  }
-
-  .logo {
-    position: relative;
-    width: 180px;
-    height: 0;
-    padding-top: calc(9 / 30 * 100%);
-  }
-
-  .logo picture img {
-    background-color: #d35e0b00;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-
   .sideBar {
     width: 80vw;
   }
@@ -241,20 +234,15 @@
 }
 
 @media only screen and (min-width: 455px) and (max-width: 600px) {
-  * {
-    background-color: rgba(0, 255, 255, 0);
-  }
 
-
-  .logo picture img {
-    width: 256px;
-    height: 73px;
+  .logo {
+    display: block;
+    font-size: medium;
     margin-left: 20px;
   }
 
-  .localCtro,
-  .localCtro img {
-    width: 80vw;
+  .minitel {
+    display: none;
   }
 
 }
@@ -267,16 +255,16 @@
 
   .menuStart {
     height: 100px;
+    padding-left: 20px;
+  }
+
+  .minitel {
+    display: none;
   }
 
   .block-call-icone,
   .block-menuNav-icone {
     width: 100px;
-  }
-
-  .logo img {
-    height: 95px;
-    width: 350px;
   }
 
   picture .slide-img {
@@ -403,7 +391,6 @@
   .box-test {
     margin: 4vh 3vw;
   }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -476,25 +463,23 @@
 
   .saiba-mais-ser {
     position: relative;
-
     bottom: 50%;
   }
 
   .reserve-ja {
-    text-align: left;
     flex-direction: inherit;
-    padding: 0 2vw;
+    padding: 0 15vw;
+    height: 20vh;
   }
 
-  .ctro-reser {
-    width: max(20%, 45%);
-    margin: 0 10%;
-  }
-
-  .ctro-reser h1,
-  .ctro-reser p {
+  .reserve-ja h1,
+  .reserve-ja p {
     text-align: left;
     padding: 0;
+  }
+
+  .border-rb {
+    margin-left: 5vw;
   }
 
   .contact-wrapperF {
@@ -637,10 +622,6 @@
     bottom: -10%;
   }
 
-  .reserve-ja {
-    padding: 3vh;
-  }
-
   .reserve-ja h1 {
     font-size: 1.5vw;
   }
@@ -713,6 +694,10 @@
 
   .saiba-mais-ser {
     bottom: -12%;
+  }
+
+  .reserve-ja {
+    padding: 0 20vw;
   }
 
 }

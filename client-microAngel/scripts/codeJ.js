@@ -83,7 +83,7 @@ function blog(className, element) {
 
   open_close(style, object);
 
-  toggleDropdown(className, element); 
+  toggleDropdown(className, element);
 
   element.classList.toggle('open');
 }
@@ -94,7 +94,7 @@ function loja(className, element) {
 
   open_close(style, object);
 
-  toggleDropdown(className, element); 
+  toggleDropdown(className, element);
 
   element.classList.toggle('open');
 }
@@ -105,7 +105,7 @@ function ask(className, element) {
 
   open_close(style, object);
 
-  toggleDropdown(className, element); 
+  toggleDropdown(className, element);
 
   element.classList.toggle('open');
 }
@@ -116,11 +116,10 @@ function pre_fq(className, element) {
 
   open_close(style, object);
 
-  toggleDropdown(className, element); 
+  toggleDropdown(className, element);
 
   element.classList.toggle('open');
 }
-
 
 function showDropdown(className) {
   var dropdown = document.querySelector('.' + className);
@@ -132,42 +131,25 @@ function hideDropdown(className) {
   dropdown.style.display = 'none';
 }
 
-
 var btTop = document.getElementById("bt-top");
-var scroll = document.documentElement;
 
 window.onscroll = function () {
-  if (scroll.scrollTop > 150) {
+  if (document.documentElement.scrollTop > 150) {
+    document.querySelector(".bt-top")
     btTop.style.display = "block";
-  } else {
+  }
+  else {
+    document.querySelector(".bt-top")
     btTop.style.display = "none";
   }
-};
-
-btTop.addEventListener("click", function () {
-  scrollToTop(100);
-});
-
-function scrollToTop(duration) {
-  var start = scroll.scrollTop;
-  var startTime = performance.now();
-
-  function animateScroll(currentTime) {
-    var elapsedTime = currentTime - startTime;
-    var ease = easeOutQuad(elapsedTime, start, -start, duration);
-    scroll.scrollTop = ease;
-    if (elapsedTime < duration) {
-      requestAnimationFrame(animateScroll);
-    }
-  }
-
-  function easeOutQuad(t, b, c, d) {
-    t /= d;
-    return -c * t * (t - 2) + b;
-  }
-
-  requestAnimationFrame(animateScroll);
 }
+
+btTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 function openChat() {
   var open = document.querySelector(".boxChat");
@@ -183,3 +165,38 @@ function quitChat() {
   }, 100);
 
 }
+
+document.querySelector('form')
+  .addEventListener('submit', event => {
+    event.preventDefault();
+
+    const data = Object.fromEntries(
+      new FormData(event.target)
+    )
+
+    const xhr = new XMLHttpRequest();
+
+    // Configurar a requisição
+    xhr.open('POST', '/send-email', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    // Converter o objeto de dados para uma string JSON
+    const jsonData = JSON.stringify(data);
+
+    // Enviar a requisição com os dados em JSON
+    xhr.send(jsonData);
+
+    // Manipular a resposta do servidor
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          // Sucesso
+          console.log('Requisição bem-sucedida:', xhr.responseText);
+        } else {
+          // Erro
+          console.error('Erro na requisição:', xhr.status);
+        }
+      }
+    }
+
+  });
