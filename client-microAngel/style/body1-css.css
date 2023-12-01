@@ -339,7 +339,7 @@ picture .simg2 {
 }
 
 .pre-fq-box {
-    background-color: antiquewhite;
+    background-color: #ffe2cd;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -537,7 +537,7 @@ picture .simg2 {
 }
 
 .contact-form {
-    background: var(--corRoxo);
+    background-color: var(--corRoxo);
 }
 
 .contact-form h3 {
@@ -587,11 +587,10 @@ picture .simg2 {
     padding: 1em;
 }
 
-.contact-form form button:hover,
-.contact-form form button:focus {
+.contact-form form button:hover {
     background: var(--corBranca);
     color: #4b4b4b;
-    transition: background-color 1s ease-out;
+    transition: background-color 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     outline: 0;
 }
 
@@ -619,4 +618,21 @@ picture .simg2 {
 
 #mail-form {
     word-wrap: break-word;
+}
+
+span.customAlert {
+    font-size: 0.9em;
+    color: #a72727;
+    font-weight: 400;
+}
+
+#nomeAlert,
+#telemovelAlert,
+#emailAlert,
+#mensagemAlert,
+#formatTelemovel,
+#formatEmail,
+#sucessAlert,
+#errorAlert {
+    display: none;
 }

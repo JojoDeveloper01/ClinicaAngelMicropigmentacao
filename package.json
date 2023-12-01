@@ -6,6 +6,7 @@
     "google-auth-library": "9.2.0",
     "googleapis": "^128.0.0",
     "morgan": "1.10.0",
+    "node-cron": "3.0.3",
     "nodemailer": "6.9.7",
     "openai": "4.12.4"
   },
@@ -21,7 +22,7 @@
   "main": "app.js",
   "name": "clinica_micropigmentacao",
   "scripts": {
-    "start": "node --watch ./server-microAngel/app.js"
+    "start": "NODE_OPTIONS='--experimental-json-modules' node --watch ./server-microAngel/app.js"
   },
   "type": "module",
   "version": "1.0.0"

@@ -166,37 +166,113 @@ function quitChat() {
 
 }
 
-document.querySelector('form')
-  .addEventListener('submit', event => {
-    event.preventDefault();
+const buttonForm = document.querySelector(".contact-form form button");
+document.querySelector('form').addEventListener('submit', handleSubmit);
 
-    const data = Object.fromEntries(
-      new FormData(event.target)
-    )
+function handleSubmit(event) {
+  event.preventDefault();
 
-    const xhr = new XMLHttpRequest();
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const telemovel = document.getElementById("telemovel").value;
+  const mensagem = document.getElementById("mensagem").value;
 
-    // Configurar a requisição
-    xhr.open('POST', '/send-email', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
+  let it_works = true;
 
-    // Converter o objeto de dados para uma string JSON
-    const jsonData = JSON.stringify(data);
+  clearAlerts();
 
-    // Enviar a requisição com os dados em JSON
-    xhr.send(jsonData);
+  if (!nome) {
+    it_works = false;
+    displayAlert("nomeAlert");
+  }
 
-    // Manipular a resposta do servidor
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          // Sucesso
-          console.log('Requisição bem-sucedida:', xhr.responseText);
-        } else {
-          // Erro
-          console.error('Erro na requisição:', xhr.status);
-        }
-      }
+  if (!mensagem) {
+    it_works = false;
+    displayAlert("mensagemAlert");
+  }
+
+  if (!telemovel && !email) {
+    it_works = false;
+    displayAlert("telemovelAlert");
+    displayAlert("emailAlert");
+  }
+
+  if (telemovel && !isValidPhoneNumber(telemovel)) {
+    it_works = false;
+    displayAlert("formatTelemovel");
+  }
+
+  if (email && !isValidEmail(email)) {
+    it_works = false;
+    displayAlert("formatEmail");
+  }
+
+  if (it_works === true) {
+    const data = Object.fromEntries(new FormData(event.target));
+    sendFormData(data);
+    const inputs = document.querySelectorAll('.contact-form form input');
+
+    inputs.forEach(input => {
+      input.value = '';
+    });
+
+    document.querySelector('.contact-form form textarea').value = '';
+  }
+}
+
+function sendFormData(data) {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('POST', '/send-email', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  const jsonData = JSON.stringify(data);
+
+  xhr.send(jsonData);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      handleResponse(xhr.status, xhr.responseText);
     }
+  };
+}
 
-  });
+function handleResponse(status, responseText) {
+  if (status === 200) {
+    buttonForm.style.backgroundColor = '#38d391';
+    buttonForm.style.transition = 'background-color 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28)';
+    displayAlert('sucessAlert')
+    console.log('Requisição bem-sucedida:', responseText);
+  } else {
+    buttonForm.style.backgroundColor = '#ff0050';
+    buttonForm.style.transition = 'background-color 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28)';
+    displayAlert('errorAlert')
+    console.error('Erro na requisição:', status);
+  }
+}
+
+function displayAlert(alertId) {
+  document.getElementById(alertId).style.display = "block";
+}
+
+function clearAlerts() {
+  const alerts = document.getElementsByClassName("customAlert");
+  for (const alert of alerts) {
+    alert.style.display = "none";
+  }
+}
+
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function isValidPhoneNumber(telefone) {
+  const numeroRegex = /^\d+$/;
+  return numeroRegex.test(telefone);
+}
+
+buttonForm.addEventListener("blur", function () {
+  this.style.backgroundColor = '';
+  this.style.transition = '';
+});

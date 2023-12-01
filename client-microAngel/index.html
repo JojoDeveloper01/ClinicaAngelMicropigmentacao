@@ -1013,31 +1013,38 @@
     <section class="formulario" id="reservar">
       <div class="form-box">
         <h1>CONTACTE<span>-NOS</span></h1>
-
         <div class="contact-wrapperF">
           <div class="contact-form">
             <h3>Marque uma consulta ou Pergunte-nos a sua dúvida</h3>
-            <form id="form-reserva">
+            <form id="form-reserva" novalidate>
               <p>
-                <label for="nome">Nome</label>
+                <label for="nome"><span style="color:#a72727">*</span> Nome</label>
                 <input type="text" name="nome" id="nome" autocomplete="given-name">
+                <span class="customAlert" id="nomeAlert">Preencher o campo.</span>
               </p>
               <p>
                 <label for="telemovel">Número de Telemóvel</label>
                 <input type="tel" name="telemovel" id="telemovel" autocomplete="tel">
+                <span class="customAlert" id="telemovelAlert">Preencher este campo ou email. </span>
+                <span class="customAlert" id="formatTelemovel"> Só são permitidos números neste campo.</span>
               </p>
               <p class="block">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" autocomplete="email">
+                <span class="customAlert" id="emailAlert">Preencher este campo ou telemovel. </span>
+                <span class="customAlert" id="formatEmail"> Formato de email não aceite.</span>
               </p>
               <p class="block">
-                <label for="mensagem">Mensagem</label>
+                <label for="mensagem"><span style="color:#a72727">*</span> Mensagem</label>
                 <textarea name="mensagem" id="mensagem" rows="3"></textarea>
+                <span class="customAlert" id="mensagemAlert">Preencher o campo.</span>
               </p>
               <p class="block">
                 <button type="submit">
                   Enviar
                 </button>
+                <span class="customAlert" id="sucessAlert" style="color: rgb(0 131 75);">Mensagem enviada com sucesso!</span>
+                <span class="customAlert" id="errorAlert"">Sua mensagem não foi enviada. Tente novamente mais tarde.</span>
               </p>
             </form>
           </div>
@@ -1064,7 +1071,6 @@
           </div>
         </div>
       </div>
-
     </section>
 
   </main>
@@ -1100,7 +1106,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-
 </body>
 
 </html>
