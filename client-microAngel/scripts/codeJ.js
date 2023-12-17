@@ -1,3 +1,8 @@
+function creditos() {
+  const panel = document.querySelector(".creditos-section");
+  panel.style.display = "block";
+}
+
 function showPanel(element) {
   var panel = document.querySelector(".sideBar");
 
@@ -167,7 +172,9 @@ function quitChat() {
 }
 
 const buttonForm = document.querySelector(".contact-form form button");
-document.querySelector('form').addEventListener('submit', handleSubmit);
+if (buttonForm) {
+  document.querySelector('form').addEventListener('submit', handleSubmit);
+}
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -272,7 +279,9 @@ function isValidPhoneNumber(telefone) {
   return numeroRegex.test(telefone);
 }
 
-buttonForm.addEventListener("blur", function () {
-  this.style.backgroundColor = '';
-  this.style.transition = '';
-});
+if (buttonForm) {
+  buttonForm.addEventListener("blur", function () {
+    this.style.backgroundColor = '';
+    this.style.transition = '';
+  });
+}

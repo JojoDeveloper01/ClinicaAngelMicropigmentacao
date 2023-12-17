@@ -57,17 +57,34 @@
     height: 40%;
   }
 
+  #fd {
+    background-image: linear-gradient(#ff9763, #ffc5a5);
+  }
+
+  #fd1 {
+    background-image: linear-gradient(#972c27, #f5cecc);
+  }
+
+  #fd2 {
+    background-image: linear-gradient(#018979, #a6ede5);
+  }
+
+  #fd3 {
+    background-image: linear-gradient(#9d2a58, #f7b8d2);
+  }
+
   .texto-carousel {
     padding: 20px 6vw;
   }
 
   .texto-carousel h2 {
-    font-size: max(15px, 3vh);
+    font-size: x-large;
   }
 
-  .texto-carousel p {
-    font-size: min(12px, 3vw);
+  div.texto-carousel p {
+    font-size: medium;
     padding: 5px 0;
+    margin: 4px 0 8px 0;
   }
 
   .border-slide {
@@ -81,7 +98,6 @@
     width: 50vw;
     height: 35vh;
   }
-
 
   .separar-titu {
     flex-direction: column;
@@ -155,13 +171,15 @@
     margin: 4vh 3vw;
   }
 
+
+  .politica-de-privacidade {
+    margin-left: 11%;
+    margin-right: 11%;
+  }
+
 }
 
 @media only screen and (max-width: 317px) {
-
-  * {
-    background-color: #d9909000;
-  }
 
   .bt-float button {
     width: 40px;
@@ -175,6 +193,15 @@
 
   .sideBar {
     width: 100vw;
+  }
+
+  .texto-carousel h2 {
+    font-size: larger;
+  }
+
+  div.texto-carousel p {
+    font-size: small;
+    margin: 6px 0 6px 0;
   }
 
   picture .slide-img,
@@ -245,6 +272,15 @@
     display: none;
   }
 
+  .texto-carousel {
+    align-items: center;
+    text-align: center;
+    padding: 0 76px;
+  }
+
+  .texto-carousel p {
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 601px) {
@@ -273,47 +309,44 @@
   }
 
   picture .simg,
-  picture .simg1 {
+  picture .simg1,
+  picture .simg2 {
     transform: scaleX(-1);
   }
 
   .fondo-distor {
     position: absolute;
-    left: 64%;
-    bottom: 40%;
-    transform: translate(-50%, 50%);
-    padding: 30px 20px;
+    left: 11%;
+    bottom: 13%;
+  }
 
-    width: 400px;
+  div.texto-carousel h2 {
+    font-weight: 900;
+  }
+
+  div.texto-carousel p {
+    line-height: 19px;
+    font-weight: 600;
+  }
+
+  #fd,
+  #fd1 {
+    background-image: none;
+  }
+
+  #fd2,
+  #fd3 {
+    background-image: none;
+    left: 60%;
   }
 
   .texto-carousel {
-    width: 70vw;
+    max-width: 300px;
   }
 
-  .texto-carousel h2 {
-    font-size: max(20px, 2.5vw);
-  }
-
-  .texto-carousel p {
-    font-size: min(23px, 1.5vw);
-    padding: 15px 20px;
-  }
-
-  .fd1 {
-    left: 65%;
-    bottom: 30%;
-  }
-
-  .fd3 {
-    left: 77%;
-    bottom: 55%;
-    transform: translate(-67%, 45%);
-  }
-
-  .border-slide {
-    position: relative;
-    padding: 25px;
+  button.border-slide {
+    padding: 40px;
+    background-color: #5353531f;
   }
 
   .dimension-total img {
@@ -391,13 +424,14 @@
   .box-test {
     margin: 4vh 3vw;
   }
+
+  .politica-de-privacidade {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-
-  * {
-    background-color: rgba(255, 172, 63, 0);
-  }
 
   .menuStart {
     height: 100px;
@@ -543,6 +577,24 @@
     display: flex;
   }
 
+  #fd {
+    background-image: linear-gradient(#ffede3, #b75321);
+  }
+
+  #fd1 {
+    background-image: linear-gradient(#ffe6e5, #83110c);
+  }
+
+  #fd2 {
+    left: inherit;
+    background-image: linear-gradient(#eefffd, #007f70);
+  }
+
+  #fd3 {
+    left: inherit;
+    background-image: linear-gradient(#ffebf3, #c10854);
+  }
+
   .fondo-distor,
   picture .slide-img {
     position: relative;
@@ -559,35 +611,34 @@
     margin-right: -1px;
   }
 
-  picture .simg1 {
-    transform: scale(1, 1.2);
-  }
-
-  picture .simg2 {
-    margin-left: -1px;
-  }
-
-  picture .simg2 {
-    transform: scaleX(-1);
-  }
-
   .texto-carousel {
     width: 35vw;
-    margin-top: 100px;
-    margin-right: 60px;
+    margin: 100px 0 0 65px;
   }
 
-  .tc1 {
-    margin-right: 0px;
-    margin-left: 60px;
-  }
-
+  .texto-carousel h2,
+  .texto-carousel p,
   .texto-carousel a {
-    height: 50px;
+    width: -webkit-fill-available;
   }
 
-  .border-slide {
-    margin-top: 13px;
+  div.texto-carousel h2 {
+    font-weight: 600;
+  }
+
+  #fd2 h2,
+  #fd3 h2 {
+    width: max-content;
+  }
+
+  div.texto-carousel p {
+    font-weight: inherit;
+    line-height: 26px;
+    width: 25rem;
+  }
+
+  button.border-slide {
+    background-color: transparent;
     padding: 30px;
     transition: padding 0.3s ease;
   }
@@ -640,6 +691,11 @@
     align-items: center;
   }
 
+  .politica-de-privacidade {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
 }
 
 @media only screen and (min-width: 1500px) {
@@ -666,6 +722,10 @@
 
   .imgPRE {
     display: none;
+  }
+
+  .texto-carousel {
+    margin: 100px 0 0 165px;
   }
 
   .localCtro {

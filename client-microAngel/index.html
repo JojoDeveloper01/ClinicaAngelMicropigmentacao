@@ -16,10 +16,7 @@
   <link rel="stylesheet" href="style/body1-css.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/image/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/image/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/image/icons/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="assets/image/icons/favicon.ico">
   <link rel="manifest" href="assets/image/icons/site.webmanifest">
   <title>Micropigmentação Angel</title>
 </head>
@@ -32,7 +29,7 @@
 
     <div class="boxChat">
       <div class="header-chat">
-        <img src="assets/image/icons/logoSakura.webp" width="45" height="45">
+        <img src="assets/image/icons/favicon.ico" width="45" height="45">
         <p>Info Chat</p>
         <span onclick="quitChat()"><i class="fa-solid fa-x fa-lg"></i></span>
       </div>
@@ -54,7 +51,7 @@
     </div>
 
     <div class="menuStart">
-      <a href="index.html" class="logo ">
+      <a href="index.html" class="logo">
         <span>Angel</span> Micropigmentação
       </a>
       <a href="index.html" class="minitel">
@@ -64,10 +61,10 @@
       <div class="end-menu">
         <div class="block-icons">
           <a href="https://wa.me/351935407895?text=Ola! Tenho uma duvida!" class="block-call-icone">
-            <img src="style/icons/phone1.svg" alt="Contactar com Angel, uma especialista em micropigmentação">
+            <img src="assets/image/icons/phone.svg" alt="Contactar com Angel, uma especialista em micropigmentação">
           </a>
           <button class="block-menuNav-icone" onclick="showPanel(document.querySelector('.distorted'))">
-            <img src="style/icons/menu.svg" alt="Menu de secções do site">
+            <img src="assets/image/icons/menu.svg" alt="Menu de secções do site">
           </button>
         </div>
       </div>
@@ -103,9 +100,7 @@
             </li>
 
             <li><a href="#testemunhas" onclick="exitdistorted()">TESTEMUNHAS</a></li>
-
           </ul>
-
           <ul class="social-midia" id="sm-tel">
             <li><a href="https://www.facebook.com/angelmicropigmentacion" target="_blank"><i
                   class="fa-brands fa-facebook fa-xl"></i></a></li>
@@ -120,7 +115,6 @@
                   class="fa fa-youtube fa-xl"></i></a></li>
           </ul>
         </div>
-
 
         <ul class="navOptions">
           <ul class="line1-menubar">
@@ -206,27 +200,16 @@
           <div class="carousel-item active" data-bs-interval="1000">
             <div class="ctro-itemS">
               <picture>
-                <source srcset="assets/image/servicos/micro-sobran.avif">
-                <source srcset="assets/image/servicos/micro-sobran.webp">
-                <img src="assets/image/servicos/micro-sobran.jpeg"
-                  alt="mulher com uma linda micropigmentação de sobrancelhas" class="slide-img simg">
-                <span class="text-contra"><a
-                    href="https://br.freepik.com/fotos-gratis/o-lindo-rosto-feminino-a-pele-perfeita-e-limpa-do-rosto-em-branco-a-beleza-cuidados-pele-tratamento-saude-spa-conceito-cosmetico_15859618.htm#&position=3&from_view=search&track=ais"
-                    target="_blank">Freepik</a> Image</span>
+                <source srcset="assets/image/servicos/micro_sobran.avif">
+                <img src="assets/image/servicos/micro_sobran.webp"
+                  alt="Mulher com uma linda micropigmentação de sobrancelhas" class="slide-img simg">
               </picture>
 
-              <div class="fondo-distor fd">
+              <div class="fondo-distor" id="fd">
                 <div class="texto-carousel">
                   <h2>MICROPIGMENTAÇÃO SOBRANCELHAS</h2>
-                  <p>A micropigmentação de sobrancelhas é um tratamento estético avançado que usa pigmentos
-                    para realçar e
-                    preencher as sobrancelhas, proporcionando um aspeto natural e atraente. Esqueça a maquilhagem diária
-                    e
-                    desfrute de sobrancelhas perfeitas em todas as ocasiões!</p>
-                  <p id="tiny-p">
-                    Realce natural e duradouro, dispensando maquilhagem diária. Diga adeus à maquilhagem diária e
-                    desfrute
-                    de sobrancelhas impecáveis em todas as situações!
+                  <p>Explore a magia simples da micropigmentação de sobrancelhas, um processo delicado que realça não
+                    apenas a aparência, mas também a autoconfiança, deixando um rasto de beleza autêntica.
                   </p>
 
                   <a href="#reservar">
@@ -245,25 +228,18 @@
                 <source srcset="assets/image/servicos/micro-labial-freepik.avif">
                 <source srcset="assets/image/servicos/micro-labial-freepik.webp">
                 <img src="assets/image/servicos/micro-labial-freepik.jpeg"
-                  alt="mulher com uma linda micropigmentação labial" class="slide-img simg1">
+                  alt="Mulher com uma linda micropigmentação labial" class="slide-img simg1">
                 <span class="text-contra"><a
                     href="https://br.freepik.com/fotos-gratis/feche-o-retrato-de-mulher-com-pele-hidratada_27370315.htm#&position=0&from_view=search&track=ais"
                     target="_blank">Freepik</a> Image</span>
               </picture>
 
-              <div class="fondo-distor fd1">
+              <div class="fondo-distor" id="fd1">
                 <div class="texto-carousel">
                   <h2>MICROPIGMENTAÇÃO LABIAL</h2>
-                  <p>Descubra a micropigmentação labial, uma arte que realça sua beleza única com contorno e cor
-                    perfeitos.
-                    Diga adeus ao batom constante e acolha lábios impecáveis em todas as ocasiões. Agende sua
-                    transformação labial e confie na experiência dos profissionais para um sorriso irresistível que
-                    perdura!</p>
-                  <p id="tiny-p">
-                    Descubra a micropigmentação labial, realce natural, lábios perfeitos. Despreocupe-se com retoques e
-                    aproveite a beleza duradoura. Seus lábios, sua confiança, sempre deslumbrantes!
+                  <p>A simplicidade de lábios perfeitamente desenhados, adicionando um toque de elegância à sua beleza
+                    natural.
                   </p>
-
                   <a href="#reservar">
                     <button class="border-slide">
                       <div class="reser-buttonS">MARCAR RESERVA</div>
@@ -272,22 +248,22 @@
                 </div>
               </div>
             </div>
-
           </div>
 
           <div class="carousel-item" data-bs-interval="1000">
             <div class="ctro-itemS">
-              <div class="fondo-distor fd2">
-                <div class="texto-carousel tc1">
+              <picture>
+                <source srcset="assets/image/servicos/limpeza_facial.jpg">
+                <source srcset="assets/image/servicos/limpeza_facial.webp">
+                <img src="assets/image/servicos/limpeza_facial.jpg" alt="Homem a fazer-se uma limpeza facial"
+                  class="slide-img simg2">
+              </picture>
+              <div class="fondo-distor" id="fd2">
+                <div class="texto-carousel">
                   <h2>LIMPEZA FACIAL</h2>
-                  <p> A limpeza facial é um ritual de cuidado que rejuvenesce a sua pele, removendo impurezas e
-                    proporcionando um brilho saudável e radiante. Descubra o segredo para uma pele luminosa e
-                    revitalizada
-                    com a nossa limpeza facial especializada!</p>
-                  <p id="tiny-p">
-                    A limpeza facial revitaliza sua pele, removendo impurezas para um brilho saudável. Experimente a
-                    nossa
-                    especialidade em cuidado facial!
+                  <p>
+                    Descubra a leveza da limpeza facial, um passo essencial para manter a sua pele equilibrada e
+                    radiante, de forma simples e eficaz.
                   </p>
 
                   <a href="#reservar">
@@ -297,32 +273,22 @@
                   </a>
                 </div>
               </div>
-
-              <picture>
-                <source srcset="assets/image/servicos/limpezaFacial.avif">
-                <source srcset="assets/image/servicos/limpezaFacial.webp">
-                <img src="assets/image/servicos/limpezaFacial.jpeg" alt="Homem a fazer-se uma limpeza facial"
-                  class="slide-img simg2">
-                <span id="text-contra"><a
-                    href="https://br.freepik.com/fotos-gratis/mulher-visitando-cosmetologista-e-fazendo-procedimentos-de-rejuvenescimento_12178259.htm#query=limpeza%20facial&position=5&from_view=search&track=ais"
-                    target="_blank">Freepik</a> Image</span>
-              </picture>
             </div>
           </div>
-
           <div class="carousel-item">
             <div class="ctro-itemS">
-              <div class="fondo-distor fd3">
-                <div class="texto-carousel tc1">
+              <picture>
+                <source srcset="assets/image/servicos/lifting_pestanas.avif">
+                <source srcset="assets/image/servicos/lifting_pestana.webp">
+                <img src="assets/image/servicos/lifting_pestana.jpeg" alt="Mulher a fazer-se um lifting de Pestanas"
+                  class="slide-img simg3">
+              </picture>
+              <div class="fondo-distor" id="fd3">
+                <div class="texto-carousel">
                   <h2>LIFTING DE PESTANAS</h2>
-                  <p> O lifting de pestanas é um procedimento revolucionário que realça e curva naturalmente as suas
-                    pestanas, abrindo o olhar e eliminando a necessidade de recorrer ao uso constante de máscars.
-                    Descubra um olhar cativante e deslumbrante com o nosso especializado lifting de pestanas!</p>
-                  <p id="tiny-p">
-                    O lifting de pestanas realça e curva naturalmente, abrindo o olhar e eliminando a necessidade de
-                    máscaras. Descubra um olhar cativante com o nosso especializado lifting de pestanas!
+                  <p>Experimente a simplicidade de cílios incrivelmente levantados, realçando a expressão dos seus
+                    olhos de maneira encantadora.
                   </p>
-
                   <a href="#reservar">
                     <button class="border-slide">
                       <div class="reser-buttonS">MARCAR RESERVA</div>
@@ -330,15 +296,6 @@
                   </a>
                 </div>
               </div>
-              <picture>
-                <source srcset="assets/image/servicos/lifting-pestanas.avif">
-                <source srcset="assets/image/servicos/lifting-pestanas.webp">
-                <img src="assets/image/servicos/lifting-pestanas.jpeg" alt="Mulher a fazer-se um lifting de Pestanas"
-                  class="slide-img simg2">
-                <span><a
-                    href="https://br.freepik.com/fotos-gratis/mao-de-alto-angulo-com-luva-segurando-o-pincel_30944924.htm#query=lifting%20pestanas&position=36&from_view=search&track=ais"
-                    target="_blank">Freepik</a> Image</span>
-              </picture>
             </div>
           </div>
         </div>
@@ -957,8 +914,7 @@
       <div class="ctro-testbox">
         <div class="box-test">
           <a href="https://goo.gl/maps/TeFJimsdnqERmXu47" target="_blank" class="ctro-img-nome">
-            <img
-              src="https://lh3.googleusercontent.com/a-/AD_cMMSBmXHxzJdkKtigT8vpUiQAD6yHfRNfZd3mADgtU0DEkQ=w36-h36-p-rp-mo-br100"
+            <img src="./assets/image/testemunhas/cliente1.png"
               alt="Foto da clienta Soraia Araujo que fez Micropigmentação">
             <h6>Soraia Araujo<br>⭐⭐⭐⭐⭐</h6>
           </a>
@@ -1043,31 +999,32 @@
                 <button type="submit">
                   Enviar
                 </button>
-                <span class="customAlert" id="sucessAlert" style="color: rgb(0 131 75);">Mensagem enviada com sucesso!</span>
+                <span class="customAlert" id="sucessAlert" style="color: rgb(0 131 75);">Mensagem enviada com
+                  sucesso!</span>
                 <span class="customAlert" id="errorAlert"">Sua mensagem não foi enviada. Tente novamente mais tarde.</span>
               </p>
             </form>
           </div>
-          <div class="contact-info">
-            <h4>Contactos Adicionais</h4>
-            <div><i class="fa-solid fa-location-dot"></i><a href="https://goo.gl/maps/cYxcvHsE3dmLaPj46"
-                target="_blank">Póvoa de Santa Iria</a></div>
-            <div><i class="fa-solid fa-location-dot"></i><a href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
-                target="_blank">Roma-Areeiro</a></div>
-            <div><i class="fas fa-phone"></i><a
-                href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
-                target="_blank">(+351)
-                935 407 895</a></div>
-            <div><i class="fas fa-envelope-open-text"></i><a id="mail-form"
-                href="mailto:angelbalcboniclinicamicropigme@gmail.com"
-                target="_blank">angelbalcboniclinicamicropigme@</a>
-            </div>
-            <br>
-            <p>Bem-vindos à Micropigmentação Angel, onde nossa missão é realçar a beleza de cada pessoa,
-              proporcionando autoconfiança e satisfação. Nossos especialistas estão prontos para transformar seus
-              sorrisos e ressaltar sua melhor versão. Descubra a arte da micropigmentação feita com maestria e
-              sinta-se mais confiante e radiante. Venha nos visitar e descubra a verdadeira magia da beleza!
-            </p>
+          <div class=" contact-info">
+                  <h4>Contactos Adicionais</h4>
+                  <div><i class="fa-solid fa-location-dot"></i><a href="https://goo.gl/maps/cYxcvHsE3dmLaPj46"
+                      target="_blank">Póvoa de Santa Iria</a></div>
+                  <div><i class="fa-solid fa-location-dot"></i><a href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
+                      target="_blank">Roma-Areeiro</a></div>
+                  <div><i class="fas fa-phone"></i><a
+                      href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
+                      target="_blank">(+351)
+                      935 407 895</a></div>
+                  <div><i class="fas fa-envelope-open-text"></i><a id="mail-form"
+                      href="mailto:angelbalcboniclinicamicropigme@gmail.com"
+                      target="_blank">angelbalcboniclinicamicropigme@</a>
+                  </div>
+                  <br>
+                  <p>Bem-vindos à Micropigmentação Angel, onde nossa missão é realçar a beleza de cada pessoa,
+                    proporcionando autoconfiança e satisfação. Nossos especialistas estão prontos para transformar seus
+                    sorrisos e ressaltar sua melhor versão. Descubra a arte da micropigmentação feita com maestria e
+                    sinta-se mais confiante e radiante. Venha nos visitar e descubra a verdadeira magia da beleza!
+                  </p>
           </div>
         </div>
       </div>
@@ -1094,8 +1051,31 @@
     </div>
     <hr class="linha-footer">
     <div class="footer-bottom">
-      <p>&copy; 2023 Micropigmentação Angel | <a href="politica-de-privacidade.html">Política de Privacidade</a>
-        <br>Desenvolvido por <a href="https://www.linkedin.com/in/joseth-balcazar-3bb450298/" target="_blank">J-set</a>
+      <p>&copy; 2023 Micropigmentação Angel <br> <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        | Desenvolvido por <a href="https://www.linkedin.com/in/joseth-balcazar-3bb450298/" target="_blank">J-set</a>
+
+        <br><a onclick="creditos()">Créditos</a>
+
+      <ul class="creditos-section" id="creditos">
+        <li><a
+            href="https://br.freepik.com/fotos-gratis/rosto-de-menina-bonita-pele-perfeita_8096956.htm#query=sobrancelhas&position=22&from_view=search&track=sph&uuid=ad37ea15-9835-4028-95fa-6a186ac2c0d4"
+            target="_blank">Sobrancelhas de uma mulher</a> |
+          <a href="https://br.freepik.com/fotos-gratis/feche-o-retrato-de-mulher-com-pele-hidratada_27370315.htm#&position=0&from_view=search&track=ais"
+            target="_blank">Labios de uma mulher</a>
+        </li>
+        <li>
+          <a href="https://br.freepik.com/fotos-gratis/terapeuta-feminina-lavando-o-rosto-de-um-cliente-do-sexo-masculino-enquanto-faz-um-tratamento-facial-em-um-spa_28030936.htm#query=limpeza%20de%20pele%20em%20homem&position=1&from_view=search&track=ais&uuid=7afc7135-82bd-4a81-a302-59e1caed7b43"
+            target="_blank">Limpeza Facial a um homem</a> |
+          <a href="https://br.freepik.com/fotos-gratis/mao-de-alto-angulo-segurando-o-cotonete-rosa_30944949.htm#query=lifting%20pestanas&position=2&from_view=search&track=ais&uuid=3c2ecdf7-24a4-453a-9b65-2268352d3772"
+            target="_blank">Lifting Pestanas a uma mulher
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank"></a> |
+          <a href="" target="_blank">
+          </a>
+        </li>
+      </ul>
       </p>
     </div>
   </footer>

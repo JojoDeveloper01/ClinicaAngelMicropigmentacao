@@ -11,8 +11,10 @@
     height: calc(100vh - var(--height-itemS));
 }
 
-picture .simg2 {
-    transform: scaleX(-1);
+picture .simg,
+picture .simg2,
+picture .simg3 {
+    object-fit: cover;
 }
 
 .ctro-itemS .text-contra {
@@ -43,37 +45,24 @@ picture .simg2 {
     z-index: 9;
 }
 
-.fd {
-    background-image: linear-gradient(to left, #ffffff, #E9CCB7, #D8AD8E);
-}
-
-.fd1 {
-    background-image: linear-gradient(to left, #ffffff, #d8a5a3, #c07774);
-}
-
-.fd2 {
-    background-image: linear-gradient(to right, #ffffff, #d1af96, #ac7b54);
-}
-
-.fd3 {
-    background-image: linear-gradient(to right, #ffffff, #e0bcad, #C98568);
-}
-
 .texto-carousel {
-    background-color: #e0985d00;
     position: relative;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    display: flex;
-
     user-select: none;
-    color: #000000;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .texto-carousel h2 {
-    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.texto-carousel p {
+    color: #ffffff;
+    line-height: 15px;
+    margin: 13px 0 23px 0;
 }
 
 #tiny-p {
@@ -81,10 +70,6 @@ picture .simg2 {
 }
 
 .texto-carousel a {
-    display: flex;
-
-    align-items: center;
-    width: auto;
     height: 50px;
 }
 
@@ -92,11 +77,11 @@ picture .simg2 {
     position: relative;
     display: flex;
     background-color: transparent;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
 }
 
 .reser-buttonS {
-    color: #000000;
+    color: #ffffff;
 }
 
 .nossoTeam {
@@ -251,6 +236,12 @@ picture .simg2 {
 
 .nextSer {
     z-index: 9;
+}
+
+.nextS .carousel-control-next,
+.nextS .carousel-control-prev {
+    opacity: .3;
+    width: 8%;
 }
 
 .saiba-mais-ser {
