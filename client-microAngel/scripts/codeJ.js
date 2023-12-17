@@ -1,7 +1,10 @@
-function creditos() {
-  const panel = document.querySelector(".creditos-section");
-  panel.style.display = "block";
+
+function nextSlide() {
+  const controlNext = document.querySelector(".carousel-control-next");
+  controlNext.click();
 }
+
+setInterval(nextSlide, 6000);
 
 function showPanel(element) {
   var panel = document.querySelector(".sideBar");
@@ -284,4 +287,9 @@ if (buttonForm) {
     this.style.backgroundColor = '';
     this.style.transition = '';
   });
+}
+
+function creditos() {
+  const panel = document.querySelector(".creditos-section");
+  panel.style.display = "block";
 }

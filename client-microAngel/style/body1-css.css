@@ -39,7 +39,7 @@ picture .simg3 {
 
 .fondo-distor {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 
     z-index: 9;
@@ -56,21 +56,16 @@ picture .simg3 {
 
 .texto-carousel h2 {
     color: #ffffff;
-    font-weight: 600;
 }
 
 .texto-carousel p {
     color: #ffffff;
-    line-height: 15px;
     margin: 13px 0 23px 0;
-}
-
-#tiny-p {
-    display: none;
 }
 
 .texto-carousel a {
     height: 50px;
+    width: fit-content;
 }
 
 .border-slide {
