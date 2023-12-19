@@ -171,10 +171,14 @@
     margin: 4vh 3vw;
   }
 
-
   .politica-de-privacidade {
     margin-left: 11%;
     margin-right: 11%;
+  }
+
+  .creditos-section a {
+    display: block;
+    width: auto;
   }
 
 }

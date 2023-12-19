@@ -23,7 +23,7 @@ function directMessages() {
 
         const messageUser = document.createElement('div');
         messageUser.classList.add('user-question');
-
+        
         const innerHTML = `
       <div class="ctro-chat">
           <img src="assets/image/servicos/depilacaoFIoFio.avif" width="30" height="30">
@@ -72,8 +72,8 @@ function directMessages() {
 
             const innerHTML = `
         <div class="ctro-chat">
-            <img src="assets/image/servicos/micro-labial-freepik.jpeg" width="30" height="30">
-            <p class="userName">Clinica GPT</p>
+            <img src="assets/image/icons/favicon.ico" width="30" height="30">
+            <p class="userName">Clínica GPT</p>
         </div>
         <p class="chat">${message}</p>
         <hr class="space-hr">`;
