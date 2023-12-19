@@ -343,10 +343,18 @@ footer {
   line-height: 30px;
   word-spacing: 2px;
   text-transform: capitalize;
+  margin: 0;
 }
 
 .footer-bottom a {
   color: #000;
+  opacity: 0.8;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-bottom label p {
+  cursor: pointer;
   opacity: 0.8;
   font-weight: bold;
   text-transform: uppercase;
@@ -357,56 +365,37 @@ footer {
   font-weight: bolder;
 }
 
-main.privacidade {
-  padding-top: 150px;
+#toggle-creditos {
+  display: none;
 }
 
-.politica-de-privacidade {
-  position: relative;
-  margin-bottom: 150px;
-}
-
-.politica-de-privacidade h1,
-.politica-de-privacidade h2,
-.politica-de-privacidade h3,
-.politica-de-privacidade h4,
-.politica-de-privacidade h5 {
-  text-align: center;
-  margin: 50px 0;
-  font-weight: bold;
-  color: #313131;
-}
-
-.politica-de-privacidade li {
-  font-size: smaller;
-  font-weight: bold;
-  opacity: 0.7;
-}
-
-.politica-de-privacidade p {
-  font-size: smaller;
-  text-align: left;
-  margin: 10px 0;
-  opacity: 0.7;
-}
-
-.politica-de-privacidade a {
-  color: rgb(37, 56, 109);
+#toggle-creditos:checked+.creditos-section {
+  display: block;
 }
 
 .creditos-section {
-  background-color: #ef83f300;
   display: none;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
 }
 
 .creditos-section a {
   font-size: small;
   font-weight: 200;
+  text-align: center;
+  border: 1px solid black;
+
+  display: inline-block;
+  width: 270px;
+  padding: 0;
 }
 
 .creditos-section a:hover {
   font-weight: inherit;
+}
+
+.creditos-section li:first-child {
+  margin: 8px 0 14px 0;
+  border: inherit;
 }

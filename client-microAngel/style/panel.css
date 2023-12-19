@@ -12,7 +12,7 @@
 }
 
 .sideBar {
-    background-color: rgb(255, 252, 239);
+    background-color: var(--corBranca);
     display: none;
     position: fixed;
     justify-content: center;

@@ -1,7 +1,9 @@
 
 function nextSlide() {
   const controlNext = document.querySelector(".carousel-control-next");
+  const controlNext1 = document.querySelector(".ccn");
   controlNext.click();
+  controlNext1.click();
 }
 
 setInterval(nextSlide, 6000);
