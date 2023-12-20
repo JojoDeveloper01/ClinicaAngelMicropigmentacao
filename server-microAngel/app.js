@@ -90,7 +90,7 @@ app.post("/send-email", (req, res) => {
         })
         .then((result) => {
             console.log('Email sent...', result);
-            res.json({ success: true });    
+            res.json({ success: true });
         })
         .catch((error) => {
             console.error('Erro ao enviar o e-mail:', error.message);
@@ -111,6 +111,15 @@ app.post("/send-message", async (req, res) => {
 app.disable('x-powered-by')
 app.use(logger('dev'))
 app.use(express.static('client-microAngel'));
+
+app.use((req, res, next) => {
+    if (req.hostname === "clinicamicropigmentacao.up.railway.app") {
+        console.log("n deu mano.....",req.url);
+        return res.redirect("https://clinicamicropigmentacao.com" + req.url);
+    }
+    next();
+    console.log("n deu mano.....",req.url);
+});
 
 app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/client-microAngel/index.html');
