@@ -113,8 +113,8 @@ app.use(logger('dev'))
 app.use(express.static('client-microAngel'));
 
 app.use((req, res, next) => {
-    if (req.hostname === "domain.up.railway.app") {
-        return res.redirect("https://domain.com" + req.url);
+    if (req.hostname === "clinicamicropigmentacao.up.railway.app") {
+        return res.redirect("https://clinicamicropigmentacao.com" + req.url);
     }
     next();
 });
