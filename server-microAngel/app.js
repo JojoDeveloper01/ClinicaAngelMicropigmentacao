@@ -112,13 +112,6 @@ app.disable('x-powered-by')
 app.use(logger('dev'))
 app.use(express.static('client-microAngel'));
 
-app.use((req, res, next) => {
-    if (!req.hostname.startsWith("www.") || (req.headers["x-forwarded-proto"] || "").endsWith("http"))
-        res.redirect(`https://${req.hostname.startsWith("www.") ? "" : "www."}${req.hostname}${req.url}`);
-    else
-        next();
-});
-
 app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/client-microAngel/index.html');
 });
