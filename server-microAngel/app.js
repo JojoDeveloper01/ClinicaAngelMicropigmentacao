@@ -112,6 +112,17 @@ app.disable('x-powered-by')
 app.use(logger('dev'))
 app.use(express.static('client-microAngel'));
 
+function wwwRedirect(req, res, next) {
+    if (req.headers.host.slice(0, 4) === 'www.') {
+        const newHost = req.headers.host.slice(4);
+        return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl);
+    }
+    next();
+};
+
+app.set('trust proxy', true);
+app.use(wwwRedirect);
+
 app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/client-microAngel/index.html');
 });
