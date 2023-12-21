@@ -112,12 +112,16 @@ app.disable('x-powered-by')
 app.use(logger('dev'))
 app.use(express.static('client-microAngel'));
 
-if (req.host == "clinicamicropigmentacao.up.railway.app") res.redirect("clinicamicropigmentacao.com")
+app.use((req, res, next) => {
+    if (req.hostname === "domain.up.railway.app") {
+        return res.redirect("https://domain.com" + req.url);
+    }
+    next();
+});
 
 app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/client-microAngel/index.html');
 });
-
 app.listen(port, '0.0.0.0', () => {
     console.log(`Servidor ouvindo na porta ${port}`);
 });
