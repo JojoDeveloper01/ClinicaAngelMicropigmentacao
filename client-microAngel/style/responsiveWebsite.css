@@ -35,14 +35,13 @@
     font-size: 13px;
   }
 
-  .ctro-itemS {
-    margin-top: 110px;
-    --height-itemS: 110px;
+  main {
+    --tam: 110px;
   }
 
-  picture .slide-img {
-    height: 60%;
-    width: 100vw;
+  .slide-img {
+    height: 50%;
+    width: 100%;
     margin: 0;
   }
 
@@ -53,8 +52,8 @@
 
   .fondo-distor {
     position: relative;
-    width: 100vw;
-    height: 40%;
+    width: 100%;
+    height: 50%;
   }
 
   #fd {
@@ -232,9 +231,6 @@
 }
 
 @media only screen and (min-width: 318px) and (max-width: 454px) {
-  * {
-    background-color: rgba(250, 0, 187, 0);
-  }
 
   .bt-float button {
     width: 40px;
@@ -289,10 +285,6 @@
 
 @media only screen and (min-width: 601px) {
 
-  * {
-    background-color: rgba(42, 202, 63, 0);
-  }
-
   .menuStart {
     height: 100px;
     padding-left: 20px;
@@ -313,7 +305,6 @@
   }
 
   picture .simg,
-  picture .simg1,
   picture .simg2 {
     transform: scaleX(-1);
   }
@@ -539,8 +530,8 @@
 
 @media only screen and (min-width: 992px) {
 
-  * {
-    background-color: rgba(0, 0, 255, 0);
+  main {
+    --tam: 111px;
   }
 
   .menuStart {
@@ -603,21 +594,14 @@
   picture .slide-img {
     position: relative;
     width: 50vw;
+    height: 100%;
     left: inherit;
     bottom: inherit;
     transform: inherit;
   }
 
-  picture .slide-img {
-    margin-top: 110px;
-    height: calc(100vh - 110px);
-    width: calc(50vw + 1px);
-    margin-right: -1px;
-  }
-
   .texto-carousel {
-    width: 35vw;
-    margin: 100px 0 0 65px;
+    margin-left: 5vw;
   }
 
   .texto-carousel h2,
@@ -678,7 +662,7 @@
   }
 
   .reserve-ja h1 {
-    font-size: 1.5vw;
+    font-size: 1.9vw;
   }
 
   .reserve-ja p {
@@ -728,10 +712,6 @@
     display: none;
   }
 
-  .texto-carousel {
-    margin: 100px 0 0 165px;
-  }
-
   .localCtro {
     flex-direction: row;
     width: 45vw;
@@ -761,7 +741,20 @@
   }
 
   .reserve-ja {
+    height: 24vh;
     padding: 0 20vw;
+  }
+
+  button.border-rb {
+    padding: 4vh 3vw;
+  }
+
+  button.border-rb:hover {
+    padding: 4.5vh 3.5vw;
+  }
+
+  .reser-button {
+    font-size: 1vw;
   }
 
 }

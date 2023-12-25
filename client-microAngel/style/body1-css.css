@@ -8,7 +8,7 @@
 
 .ctro-itemS {
     width: 100vw;
-    height: calc(100vh - var(--height-itemS));
+    height: calc(100vh - var(--tam));
 }
 
 picture .simg,

@@ -27,7 +27,7 @@ function directMessages() {
         const innerHTML = `
       <div class="ctro-chat">
           <img src="assets/image/servicos/depilacaoFIoFio.avif" width="30" height="30">
-          <p class="userName">User</p>
+          <p class="userName">Utilizador</p>
       </div>
       <p class="chat">${message}</p>
       <hr class="space-hr">`;

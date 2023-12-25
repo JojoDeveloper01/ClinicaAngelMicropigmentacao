@@ -11,6 +11,7 @@ html {
 :root {
   --corRoxo: #ef83f3;
   --corBranca: #F4F4F4;
+  --tam: 140px;
 }
 
 body {
@@ -33,6 +34,10 @@ body a {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+main {
+  margin-top: var(--tam);
 }
 
 .bt-float {
@@ -401,7 +406,7 @@ footer {
 }
 
 main.privacidade {
-  padding-top: 150px;
+  padding-top: 50px;
 }
 
 .politica-de-privacidade {
