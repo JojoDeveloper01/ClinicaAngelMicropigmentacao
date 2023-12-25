@@ -50,16 +50,16 @@
 
     <header>
         <div class="top-section">
-            <a href="#reservar" class="block-appointment">
+            <a href="./#reservar" class="block-appointment">
                 <p>MARCAR CONSULTA</p>
             </a>
         </div>
 
         <div class="menuStart">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <span>Clínica</span> Angel Micropigmentação
             </a>
-            <a href="index.html" class="minitel">
+            <a href="/" class="minitel">
                 <span>Clínica</span> Angel
             </a>
 
@@ -81,33 +81,41 @@
                     <button type="button" class="btn-close" aria-label="Close"
                         onclick="quitPanel(document.querySelector('.distorted'))"></button>
                     <ul class="nav-panel">
-                        <li><a href="index.html" onclick="exitdistorted()">INÍCIO</a></li>
-                        <li><a href="#sobre-nos" onclick="exitdistorted()">SOBRE NÓS</a></li>
+                        <li><a href="/" onclick="exitdistorted()">INÍCIO</a></li>
+                        <li><a href="./#sobre-nos" onclick="exitdistorted()">SOBRE NÓS</a></li>
 
                         <li>
-                            <a href="#servicos" onclick="exitdistorted()" class="dropdownActive">SERVIÇOS</a>
+                            <a href="./#servicos" onclick="exitdistorted()" class="dropdownActive">SERVIÇOS</a>
                             <span onclick="ser('dropdown1', this)">></span>
                             <ul class="dropdown1 dropdown-nav">
-                                <li><a href="#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO SOBRANCELHAS</a></li>
-                                <li><a href="#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO BOCA</a></li>
-                                <li><a href="#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO OLHOS</a></li>
-                            </ul>
-                        </li>
-
-
-                        <li>
-                            <a href="#perguntas" onclick="exitdistorted()" class="dropdownActive">PERGUNTAS</a>
-                            <span onclick="ask('dropdown4', this)">></span>
-                            <ul class="dropdown4 dropdown-nav">
-                                <li><a href="#pg1" onclick="exitdistorted()">O QUE É MICROPIGMENTAÇÃO?</a></li>
-                                <li><a href="#pg2" onclick="exitdistorted()">A MICROPIGMENTAÇÃO DÓI?</a></li>
-                                <li><a href="#pg3" onclick="exitdistorted()">QUANTO TEMPO DURA A MICROPIGMENTAÇÃO?</a>
+                                <li><a href="./#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO
+                                        SOBRANCELHAS</a></li>
+                                <li><a href="./#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO BOCA</a>
+                                </li>
+                                <li><a href="./#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO OLHOS</a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li><a href="#testemunhas" onclick="exitdistorted()">TESTEMUNHAS</a></li>
+
+                        <li>
+                            <a href="./#perguntas" onclick="exitdistorted()" class="dropdownActive">PERGUNTAS</a>
+                            <span onclick="ask('dropdown4', this)">></span>
+                            <ul class="dropdown4 dropdown-nav">
+                                <li><a href="./#pg1" onclick="exitdistorted()">O QUE É MICROPIGMENTAÇÃO?</a>
+                                </li>
+                                <li><a href="./#pg2" onclick="exitdistorted()">A MICROPIGMENTAÇÃO DÓI?</a>
+                                </li>
+                                <li><a href="./#pg3" onclick="exitdistorted()">QUANTO TEMPO DURA A
+                                        MICROPIGMENTAÇÃO?</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="./#testemunhas" onclick="exitdistorted()">TESTEMUNHAS</a></li>
+
                     </ul>
+
                     <ul class="social-midia" id="sm-tel">
                         <li><a href="https://www.facebook.com/angelmicropigmentacion" target="_blank"><i
                                     class="fa-brands fa-facebook fa-xl"></i></a></li>
@@ -122,22 +130,23 @@
                     </ul>
                 </div>
 
+
                 <ul class="navOptions">
                     <ul class="line1-menubar">
-                        <a href="index.html">
+                        <a href="/">
                             <li>
                                 <div class="select here"></div>
                                 <p>INÍCIO</p>
                             </li>
                         </a>
 
-                        <a href="#sobre-nos">
+                        <a href="./#sobre-nos">
                             <li>
                                 <div class="select"></div>
                                 <p>SOBRE NÓS</p>
                             </li>
                         </a>
-                        <a href="#contactos">
+                        <a href="./#contactos">
                             <li>
                                 <div class="select"></div>
                                 <p>CONTACTOS</p>
@@ -147,31 +156,31 @@
                     <ul class="line2-menubar">
 
                         <li onmouseover="showDropdown('dropdownPC1')" onmouseout="hideDropdown('dropdownPC1')">
-                            <a href="#servicos">
+                            <a href="./#servicos">
                                 <div class="select-drop"></div>
                                 <p>SERVIÇOS</p>
                             </a>
                             <div class="dropdown-PCnav dropdownPC1" onmouseover="showDropdown('dropdownPC1')"
                                 onmouseout="hideDropdown('dropdownPC1')">
-                                <a href="#servicos">Micropigmentação Sobrancelhas</a>
-                                <a href="#servicos">Micropigmentação Labial</a>
-                                <a href="#servicos">Micropigmentação Olhos</a>
+                                <a href="./#servicos">Micropigmentação Sobrancelhas</a>
+                                <a href="./#servicos">Micropigmentação Labial</a>
+                                <a href="./#servicos">Micropigmentação Olhos</a>
                             </div>
                         </li>
                         <li onmouseover="showDropdown('dropdownPC2')" onmouseout="hideDropdown('dropdownPC2')">
-                            <a href="#perguntas">
+                            <a href="./#perguntas">
                                 <div class="select-drop"></div>
                                 <p>PERGUNTAS</p>
                             </a>
                             <div class="dropdown-PCnav dropdownPC2" onmouseover="showDropdown('dropdownPC2')"
                                 onmouseout="hideDropdown('dropdownPC2')">
-                                <a href="#pg1">O que é micropigmentação?</a>
-                                <a href="#pg2">A micropigmentação dói?</a>
-                                <a href="#pg3">Quanto tempo dura a micropigmentação?</a>
+                                <a href="./#pg1">O que é micropigmentação?</a>
+                                <a href="./#pg2">A micropigmentação dói?</a>
+                                <a href="./#pg3">Quanto tempo dura a micropigmentação?</a>
                             </div>
                         </li>
 
-                        <a href="#testemunhas">
+                        <a href="./#testemunhas">
                             <li>
                                 <div class="select"></div>
                                 <p>TESTEMUNHAS</p>
