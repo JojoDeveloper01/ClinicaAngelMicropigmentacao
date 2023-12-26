@@ -134,6 +134,10 @@ picture .simg3 {
     z-index: 1;
 }
 
+.locais h1 a {
+    color: #000;
+}
+
 .locais h2 {
     font-size: 40px;
     opacity: 0.6;
@@ -212,7 +216,7 @@ picture .simg3 {
     object-fit: cover;
 }
 
-.card-body {
+.card-servicos {
     background-color: var(--corBranca);
     display: flex;
     justify-content: center;
@@ -222,7 +226,7 @@ picture .simg3 {
     padding: 0;
 }
 
-.card-text {
+.card-text-servicos {
     font-size: 14px;
     opacity: 0.8;
     text-align: center;
@@ -352,6 +356,7 @@ picture .simg3 {
 }
 
 .pre-fq-box a {
+    color: #000;
     font-size: 0.8em;
     position: relative;
     bottom: 0;
@@ -602,6 +607,7 @@ picture .simg3 {
 }
 
 #mail-form {
+    font-size: smaller;
     word-wrap: break-word;
 }
 

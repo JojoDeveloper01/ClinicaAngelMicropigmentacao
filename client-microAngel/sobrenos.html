@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style/panel.css">
     <link rel="stylesheet" href="style/responsiveWebsite.css">
     <link rel="stylesheet" href="style/body1-css.css">
+    <link rel="stylesheet" href="style/body2-css.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="assets/image/icons/favicon.ico">
@@ -57,10 +58,10 @@
         </div>
 
         <div class="menuStart">
-            <a href="/" class="logo">
+            <a href="./" class="logo">
                 <span>Clínica</span> Angel Micropigmentação
             </a>
-            <a href="/" class="minitel">
+            <a href="./" class="minitel">
                 <span>Clínica</span> Angel
             </a>
 
@@ -82,8 +83,8 @@
                     <button type="button" class="btn-close" aria-label="Close"
                         onclick="quitPanel(document.querySelector('.distorted'))"></button>
                     <ul class="nav-panel">
-                        <li><a href="/" onclick="exitdistorted()">INÍCIO</a></li>
-                        <li><a href="./#sobre-nos" onclick="exitdistorted()">SOBRE NÓS</a></li>
+                        <li><a href="./" onclick="exitdistorted()">INÍCIO</a></li>
+                        <li><a href="./sobrenos.html" onclick="exitdistorted()">SOBRE NÓS</a></li>
 
                         <li>
                             <a href="./#servicos" onclick="exitdistorted()" class="dropdownActive">SERVIÇOS</a>
@@ -134,16 +135,16 @@
 
                 <ul class="navOptions">
                     <ul class="line1-menubar">
-                        <a href="/">
+                        <a href="./">
                             <li>
-                                <div class="select here"></div>
+                                <div class="select"></div>
                                 <p>INÍCIO</p>
                             </li>
                         </a>
 
-                        <a href="./#sobre-nos">
+                        <a href="./sobrenos.html">
                             <li>
-                                <div class="select"></div>
+                                <div class="select here"></div>
                                 <p>SOBRE NÓS</p>
                             </li>
                         </a>
@@ -207,7 +208,118 @@
     </header>
 
     <main>
+        <section class="sobrenos">
+            <div class="back-sobrenos"></div>
+            <div class="sobrenos-img">
+                <div class="sobrenos-box">
+                </div>
+            </div>
+            <div class="sobrenos-texto">
+                <h1>Clínica Angel Micropigmentação</h1>
+                <p>Onde a beleza se harmoniza com a natureza. Descubra as artes do microblading, micropigmentação
+                    ocular, capilar, labial e serviços especializados de remoção de manchas.
+                </p>
+            </div>
+        </section>
 
+        <section class="body">
+            <h3>Procedimentos</h3>
+            <p>
+                A Clínica Angel Micropigmentação destaca-se como um estabelecimento especializado em técnicas
+                avançadas
+                de realce estético, situado em <a href="./#locais">Lisboa</a>. Nosso foco principal recai sobre
+                procedimentos como microblading, micropigmentação de olhos, capilar e labial</a>,
+                além de oferecer serviços especializados em remoção de manchas e correções de micropigmentação.
+            </p>
+            <a href="./#servicos">Saber mais sobre serviços</a>
+
+            <h3>Compromisso</h3>
+            <p>
+                Nossa abordagem cuidadosa e experiente visa realçar a beleza natural de cada indivíduo,
+                proporcionando
+                resultados notáveis e duradouros. Inspirados pelo compromisso com a excelência, buscamos sempre
+                aprimorar nossas técnicas e permanecer atualizados com as inovações no campo da micropigmentação.
+            </p>
+
+            <h3>Confiança</h3>
+            <p>
+                Na <strong>Clínica Angel Micropigmentação</strong>, nosso objetivo é proporcionar aos nossos
+                clientes
+                uma experiência
+                confiável e satisfatória, onde a qualidade e a segurança estão sempre em primeiro plano. Estamos
+                ansiosos para continuar aprimorando e expandindo nossa oferta de serviços, garantindo que cada
+                cliente
+                se sinta confiante e satisfeito com os resultados alcançados.
+            </p>
+            <a href="./#testemunhas">Ver mais sobre as experiências dos nosso clientes</a>
+
+            <h3>Visão Futura</h3>
+            <p>
+                À medida que avançamos, aspiramos a continuar oferecendo serviços de qualidade e excelência em
+                estética.
+                Almejamos ser reconhecidos como referência na área, mantendo nossa dedicação a padrões elevados e
+                inovação constante.
+            </p>
+            <br>
+            <h1>Profissionais</h1>
+            <div class="card-group">
+                <div class="card">
+                    <picture>
+                        <source srcset="./assets/image/profissionais/AngelFotodePerfil1.avif"">
+                        <img src=" ./assets/image/profissionais/AngelFotodePerfil1.webp" class="card-img-top"
+                            alt="...">
+                    </picture>
+                    <div class="card-body">
+                        <h5 class="card-title">Angel</h5>
+                        <p class="card-text">Formada inicialmente em Técnico em Enfermagem, descobriu em 2014 a
+                            verdadeira paixão: elevar a beleza natural com maquilhagem semipermanente. Especializada em
+                            microblading, micropigmentação de olhos, lábios, capilar, aréola remoção, tatuagens e
+                            manchas.</p>
+                        <p class="card-text"><small class="text-body-secondary"><a href="./#servicos">Ver serviços da
+                                    Angel</a></small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <picture>
+                        <source srcset="./assets/image/profissionais/EsperanzaFotodePerfil.avif"">
+                        <img src=" ./assets/image/profissionais/EsperanzaFotodePerfil.webp" class="card-img-top"
+                            alt="...">
+                    </picture>
+                    <div class="card-body">
+                        <h5 class="card-title">Esperanza</h5>
+                        <p class="card-text">
+                            Enfermeira desde 1982, nutricionista desde 2000, e esteticista desde 2001. Dedicada ao
+                            conforto e bem-estar das pessoas. Profissional em massagens relaxantes corporais e faciais,
+                            drenagem linfática e limpezas faciais.
+                        </p>
+                        <p class="card-text"><small class="text-body-secondary"><a href="./#servicos">Ver serviços da
+                                    Esperanza</a></small></p>
+                    </div>
+                </div>
+            </div>
+
+            <h1 id="titulo-social">Redes Sociais</h1>
+            <section class="social">
+                <div class="elfsight-app-e2eaee2f-76d4-44ae-9577-f9ee18f0bccc red" style="z-index:0!important"
+                    data-elfsight-app-lazy></div>
+                <div class="elfsight-app-df3b1f3b-215d-40e9-9791-ef436b43ad39 red" style="z-index:0!important"
+                    data-elfsight-app-lazy></div>
+                <div class="elfsight-app-010d6128-b09a-47b3-9a50-b0232fe196f4 red whas" style="z-index:0!important"
+                    data-elfsight-app-lazy></div>
+            </section>
+
+        </section>
+
+        <section class="reserve-ja">
+            <div class="ctro-reser">
+                <h1>RESERVE O SEU MOMENTO DE BELEZA</h1>
+                <p>Agende uma consulta e deixe-se cuidar pelos nossos profissionais especializados</p>
+            </div>
+            <a href="./#reservar"><button class="border-rb">
+                    <span class="reser-button">MARCAR RESERVA</span>
+                </button>
+            </a>
+        </section>
     </main>
 
     <footer>
@@ -294,6 +406,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
 </body>
 
 </html>

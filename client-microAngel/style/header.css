@@ -6,7 +6,7 @@ header {
   width: 100vw;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 999;
 }
 
 .top-section {
@@ -41,9 +41,13 @@ header {
   align-items: center;
 }
 
+.menuStart a{
+  color:#000;
+}
+
 .logo {
   font-family: 'Vollkorn', serif;
-  font-size:x-large;
+  font-size: x-large;
   font-weight: 900;
   opacity: 0.7;
   text-transform: uppercase;

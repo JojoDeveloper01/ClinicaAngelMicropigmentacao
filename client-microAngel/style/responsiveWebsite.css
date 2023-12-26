@@ -170,9 +170,9 @@
     margin: 4vh 3vw;
   }
 
-  .politica-de-privacidade {
-    margin-left: 11%;
-    margin-right: 11%;
+  section.body {
+    margin-left: 10%;
+    margin-right: 5%;
   }
 
   .creditos-section a {
@@ -221,11 +221,34 @@
   }
 
   #phone-tiny {
-    font-size: 1.5vh;
+    font-size: x-small;
   }
 
   .box-test {
     margin-bottom: 10vh;
+  }
+
+  a.emailChato {
+    font-size: smaller;
+  }
+
+  section div.sobrenos-texto {
+    width: -webkit-fill-available;
+    margin: 0 20px;
+  }
+
+  .sobrenos-texto p,
+  .sobrenos-texto h1 {
+    font-size: smaller;
+  }
+
+  section .red {
+    width: -webkit-fill-available;
+  }
+
+  section.social div.whas {
+    width: inherit;
+    margin: 0;
   }
 
 }
@@ -255,7 +278,16 @@
   }
 
   #phone-tiny {
-    font-size: 1.6vh;
+    font-size: smaller;
+  }
+
+  section .red {
+    width: -webkit-fill-available;
+  }
+
+  section.social div.whas {
+    width: inherit;
+    margin: 0;
   }
 
 }
@@ -420,9 +452,9 @@
     margin: 4vh 3vw;
   }
 
-  .politica-de-privacidade {
-    margin-left: 20%;
-    margin-right: 20%;
+  section.body {
+    margin-left: 10%;
+    margin-right: 5%;
   }
 }
 
@@ -526,6 +558,17 @@
     text-align: left;
   }
 
+}
+
+@media only screen and (max-width: 825px) {
+  .body section.social {
+    height: 95rem;
+  }
+
+  .body .social div.whas {
+    margin-left: 50%;
+    margin-right: 50%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -679,11 +722,16 @@
     align-items: center;
   }
 
-  .politica-de-privacidade {
-    margin-left: 30%;
-    margin-right: 30%;
+  section.body {
+    margin-left: 25%;
+    margin-right: 25%;
   }
+}
 
+@media only screen and (max-width: 1262px) {
+  section.social {
+    height: 59rem;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
