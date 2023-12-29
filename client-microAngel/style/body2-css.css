@@ -1,25 +1,16 @@
 section.sobrenos {
+    background-color: #4137ff;
     display: flex;
     align-items: center;
     width: 100vw;
     height: 40vh;
 }
 
-.sobrenos-img {
-    background-image: url("../assets/videos/micro-sobrancelhasFeitinhas.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.sobrenos-video {
+    object-fit: cover;
     width: 100vw;
     height: 40vh;
     opacity: 0.7;
-}
-
-.back-sobrenos {
-    background-color: #4137ff;
-    position: absolute;
-    width: 100vw;
-    height: 40vh;
 }
 
 section .sobrenos-texto {
@@ -38,18 +29,14 @@ section .sobrenos-texto {
     opacity: 1;
 }
 
-.sobrenos-box {
-    width: min-content;
-    margin-left: 10%;
-}
-
 .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.card-body h5 {
+.card-body h3 {
+    font-size: larger;
     margin: 10px 0;
 }
 

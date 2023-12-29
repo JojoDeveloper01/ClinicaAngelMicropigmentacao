@@ -220,7 +220,7 @@
     height: 30vh;
   }
 
-  #phone-tiny {
+  .phone-tiny {
     font-size: x-small;
   }
 
@@ -277,7 +277,7 @@
     padding: 13px;
   }
 
-  #phone-tiny {
+  .phone-tiny {
     font-size: smaller;
   }
 

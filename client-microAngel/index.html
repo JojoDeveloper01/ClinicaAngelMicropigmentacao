@@ -18,7 +18,8 @@
   <meta property="og:title" content="Clínica Angel Micropigmentação - Estética Micropigmentação">
   <meta property="og:description"
     content="Bem-vindo à Clínica Angel Micropigmentação em Lisboa, onde a beleza encontra expertise. Descubra técnicas como microblading, micropigmentação de olhos, capilar, labial, e serviços especializados em remoção de manchas. Explore nossos tratamentos estéticos adicionais para uma experiência completa de cuidados com a beleza.">
-  <meta property="og:image" content="assets/image/icons/favicon.ico">
+  <meta property="og:image"
+    content="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/favicon.ico">
   <meta property="og:image:width" content="556">
 
   <link rel="stylesheet" href="style/all-for-one.css">
@@ -29,20 +30,30 @@
   <link rel="stylesheet" href="style/body1-css.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="icon" type="image/x-icon" href="assets/image/icons/favicon.ico">
-  <link rel="manifest" href="assets/image/icons/site.webmanifest">
+
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/favicon-16x16.png">
+  <link rel="manifest" href="./assets/image/icons/site.webmanifest">
   <title>Clínica Angel Micropigmentação</title>
 </head>
 
 <body>
 
   <div class="bt-float">
-    <button id="bt-top"><i class="fa-solid fa-arrow-up fa-xl" style="color: #00000098;"></i></i></button>
-    <button id="chat-micro" onclick="openChat()"><i class="fa-regular fa-message fa-xl"></i></button>
+    <button aria-label="Subir ao topo" id="bt-top"><i class="fa-solid fa-arrow-up fa-xl"
+        style="color: #00000098;"></i></button>
+    <button aria-label="Abrir chat" id="chat-micro" onclick="openChat()"><i
+        class="fa-regular fa-message fa-xl"></i></button>
 
     <div class="boxChat">
       <div class="header-chat">
-        <img src="assets/image/icons/favicon.ico" width="45" height="45">
+        <img
+          src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727136/assets/image/icons/favicon.ico"
+          width="45" height="45" alt="Icone do Website">
         <p>Info Chat</p>
         <span onclick="quitChat()"><i class="fa-solid fa-x fa-lg"></i></span>
       </div>
@@ -58,26 +69,32 @@
 
   <header>
     <div class="top-section">
-      <a href="#reservar" class="block-appointment">
+      <a aria-label="Marcar consulta" href="./#reservar" class="block-appointment">
         <p>MARCAR CONSULTA</p>
       </a>
     </div>
 
     <div class="menuStart">
-      <a href="./" class="logo">
+      <a aria-label="página de início" href="./" class="logo">
         <span>Clínica</span> Angel Micropigmentação
       </a>
-      <a href="./" class="minitel">
+      <a aria-label="página de início" href="./" class="minitel">
         <span>Clínica</span> Angel
       </a>
 
       <div class="end-menu">
         <div class="block-icons">
-          <a href="https://wa.me/351935407895?text=Ola! Tenho uma duvida!" class="block-call-icone">
-            <img src="assets/image/icons/phone.svg" alt="Contactar com Angel, uma especialista em micropigmentação">
+          <a aria-label="Whatsapp Angel" href="https://wa.me/351935407895?text=Ola! Tenho uma duvida!"
+            class="block-call-icone">
+            <img
+              src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/phone.svg"
+              alt="Contactar com Angel, uma especialista em micropigmentação">
           </a>
-          <button class="block-menuNav-icone" onclick="showPanel(document.querySelector('.distorted'))">
-            <img src="assets/image/icons/menu.svg" alt="Menu de secções do site">
+          <button aria-label="Abrir painel de navegação" class="block-menuNav-icone"
+            onclick="showPanel(document.querySelector('.distorted'))">
+            <img
+              src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/menu.svg"
+              alt="Menu de secções do site">
           </button>
         </div>
       </div>
@@ -85,120 +102,127 @@
       <nav>
         <div class="distorted" onclick="exitdistorted()"></div>
         <div class="sideBar">
-          <button type="button" class="btn-close" aria-label="Close"
+          <button type="button" class="btn-close" aria-label="Fechar painel de navegação"
             onclick="quitPanel(document.querySelector('.distorted'))"></button>
           <ul class="nav-panel">
-            <li><a href="./" onclick="exitdistorted()">INÍCIO</a></li>
-            <li><a href="./sobrenos.html" onclick="exitdistorted()">SOBRE NÓS</a></li>
+            <li><a aria-label="página de início" href="./" onclick="exitdistorted()">INÍCIO</a></li>
+            <li><a aria-label="página de sobre nós" href="./sobrenos.html" onclick="exitdistorted()">SOBRE NÓS</a></li>
 
             <li>
-              <a href="#servicos" onclick="exitdistorted()" class="dropdownActive">SERVIÇOS</a>
+              <a aria-label="página de serviços" href="./#servicos" onclick="exitdistorted()"
+                class="dropdownActive">SERVIÇOS</a>
               <span onclick="ser('dropdown1', this)">></span>
               <ul class="dropdown1 dropdown-nav">
-                <li><a href="#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO SOBRANCELHAS</a></li>
-                <li><a href="#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO BOCA</a></li>
-                <li><a href="#servicos" onclick="exitdistorted()">MICROPIGMENTAÇÃO OLHOS</a></li>
+                <li><a aria-label="Serviço micropigmentação sobrancelha" href="./#servicos"
+                    onclick="exitdistorted()">MICROPIGMENTAÇÃO SOBRANCELHAS</a></li>
+                <li><a aria-label="Serviço micropigmentação labial" href="./#servicos"
+                    onclick="exitdistorted()">MICROPIGMENTAÇÃO LABIAL</a></li>
+                <li><a aria-label="Serviço micropigmentação olhos" href="./#servicos"
+                    onclick="exitdistorted()">MICROPIGMENTAÇÃO OLHOS</a></li>
               </ul>
             </li>
 
 
             <li>
-              <a href="#perguntas" onclick="exitdistorted()" class="dropdownActive">PERGUNTAS</a>
+              <a aria-label="página perguntas/dúvidas" href="./#perguntas" onclick="exitdistorted()"
+                class="dropdownActive">PERGUNTAS</a>
               <span onclick="ask('dropdown4', this)">></span>
               <ul class="dropdown4 dropdown-nav">
-                <li><a href="#pg1" onclick="exitdistorted()">O QUE É MICROPIGMENTAÇÃO?</a></li>
-                <li><a href="#pg2" onclick="exitdistorted()">A MICROPIGMENTAÇÃO DÓI?</a></li>
-                <li><a href="#pg3" onclick="exitdistorted()">QUANTO TEMPO DURA A MICROPIGMENTAÇÃO?</a></li>
+                <li><a aria-label="pergunta: o que é micropigmentação?" href="./#pg1" onclick="exitdistorted()">O QUE É
+                    MICROPIGMENTAÇÃO?</a></li>
+                <li><a aria-label="pergunta: A micropigmentação doi?" href="./#pg2" onclick="exitdistorted()">A
+                    MICROPIGMENTAÇÃO DÓI?</a></li>
+                <li><a aria-label="pergunta: Quanto tempo dura a micropigmentação?" href="./#pg3"
+                    onclick="exitdistorted()">QUANTO TEMPO DURA A MICROPIGMENTAÇÃO?</a></li>
               </ul>
             </li>
 
-            <li><a href="#testemunhas" onclick="exitdistorted()">TESTEMUNHAS</a></li>
+            <li><a aria-label="página de testemunhas" href="./#testemunhas" onclick="exitdistorted()">TESTEMUNHAS</a>
+            </li>
           </ul>
           <ul class="social-midia" id="sm-tel">
-            <li><a href="https://www.facebook.com/angelmicropigmentacion" target="_blank"><i
-                  class="fa-brands fa-facebook fa-xl"></i></a></li>
-            <li><a
+            <li><a aria-label="página de Facebook 1" href="https://www.facebook.com/angelmicropigmentacion"
+                target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+            <li><a aria-label="Whatsapp"
                 href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
                 target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
-            <li><a href="https://www.facebook.com/aangelmicropigmentacao" target="_blank"><i
-                  class="fa-brands fa-facebook fa-xl"></i></a></li>
-            <li><a href="https://www.instagram.com/aangelmicropigmentacao/" target="_blank"><i
+            <li><a aria-label="página de facebook 2" href="https://www.facebook.com/aangelmicropigmentacao"
+                target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+            <li><a aria-label="Instagram" href="https://www.instagram.com/aangelmicropigmentacao/" target="_blank"><i
                   class="fa fa-instagram fa-xl"></i></a></li>
-            <li><a href="https://www.youtube.com/@angelmicropigmentacion4389" target="_blank"><i
+            <li><a aria-label="Youtube" href="https://www.youtube.com/@angelmicropigmentacion4389" target="_blank"><i
                   class="fa fa-youtube fa-xl"></i></a></li>
           </ul>
         </div>
 
         <ul class="navOptions">
           <ul class="line1-menubar">
-            <a href="./">
-              <li>
+            <li>
+              <a aria-label="página início" href="./">
                 <div class="select here"></div>
                 <p>INÍCIO</p>
-              </li>
-            </a>
-
-            <a href="./sobrenos.html">
-              <li>
+              </a>
+            </li>
+            <li>
+              <a aria-label="página sobre nós" href="./sobrenos.html">
                 <div class="select"></div>
                 <p>SOBRE NÓS</p>
-              </li>
-            </a>
-            <a href="#contactos">
-              <li>
+              </a>
+            </li>
+            <li>
+              <a aria-label="página contactos" href="./#contactos">
                 <div class="select"></div>
                 <p>CONTACTOS</p>
-              </li>
-            </a>
+              </a>
+            </li>
           </ul>
           <ul class="line2-menubar">
-
             <li onmouseover="showDropdown('dropdownPC1')" onmouseout="hideDropdown('dropdownPC1')">
-              <a href="#servicos">
+              <a aria-label="página serviços" href="./#servicos">
                 <div class="select-drop"></div>
                 <p>SERVIÇOS</p>
               </a>
               <div class="dropdown-PCnav dropdownPC1" onmouseover="showDropdown('dropdownPC1')"
                 onmouseout="hideDropdown('dropdownPC1')">
-                <a href="#servicos">Micropigmentação Sobrancelhas</a>
-                <a href="#servicos">Micropigmentação Labial</a>
-                <a href="#servicos">Micropigmentação Olhos</a>
+                <a aria-label="Serviço micropigmentação sobrancelha" href="./#servicos">Micropigmentação
+                  Sobrancelhas</a>
+                <a aria-label="Serviço micropigmentação labial" href="./#servicos">Micropigmentação Labial</a>
+                <a aria-label="Serviço micropigmentação olhos" href="./#servicos">Micropigmentação Olhos</a>
               </div>
             </li>
             <li onmouseover="showDropdown('dropdownPC2')" onmouseout="hideDropdown('dropdownPC2')">
-              <a href="#perguntas">
+              <a aria-label="página perguntas/dúvidas" href="./#perguntas">
                 <div class="select-drop"></div>
                 <p>PERGUNTAS</p>
               </a>
               <div class="dropdown-PCnav dropdownPC2" onmouseover="showDropdown('dropdownPC2')"
                 onmouseout="hideDropdown('dropdownPC2')">
-                <a href="#pg1">O que é micropigmentação?</a>
-                <a href="#pg2">A micropigmentação dói?</a>
-                <a href="#pg3">Quanto tempo dura a micropigmentação?</a>
+                <a aria-label="pergunta: O que é a micropigmentação?" href="./#pg1">O que é micropigmentação?</a>
+                <a aria-label="pergunta: A micropigmentação dói?" href="./#pg2">A micropigmentação dói?</a>
+                <a aria-label="pergunta: Quanto tempo dura a micropigmentação?" href="./#pg3">Quanto tempo dura a
+                  micropigmentação?</a>
               </div>
             </li>
-
-            <a href="#testemunhas">
-              <li>
+            <li>
+              <a aria-label="página testemunhas" href="./#testemunhas">
                 <div class="select"></div>
                 <p>TESTEMUNHAS</p>
-              </li>
-            </a>
+              </a>
+            </li>
           </ul>
-
         </ul>
       </nav>
       <ul class="social-midia" id="sm-PC">
-        <li><a href="https://www.facebook.com/angelmicropigmentacion" target="_blank"><i
-              class="fa-brands fa-facebook fa-xl"></i></a></li>
-        <li><a
+        <li><a aria-label="página de Facebook 1" href="https://www.facebook.com/angelmicropigmentacion"
+            target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+        <li><a aria-label="Whatsapp"
             href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
             target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
-        <li><a href="https://www.facebook.com/aangelmicropigmentacao" target="_blank"><i
-              class="fa-brands fa-facebook fa-xl"></i></a></li>
-        <li><a href="https://www.instagram.com/aangelmicropigmentacao/" target="_blank"><i
+        <li><a aria-label="página de facebook 2" href="https://www.facebook.com/aangelmicropigmentacao"
+            target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+        <li><a aria-label="Instagram" href="https://www.instagram.com/aangelmicropigmentacao/" target="_blank"><i
               class="fa fa-instagram fa-xl"></i></a></li>
-        <li><a href="https://www.youtube.com/@angelmicropigmentacion4389" target="_blank"><i
+        <li><a aria-label="Youtube" href="https://www.youtube.com/@angelmicropigmentacion4389" target="_blank"><i
               class="fa fa-youtube fa-xl"></i></a></li>
       </ul>
     </div>
@@ -213,8 +237,10 @@
           <div class="carousel-item active" data-bs-interval="1000">
             <div class="ctro-itemS">
               <picture>
-                <source srcset="assets/image/servicos/micro_sobran.avif">
-                <img src="assets/image/servicos/micro_sobran.webp"
+                <source
+                  srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.avif">
+                <img
+                  src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.webp"
                   alt="Mulher com uma linda micropigmentação de sobrancelhas" class="slide-img simg">
               </picture>
 
@@ -225,8 +251,8 @@
                     apenas a aparência, mas também a autoconfiança, deixando um rasto de beleza autêntica.
                   </p>
 
-                  <a href="#reservar">
-                    <button class="border-slide">
+                  <a aria-label="Marcar reserva" href="./#reservar">
+                    <button aria-label="Marcar reserva" class="border-slide">
                       <div class="reser-buttonS">MARCAR RESERVA</div>
                     </button>
                   </a>
@@ -238,9 +264,11 @@
           <div class="carousel-item" data-bs-interval="2000">
             <div class="ctro-itemS">
               <picture>
-                <source srcset="assets/image/servicos/micro_labial.avif">
-                <img src="assets/image/servicos/micro_labial.webp" alt="Mulher com uma linda micropigmentação labial"
-                  class="slide-img simg1">
+                <source
+                  srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_labial.avif">
+                <img
+                  src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_labial.webp"
+                  alt="Mulher com uma linda micropigmentação labial" class="slide-img simg1">
               </picture>
 
               <div class="fondo-distor" id="fd1">
@@ -249,8 +277,8 @@
                   <p>A simplicidade de lábios perfeitamente desenhados, adicionando um toque de elegância à sua beleza
                     natural.
                   </p>
-                  <a href="#reservar">
-                    <button class="border-slide">
+                  <a aria-label="Marcar reserva" href="./#reservar">
+                    <button aria-label="Marcar reserva" class="border-slide">
                       <div class="reser-buttonS">MARCAR RESERVA</div>
                     </button>
                   </a>
@@ -262,9 +290,11 @@
           <div class="carousel-item" data-bs-interval="1000">
             <div class="ctro-itemS">
               <picture>
-                <source srcset="assets/image/servicos/limpeza_facial.avif">
-                <img src="assets/image/servicos/limpeza_facial.webp" alt="Homem a fazer-se uma limpeza facial"
-                  class="slide-img simg2">
+                <source
+                  srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/limpeza_facial.avif">
+                <img
+                  src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/limpeza_facial.webp"
+                  alt="Homem a fazer-se uma limpeza facial" class="slide-img simg2">
               </picture>
               <div class="fondo-distor" id="fd2">
                 <div class="texto-carousel">
@@ -274,8 +304,8 @@
                     radiante, de forma simples e eficaz.
                   </p>
 
-                  <a href="#reservar">
-                    <button class="border-slide">
+                  <a aria-label="Marcar reserva" href="./#reservar">
+                    <button aria-label="Marcar reserva" class="border-slide">
                       <div class="reser-buttonS">MARCAR RESERVA</div>
                     </button>
                   </a>
@@ -286,9 +316,11 @@
           <div class="carousel-item">
             <div class="ctro-itemS">
               <picture>
-                <source srcset="assets/image/servicos/lifting_pestanas.avif">
-                <img src="assets/image/servicos/lifting_pestanas.webp" alt="Mulher a fazer-se um lifting de Pestanas"
-                  class="slide-img simg3">
+                <source
+                  srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.avif">
+                <img
+                  src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.webp"
+                  alt="Mulher a fazer-se um lifting de Pestanas" class="slide-img simg3">
               </picture>
               <div class="fondo-distor" id="fd3">
                 <div class="texto-carousel">
@@ -296,8 +328,8 @@
                   <p>Experimente a simplicidade de cílios incrivelmente levantados, realçando a expressão dos seus
                     olhos de maneira encantadora.
                   </p>
-                  <a href="#reservar">
-                    <button class="border-slide">
+                  <a aria-label="Marcar reserva" href="./#reservar">
+                    <button aria-label="Marcar reserva" class="border-slide">
                       <div class="reser-buttonS">MARCAR RESERVA</div>
                     </button>
                   </a>
@@ -307,11 +339,13 @@
           </div>
         </div>
         <div class="nextS">
-          <button class="carousel-control-prev" type="button" data-bs-target="#slideHomeTarget" data-bs-slide="prev">
+          <button aria-label="Seguinte slide" class="carousel-control-prev" type="button"
+            data-bs-target="#slideHomeTarget" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#slideHomeTarget" data-bs-slide="next">
+          <button aria-label="Anterior slide" class="carousel-control-next" type="button"
+            data-bs-target="#slideHomeTarget" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -323,9 +357,11 @@
       <h1>ESPECIALISTA EM MICROPIGMENTAÇÃO</h1>
       <div class="dimension-total">
         <picture>
-          <source srcset="assets/image/profissionais/AngelFotodePerfil.avif">
-          <img src="assets/image/profissionais/AngelFotodePerfil.webp" alt="Foto da profissional Angel"
-            class="fickleHere" id="imgTeam" data-animation="fade">
+          <source
+            srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/profissionais/AngelFotodePerfil.avif">
+          <img
+            src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/profissionais/AngelFotodePerfil.webp"
+            alt="Foto da profissional Angel" class="fickleHere" id="imgTeam" data-animation="fade">
         </picture>
         <div class="caption">
           <p>
@@ -348,56 +384,67 @@
 
     <section id="contactos" class="locais">
       <div class="separar-titu">
-        <h1><a href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6" target="_blank">AREEIRO</a></h1>
+        <h1><a aria-label="Local Areeiro" href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6" target="_blank">AREEIRO</a>
+        </h1>
         <h2>|</h2>
-        <h1><a href="https://goo.gl/maps/7LJNApWVJKzsMmUH8" target="_blank">PÓVOA</a></h1>
+        <h1><a aria-label="Local Póvoa" href="https://goo.gl/maps/7LJNApWVJKzsMmUH8" target="_blank">PÓVOA</a></h1>
       </div>
 
       <div class="position-local">
         <article class="localCtro">
-          <a href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6" target="_blank">
+          <a aria-label="Mapa local Areeiro" href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6" target="_blank">
             <picture>
-              <source srcset="assets/image/local/localVilaLisboa.avif">
-              <img src="assets/image/local/localVilaLisboa.webp" alt="Local Areeiro">
+              <source
+                srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/local/localVilaLisboa.avif">
+              <img
+                src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/local/localVilaLisboa.webp"
+                alt="Local Areeiro">
             </picture>
           </a>
           <p>
             <b>*Antes de visitar nossas instalações, entre em contato conosco</b>
             <br>
             Morada:
-            <a href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6" target="_blank">Avenida João XXI 49B, Areeiro</a>
+            <a aria-label="Mapa local Areeiro" href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6" target="_blank">Avenida
+              João XXI 49B, Areeiro</a>
             <br>
-            Telemóvel: <a
+            Telemóvel: <a aria-label="Whatsapp Angel"
               href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
               target="_blank">935 407 895</a>
             <br>
             E-mail:
-            <a href="mailto:Balcboni@angelmicropigmentação.com" target="_blank"
-              id="phone-tiny">angelbalcboniclinicamicropigme@gmail.com</a>
+            <a aria-label="E-mail Angel" href="mailto:angelbalcboniclinicamicropigme@gmail.com" target="_blank"
+              class="phone-tiny">angelbalcboniclinicamicropigme@gmail.com</a>
           </p>
         </article>
 
         <article class="localCtro">
-          <a href="https://goo.gl/maps/R4RpzfBGRcL3p5jV8" target="_blank">
+          <a aria-label="Local Póvoa" href="https://goo.gl/maps/R4RpzfBGRcL3p5jV8" target="_blank">
             <picture>
-              <source srcset="assets/image/local/localPovoa.avif">
-              <img src="assets/image/local/localPovoa.webp" alt="Local Póvoa">
+              <source
+                srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/local/localPovoa.avif">
+              <img
+                src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/local/localPovoa.webp"
+                alt="Local Póvoa">
             </picture>
           </a>
           <p>
             <b>*Antes de visitar nossas instalações, entre em contato conosco</b>
             <br>
             Morada:
-            <a href="https://goo.gl/maps/locaR4RpzfBGRcL3p5jV8" target="_blank">Rua José Nogueira Vaz 16, Póvoa de Santa
+            <a aria-label="Mapa local Póvoa" href="https://goo.gl/maps/locaR4RpzfBGRcL3p5jV8" target="_blank">Rua José
+              Nogueira Vaz 16, Póvoa de Santa
               Iria</a>
             <br>
             Telemóvel:
-            <a href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+umatarget+duvida%21&amp;type=phone_number&amp;app_absent=0"
+            <a aria-label="Whatsapp Angel"
+              href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+umatarget+duvida%21&amp;type=phone_number&amp;app_absent=0"
               target="_blank">935 407 895
             </a>
             <br>
             E-mail:
-            <a href="mailto:angelbalcboniclinicamicropigme@gmail.com" target="_blank" id="phone-tiny">
+            <a aria-label="E-mail Angel" href="mailto:angelbalcboniclinicamicropigme@gmail.com" target="_blank"
+              class="phone-tiny">
               angelbalcboniclinicamicropigme@gmail.com</a>
           </p>
         </article>
@@ -414,9 +461,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro_sobran.avif">
-                  <img src="assets/image/servicos/micro_sobran.webp" class="card-img-top"
-                    alt="Micropigmentação de Sobrancelhas">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.webp"
+                    class="card-img-top" alt="Micropigmentação de Sobrancelhas">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação Sobrancelhas</h2>
@@ -424,8 +473,11 @@
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro-labial.avif">
-                  <img src="assets/image/servicos/micro-labial.webp" class="card-img-top" alt="Micropigmentação Labial">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-labial.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-labial.webp"
+                    class="card-img-top" alt="Micropigmentação Labial">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação Labial</h2>
@@ -433,9 +485,11 @@
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro_olhos.avif">
-                  <img src="assets/image/servicos/micro_olhos.webp" class="card-img-top"
-                    alt="Micropigmentação de Olhos">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_olhos.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_olhos.webp"
+                    class="card-img-top" alt="Micropigmentação de Olhos">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação de Olhos</h2>
@@ -447,9 +501,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro-capilar.avif">
-                  <img src="assets/image/servicos/micro-capilar.webp" class="card-img-top"
-                    alt="Micropigmentação Capilar">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-capilar.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-capilar.webp"
+                    class="card-img-top" alt="Micropigmentação Capilar">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação Capilar</h2>
@@ -457,8 +513,11 @@
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro_Areola.avif">
-                  <img src="assets/image/servicos/micro_Areola.webp" class="card-img-top" alt="Micropigmentação Aréola">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_Areola.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_Areola.webp"
+                    class="card-img-top" alt="Micropigmentação Aréola">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação Aréola</h2>
@@ -466,9 +525,11 @@
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro-cicatriz.avif">
-                  <img src="assets/image/servicos/micro-cicatriz.webp" class="card-img-top"
-                    alt="Micropigmentação para Camuflar Cicatrizes">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-cicatriz.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-cicatriz.webp"
+                    class="card-img-top" alt="Micropigmentação para Camuflar Cicatrizes">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação para Camuflar Cicatrizes</h2>
@@ -480,9 +541,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/remocaoMicro.avif">
-                  <img src="assets/image/servicos/remocaoMicro.webp" class="card-img-top"
-                    alt="Remoção de Micropigmentação">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/remocaoMicro.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/remocaoMicro.webp"
+                    class="card-img-top" alt="Remoção de Micropigmentação">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Remoção de Micropigmentação</h2>
@@ -490,9 +553,11 @@
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/remocao_de_tatuagens.avif">
-                  <img src="assets/image/servicos/remocao_de_tatuagens.webp" class="card-img-top"
-                    alt="Remoção de Tatuagens">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/remocao_de_tatuagens.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/remocao_de_tatuagens.webp"
+                    class="card-img-top" alt="Remoção de Tatuagens">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Remoção de Tatuagens</h2>
@@ -500,8 +565,11 @@
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/limpeza_facial.avif">
-                  <img src="assets/image/servicos/limpeza_facial.webp" class="card-img-top" alt="Limpeza Facial">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/limpeza_facial.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/limpeza_facial.webp"
+                    class="card-img-top" alt="Limpeza Facial">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Limpeza Facial</h2>
@@ -513,9 +581,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/depilacaoFIoFio.avif">
-                  <img src="assets/image/servicos/depilacaoFIoFio.webp" class="card-img-top"
-                    alt="Depilação Sobrancelhas com Linha">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/depilacaoFIoFio.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/depilacaoFIoFio.webp"
+                    class="card-img-top" alt="Depilação Sobrancelhas com Linha">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Depilação Sobrancelhas com Linha</h2>
@@ -523,8 +593,11 @@
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/lifting_pestanas.avif">
-                  <img src="assets/image/servicos/lifting_pestanas.webp" class="card-img-top" alt="Lifting de Pestanas">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.webp"
+                    class="card-img-top" alt="Lifting de Pestanas">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Lifting de Pestanas</h2>
@@ -532,11 +605,11 @@
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/liftingFacial.avif">
-                  <img src="assets/image/servicos/liftingFacial.webp" class="card-img-top" alt="Lifting Facial">
+                  <source srcset="">
+                  <img src="" class="card-img-top" alt="Maquilhagem Facial">
                 </picture>
                 <div class="card-servicos">
-                  <h2 class="card-text-servicos">Lifting Facial</h2>
+                  <h2 class="card-text-servicos">Maquilhagem Facial</h2>
                 </div>
               </div>
             </div>
@@ -545,17 +618,20 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/linfting_corpo.avif">
-                  <img src="assets/image/servicos/linfting_corpo.webp" class="card-img-top" alt="Lifting Corpo">
+                  <source srcset="">
+                  <img src="" class="card-img-top" alt="Drenagem Linfática">
                 </picture>
                 <div class="card-servicos">
-                  <h2 class="card-text-servicos">Lifting Corpo</h2>
+                  <h2 class="card-text-servicos">Drenagem Linfática</h2>
                 </div>
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/massagemCorpo.avif">
-                  <img src="assets/image/servicos/massagemCorpo.webp" class="card-img-top" alt="Massagem Corpo Inteiro">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/massagemCorpo.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/massagemCorpo.webp"
+                    class="card-img-top" alt="Massagem Corpo Inteiro">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Massagem Corpo Inteiro</h2>
@@ -563,9 +639,11 @@
               </div>
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/massagemJapones.avif">
-                  <img src="assets/image/servicos/massagemJapones.webp" class="card-img-top"
-                    alt="Massagem Facial Japonesa">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/massagemJapones.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/massagemJapones.webp"
+                    class="card-img-top" alt="Massagem Facial Japonesa">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Massagem Facial Japonesa</h2>
@@ -575,15 +653,17 @@
           </div>
         </div>
         <div class="nextSer">
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselSer" data-bs-slide="prev">
+          <button aria-label="Seguinte slide" class="carousel-control-prev" type="button" data-bs-target="#carouselSer"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next ccn" type="button" data-bs-target="#carouselSer" data-bs-slide="next">
+          <button aria-label="Anterior slide" class="carousel-control-next ccn" type="button"
+            data-bs-target="#carouselSer" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-          <a href="#reservar" class="saiba-mais-ser">SAIBA MAIS</a>
+          <a aria-label="saber mais" href="./#reservar" class="saiba-mais-ser">SAIBA MAIS</a>
         </div>
       </div>
 
@@ -593,9 +673,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro_sobran.avif">
-                  <img src="assets/image/servicos/micro_sobran.webp" class="card-img-top"
-                    alt="Micropigmentação Sobrancelhas">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.webp"
+                    class="card-img-top" alt="Micropigmentação Sobrancelhas">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação Sobrancelhas</h2>
@@ -607,8 +689,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro-labial.avif">
-                  <img src="assets/image/servicos/micro-labial.webp" class="card-img-top" alt="Micropigmentação Labial">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-labial.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-labial.webp"
+                    class="card-img-top" alt="Micropigmentação Labial">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação Labial</h2>
@@ -620,8 +705,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro_olhos.avif">
-                  <img src="assets/image/servicos/micro_olhos.webp" class="card-img-top" alt="Micropigmentação Olhos">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_olhos.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_olhos.webp"
+                    class="card-img-top" alt="Micropigmentação Olhos">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação Olhos</h2>
@@ -633,9 +721,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro-capilar.avif">
-                  <img src="assets/image/servicos/micro-capilar.webp" class="card-img-top"
-                    alt="Micropigmentação Capilar">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-capilar.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-capilar.webp"
+                    class="card-img-top" alt="Micropigmentação Capilar">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação Capilar</h2>
@@ -647,8 +737,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro_Areola.avif">
-                  <img src="assets/image/servicos/micro_Areola.webp" class="card-img-top" alt="Micropigmentação Aréola">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_Areola.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_Areola.webp"
+                    class="card-img-top" alt="Micropigmentação Aréola">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação Aréola</h2>
@@ -660,9 +753,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/micro-cicatriz.avif">
-                  <img src="assets/image/servicos/micro-cicatriz.webp" class="card-img-top"
-                    alt="Micropigmentação para Camuflar Cicatrizes">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-cicatriz.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro-cicatriz.webp"
+                    class="card-img-top" alt="Micropigmentação para Camuflar Cicatrizes">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Micropigmentação para Camuflar Cicatrizes</h2>
@@ -674,9 +769,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/remocaoMicro.avif">
-                  <img src="assets/image/servicos/remocaoMicro.webp" class="card-img-top"
-                    alt="Remoção de Micropigmentação">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/remocaoMicro.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/remocaoMicro.webp"
+                    class="card-img-top" alt="Remoção de Micropigmentação">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Remoção de Micropigmentação</h2>
@@ -688,9 +785,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/remocao_de_tatuagens.avif">
-                  <img src="assets/image/servicos/remocao_de_tatuagens.webp" class="card-img-top"
-                    alt="Remoção de Tatuagens">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/remocao_de_tatuagens.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/remocao_de_tatuagens.webp"
+                    class="card-img-top" alt="Remoção de Tatuagens">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Remoção de Tatuagens</h2>
@@ -702,8 +801,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/limpeza_facial.avif">
-                  <img src="assets/image/servicos/limpeza_facial.webp" class="card-img-top" alt="Limpeza Facial">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/limpeza_facial.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/limpeza_facial.webp"
+                    class="card-img-top" alt="Limpeza Facial">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Limpeza Facial</h2>
@@ -715,9 +817,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/depilacaoFIoFio.avif">
-                  <img src="assets/image/servicos/depilacaoFIoFio.webp" class="card-img-top"
-                    alt="Depilação Sobrancelhas com Linha">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/depilacaoFIoFio.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/depilacaoFIoFio.webp"
+                    class="card-img-top" alt="Depilação Sobrancelhas com Linha">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Depilação Sobrancelhas com Linha</h2>
@@ -729,8 +833,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/lifting_pestanas.avif">
-                  <img src="assets/image/servicos/lifting_pestanas.webp" class="card-img-top" alt="Lifting de Pestanas">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.webp"
+                    class="card-img-top" alt="Lifting de Pestanas">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Lifting de Pestanas</h2>
@@ -742,11 +849,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/liftingFacial.avif">
-                  <img src="assets/image/servicos/liftingFacial.webp" class="card-img-top" alt="Lifting Facial">
+                  <source srcset="">
+                  <img src="" class="card-img-top" alt="Maquilhagem Facial">
                 </picture>
                 <div class="card-servicos">
-                  <h2 class="card-text-servicos">Lifting Facial</h2>
+                  <h2 class="card-text-servicos">Maquilhagem Facial</h2>
                 </div>
               </div>
             </div>
@@ -755,11 +862,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/linfting_corpo.avif">
-                  <img src="assets/image/servicos/linfting_corpo.webp" class="card-img-top" alt="Lifting Corpo">
+                  <source srcset="">
+                  <img src="" class="card-img-top" alt="Drenagem Linfático">
                 </picture>
                 <div class="card-servicos">
-                  <h2 class="card-text-servicos">Lifting Corpo</h2>
+                  <h2 class="card-text-servicos">Drenagem Linfático</h2>
                 </div>
               </div>
             </div>
@@ -768,8 +875,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/massagemCorpo.avif">
-                  <img src="assets/image/servicos/massagemCorpo.webp" class="card-img-top" alt="Massagem Corpo Inteiro">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/massagemCorpo.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/massagemCorpo.webp"
+                    class="card-img-top" alt="Massagem Corpo Inteiro">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Massagem Corpo Inteiro</h2>
@@ -781,9 +891,11 @@
             <div class="dimension-total-ser">
               <div class="card">
                 <picture>
-                  <source srcset="assets/image/servicos/massagemJapones.avif">
-                  <img src="assets/image/servicos/massagemJapones.webp" class="card-img-top"
-                    alt="Massagem Facial Japonesa">
+                  <source
+                    srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/massagemJapones.avif">
+                  <img
+                    src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/massagemJapones.webp"
+                    class="card-img-top" alt="Massagem Facial Japonesa">
                 </picture>
                 <div class="card-servicos">
                   <h2 class="card-text-servicos">Massagem Facial Japonesa</h2>
@@ -793,15 +905,17 @@
           </div>
         </div>
         <div class="nextSer">
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselSerM" data-bs-slide="prev">
+          <button aria-label="Seguinte slide" class="carousel-control-prev" type="button" data-bs-target="#carouselSerM"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next ccn1" type="button" data-bs-target="#carouselSerM" data-bs-slide="next">
+          <button aria-label="Anterior slide" class="carousel-control-next ccn1" type="button"
+            data-bs-target="#carouselSerM" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-          <a href="#reservar" class="saiba-mais-ser">SAIBA MAIS</a>
+          <a aria-label="saber mais" href="./#reservar" class="saiba-mais-ser">SAIBA MAIS</a>
         </div>
       </div>
     </section>
@@ -811,7 +925,8 @@
         <h1>RESERVE O SEU MOMENTO DE BELEZA</h1>
         <p>Agende uma consulta e deixe-se cuidar pelos nossos profissionais especializados</p>
       </div>
-      <a href="#reservar"><button class="border-rb">
+      <a aria-label="Marcar Reserva" href="./#reservar">
+        <button aria-label="Marcar reserva" class="border-rb">
           <span class="reser-button">MARCAR RESERVA</span>
         </button>
       </a>
@@ -827,7 +942,7 @@
             <p>A micropigmentação é uma técnica estética que consiste em implantar pigmentos na pele para realçar
               características faciais, como sobrancelhas, lábios e linha do olhos.</p>
           </div>
-          <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+          <div><a aria-label="Mais informação" href="./#reservar">MAIS INFORMAÇÃO</a></div>
         </div>
         <div id="pg2" class="pre-fq-box">
           <div class="mesmo-tam">
@@ -835,7 +950,7 @@
             <p>A dor pode variar de pessoa para pessoa, mas em geral, a micropigmentação é bem tolerada. Geralmente, é
               aplicado um creme anestésico antes do procedimento para minimizar o desconforto.</p>
           </div>
-          <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+          <div><a aria-label="Mais informação" href="./#reservar">MAIS INFORMAÇÃO</a></div>
         </div>
         <div id="pg3" class="pre-fq-box">
           <div class="mesmo-tam">
@@ -843,7 +958,7 @@
             <p>A duração da micropigmentação pode variar dependendo do tipo de tratamento e dos cuidados após o
               procedimento. Em média, os resultados podem durar de 1 a 3 anos.</p>
           </div>
-          <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+          <div><a aria-label="Mais informação" href="./#reservar">MAIS INFORMAÇÃO</a></div>
         </div>
       </div>
 
@@ -860,7 +975,7 @@
               <p>Sim, em alguns casos é possível corrigir ou remover a micropigmentação mal feita através de
                 procedimentos específicos.</p>
             </div>
-            <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+            <div><a aria-label="Mais informação" href="./#reservar">MAIS INFORMAÇÃO</a></div>
           </div>
 
           <div class="pre-fq-box">
@@ -869,7 +984,7 @@
               <p>O tempo de cicatrização pode variar, mas em geral, leva cerca de 1 a 2 semanas para a pele se recuperar
                 completamente.</p>
             </div>
-            <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+            <div><a aria-label="Mais informação" href="./#reservar">MAIS INFORMAÇÃO</a></div>
           </div>
           <div class="pre-fq-box">
             <div class="mesmo-tam">
@@ -877,22 +992,24 @@
               <p>O custo da micropigmentação pode variar dependendo da região e do profissional escolhido. É
                 importante fazer uma pesquisa e obter orçamentos antes de realizar o procedimento.</p>
             </div>
-            <div><a href="#reservar">MAIS INFORMAÇÃO</a></div>
+            <div><a aria-label="Mais informação" href="./#reservar">MAIS INFORMAÇÃO</a></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="testemunhas" class="testemunhos">
+    <section id="testemunhas" class="testemunhas">
 
       <h1>TESTEMUNHAS</h1>
 
       <div class="ctro-testbox">
         <div class="box-test">
-          <a href="https://goo.gl/maps/TeFJimsdnqERmXu47" target="_blank" class="ctro-img-nome">
-            <img src="./assets/image/testemunhas/cliente1.webp"
+          <a aria-label="Ver comentário da testemunha Soraia" href="https://goo.gl/maps/TeFJimsdnqERmXu47"
+            target="_blank" class="ctro-img-nome">
+            <img
+              src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703790669/assets/image/testemunhas/cliente1.webp"
               alt="Foto da clienta Soraia Araujo que fez Micropigmentação">
-            <h6>Soraia Araujo<br>⭐⭐⭐⭐⭐</h6>
+            <strong>Soraia Araujo<br>⭐⭐⭐⭐⭐</strong>
           </a>
           <hr class="linha-test">
           <div class="ctro-test-p">
@@ -904,10 +1021,12 @@
           </div>
         </div>
         <div class="box-test">
-          <a href="https://goo.gl/maps/ggPsTNNPZAiW8avq8" target="_blank" class="ctro-img-nome">
-            <img src="./assets/image/testemunhas/cliente2.webp"
+          <a aria-label="Ver comentário da testemunha Lia" href="https://goo.gl/maps/ggPsTNNPZAiW8avq8" target="_blank"
+            class="ctro-img-nome">
+            <img
+              src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703790669/assets/image/testemunhas/cliente2.png"
               alt="Foto da clienta Lia Mercado que fez Micropigmentação">
-            <h6>Lia Mercado<br>⭐⭐⭐⭐⭐</h6>
+            <strong>Lia Mercado<br>⭐⭐⭐⭐⭐</strong>
           </a>
           <hr class="linha-test">
           <div class="ctro-test-p">
@@ -921,10 +1040,12 @@
           </div>
         </div>
         <div class="box-test">
-          <a href="https://goo.gl/maps/BvkGtjoKuqNhbyyK9" target="_blank" class="ctro-img-nome">
-            <img src="./assets/image/testemunhas/cliente3.webp"
+          <a aria-label="Ver comentário da testemunha Liliana" href="https://goo.gl/maps/BvkGtjoKuqNhbyyK9"
+            target="_blank" class="ctro-img-nome">
+            <img
+              src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703790669/assets/image/testemunhas/cliente3.png"
               alt="Foto da clienta Liliana Monteiro que fez Micropigmentação">
-            <h6>Liliana Monteiro<br>⭐⭐⭐⭐⭐</h6>
+            <strong>Liliana Monteiro<br>⭐⭐⭐⭐⭐</strong>
           </a>
           <hr class="linha-test">
           <div class="ctro-test-p">
@@ -937,7 +1058,6 @@
           </div>
         </div>
       </div>
-
     </section>
 
     <section class="formulario" id="reservar">
@@ -945,7 +1065,7 @@
         <h1>CONTACTE<span>-NOS</span></h1>
         <div class="contact-wrapperF">
           <div class="contact-form">
-            <h3>Marque uma consulta ou Pergunte-nos a sua dúvida</h3>
+            <h2>Marque uma consulta ou Pergunte-nos a sua dúvida</h2>
             <form id="form-reserva" novalidate>
               <p>
                 <label for="nome"><span style="color:#a72727">*</span> Nome</label>
@@ -970,7 +1090,7 @@
                 <span class="customAlert" id="mensagemAlert">Preencher o campo.</span>
               </p>
               <p class="block">
-                <button type="submit">
+                <button aria-label="Enviar formulario" type="submit">
                   Enviar
                 </button>
                 <span class="customAlert" id="sucessAlert" style="color: rgb(0 131 75);">Mensagem enviada com
@@ -979,17 +1099,17 @@
               </p>
             </form>
           </div>
-          <div class=" contact-info">
+          <div class=" contact-info<a">
                   <h4>Contactos Adicionais</h4>
-                  <div><i class="fa-solid fa-location-dot"></i><a href="https://goo.gl/maps/cYxcvHsE3dmLaPj46"
-                      target="_blank">Póvoa de Santa Iria</a></div>
-                  <div><i class="fa-solid fa-location-dot"></i><a href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
-                      target="_blank">Roma-Areeiro</a></div>
-                  <div><i class="fas fa-phone"></i><a
+                  <div><i class="fa-solid fa-location-dot"></i><a aria-label="Mapa local Póvoa"
+                      href="https://goo.gl/maps/cYxcvHsE3dmLaPj46" target="_blank">Póvoa de Santa Iria</a></div>
+                  <div><i class="fa-solid fa-location-dot"></i><a aria-label="Mapa local Areeiro"
+                      href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6" target="_blank">Roma-Areeiro</a></div>
+                  <div><i class="fas fa-phone"></i><a aria-label="Whatsapp Angel"
                       href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
                       target="_blank">(+351)
                       935 407 895</a></div>
-                  <div><i class="fas fa-envelope-open-text"></i><a id="mail-form"
+                  <div><i class="fas fa-envelope-open-text"></i><a aria-label="E-mail Angel" id="mail-form"
                       href="mailto:angelbalcboniclinicamicropigme@gmail.com"
                       target="_blank">angelbalcboniclinicamicropigme@gmail.com</a>
                   </div>
@@ -1008,25 +1128,27 @@
     <div class="footer-content">
       <h3>Clínica Angel Micropigmentação</h3>
       <p>Descubra a beleza que brilha dentro de você, irradiando confiança e amor próprio a cada passo do caminho!</p>
-      <div class="socials">
-        <li><a href="https://www.facebook.com/angelmicropigmentacion" target="_blank"><i
-              class="fa-brands fa-facebook fa-xl"></i></a></li>
-        <li><a
+      <ul class="socials">
+        <li><a aria-label="página de Facebook 1" href="https://www.facebook.com/angelmicropigmentacion"
+            target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+        <li><a aria-label="Whatsapp"
             href="https://api.whatsapp.com/send/?phone=351935407895&amp;text=Ola%21+Tenho+uma+duvida%21&amp;type=phone_number&amp;app_absent=0"
             target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
-        <li><a href="https://www.facebook.com/aangelMicropigmentacao" target="_blank"><i
-              class="fa-brands fa-facebook fa-xl"></i></a></li>
-        <li><a href="https://www.instagram.com/aangelMicropigmentacao/" target="_blank"><i
+        <li><a aria-label="página de facebook 2" href="https://www.facebook.com/aangelmicropigmentacao"
+            target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+        <li><a aria-label="Instagram" href="https://www.instagram.com/aangelmicropigmentacao/" target="_blank"><i
               class="fa fa-instagram fa-xl"></i></a></li>
-        <li><a href="https://www.youtube.com/@angelmicropigmentacion4389" target="_blank"><i
+        <li><a aria-label="Youtube" href="https://www.youtube.com/@angelmicropigmentacion4389" target="_blank"><i
               class="fa fa-youtube fa-xl"></i></a></li>
-      </div>
+      </ul>
     </div>
     <hr class="linha-footer">
     <div class="footer-bottom">
-      <p>&copy; 2023 Clínica Angel Micropigmentação <br> <a href="politica-de-privacidade.html">Política de
+      <p>&copy; 2023 Clínica Angel Micropigmentação <br> <a aria-label="página politica de privacidade"
+          href="./politica-de-privacidade.html">Política de
           Privacidade</a>
-        | Desenvolvido por <a href="https://www.linkedin.com/in/joseth-balcazar-3bb450298/" target="_blank">J-set</a>
+        | Desenvolvido por <a aria-label="Rede Social do criador do Website"
+          href="https://www.linkedin.com/in/joseth-balcazar-3bb450298/" target="_blank">J-set</a>
       </p>
       <label>
         <p>Créditos</p>
@@ -1034,48 +1156,59 @@
 
         <ul class="creditos-section">
           <li>Fontes das Imagens: </li>
-          <li><a
+          <li><a aria-label="Imagem de Freepik 1"
               href="https://br.freepik.com/fotos-gratis/rosto-de-menina-bonita-pele-perfeita_8096956.htm#query=sobrancelhas&position=22&from_view=search&track=sph&uuid=ad37ea15-9835-4028-95fa-6a186ac2c0d4"
               target="_blank">Sobrancelhas de uma mulher</a>
-            <a href="https://br.freepik.com/fotos-gratis/feche-o-retrato-de-mulher-com-pele-hidratada_27370315.htm#&position=0&from_view=search&track=ais"
+            <a aria-label="Imagem de Freepik 2"
+              href="https://br.freepik.com/fotos-gratis/feche-o-retrato-de-mulher-com-pele-hidratada_27370315.htm#&position=0&from_view=search&track=ais"
               target="_blank">Labios de uma mulher</a>
           </li>
           <li>
-            <a href="https://br.freepik.com/fotos-gratis/labios-perfeitos-sorriso-de-mulher-jovem-de-beleza-labio-carnudo-natural-detalhe-de-close_10427048.htm#from_view=detail_alsolike"
+            <a aria-label="Imagem de Freepik 3"
+              href="https://br.freepik.com/fotos-gratis/labios-perfeitos-sorriso-de-mulher-jovem-de-beleza-labio-carnudo-natural-detalhe-de-close_10427048.htm#from_view=detail_alsolike"
               target="_blank">
               Labios de uma mulher 2</a>
-            <a href="https://br.freepik.com/fotos-gratis/terapeuta-feminina-lavando-o-rosto-de-um-cliente-do-sexo-masculino-enquanto-faz-um-tratamento-facial-em-um-spa_28030936.htm#query=limpeza%20de%20pele%20em%20homem&position=1&from_view=search&track=ais&uuid=7afc7135-82bd-4a81-a302-59e1caed7b43"
+            <a aria-label="Imagem de Freepik 4"
+              href="https://br.freepik.com/fotos-gratis/terapeuta-feminina-lavando-o-rosto-de-um-cliente-do-sexo-masculino-enquanto-faz-um-tratamento-facial-em-um-spa_28030936.htm#query=limpeza%20de%20pele%20em%20homem&position=1&from_view=search&track=ais&uuid=7afc7135-82bd-4a81-a302-59e1caed7b43"
               target="_blank">Limpeza Facial a um homem</a>
           </li>
           <li>
-            <a href="https://br.freepik.com/fotos-gratis/mao-de-alto-angulo-segurando-o-cotonete-rosa_30944949.htm#query=lifting%20pestanas&position=2&from_view=search&track=ais&uuid=3c2ecdf7-24a4-453a-9b65-2268352d3772"
+            <a aria-label="Imagem de Freepik 5"
+              href="https://br.freepik.com/fotos-gratis/mao-de-alto-angulo-segurando-o-cotonete-rosa_30944949.htm#query=lifting%20pestanas&position=2&from_view=search&track=ais&uuid=3c2ecdf7-24a4-453a-9b65-2268352d3772"
               target="_blank">Lifting Pestanas a uma mulher
             </a>
-            <a href="https://www.shutterstock.com/image-photo/scar-on-abdomen-after-removal-appendicitis-1681413388"
+            <a aria-label="Imagem de Freepik 6"
+              href="https://www.shutterstock.com/image-photo/scar-on-abdomen-after-removal-appendicitis-1681413388"
               target="_blank">Homem Com uma cicatriz
             </a>
           </li>
           <li>
-            <a href="https://br.freepik.com/fotos-gratis/jovem-relaxando-em-um-salao-de-beleza_13104982.htm#query=Depila%C3%A7%C3%A3o%20Sobrancelhas%20com%20Linha&position=0&from_view=search&track=ais&uuid=a43d7287-6e27-428b-bc76-9ac681029413"
+            <a aria-label="Imagem de Freepik 7"
+              href="https://br.freepik.com/fotos-gratis/jovem-relaxando-em-um-salao-de-beleza_13104982.htm#query=Depila%C3%A7%C3%A3o%20Sobrancelhas%20com%20Linha&position=0&from_view=search&track=ais&uuid=a43d7287-6e27-428b-bc76-9ac681029413"
               target="_blank">Depilação Sobrancelhas com Linha
             </a>
-            <a href="https://br.freepik.com/fotos-gratis/retrato-de-mulher-madura-antes-e-depois-retocado_18962235.htm#query=lifting%20facial&position=0&from_view=search&track=ais&uuid=a93e9d6a-761b-4b7b-9582-5ada8ac8f122"
+            <a aria-label="Imagem de Freepik 8"
+              href="https://br.freepik.com/fotos-gratis/retrato-de-mulher-madura-antes-e-depois-retocado_18962235.htm#query=lifting%20facial&position=0&from_view=search&track=ais&uuid=a93e9d6a-761b-4b7b-9582-5ada8ac8f122"
               target="_blank">Lifting Facial
             </a>
           </li>
           <li>
-            <a href="https://br.freepik.com/fotos-gratis/corpo-feminino-de-esporte-sensual-perfeita-garota-em-lingerie-branca_7201437.htm#query=lifting%20corpo&position=10&from_view=search&track=ais&uuid=22781b9c-2ae2-4206-b586-af44076e0363"
+            <a aria-label="Imagem de Freepik 9"
+              href="https://br.freepik.com/fotos-gratis/corpo-feminino-de-esporte-sensual-perfeita-garota-em-lingerie-branca_7201437.htm#query=lifting%20corpo&position=10&from_view=search&track=ais&uuid=22781b9c-2ae2-4206-b586-af44076e0363"
               target="_blank">
               Lifting Corpo</a>
-            <a href="https://br.freepik.com/fotos-gratis/mulher-com-massagem-no-abdomen-por-terapeuta-profissional-de-osteopatia_1318985.htm#&position=14&from_view=author&uuid=2fe19120-1903-4438-bb9f-8fb0f8c31482"
+            <a aria-label="Imagem de Freepik 10"
+              href="https://br.freepik.com/fotos-gratis/mulher-com-massagem-no-abdomen-por-terapeuta-profissional-de-osteopatia_1318985.htm#&position=14&from_view=author&uuid=2fe19120-1903-4438-bb9f-8fb0f8c31482"
               target="_blank">
               Massagem Corpo</a>
           </li>
           <li>
-            <a href="https://br.freepik.com/fotos-gratis/osteopata-tratando-um-paciente-massageando-seu-rosto_11403560.htm"
+            <a aria-label="Imagem de Freepik 11"
+              href="https://br.freepik.com/fotos-gratis/osteopata-tratando-um-paciente-massageando-seu-rosto_11403560.htm"
               target="_blank">
               Massagem Facial</a>
-            <a href="https://www.youtube.com/watch?v=HZ88AMduCXE" target="_blank">REMOÇÃO DE TATUAGENS</a>
+            <a aria-label="Imagem de Freepik 12" href="https://www.youtube.com/watch?v=HZ88AMduCXE"
+              target="_blank">REMOÇÃO DE TATUAGENS</a>
           </li>
         </ul>
       </label>

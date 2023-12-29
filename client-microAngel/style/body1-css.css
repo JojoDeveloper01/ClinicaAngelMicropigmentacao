@@ -68,6 +68,10 @@ picture .simg3 {
     width: fit-content;
 }
 
+.texto-carousel a:hover {
+    text-decoration: none;
+}
+
 .border-slide {
     position: relative;
     display: flex;
@@ -136,6 +140,11 @@ picture .simg3 {
 
 .locais h1 a {
     color: #000;
+}
+
+.locais h1 a:hover {
+    color: #000;
+    text-decoration: none;
 }
 
 .locais h2 {
@@ -249,10 +258,6 @@ picture .simg3 {
     transform: translate(-50%, 50%);
 }
 
-.saiba-mais-ser:hover {
-    font-weight: bold;
-}
-
 .reserve-ja {
     background-color: var(--corRoxo);
     position: relative;
@@ -270,6 +275,10 @@ picture .simg3 {
 
     position: relative;
     margin: 2vw 0 0 0;
+}
+
+.reserve-ja a:hover {
+    text-decoration: none;
 }
 
 .reserve-ja p {
@@ -413,19 +422,23 @@ picture .simg3 {
 }
 
 
-.testemunhos {
+.testemunhas {
     background-color: var(--corRoxo);
     position: relative;
     width: 100vw;
     padding: 50px 0;
 }
 
-.testemunhos h1 {
+.testemunhas h1 {
     color: var(--corBranca);
     text-align: center;
     font-weight: bold;
 
     margin: 5vh 0 8vh 0;
+}
+
+.testemunhas a:hover {
+    text-decoration: none;
 }
 
 .ctro-testbox {
@@ -458,11 +471,6 @@ picture .simg3 {
     border-radius: 100%;
     object-fit: cover;
     margin-right: 20px;
-}
-
-.ctro-img-nome h6 {
-    font-size: 15px;
-    font-weight: bold;
 }
 
 .linha-test {
@@ -530,7 +538,7 @@ picture .simg3 {
     background-color: var(--corRoxo);
 }
 
-.contact-form h3 {
+.contact-form h2 {
     color: #161616cb;
     font-size: 25px;
 

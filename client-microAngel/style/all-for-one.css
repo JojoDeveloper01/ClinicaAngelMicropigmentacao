@@ -24,20 +24,20 @@ body h2 {
   position: relative;
   color: black;
   font-size: calc(1.5vw + 1em);
-  opacity: 0.9;
+  text-transform: capitalize;
   letter-spacing: 2px;
 
   margin: 0;
 }
 
 body a {
-  color: rgb(37, 56, 109);
+  color: rgb(0 50 191);
   text-decoration: none;
   cursor: pointer;
 }
 
-body strong {
-  opacity: 0.8;
+body a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -62,8 +62,7 @@ main .body {
 .body h5 {
   text-align: left;
   margin: 50px 0;
-  font-weight: bold;
-  color: #313131;
+  opacity: 0.8;
 }
 
 .body p {
@@ -322,7 +321,6 @@ footer {
 
 .footer-content h3 {
   font-weight: bold;
-
   opacity: 0.7;
   line-height: 3rem;
 }

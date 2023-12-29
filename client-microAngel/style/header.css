@@ -41,8 +41,12 @@ header {
   align-items: center;
 }
 
-.menuStart a{
-  color:#000;
+.menuStart a {
+  color: #000;
+}
+
+.menuStart a:hover {
+  text-decoration: none;
 }
 
 .logo {
