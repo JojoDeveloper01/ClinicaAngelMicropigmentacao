@@ -1,0 +1,244 @@
+---
+import ToBook from "../components/ToBook.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  .sobrenos {
+    background-color: #4137ff;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 40vh;
+  }
+
+  .sobrenos-video {
+    width: 100vw;
+    height: 40vh;
+    opacity: 0.7;
+  }
+
+  section .sobrenos-texto {
+    position: absolute;
+    left: 8vw;
+    margin: 0;
+    padding: 0;
+    width: min-content;
+  }
+
+  .sobrenos-texto h1,
+  .sobrenos-texto p {
+    color: #fff;
+    margin: 20px 0;
+    opacity: 1;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .red {
+    background-color: var(--corBranca);
+    box-shadow: 0px -4px 26px rgb(221 221 221 / 99%);
+    width: min-content;
+    height: min-content;
+    margin: 20px;
+  }
+
+  #titulo-social {
+    margin-top: 100px;
+  }
+
+  .card-body p {
+    font-size: medium;
+  }
+
+  @media only screen and (max-width: 317px) {
+    section div.sobrenos-texto {
+      width: -webkit-fill-available;
+      margin: 0 20px;
+    }
+
+    .sobrenos-texto p,
+    .sobrenos-texto h2 {
+      font-size: smaller;
+    }
+
+    .social .red {
+      margin: 0 0 5rem 0;
+    }
+  }
+  @media only screen and (max-width: 474px) {
+    .body p {
+      font-size: inherit;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    #eapps-instagram-feed-1 {
+      max-width: 25rem;
+      width: 25rem;
+    }
+  }
+</style>
+
+<Layout
+  title="Sobre Nós"
+  description="Explore técnicas como microblading, micropigmentação de olhos, labial, capilar, aréola e muito mais nos nossos locais em Lisboa e Póvoa de Santa Iria."
+  keywords="clínica micropigmentação lisboa, angel micropigmentação, microblanding, micropigmentação, micropigmentação preço, micropigmentação de sobrancelhas, micropigmentação labial, micropigmentação capilar, micropigmentação facial, micropigmentação de olhos, micropigmentação para cicatrizes, remoção de micropigmentação, camuflagem de estrias, remoção de pigmento, remoção de tatuagens, remoção de manchas"
+  canonical="https://clinicamicropigmentacao.com/sobrenos"
+>
+  <section class="sobrenos">
+    <video class="sobrenos-video" autoplay loop muted playsinline>
+      <source
+        src="https://res.cloudinary.com/dg6twczfr/video/upload/v1703727130/assets/videos/micro-sobrancelhasFeitinhas_cujdxb.mp4"
+        type="video/mp4"
+      />
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+    <div class="sobrenos-texto">
+      <h1>Clínica Angel Micropigmentação</h1>
+      <p>
+        Um espaço onde o profissionalismo, a precisão e a inovação destacam cada
+        Serviço. Explore técnicas como microblading, micropigmentação de olhos,
+        capilar, labial e serviços especializados de remoção de tatuagens.
+      </p>
+    </div>
+  </section>
+
+  <section class="body">
+    <h2>Procedimentos</h2>
+    <p>
+      A Clínica Angel Micropigmentação destaca-se como um estabelecimento
+      especializado em técnicas avançadas de realce estético, situado em <a
+        aria-label="Ver locais em Lisboa"
+        href="./#locais">Lisboa</a
+      >. Nosso foco principal recai sobre procedimentos como microblading,
+      micropigmentação de olhos, capilar e labial, além de oferecer serviços
+      especializados em remoção de manchas e correções de micropigmentação.
+    </p>
+    <a aria-label="Saber mais sobre serviços" href="./#servicos"
+      >Saber mais sobre serviços</a
+    >
+
+    <h2>Compromisso</h2>
+    <p>
+      Nossa abordagem cuidadosa e experiente visa realçar a beleza natural de
+      cada indivíduo, proporcionando resultados notáveis e duradouros.
+      Inspirados pelo compromisso com a excelência, buscamos sempre aprimorar
+      nossas técnicas e permanecer atualizados com as inovações no campo da
+      micropigmentação.
+    </p>
+
+    <h2>Confiança</h2>
+    <p>
+      Na <strong>Clínica Angel Micropigmentação</strong>, nosso objetivo é
+      proporcionar aos nossos clientes uma experiência confiável e satisfatória,
+      onde a qualidade e a segurança estão sempre em primeiro plano. Estamos
+      ansiosos para continuar aprimorando e expandindo nossa oferta de serviços,
+      garantindo que cada cliente se sinta confiante e satisfeito com os
+      resultados alcançados.
+    </p>
+    <a
+      aria-label="Ver mais sobre as experiências dos nosso clientes"
+      href="./#testemunhas">Ver mais sobre as experiências dos nosso clientes</a
+    >
+
+    <h2>Visão Futura</h2>
+    <p>
+      À medida que avançamos, aspiramos a continuar oferecendo serviços de
+      qualidade e excelência em estética. Almejamos ser reconhecidos como
+      referência na área, mantendo nossa dedicação a padrões elevados e inovação
+      constante.
+    </p>
+    <br />
+    <h2>Profissionais</h2>
+    <div class="card-group">
+      <div class="card">
+        <picture>
+          <source
+            srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/AngelFotodePerfil1.avif"
+          />
+          <img
+            src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/AngelFotodePerfil1.webp"
+            class="card-img-top"
+            alt="Profissional Angel"
+          />
+        </picture>
+        <div class="card-body">
+          <h3 class="card-title">Angel</h3>
+          <p>
+            Formada inicialmente em Técnico em Enfermagem, descobriu em 2014 a
+            verdadeira paixão: elevar a beleza natural com maquilhagem
+            semipermanente. Especializada em microblading, micropigmentação de
+            olhos, lábios, capilar, aréola remoção, tatuagens e manchas.
+          </p>
+          <p>
+            <small class="text-body-secondary"
+              ><a
+                aria-label="Ver serviços de Angel"
+                href="./#servicos"
+                class="text-base">Ver serviços de Angel</a
+              ></small
+            >
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <picture>
+          <source
+            srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/EsperanzaFotodePerfil.avif"
+          />
+          <img
+            src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/EsperanzaFotodePerfil.webp"
+            class="card-img-top"
+            alt="Profissional Esperanza"
+          />
+        </picture>
+        <div class="card-body">
+          <h3 class="card-title">Esperanza</h3>
+          <p>
+            Enfermeira desde 1982, nutricionista desde 2000, e esteticista desde
+            2001. Dedicada ao conforto e bem-estar das pessoas. Profissional em
+            massagens relaxantes corporais e faciais, drenagem linfática e
+            limpezas faciais.
+          </p>
+          <p>
+            <small class="text-body-secondary"
+              ><a
+                aria-label="Ver serviços de Esperanza"
+                href="./#servicos"
+                class="text-base">Ver serviços de Esperanza</a
+              ></small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="titulo-social">Redes Sociais</h2>
+    <section class="social">
+      <div
+        class="elfsight-app-58d93203-58c5-488c-b481-339ff1a3d60f red max-w-[25rem]"
+        style="z-index: 0;"
+        data-elfsight-app-lazy
+      >
+      </div>
+      <div
+        class="elfsight-app-900c2f93-c423-42c1-b6fc-4bcabe0bf42b red max-w-[25rem]"
+        style="z-index: 0;"
+        data-elfsight-app-lazy
+      >
+      </div>
+    </section>
+  </section>
+  <ToBook />
+</Layout>
+
+<script
+  is:inline
+  src="https://static.elfsight.com/platform/platform.js"
+  data-use-service-core
+  defer></script>

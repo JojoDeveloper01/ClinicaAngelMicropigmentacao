@@ -1,0 +1,93 @@
+.carousel_viewport {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+button.carousel-control-prev,
+button.carousel-control-next {
+  background: transparent;
+  opacity: 0.2;
+  position: absolute;
+  width: 5rem;
+  height: 3rem;
+  top: 64%;
+  transform: translateY(-50%);
+}
+
+button.carousel-control-prev {
+  left: 0;
+}
+
+button.carousel-control-next {
+  right: 0;
+}
+
+button.carousel-control-next:hover,
+button.carousel-control-prev:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+button.prev,
+button.next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slides {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100vw;
+  transition: right 0.3s ease;
+}
+
+.slide {
+  right: var(--slides);
+}
+
+.slide1 {
+  right: var(--slides1);
+}
+
+.slide2 {
+  right: var(--slides2);
+}
+
+.ver-maisP,
+.ver-maisExtra {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0;
+}
+
+.fq-vermais,
+.activarS {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.activeToogle {
+  max-height: 86rem;
+}
+
+#pfq1 {
+  font-size: 18px;
+  font-weight: bolder;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  margin-left: 13px;
+  transform: rotate(90deg);
+}
+
+.open #pfq1 {
+  transform: rotate(270deg);
+}

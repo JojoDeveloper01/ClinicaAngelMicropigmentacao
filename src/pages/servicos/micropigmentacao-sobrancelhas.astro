@@ -1,0 +1,1079 @@
+---
+import Form from "../../components/Form/form.astro";
+import ToBook from "../../components/ToBook.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<style>
+  .hero-sobrancelhas {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .hero-sobrancelhas img {
+    object-fit: cover;
+    object-position: left 35%;
+  }
+
+  .shadowyHero {
+    background: linear-gradient(
+      269deg,
+      rgba(233, 160, 236, 0.04) 0.51%,
+      #fcafff 7.24%,
+      #fca2ff 51.55%,
+      rgba(252, 163, 255, 0.77) 92.59%,
+      rgba(252, 161, 255, 0.47) 97.48%
+    );
+    display: flex;
+    justify-content: center;
+  }
+
+  .ctroShadowlyHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 57%;
+    height: 100%;
+    gap: 44px;
+  }
+
+  .shadowyTextBody {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-self: flex-start;
+  }
+
+  .shadowyTextBody h1 {
+    font-size: calc(2vw + 0.7em);
+    color: var(--corBranca);
+    text-transform: uppercase;
+  }
+
+  .shadowyTextBody p {
+    font-size: calc(1vw + 0.3em);
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+  }
+
+  .benefits {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .benefits > :first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .benefits > :first-child li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #000;
+    text-shadow: 4px 6px 4px rgb(73 73 73 / 24%);
+    font-size: 1.6rem;
+    line-height: normal;
+    height: 6px;
+  }
+
+  .benefits > :last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+
+    text-transform: uppercase;
+  }
+
+  .benefits > :last-child li {
+    font-size: calc(1vw + 0.5em);
+    margin-bottom: 2.4rem;
+  }
+
+  .reservarHero {
+    display: flex;
+    width: 20rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .reservarHero button {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--BlackButDiferent);
+    box-shadow: 0 9px 11px 0 rgba(0, 0, 0, 0.3);
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: background-color 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+
+  .reservarHero a {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reservarHero a:hover {
+    text-decoration: none;
+  }
+
+  .reservarHero button:hover {
+    background: #fff;
+  }
+
+  .reservarHero button:hover a {
+    color: var(--BlackButDiferent);
+  }
+
+  .precoHero {
+    display: flex;
+    width: 100%;
+  }
+
+  .precoHero p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .precoHero > :first-child span {
+    color: rgba(0, 0, 0, 0.63);
+    text-decoration-line: line-through;
+  }
+
+  .precoHero > :last-child span {
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+
+  .askSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .ask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 4.2rem 0;
+    gap: 1rem;
+    width: 29rem;
+    border-radius: 0.125rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 5px 9px 14px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .ask img,
+  .ask video {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    height: 16rem;
+  }
+
+  .ask div {
+    display: flex;
+    width: 84%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .ask div h2 {
+    text-transform: unset;
+    font-size: 1.1rem;
+  }
+
+  .ask div p {
+    letter-spacing: 0.077em;
+  }
+
+  .ask div span {
+    color: #494949;
+  }
+
+  .incentive {
+    display: flex;
+    justify-content: center;
+    margin: 10rem 0;
+  }
+
+  .incentive article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 66%;
+  }
+
+  .incentive h2 {
+    margin-bottom: 2rem;
+    width: 100%;
+    text-transform: math-auto;
+  }
+
+  .incentive p {
+    display: flex;
+    font-size: larger;
+    align-items: center;
+  }
+
+  .incentive p i {
+    margin-right: 1.5rem;
+  }
+
+  .tes-Sobran {
+    background-color: transparent;
+    margin-top: 4rem;
+  }
+
+  .tes-Sobran h2 {
+    text-transform: math-auto;
+    text-align: left;
+    color: #000;
+    width: 100%;
+    padding: 0 17vw;
+  }
+
+  .incentive .card-group img,
+  .incentive .card-group video {
+    height: 16rem;
+    object-position: top;
+  }
+
+  .incentive .card-group {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .incentive .card-group > .card {
+    flex: inherit;
+    justify-content: center;
+  }
+
+  .incentive .card {
+    margin: 0;
+  }
+
+  .incentive .card-group h3 a {
+    color: #000;
+  }
+
+  .card-title {
+    font-weight: 600;
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    .hero-sobrancelhas {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100dvh;
+      background-color: transparent;
+    }
+
+    .hero-sobrancelhas img {
+      width: 100%;
+      height: 36%;
+    }
+
+    .benefits > :first-child {
+      gap: 7vh;
+      padding: 0;
+    }
+
+    .benefits > :first-child li {
+      font-size: 2rem;
+      justify-content: center;
+    }
+
+    .benefits > :last-child {
+      gap: 5vh;
+    }
+
+    .benefits > :last-child li {
+      font-size: 3vw;
+      margin: 0;
+    }
+
+    .shadowyHero {
+      position: relative;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(269deg, #fcafff 7.24%, #fca2ff 51.55%);
+    }
+
+    .ctroShadowlyHero {
+      justify-content: center;
+    }
+
+    .shadowyTextBody {
+      width: 51vw;
+      position: absolute;
+      top: -74%;
+      right: 5%;
+    }
+
+    .shadowyTextBody h1 {
+      color: #000000;
+      font-size: calc(3vw + 0.3em);
+    }
+
+    .shadowyTextBody p {
+      font-size: 2.5vw;
+      margin-top: 1.5rem;
+    }
+
+    .reservarHero {
+      justify-content: flex-start;
+      position: relative;
+      width: 100%;
+      height: 12rem;
+      transform: translateY(-0.1%);
+      background: linear-gradient(269deg, #fcafff 7.24%, #fca2ff 51.55%);
+    }
+
+    .reservarHero button {
+      height: 38%;
+      width: 71%;
+    }
+
+    .precoHero {
+      justify-content: center;
+    }
+
+    .precoHero p {
+      width: 25%;
+      gap: 12px;
+      font-size: 1em;
+    }
+
+    .precoHero > :first-child span {
+      font-size: 1.4em;
+    }
+
+    .precoHero > :last-child span {
+      font-size: 1.7em;
+    }
+
+    .askSection {
+      margin-top: 10vh;
+    }
+
+    .ask {
+      margin: 3rem 0;
+      flex-direction: column;
+    }
+
+    .incentive article {
+      width: 88%;
+    }
+
+    .incentive .card-group video {
+      height: 100%;
+    }
+
+    .incentive p {
+      font-size: medium;
+    }
+
+    .incentive .card-group > .card {
+      width: 76%;
+    }
+
+    .incentive .card-group > .card {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 317px) {
+    .hero-sobrancelhas {
+      height: 110dvh;
+    }
+
+    .hero-sobrancelhas img {
+      height: 27%;
+    }
+
+    .benefits > :first-child {
+      gap: 5.5vh;
+    }
+
+    .benefits > :first-child li {
+      height: 1vw;
+      font-size: 1.5rem;
+    }
+
+    .benefits > :last-child {
+      gap: 4.6vh;
+    }
+
+    .benefits > :last-child li {
+      margin-bottom: 0;
+      letter-spacing: 1px;
+    }
+
+    .shadowyHero {
+      height: 50%;
+      padding-top: 2em;
+    }
+
+    .ctroShadowlyHero {
+      width: 100%;
+      padding: 0 4vw 0 10vw;
+      gap: 4vh;
+    }
+
+    .shadowyTextBody {
+      width: 100%;
+      position: relative;
+      top: inherit;
+      right: inherit;
+    }
+
+    .shadowyTextBody h1 {
+      font-size: calc(2vw + 0.7em);
+    }
+
+    .shadowyTextBody p {
+      font-size: 4vw;
+      margin-top: 1.5em;
+    }
+
+    .reservarHero {
+      height: 22%;
+      padding: 1em 0;
+    }
+
+    .reservarHero button {
+      height: 10vh;
+      width: 92vw;
+    }
+
+    .precoHero p {
+      width: 37%;
+      width: 44%;
+      gap: 12px;
+      font-size: 1em;
+    }
+
+    .precoHero p span {
+      font-size: 2em;
+      letter-spacing: 4px;
+    }
+  }
+
+  @media only screen and (min-width: 318px) and (max-width: 454px) {
+    .hero-sobrancelhas {
+      height: 110dvh;
+    }
+
+    .hero-sobrancelhas img {
+      height: 18%;
+    }
+
+    .benefits > :first-child {
+      gap: 5.5vh;
+    }
+
+    .benefits > :first-child li {
+      height: 1vw;
+    }
+
+    .benefits > :last-child li {
+      letter-spacing: 1px;
+    }
+
+    .shadowyHero {
+      height: 50%;
+      padding-top: 2em;
+    }
+
+    .ctroShadowlyHero {
+      width: 100%;
+      padding: 0 4vw 0 10vw;
+      gap: 4vh;
+    }
+
+    .shadowyTextBody {
+      width: 100%;
+      position: relative;
+      top: inherit;
+      right: inherit;
+    }
+
+    .shadowyTextBody h1 {
+      font-size: calc(2vw + 0.7em);
+    }
+
+    .shadowyTextBody p {
+      font-size: 4vw;
+      margin-top: 1.5em;
+    }
+
+    .reservarHero {
+      height: 22%;
+    }
+
+    .reservarHero button {
+      height: 10vh;
+      width: 92vw;
+    }
+
+    .precoHero p {
+      width: 37%;
+      width: 44%;
+      gap: 12px;
+      font-size: 1em;
+    }
+
+    .precoHero p span {
+      font-size: 2em;
+      letter-spacing: 4px;
+    }
+
+    .incentive .card-group > .card {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 455px) and (max-width: 600px) {
+    .shadowyTextBody h1,
+    .shadowyTextBody p {
+      color: #ffff;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .hero-sobrancelhas {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100dvh;
+      background-color: transparent;
+    }
+
+    .hero-sobrancelhas img {
+      width: 100%;
+      height: 36%;
+    }
+
+    .benefits > :first-child {
+      gap: 3.4rem;
+      padding: 0;
+    }
+
+    .benefits > :first-child li {
+      font-size: 2rem;
+      justify-content: center;
+    }
+
+    .benefits > :last-child {
+      gap: 2.4rem;
+    }
+
+    .benefits > :last-child li {
+      font-size: 3vw;
+      margin: 0;
+    }
+
+    .shadowyHero {
+      position: relative;
+      width: 100%;
+      height: 38%;
+      background: linear-gradient(269deg, #fcafff 7.24%, #fca2ff 51.55%);
+    }
+
+    .ctroShadowlyHero {
+      justify-content: center;
+    }
+
+    .shadowyTextBody {
+      width: 44vw;
+      height: 10.67rem;
+      position: absolute;
+      inset: -72% 46%;
+    }
+
+    .shadowyTextBody h1 {
+      color: #ffffff;
+    }
+
+    .shadowyTextBody p {
+      color: #ffff;
+      font-size: 2vw;
+    }
+
+    .reservarHero {
+      justify-content: flex-start;
+      position: relative;
+      width: 100%;
+      height: 12rem;
+      transform: translateY(-0.1%);
+      background: linear-gradient(269deg, #fcafff 7.24%, #fca2ff 51.55%);
+    }
+
+    .reservarHero button {
+      height: 38%;
+      width: 71%;
+    }
+
+    .precoHero {
+      justify-content: center;
+    }
+
+    .precoHero p {
+      width: 25%;
+      gap: 7px;
+      font-size: 1em;
+    }
+
+    .precoHero > :first-child span {
+      font-size: 1.4em;
+    }
+
+    .precoHero > :last-child span {
+      font-size: 1.7em;
+    }
+
+    .askSection {
+      margin-top: 10vh;
+    }
+
+    .ask {
+      flex-direction: column;
+    }
+
+    .incentive .card-group video {
+      height: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .hero-sobrancelhas {
+      flex-direction: inherit;
+      justify-content: flex-end;
+      height: calc(84vh - var(--tam));
+      margin-bottom: 5rem;
+    }
+
+    .hero-sobrancelhas img {
+      width: 50%;
+      height: 100%;
+    }
+
+    .benefits > :first-child {
+      gap: 5vh;
+    }
+
+    .benefits > :last-child {
+      gap: 3.4vh;
+    }
+
+    .benefits > :last-child li {
+      font-size: calc(1vw + 0.5em);
+    }
+
+    .shadowyHero {
+      position: absolute;
+      left: 0;
+      width: 57%;
+      height: calc(84% - var(--tam));
+      background: linear-gradient(
+        269deg,
+        rgb(233 160 236 / 0%) 1.51%,
+        #fcafff 7.24%,
+        #fca2ff 51.55%,
+        rgba(252, 163, 255, 0.77) 92.59%,
+        rgba(252, 161, 255, 0.47) 97.48%
+      );
+    }
+
+    .ctroShadowlyHero {
+      gap: 4vh;
+      width: unset;
+    }
+
+    .shadowyTextBody {
+      position: relative;
+      inset: inherit;
+      height: unset;
+    }
+
+    .shadowyTextBody h1 {
+      color: #000000;
+      font-size: calc(2vw + 0.4em);
+    }
+
+    .shadowyTextBody p {
+      color: #000000;
+      font-size: calc(1vw + 0.3em);
+      margin-top: 3.5vh;
+    }
+
+    .reservarHero {
+      position: absolute;
+      height: 12rem;
+      inset: 79.5% 0;
+      width: 60%;
+      gap: 1vh;
+      background: transparent;
+    }
+
+    .askSection {
+      margin-top: 24vh;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .hero-sobrancelhas img {
+      width: 51%;
+    }
+
+    .benefits > :first-child {
+      gap: 5.7vh;
+    }
+
+    .shadowyHero {
+      width: 53%;
+    }
+
+    .shadowyTextBody {
+      width: 42vw;
+    }
+
+    .reservarHero {
+      width: 35%;
+    }
+
+    .precoHero p {
+      gap: 3px;
+    }
+
+    .reservarHero {
+      width: 50%;
+    }
+
+    .reservarHero button {
+      width: 60%;
+    }
+
+    .ask {
+      flex-direction: unset;
+      width: 100vw;
+      height: 20rem;
+    }
+
+    .ask div {
+      padding: 1rem;
+      padding-right: 2.5rem;
+    }
+
+    .ask img,
+    .ask video {
+      align-self: stretch;
+      object-fit: cover;
+      width: 27rem;
+      height: unset;
+    }
+
+    .incentive p {
+      font-size: x-large;
+    }
+
+    .cb-body p {
+      font-size: large;
+    }
+
+    .incentive .card-body {
+      justify-content: flex-start;
+    }
+
+    .incentive .card-group video {
+      height: 16rem;
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .reservarHero button {
+      width: 48%;
+      height: 47%;
+    }
+
+    .ask {
+      flex-direction: unset;
+      width: 66vw;
+      height: 20rem;
+    }
+
+    .ask div {
+      padding: 1rem;
+      padding-right: 3.5rem;
+    }
+
+    .ask div h2 {
+      text-transform: unset;
+      font-size: 1.5rem;
+    }
+
+    .incentive h2 {
+      margin-bottom: 3rem;
+    }
+
+    .incentive .card-group {
+      justify-content: space-around;
+      gap: 2rem;
+    }
+  }
+</style>
+
+<Layout
+  title="Micropigmentação Sobrancelhas"
+  description="Serviço de Micropigmentação de Sobrancelhas, informações das técnicas mais conhecidas de micropigmentação."
+  keywords="Serviços Clínica Angel Micropigmentação, microblanding, nanoblanding, micropigmentação, micropigmentação preço, micropigmentação de sobrancelhas"
+  canonical="https://clinicamicropigmentacao.com/serivcos/micropigmentacao-sobrancelhas"
+>
+  <section class="hero-sobrancelhas">
+    <img
+      src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif"
+      alt="Mulher com Incriveís sobrancelhas"
+    />
+    <div class="shadowyHero">
+      <div class="ctroShadowlyHero">
+        <div class="shadowyTextBody">
+          <h1>Micropigmentação Sobrancelhas</h1>
+          <p>
+            Aprimora a estética das sobrancelhas, realçando os traços faciais
+            para um look mais natural.
+          </p>
+        </div>
+        <div class="benefits">
+          <ol>
+            <li>✔</li>
+            <li>✔</li>
+            <li>✔</li>
+            <li>✔</li>
+          </ol>
+          <ol>
+            <li><span class="bold">1 - 4 anos</span> de duração</li>
+            <li><span class="bold">Técnicas</span> especializadas</li>
+            <li><span class="bold">realça</span> a sua aparência</li>
+            <li><span class="bold">PERSONALIZADAS</span> A SEU GOSTO</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="reservarHero">
+      <button
+        ><a
+          href="https://zappysoftware.com/m/clinicamicropigmentacao"
+          target="_blank">Reserve com desconto</a
+        ></button
+      >
+      <div class="precoHero">
+        <p>
+          Preço antigo:
+          <span>120 €</span>
+        </p>
+        <p>
+          Preço Atual:
+          <span class="bold">95 €</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="askSection">
+    <article class="ask">
+      <img
+        src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716126/assets/image/servicos/sobrancelhas_antes_depois1.avif"
+        alt="Micropigmentação de Sobrancelhas"
+      />
+      <div>
+        <h2>O que é micropigmentação de sobrancelhas?</h2>
+        <p>
+          A <span class="bold">micropigmentação fio a fio</span> é uma técnica de
+          maquilhagem semi-permanente que utiliza pigmentos para depositar na pele,
+          criando a aparência de fios de cabelo naturais para preencher ou definir
+          sobrancelhas. É uma técnica de beleza popular que pode durar de 1 a 4 anos
+          com os cuidados adequados.
+        </p>
+      </div>
+    </article>
+    <article class="ask">
+      <img
+        src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas_antes_depois2.avif"
+        alt="Nanoblanding e Microblanding"
+      />
+      <div>
+        <h2>Nanoblanding e Microblanding</h2>
+        <p>
+          Utilizando lâminas finas, depositam pigmento na pele, criando fios de
+          cabelo naturais. O <span class="bold">Microblanding</span>
+          proporciona um aspeto definido que dura cerca de 1 a 2 anos. Já o <span
+            class="bold">Nanoblanding</span
+          >, com lâminas ainda mais finas, Oferece resultados mais detalhados,
+          com uma durabilidade de 2 a 6 anos.
+        </p>
+      </div>
+    </article>
+    <article class="ask">
+      <img
+        src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/microSobranHomem.avif"
+        alt="Micropigmentação de Sobrancelhas de Homem"
+      />
+      <div>
+        <h2>Técnica Especializada para Homens</h2>
+        <p>
+          Oferece um toque <span class="bold">natural</span> e personalizado à expressão
+          facial masculina, garantindo sobrancelhas harmoniosas e
+          <span class="bold">discretas</span>. Com um cuidado especial aos
+          traços masculinos, o procedimento realça a beleza original,
+          proporcionando <span class="bold">confiança</span> e autenticidade.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section class="incentive">
+    <article>
+      <h2>Identifica-se com isto?</h2>
+      <p>
+        <i class="fa-solid fa-clock fa-xl"></i> Passa muito tempo todas as manhãs
+        em frente ao espelho a maquilhar-se?
+      </p>
+      <p>
+        <i class="fa-solid fa-briefcase fa-xl"></i> Tem uma agenda ocupada e não
+        tem tempo para aplicar maquilhagem diariamente?
+      </p>
+      <p>
+        <i class="fa-solid fa-fan fa-xl"></i> Tem perda de pelos ou condição similar,
+        mas deseja ter sobrancelhas novamente?
+      </p>
+      <p>
+        <i class="fa-solid fa-star fa-rotate-90 fa-xl"></i>Deseja realçar a sua
+        beleza de maneira natural e discreta, sem exageros?
+      </p>
+    </article>
+  </section>
+
+  <section class="incentive">
+    <article>
+      <h2>
+        Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias
+        para si!
+      </h2>
+      <p style="text-transform: inherit;">
+        A nossa abordagem à micropigmentação visa criar uma aparência natural e
+        realçar a sua beleza única. As cores e formas são personalizadas para
+        combinar perfeitamente com o seu rosto, proporcionando um visual
+        autêntico. <br /><br />
+        Imagine acordar todas as manhãs com sobrancelhas perfeitas, lábios vibrantes
+        e um delineador impecável, sem precisar gastar tempo aplicando maquilhagem.
+        A micropigmentação torna isso possível.
+      </p>
+    </article>
+  </section>
+
+  <section class="incentive">
+    <article class="card-group">
+      <h2>
+        Qual a opinião dos nossos clientes com a micropigmentação de
+        sobrancelhas?
+      </h2>
+      <div class="card">
+        <video playsinline controls>
+          <source
+            src="https://res.cloudinary.com/dg6twczfr/video/upload/v1706716786/assets/videos/clientSobran_td7mks.mp4"
+            type="video/mp4"
+          />
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+        <div class="card-body cb-body">
+          <h3 class="card-title">Marta</h3>
+          <h3 class="card-title">⭐⭐⭐⭐⭐</h3>
+          <p>
+            Fiz a micropigmentação, a primeira vez que fiz, correu lindamente.
+            Não doeu rigorosamente nada. A segunda vez ficou maravilhoso. Por
+            isso, não tenham medo, porque não dói nada, a anestesia é
+            fantástica, e irei voltar como cliente.
+          </p><br />
+        </div>
+      </div>
+      <div class="card">
+        <a
+          href="https://www.facebook.com/photo.php?fbid=1356026714868063&set=a.164134344057312&type=3"
+          target="_blank"
+          ><img
+            src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716527/assets/image/testemunhas/testemunhaOpiniao_mnn187.avif"
+            class="card-img-top"
+            alt="Cliente"
+          /></a
+        >
+        <div class="card-body cb-body">
+          <h3 class="card-title">
+            <a
+              href="https://www.facebook.com/photo.php?fbid=1356026714868063&set=a.164134344057312&type=3"
+              >Daniela Alexandra</a
+            >
+          </h3>
+          <h3 class="card-title">⭐⭐⭐⭐⭐</h3>
+          <p>
+            Muito bom serviço e sem dor!!! Muita atenção e delicadeza no
+            atendimento ao cliente!! Vou regressar mais vezes para retocar as
+            minhas sobrancelhas e fazer mais procedimentos estéticos, sem
+            dúvida!!!! 😊😊
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/reviews/@38.7423967,-9.1389141,17z/data=!3m1!4b1!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSURobDRMbmFREAE!2m1!1s0x0:0x3ed8bc3894b5ca15?hl=pt-PT&entry=ttu"
+        >
+          <img
+            src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716126/assets/image/servicos/sobrancelhas_antes_depois1.avif"
+            class="card-img-top"
+            alt="Cliente"
+          />
+        </a>
+        <div class="card-body cb-body">
+          <h3 class="card-title">
+            <a
+              href="https://www.google.com/maps/reviews/@38.7423967,-9.1389141,17z/data=!3m1!4b1!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSURobDRMbmFREAE!2m1!1s0x0:0x3ed8bc3894b5ca15?hl=pt-PT&entry=ttu"
+              >Inês Jordão</a
+            >
+          </h3>
+          <h3 class="card-title">⭐⭐⭐⭐⭐</h3>
+          <p>
+            Profissional de excelência e uma pessoa muito humana. O resultado
+            foi extraordinário!! 🥰 Muito obrigada 🙌🙌
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <ToBook />
+  <h2 style="margin-bottom: 0;" class="marcar-perguntar">ou</h2>
+  <Form />
+</Layout>

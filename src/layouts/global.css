@@ -1,0 +1,290 @@
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=Montserrat&family=Philosopher&display=swap");
+
+  :root {
+    --corRoxo: #ef83f3;
+    --corBranca: #f4f4f4;
+    --BlackButDiferent: #494949;
+    --tam: 100px;
+    --slides: 0;
+    --slides1: 0;
+    --slides2: 0;
+    --maxSlides: 0;
+    --minSlides: 0;
+  }
+
+  * {
+    font-family: "Montserrat", sans-serif;
+    border: 0;
+    margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  html body {
+    /*  background-color: var(--corBranca); */
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body h1,
+  body h2 {
+    position: relative;
+    color: black;
+    font-weight: bolder;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+
+    margin: 0;
+  }
+
+  body h1 {
+    font-size: xxx-large;
+  }
+
+  body h2 {
+    font-size: calc(1.5vw + 1em);
+  }
+
+  body h3 {
+    font-size: x-large;
+  }
+
+  body a {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  body a:hover {
+    text-decoration: none;
+  }
+
+  body p {
+    text-align: left;
+    line-height: 1.7em;
+    text-wrap: pretty;
+  }
+
+  main {
+    width: 100vw;
+    margin-top: var(--tam);
+  }
+
+  main .body {
+    padding-top: 50px;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: var(--tam);
+  }
+
+  .body h1,
+  .body h2,
+  .body h3,
+  .body h4,
+  .body h5 {
+    text-align: left;
+    font-weight: bold;
+    margin: 50px 0;
+  }
+
+  .body p {
+    font-size: x-large;
+    margin: 10px 0;
+  }
+
+  .body a {
+    color: #3366cc;
+  }
+
+  .body a:hover {
+    text-decoration: underline;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul a:hover {
+    color: var(--corRoxo);
+  }
+
+  video {
+    object-fit: cover;
+  }
+
+  .bold {
+    font-weight: bold;
+    -webkit-text-stroke: 1px #444;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  button,
+  input {
+    cursor: pointer;
+  }
+
+  .marcar-perguntar {
+    margin: 8vh 0;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  .card {
+    margin: 0 15px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.178);
+  }
+
+  .card {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-border-width: 1px;
+    --bs-card-border-color: rgb(0, 0, 0, 0.175);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: 1px solid rgb(0, 0, 0, 0.175);
+  }
+
+  .card img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-group>.card {
+    flex: 1 0 0%;
+    margin-bottom: 0;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    padding: 1rem;
+  }
+
+  .card-body h3 {
+    font-size: larger;
+    margin: 10px 0;
+  }
+
+  .marcar-perguntar {
+    margin: 8vh 0;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    main {
+      --tam: 70px;
+    }
+
+    body h1 {
+      font-size: 7vw;
+    }
+
+    .card img {
+      height: 250px;
+    }
+
+    section.body {
+      margin-left: 10%;
+      margin-right: 5%;
+    }
+
+    div.card-group {
+      display: block;
+    }
+
+    div.card {
+      margin: 15px 0;
+    }
+
+  }
+
+  @media only screen and (max-width: 317px) {
+    section.body {
+      margin-left: 7%;
+      margin-right: 5%;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .card {
+      width: 60vw;
+    }
+
+    .card img {
+      position: inherit;
+      height: 30vh;
+    }
+
+    section.body {
+      margin-left: 10%;
+      margin-right: 5%;
+    }
+
+  }
+
+  @media only screen and (min-width: 992px) {
+    main {
+      --tam: 111px;
+    }
+
+    .card {
+      width: 30vw;
+    }
+
+    .card img {
+      height: 35vh;
+    }
+
+    section.body {
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .card {
+      width: 20vw;
+    }
+
+    .card img {
+      height: 30vh;
+    }
+  }

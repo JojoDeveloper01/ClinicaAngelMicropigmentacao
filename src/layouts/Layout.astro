@@ -1,0 +1,127 @@
+---
+import ButtonFloat from "../components/ButtonFloat.astro";
+import Footer from "../components/Footer/Footer.astro";
+import Header from "../components/Header/Header.astro";
+import "./global.css";
+import "./normalize.css";
+
+interface Props {
+  title: string;
+  description: string;
+  keywords: string;
+  canonical: string;
+}
+
+const { title, description, keywords, canonical } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Clínica Angel Micropigmentação" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="keywords" content={keywords} />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="facebook-domain-verification"
+      content="sb6mwara10tzlkoup9imszy27upaob"
+    />
+    <meta property="og:url" content="https://clinicamicropigmentacao.com" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Clínica Angel Micropigmentação - Estética Micropigmentação"
+    />
+    <meta
+      property="og:description"
+      content="Um espaço onde o profissionalismo, a precisão e a inovação destacam cada Serviço. Explore técnicas como microblading, micropigmentação de olhos, capilar, labial e muito mais."
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/favicon.ico"
+    />
+    <meta property="og:image:width" content="556" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/favicon-32x32.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function yourFunction(w: any, d: any, s: any, l: string, i: any) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        const script = d.createElement("script");
+        const f = d.getElementsByTagName(s)[0];
+        const dl = l != "dataLayer" ? "&l=" + l : "";
+
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+
+        if (f && f.parentNode) {
+          f.parentNode.insertBefore(script, f);
+        }
+      })(window, document, "script", "dataLayer", "GTM-WGS4GCL3");
+    </script>
+    <!-- Acaba o Tag Manager -->
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <ButtonFloat />
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/5e2d559914.js"
+      crossorigin="anonymous"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WGS4GCL3"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+</html>
+<!-- <script>
+  function scrollToElement() {
+    setTimeout(() => {
+      history.replaceState(
+        "",
+        document.title,
+        window.location.origin +
+          window.location.pathname +
+          window.location.search
+      );
+    }, 1);
+  }
+</script>
+ -->

@@ -1,0 +1,248 @@
+---
+import SocialMidia from "../SocialMidia.astro";
+---
+
+<style>
+  footer {
+    background-color: var(--corBranca);
+    box-shadow: 0 0 6px 0 #a1a1a196;
+    color: #000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    width: 100vw;
+    padding: 6vh 0 4vh 0;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-content h3 {
+    font-weight: bold;
+    opacity: 0.7;
+    line-height: 3rem;
+  }
+
+  .footer-content p {
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    max-width: 500px;
+    margin: 10px;
+  }
+
+  .linha-footer {
+    text-align: center;
+    opacity: 0.25;
+    border: 1px solid #000;
+    width: 250px;
+    margin: 1rem 0;
+  }
+
+  .footer-bottom {
+    padding-top: 5px;
+  }
+
+  .footer-bottom p {
+    color: #000;
+    opacity: 0.8;
+    font-size: 14px;
+    line-height: 30px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer-bottom a {
+    color: #000;
+    opacity: 0.8;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom label p {
+    cursor: pointer;
+    opacity: 0.8;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom a:hover {
+    opacity: 1;
+    font-weight: bolder;
+  }
+
+  #toggle-creditos {
+    display: none;
+  }
+
+  #toggle-creditos:checked + .creditos-section {
+    display: block;
+  }
+
+  .creditos-section {
+    display: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .creditos-section a {
+    font-size: small;
+    font-weight: 200;
+    text-align: center;
+    border: 1px solid black;
+
+    display: inline-block;
+    width: 286px;
+    padding: 0;
+  }
+
+  .creditos-section a:hover {
+    font-weight: inherit;
+  }
+
+  .creditos-section li:first-child {
+    margin: 8px 0 14px 0;
+    border: inherit;
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    .creditos-section a {
+      display: block;
+      width: auto;
+    }
+  }
+</style>
+
+<footer>
+  <div class="footer-content">
+    <h3>Clínica Angel Micropigmentação</h3>
+    <p>
+      Descubra a beleza que brilha dentro de você, irradiando confiança e amor
+      próprio a cada passo do caminho!
+    </p>
+    <SocialMidia />
+  </div>
+  <hr class="linha-footer" />
+  <div class="footer-bottom">
+    <p>
+      &copy; 2024 Clínica Angel Micropigmentação <br />
+      <a
+        aria-label="página politica de privacidade"
+        href="./politica-de-privacidade">Política de Privacidade</a
+      >
+      | Desenvolvido por <a
+        aria-label="Rede Social do criador do Website"
+        href="https://www.linkedin.com/in/joseth-balcazar-3bb450298/"
+        target="_blank">J-set</a
+      >
+    </p>
+    <label>
+      <p>Créditos</p>
+      <input type="checkbox" id="toggle-creditos" />
+
+      <ul class="creditos-section">
+        <li>Fontes das Imagens:</li>
+        <li>
+          <a
+            aria-label="Imagem de Freepik 1"
+            href="https://br.freepik.com/fotos-gratis/rosto-de-menina-bonita-pele-perfeita_8096956.htm#query=sobrancelhas&position=22&from_view=search&track=sph&uuid=ad37ea15-9835-4028-95fa-6a186ac2c0d4"
+            target="_blank">Sobrancelhas de uma mulher</a
+          >
+          <a
+            aria-label="Imagem de Freepik 2"
+            href="https://br.freepik.com/fotos-gratis/feche-o-retrato-de-mulher-com-pele-hidratada_27370315.htm#&position=0&from_view=search&track=ais"
+            target="_blank">Labios de uma mulher</a
+          >
+        </li>
+        <li>
+          <a
+            aria-label="Imagem de Freepik 3"
+            href="https://br.freepik.com/fotos-gratis/labios-perfeitos-sorriso-de-mulher-jovem-de-beleza-labio-carnudo-natural-detalhe-de-close_10427048.htm#from_view=detail_alsolike"
+            target="_blank"
+          >
+            Labios de uma mulher 2</a
+          >
+          <a
+            aria-label="Imagem de Freepik 4"
+            href="https://br.freepik.com/fotos-gratis/terapeuta-feminina-lavando-o-rosto-de-um-cliente-do-sexo-masculino-enquanto-faz-um-tratamento-facial-em-um-spa_28030936.htm#query=limpeza%20de%20pele%20em%20homem&position=1&from_view=search&track=ais&uuid=7afc7135-82bd-4a81-a302-59e1caed7b43"
+            target="_blank">Limpeza Facial a um homem</a
+          >
+        </li>
+        <li>
+          <a
+            aria-label="Imagem de Freepik 5"
+            href="https://br.freepik.com/fotos-gratis/mao-de-alto-angulo-segurando-o-cotonete-rosa_30944949.htm#query=lifting%20pestanas&position=2&from_view=search&track=ais&uuid=3c2ecdf7-24a4-453a-9b65-2268352d3772"
+            target="_blank"
+            >Lifting Pestanas a uma mulher
+          </a>
+          <a
+            aria-label="Imagem de Freepik 6"
+            href="https://www.shutterstock.com/image-photo/scar-on-abdomen-after-removal-appendicitis-1681413388"
+            target="_blank"
+            >Homem Com uma cicatriz
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Imagem de Freepik 7"
+            href="https://br.freepik.com/fotos-gratis/jovem-relaxando-em-um-salao-de-beleza_13104982.htm#query=Depila%C3%A7%C3%A3o%20Sobrancelhas%20com%20Linha&position=0&from_view=search&track=ais&uuid=a43d7287-6e27-428b-bc76-9ac681029413"
+            target="_blank"
+            >Depilação Sobrancelhas com Linha
+          </a>
+          <a
+            aria-label="Imagem de Freepik 8"
+            href="https://br.freepik.com/fotos-gratis/retrato-de-mulher-madura-antes-e-depois-retocado_18962235.htm#query=lifting%20facial&position=0&from_view=search&track=ais&uuid=a93e9d6a-761b-4b7b-9582-5ada8ac8f122"
+            target="_blank"
+            >Lifting Facial
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Imagem de Freepik 9"
+            href="https://br.freepik.com/fotos-gratis/corpo-feminino-de-esporte-sensual-perfeita-garota-em-lingerie-branca_7201437.htm#query=lifting%20corpo&position=10&from_view=search&track=ais&uuid=22781b9c-2ae2-4206-b586-af44076e0363"
+            target="_blank"
+          >
+            Lifting Corpo</a
+          >
+          <a
+            aria-label="Imagem de Freepik 10"
+            href="https://br.freepik.com/fotos-gratis/mulher-com-massagem-no-abdomen-por-terapeuta-profissional-de-osteopatia_1318985.htm#&position=14&from_view=author&uuid=2fe19120-1903-4438-bb9f-8fb0f8c31482"
+            target="_blank"
+          >
+            Massagem Corpo</a
+          >
+        </li>
+        <li>
+          <a
+            aria-label="Imagem de Freepik 11"
+            href="https://br.freepik.com/fotos-gratis/osteopata-tratando-um-paciente-massageando-seu-rosto_11403560.htm"
+            target="_blank"
+          >
+            Massagem Facial</a
+          >
+          <a
+            aria-label="Imagem de Freepik 12"
+            href="https://www.youtube.com/watch?v=HZ88AMduCXE"
+            target="_blank">REMOÇÃO DE TATUAGENS</a
+          >
+        </li>
+      </ul>
+    </label>
+  </div>
+</footer>

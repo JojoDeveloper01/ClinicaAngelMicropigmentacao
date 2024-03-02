@@ -1,0 +1,66 @@
+---
+import SectionGroup from "./SectionGroup.astro";
+---
+
+<style>
+  .openSideBar:checked + nav {
+    display: flex;
+  }
+  .openSideBar:checked + nav .sectionGroup {
+    right: -100%;
+  }
+</style>
+
+<header
+  style=`background-color: var(--corBranca);`
+  class="fixed flex justify-between items-center w-screen top-[0] z-[3] [box-shadow:0px_3px_5px_rgba(0,_0,_0,_0.178)] min-[992px]:h-[110px] min-[992px]:px-[2em] max-[992px]:pl-[20px] max-[991px]:h-[100px] max-[600px]:h-[70px]"
+>
+  <a
+    aria-label="início"
+    href="../"
+    class="logo w-[50%] text-[x-large] font-bold uppercase tracking-[2px] leading-[24px] min-[1700px]:w-[38%] min-[1500px]:w-auto"
+  >
+    <span class="text-[#e62fec]">Clínica</span> Angel
+    <span class="block max-[600px]:hidden">Micropigmentação</span>
+  </a>
+
+  <div class="min-[992px]:hidden flex justify-end h-full w-full">
+    <a
+      href="tel:+351935407895"
+      target="_blank"
+      aria-label="Chamar Angel"
+      class="flex items-center justify-center bg-[#a0a0a02c] min-[768px]:w-[110px] min-[601px]:w-[100px] max-[600px]:w-[70px]"
+      ><i class="fa-solid fa-phone fa-2xl" style="color: #000000c2;"></i></a
+    >
+    <button
+      aria-label="Abrir painel de navegação"
+      style="background-color:var(--corRoxo)"
+      class="flex items-center justify-center min-[768px]:w-[110px] min-[601px]:w-[100px] max-[600px]:w-[70px]"
+    >
+      <i class="fa-solid fa-bars fa-2xl" style="color: #000000d0;"></i>
+    </button>
+  </div>
+  <input
+    type="checkbox"
+    class="openSideBar min-[768px]:size-[110px] min-[601px]:size-[100px] max-[600px]:size-[70px] absolute right-[0] opacity-0 checked:size-8 checked:-translate-x-[29%] checked:min-[601px]:-translate-x-[104%] checked:min-[601px]:-translate-y-[60%] checked:z-[5] min-[992px]:hidden"
+  />
+  <nav
+    class="flex justify-center items-center min-[992px]:w-full max-[991px]:hidden"
+  >
+    <div
+      onclick=`removeNav()`
+      class="distorted fixed z-[4] bg-[rgba(0,0,0,0.209)] backdrop-blur-[10px]
+      opacity-100 inset-0 min-[991px]:hidden"
+    >
+    </div>
+    <SectionGroup />
+  </nav>
+</header>
+
+<script>
+  const toggleBodyScroll = () => document.body.classList.toggle("no-scroll");
+
+  const openSideBar = document.querySelector<HTMLElement>(".openSideBar");
+  openSideBar?.addEventListener("click", toggleBodyScroll);
+  (window as any).removeNav = () => openSideBar?.click();
+</script>

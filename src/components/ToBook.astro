@@ -1,0 +1,143 @@
+<style>
+  .reserve-ja {
+    background-color: var(--corRoxo);
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .reserve-ja h2 {
+    color: var(--corBranca);
+    font-weight: bold;
+
+    position: relative;
+    margin: 2vw 0 0 0;
+  }
+
+  .reserve-ja a:hover {
+    text-decoration: none;
+  }
+
+  .reserve-ja p {
+    color: var(--corBranca);
+    opacity: 0.9;
+    margin: 1.5vh 0 3vh 0;
+  }
+
+  .border-rb {
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    border: 1px solid var(--corBranca);
+    transition: padding 0.3s ease;
+    padding: min(3.5vh, 9vh);
+  }
+
+  .border-rb:hover {
+    padding: min(4vh, 10vw);
+  }
+
+  .reser-button {
+    color: var(--corBranca);
+    font-weight: bold;
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    .reserve-ja {
+      flex-direction: column;
+      padding: 5vw;
+    }
+
+    .reserve-ja h2,
+    .reserve-ja p {
+      text-align: center;
+    }
+
+    .reserve-ja h2 {
+      font-size: 1.5em;
+    }
+
+    .reserve-ja p {
+      font-size: 1em;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .reserve-ja {
+      flex-direction: column;
+      padding: 5vw;
+    }
+
+    .reserve-ja h2,
+    .reserve-ja p {
+      text-align: center;
+      padding: 0 2.5em;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .reserve-ja {
+      flex-direction: inherit;
+      padding: 0 15vw;
+      height: 20vh;
+    }
+
+    .reserve-ja h2,
+    .reserve-ja p {
+      text-align: left;
+      padding: 0;
+    }
+
+    .border-rb {
+      margin-left: 5vw;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .reserve-ja h2 {
+      font-size: 1.9vw;
+    }
+
+    .reserve-ja p {
+      font-size: 1vw;
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .reserve-ja {
+      height: 24vh;
+      padding: 0 20vw;
+    }
+    .reser-button {
+      font-size: 1vw;
+    }
+
+    button.border-rb {
+      padding: 4vh 3vw;
+    }
+
+    button.border-rb:hover {
+      padding: 4.5vh 3.5vw;
+    }
+  }
+</style>
+
+<section class="reserve-ja">
+  <div class="ctro-reser">
+    <h2>RESERVE O SEU MOMENTO DE BELEZA</h2>
+    <p>
+      Agende uma consulta e deixe-se cuidar pelos nossos profissionais
+      especializados
+    </p>
+  </div>
+  <a
+    aria-label="Marcar reserva"
+    href="https://zappysoftware.com/m/clinicamicropigmentacao"
+    target="_blank"
+  >
+    <button aria-label="Marcar reserva" class="border-rb">
+      <span class="reser-button">MARCAR RESERVA</span>
+    </button>
+  </a>
+</section>

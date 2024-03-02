@@ -1,0 +1,29 @@
+---
+import Form from "../components/Form/form.astro";
+import ToBook from "../components/ToBook.astro";
+import Layout from "../layouts/Layout.astro";
+import Contactos from "./index/contactos-index.astro";
+import Hero from "./index/hero-index.astro";
+import Perguntas from "./index/perguntas-index.astro";
+import Servicos from "./index/servicos-index.astro";
+import Sobrenos from "./index/sobrenos-index.astro";
+import Testemunhas from "./index/testemunhas-index.astro";
+---
+
+<Layout
+  title="Clínica Angel - Micropigmentação e Microblanding"
+  description="Explore técnicas como microblading, micropigmentação de olhos, labial, capilar, aréola e muito mais nos nossos locais em Lisboa e Póvoa de Santa Iria."
+  keywords="clínica micropigmentação lisboa, angel micropigmentação, microblanding, micropigmentação, micropigmentação preço, micropigmentação de sobrancelhas, micropigmentação labial, micropigmentação capilar, micropigmentação facial, micropigmentação de olhos, micropigmentação para cicatrizes, remoção de micropigmentação, camuflagem de estrias, remoção de pigmento, remoção de tatuagens, remoção de manchas"
+  canonical="https://clinicamicropigmentacao.com"
+>
+  <Hero />
+  <Servicos />
+  <ToBook />
+  <Perguntas />
+  <Testemunhas />
+  <Contactos />
+  <Sobrenos />
+  <ToBook />
+  <h2 style="margin-bottom: 0;" class="marcar-perguntar">ou</h2>
+  <Form />
+</Layout>
