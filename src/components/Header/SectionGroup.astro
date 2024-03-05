@@ -4,7 +4,7 @@ import SocialMidia from "../SocialMidia.astro";
 
 <style>
   .sectionGroup {
-    animation: openPanel 0.4s cubic-bezier(0.25, 0.11, 0.52, 0.85) both;
+    animation: openPanel 0.4s ease-out both;
   }
 
   .openSideBar {
@@ -12,6 +12,9 @@ import SocialMidia from "../SocialMidia.astro";
   }
 
   @keyframes openPanel {
+    from {
+      right: -100%;
+    }
     to {
       right: 0%;
     }
@@ -158,7 +161,7 @@ import SocialMidia from "../SocialMidia.astro";
         class="toogle absolute scale-x-[4] size-5 opacity-0 min-[992px]:hidden"
       />
       <ul
-        class="dropdown min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] min-[992px]:-ml-[8vh] animate-fade-down animate-duration-[300ms] animate-ease-in-out"
+        class="dropdown min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250"
       >
         <li>
           <a
@@ -189,7 +192,7 @@ import SocialMidia from "../SocialMidia.astro";
         class="toogle scale-x-[4] absolute size-5 opacity-0 min-[992px]:hidden"
       />
       <ul
-        class="min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] dropdown min-[992px]:-ml-[8vh] animate-fade-down animate-duration-[300ms] animate-ease-in-out"
+        class="min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] dropdown min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250"
       >
         <li>
           <a aria-label="pergunta: o que é micropigmentação?" href="../#pg1"

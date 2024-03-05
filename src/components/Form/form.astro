@@ -187,6 +187,9 @@
               class="cursor-text"
             />
             <span class="customAlert" id="nomeAlert">Preencher o campo.</span>
+            <span class="customAlert" id="nameStringAlert"
+              >O nome não deve conter números.</span
+            >
           </p>
           <p>
             <label for="telemovel"
@@ -202,9 +205,15 @@
             <span class="customAlert" id="telemovelAlert"
               >Preencher o campo.</span
             >
-            <span class="customAlert" id="formatTelemovel">
-              Só são permitidos números neste campo.</span
-            >
+            <span class="customAlert" id="phoneSpaceAlert">
+              Por favor, remova os espaços no número de telemóvel.
+            </span>
+            <span class="customAlert" id="phoneStringAlert">
+              O número de telemóvel não deve conter caracteres não numéricos.
+            </span>
+            <span class="customAlert" id="phoneNumMinAlert">
+              O número de telemóvel deve ter pelo menos 9 dígitos.
+            </span>
           </p>
           <p class="block">
             <label for="email">Email</label>
@@ -237,7 +246,7 @@
             </button>
             <span
               class="customAlert"
-              id="sucessAlert"
+              id="successAlert"
               style="color: rgb(0 131 75);">Mensagem enviada com sucesso!</span
             >
             <span class="customAlert" id="errorAlert"

@@ -1,89 +1,79 @@
-//Formulário
-
-interface FormData {
-  nome: string;
-  telemovel: string;
-  email: string;
-  mensagem: string;
-}
-
-// Verificar se estamos no ambiente do navegador antes de acessar o objeto document
 if (typeof document !== 'undefined') {
   const form = document.querySelector('form') as HTMLFormElement;
-  const buttonForm = form.querySelector('button') as HTMLButtonElement;
+  const buttonForm = form?.querySelector('button');
 
   if (buttonForm) {
-    form.addEventListener('submit', handleSubmit);
+    form?.addEventListener('submit', handleSubmit);
+    buttonForm.addEventListener("blur", () => resetButtonStyle());
   }
 
-  function handleSubmit(event: Event) {
+  async function handleSubmit(event: Event) {
     event.preventDefault();
-
-    const inputs = form.querySelectorAll('input, textarea');
-    let itWorks = true;
     clearAlerts();
 
-    const requiredFields = ['nome', 'telemovel', 'mensagem'];
-    for (const field of requiredFields) {
-      const value = (form.elements[field as keyof typeof form.elements] as HTMLInputElement)?.value;
+    const inputs = form?.querySelectorAll('input, textarea');
+    let it_works = true;
+
+    ['nome', 'telemovel', 'mensagem'].forEach(field => {
+      const value = getFormValue(field);
       if (!value) {
-        itWorks = false;
+        it_works = false;
         displayAlert(`${field}Alert`);
       }
-    }
-
-    const telemovelInput = (form.elements as any)['telemovel'] as HTMLInputElement;
-
-    if (telemovelInput) {
-      const telemovel = telemovelInput.value;
-      if (telemovel && !isValidPhoneNumber(telemovel)) {
-        itWorks = false;
-        displayAlert("formatTelemovel");
+      else if (field === 'nome' && /\d/.test(value)) {
+        it_works = false;
+        displayAlert("nameStringAlert");
       }
+    });
+
+    const telemovel = getFormValue('telemovel');
+    if (telemovel && !isValidPhoneNumber(telemovel)) {
+      it_works = false;
     }
 
-    const email: string = (form.elements as any)['email'].value;
+    const email = getFormValue('email');
     if (email && !isValidEmail(email)) {
-      itWorks = false;
+      it_works = false;
       displayAlert("formatEmail");
     }
 
-    if (itWorks) {
-      const data = Object.fromEntries(new FormData(form)) as unknown as FormData;
-      sendFormData(data);
-
-      (inputs as NodeListOf<HTMLInputElement>).forEach((input) => {
-        input.value = '';
-      });
+    if (it_works) {
+      const data = Object.fromEntries(new FormData(form));
+      await sendFormData(data);
+      resetForm(inputs);
     }
   }
 
-  function sendFormData(data: FormData) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/send-email', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onreadystatechange = () => (xhr.readyState === XMLHttpRequest.DONE) && handleResponse(xhr.status);
-    xhr.send(JSON.stringify(data));
+  async function sendFormData(data: object) {
+    try {
+      const response = await fetch('/api/send-email.json', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      handleResponse(response.status);
+    } catch (error) {
+      console.error('Error in sending data:', error);
+    }
   }
 
   function handleResponse(status: number) {
     const successColor = '#38d391';
     const errorColor = '#ff0050';
-    buttonForm.style.backgroundColor = (status === 200) ? successColor : errorColor;
-    buttonForm.style.transition = 'background-color 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28)';
-    displayAlert((status === 200) ? 'sucessAlert' : 'errorAlert');
+    if (buttonForm) {
+      buttonForm.style.backgroundColor = (status === 200) ? successColor : errorColor;
+      buttonForm.style.transition = 'background-color 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28)';
+    }
+    displayAlert((status === 200) ? 'successAlert' : 'errorAlert');
     if (status !== 200) console.error('Erro na requisição:', status);
   }
 
   function displayAlert(alertId: string) {
-    const alertElement = document.getElementById(alertId);
-
-    if (alertElement) {
-      alertElement.style.display = "block";
-    } else {
-      // Handle the case where the element is not found
-      console.error(`Alert element with ID "${alertId}" not found.`);
-    }
+    const AlertID = document.getElementById(alertId);
+    if (AlertID) AlertID.style.display = "block";
   }
 
   function clearAlerts() {
@@ -93,20 +83,41 @@ if (typeof document !== 'undefined') {
     }
   }
 
+  function isValidPhoneNumber(phoneNum: string) {
+    const hasSpaces = /\s/.test(phoneNum);
+    const hasNonNumeric = /\D/.test(phoneNum);
+
+    if (hasSpaces || hasNonNumeric || phoneNum.length < 9) {
+      displayAlert(
+        hasSpaces ? "phoneSpaceAlert" :
+          hasNonNumeric ? "phoneStringAlert" :
+            "phoneNumMinAlert"
+      );
+      return false;
+    }
+
+    return true;
+  }
+
   function isValidEmail(email: string) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
 
-  function isValidPhoneNumber(telefone: string) {
-    const numeroRegex = /^\d+$/;
-    return numeroRegex.test(telefone);
+  function getFormValue(field: string): string | undefined {
+    return (form?.elements.namedItem(field) as HTMLInputElement | HTMLTextAreaElement)?.value;
   }
 
-  if (buttonForm) {
-    buttonForm.addEventListener("blur", () => {
+  function resetForm(inputs: NodeListOf<Element> | null) {
+    inputs?.forEach(input => {
+      (input as HTMLInputElement).value = '';
+    });
+  }
+
+  function resetButtonStyle() {
+    if (buttonForm) {
       buttonForm.style.backgroundColor = '';
       buttonForm.style.transition = '';
-    });
+    }
   }
 }
