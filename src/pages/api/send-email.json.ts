@@ -39,7 +39,7 @@ const getTransporter = async () => {
   return transporter;
 };
 
-const RATE_LIMIT_THRESHOLD = 100;
+const RATE_LIMIT_THRESHOLD = 10;
 const rateLimitMap = new Map<string, number>();
 
 const getClientIp = (request: any): string | null => {
