@@ -42,7 +42,7 @@ const getTransporter = async () => {
 
 const RATE_LIMIT_THRESHOLD = 10;
 const rateLimitMap = new Map<string, number>();
-const unlimitedIPs = new Set<string>(['85.138.202.37', 'ip2', 'ip3']);
+const unlimitedIPs = new Set<string>([config.IP[1], config.IP[2], config.IP[3]]);
 
 const checkRateLimit = (ip: string): boolean => {
   // Se o IP está na lista de IPs ilimitados, permita sem verificação
