@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import ButtonFloat from "../components/ButtonFloat.astro";
 import Footer from "../components/Footer/Footer.astro";
 import Header from "../components/Header/Header.astro";
@@ -17,7 +18,7 @@ const { title, description, keywords, canonical } = Astro.props;
 
 <!doctype html>
 <html lang="pt-pt">
-  <head>
+  <>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="generator" content={Astro.generator} />
@@ -64,7 +65,7 @@ const { title, description, keywords, canonical } = Astro.props;
       sizes="32x32"
       href="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727135/assets/image/icons/favicon-32x32.png"
     />
-    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="manifest" href="/site.webmanifest" />
     <!-- Google Tag Manager -->
     <script>
       (function yourFunction(w: any, d: any, s: any, l: string, i: any) {
@@ -86,9 +87,9 @@ const { title, description, keywords, canonical } = Astro.props;
       })(window, document, "script", "dataLayer", "GTM-WGS4GCL3");
     </script>
     <!-- Acaba o Tag Manager -->
-
     <title>{title}</title>
-  </head>
+    <ViewTransitions />
+  </>
   <body>
     <Header />
     <main>
@@ -109,9 +110,7 @@ const { title, description, keywords, canonical } = Astro.props;
         style="display:none;visibility:hidden"></iframe></noscript
     >
     <!-- End Google Tag Manager (noscript) -->
-  </body>
-</html>
-<!-- <script>
+  </body><!-- <script>
   function scrollToElement() {
     setTimeout(() => {
       history.replaceState(
@@ -125,3 +124,4 @@ const { title, description, keywords, canonical } = Astro.props;
   }
 </script>
  -->
+</html>

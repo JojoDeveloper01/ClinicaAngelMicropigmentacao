@@ -4,6 +4,8 @@ import nodemailer from 'nodemailer';
 import config from './config.js';
 import { getIp } from './getIP.json.ts';
 
+export const prerender = false; //server
+
 let oAuth2Client: any = null;
 let transporter: any = null;
 

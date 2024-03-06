@@ -19,18 +19,25 @@
   <button
     aria-label="Subir ao topo"
     id="bt-top"
-    class="relative size-16 border-[1px] border-solid border-[#00000031] rounded-[35%] [box-shadow:0_0_15px_0px_#00000014] mx-0 my-[2px]"
-    ><i class="fa-solid fa-arrow-up fa-xl" style="color: #00000098;"></i>
+    class="relative flex justify-center items-center size-16 border-[1px] border-solid border-[#00000031] rounded-[35%] [box-shadow:0_0_15px_0px_#00000014] mx-0 my-[2px]"
+    ><img
+      class="size-8 opacity-60"
+      src="arrow/arrow-up-solid.svg"
+      alt="arrow up"
+    />
   </button>
   <button
     aria-label="Whatsapp Angel"
-    class="bg-white elative size-16 border-[1px] border-solid border-[#00000031] rounded-[35%] [box-shadow:0_0_15px_0px_#00000014] mx-0 my-[2px]"
+    class="bg-white elative flex justify-center items-center size-16 border-[1px] border-solid border-[#00000031] rounded-[35%] [box-shadow:0_0_15px_0px_#00000014] mx-0 my-[2px]"
     ><a
       href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
-      class="text-[#25d366]"
       target="_blank"
     >
-      <i class="fa-brands fa-whatsapp fa-2xl"></i>
+      <img
+        style="filter: invert(99%) sepia(42%) saturate(2675%) hue-rotate(77deg) brightness(92%) contrast(87%);"
+        class="size-8"
+        src="social-midia/whatsapp.svg"
+      />
     </a>
   </button>
 </div>
@@ -41,7 +48,7 @@
   if (btTop) {
     window.addEventListener("scroll", () => {
       btTop.style.display =
-        document.documentElement.scrollTop > 150 ? "block" : "none";
+        document.documentElement.scrollTop > 150 ? "flex" : "none";
     });
 
     btTop.addEventListener("click", () => {

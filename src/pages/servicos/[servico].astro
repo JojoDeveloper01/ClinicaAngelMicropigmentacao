@@ -2,6 +2,17 @@
 import Form from "../../components/Form/form.astro";
 import ToBook from "../../components/ToBook.astro";
 import Layout from "../../layouts/Layout.astro";
+
+const { servico } = Astro.params;
+export const prerender = true;
+
+export function getStaticPaths() {
+  return [
+    { params: { servico: "micropigmentacao-sobrancelhas" } },
+    { params: { servico: "micropigmentacao-labial" } },
+    { params: { servico: "micropigmentacao-olhos" } },
+  ];
+}
 ---
 
 <style>
@@ -835,7 +846,7 @@ import Layout from "../../layouts/Layout.astro";
 </style>
 
 <Layout
-  title="Micropigmentação Sobrancelhas"
+  title={servico}
   description="Serviço de Micropigmentação de Sobrancelhas, informações das técnicas mais conhecidas de micropigmentação."
   keywords="Serviços Clínica Angel Micropigmentação, microblanding, nanoblanding, micropigmentação, micropigmentação preço, micropigmentação de sobrancelhas"
   canonical="https://clinicamicropigmentacao.com/serivcos/micropigmentacao-sobrancelhas"
@@ -890,13 +901,24 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <video autoplay loop muted playsinline class="mt-[24vh] mb-24 max-[768px]:mt-[10vh] max-[768px]:mb-24">
-    <source
-    src="https://res.cloudinary.com/dg6twczfr/video/upload/v1709726604/assets/videos/sobrancelhas-bonitas_fygghk.mp4"
-    type="video/mp4"
-  />
-  Seu navegador não suporta a tag de vídeo.
-  </video>
+  <section
+    class="flex w-full mt-[24vh] mb-32 *:object-[0_19%] *:w-1/2 *:h-[27rem] max-[768px]:mt-[10vh] max-[992px]:flex-col max-[992px]:*:w-full max-[430px]:*:h-1/2"
+  >
+    <video autoplay loop muted playsinline>
+      <source
+        src="https://res.cloudinary.com/dg6twczfr/video/upload/f_auto,q_auto:good/v1709755957/assets/videos/antes-micropigmentacao-sobrancelha_tm7kzg.mp4"
+        type="video/mp4"
+      />
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+    <video autoplay loop muted playsinline>
+      <source
+        src="https://res.cloudinary.com/dg6twczfr/video/upload/f_auto,q_auto:good/v1709726604/assets/videos/sobrancelhas-bonitas_fygghk.mp4"
+        type="video/mp4"
+      />
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+  </section>
 
   <section class="askSection">
     <article class="ask">
@@ -999,7 +1021,7 @@ import Layout from "../../layouts/Layout.astro";
       <div class="card">
         <video playsinline controls>
           <source
-            src="https://res.cloudinary.com/dg6twczfr/video/upload/v1706716786/assets/videos/clientSobran_td7mks.mp4"
+            src="https://res.cloudinary.com/dg6twczfr/video/upload/f_auto,q_auto:good/v1706716786/assets/videos/clientSobran_td7mks.mp4"
             type="video/mp4"
           />
           Seu navegador não suporta a tag de vídeo.
