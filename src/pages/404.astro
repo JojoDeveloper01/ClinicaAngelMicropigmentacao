@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,800&family=Montserrat:ital,wght@0,723;1,723&family=Philosopher&display=swap");
+</style>
+
+<Layout
+  title="Error 404"
+  description="Esta página não foi encontrada."
+  keywords="Error 404"
+  canonical="https://clinicamicropigmentacao.com/404"
+>
+  <section
+    class="h-screen flex flex-col gap-16 px-[20%] justify-center items-center max-[1000px]:px-[5%]"
+  >
+    <h1 class="*:mx-3">
+      <span class="opacity-80">Erro</span>
+      <span class="bg-[color:var(--corRoxo)] p-4 opacity-100"
+        ><span class="opacity-80">404</span>
+      </span>
+    </h1>
+    <h2
+      class="normal-case text-3xl font-black text-center leading-[2.7rem] opacity-80 max-[600px]:text-2xl max-[320px]:text-xl"
+    >
+      <span>Página não encontrada.</span><br />
+      Mas pode encontrar a sua beleza interior em qualquer lugar! Inicie a sua jornada
+      de transformação connosco.
+    </h2>
+    <a
+      href="/"
+      class="px-14 py-6 bg-[color:var(--corRoxo)] text-2xl hover:animate-pop hover:animate-delay-50 hover:animate-duration-800"
+      >Home</a
+    >
+  </section>
+</Layout>

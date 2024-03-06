@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { google } from 'googleapis';
 import nodemailer from 'nodemailer';
 import config from './config.js';
+import { getIp } from './getIP.json.ts';
 
 let oAuth2Client: any = null;
 let transporter: any = null;
@@ -41,25 +42,18 @@ const getTransporter = async () => {
 
 const RATE_LIMIT_THRESHOLD = 10;
 const rateLimitMap = new Map<string, number>();
-
-const getClientIp = (request: any): string | null => {
-  // Check if the request is from a proxy (e.g., deployed behind Cloudflare)
-  const forwardedFor = request.headers.get('x-forwarded-for');
-  if (forwardedFor) {
-    return forwardedFor.split(',')[0].trim();
-  }
-
-  // Fallback to the remote address of the client
-  return request.ip;
-};
+const unlimitedIPs = new Set<string>(['85.138.202.37', 'ip2', 'ip3']);
 
 const checkRateLimit = (ip: string): boolean => {
+  // Se o IP está na lista de IPs ilimitados, permita sem verificação
+  if (unlimitedIPs.has(ip))
+    return true;
+
   const currentCount = rateLimitMap.get(ip) || 0;
 
-  if (currentCount >= RATE_LIMIT_THRESHOLD) {
-    // IP has exceeded the rate limit
-    return false;
-  }
+  if (currentCount >= RATE_LIMIT_THRESHOLD)
+    return false; // IP atingiu o limite de taxa
+
 
   rateLimitMap.set(ip, currentCount + 1);
   return true;
@@ -67,7 +61,8 @@ const checkRateLimit = (ip: string): boolean => {
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-    const ip = getClientIp(request) as string;
+    const ipResponse = await getIp();
+    const ip = await ipResponse.text();
 
     // Check if the IP has exceeded the rate limit
     if (!checkRateLimit(ip)) {
@@ -78,8 +73,8 @@ export const POST: APIRoute = async ({ request }) => {
         headers: { 'Content-Type': 'application/json' },
       });
     }
-    console.log("\n\n-------------------------------");
 
+    console.log("\n\n-------------------------------");
     console.log("\nReceived POST request");
 
     const body = await request.json();
