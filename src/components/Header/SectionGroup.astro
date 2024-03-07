@@ -1,5 +1,8 @@
 ---
 import SocialMidia from "../SocialMidia.astro";
+import navData from "../../lib/navData";
+
+const { sections, dropdownServicos, dropdownPerguntas } = navData;
 ---
 
 <style>
@@ -49,7 +52,6 @@ import SocialMidia from "../SocialMidia.astro";
     display: none;
     flex-direction: column;
     padding: 5px;
-
     margin-top: 3vh;
     gap: 2rem;
     max-height: 0;
@@ -101,10 +103,18 @@ import SocialMidia from "../SocialMidia.astro";
     .dropdown li {
       width: 100%;
       height: 4rem;
-      padding: 0 14px;
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    .dropdown li a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 0 14px;
     }
 
     .toogle:checked + .dropdown {
@@ -148,7 +158,55 @@ import SocialMidia from "../SocialMidia.astro";
   <ul
     class="nav-panel w-fit h-full justify-evenly overflow-hidden flex flex-col uppercase min-[1700px]:justify-start min-[1500px]:w-full min-[1500px]:justify-center min-[992px]:w-[29rem] min-[992px]:flex-row min-[992px]:flex-wrap min-[992px]:gap-y-2 max-[844px]:pl-[10%]"
   >
-    <li>
+    {
+      sections.map((item) => (
+        <li class={`${item.name === 'Serviços' ? 'servicos' : ''} ${
+        item.name === 'Perguntas' ? 'perguntas' : ''
+        }`}>
+          <a href={item.path} aria-label={`Ir para ${item.name}`}>
+            {item.name}
+          </a>
+          {item.name === "Serviços" && (
+              <span class="arrow min-[992px]:hidden">></span>
+              <input
+                type="checkbox"
+                class="toogle absolute scale-x-[4] size-5 opacity-0 min-[992px]:hidden"
+              />
+              <ul class="dropdown min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250">
+                {dropdownServicos.map((servico) => (
+                  <li>
+                    <a
+                      aria-label={`Ir para ${servico.name}`}
+                      href={servico.path}
+                    >
+                      {servico.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+          )}
+          {item.name === "Perguntas" && (
+
+              <span class="arrow min-[992px]:hidden">></span>
+              <input
+                type="checkbox"
+                class="toogle scale-x-[4] absolute size-5 opacity-0 min-[992px]:hidden"
+              />
+              <ul class="min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] dropdown min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250">
+                {dropdownPerguntas.map((pergunta) => (
+                  <li>
+                    <a aria-label={pergunta.name} href={pergunta.path}>
+                      {pergunta.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+          )}
+        </li>
+      ))
+    }
+
+    <!--<li>
       <a aria-label="Home" href="/">início</a>
     </li>
     <li>
@@ -216,10 +274,9 @@ import SocialMidia from "../SocialMidia.astro";
         </li>
       </ul>
     </li>
-
     <li>
       <a aria-label="testemunhas" href="/#testemunhas">testemunhas</a>
-    </li>
+    </li> -->
   </ul>
   <SocialMidia />
 </div>
