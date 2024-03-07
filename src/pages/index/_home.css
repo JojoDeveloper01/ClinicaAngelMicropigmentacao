@@ -12,18 +12,16 @@ button.carousel-control-next {
   background: transparent;
   opacity: 0.2;
   position: absolute;
-  width: 5rem;
-  height: 3rem;
   top: 64%;
   transform: translateY(-50%);
 }
 
 button.carousel-control-prev {
-  left: 0;
+  left: 1%;
 }
 
 button.carousel-control-next {
-  right: 0;
+  right: 1%;
 }
 
 button.carousel-control-next:hover,
@@ -35,7 +33,6 @@ button.carousel-control-prev:hover {
 button.prev,
 button.next {
   top: 50%;
-  transform: translateY(-50%);
 }
 
 .slides {

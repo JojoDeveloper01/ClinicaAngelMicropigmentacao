@@ -12,7 +12,7 @@
   }
 
   .formulario a:hover {
-    color: #161616;
+    color: #000000;
   }
 
   .form-box {
@@ -116,6 +116,11 @@
   .contact-info p {
     text-align: left;
     margin: 0 0 1rem 0;
+  }
+
+  .contact-list li:hover img {
+    filter: invert(82%) sepia(25%) saturate(5763%) hue-rotate(242deg)
+      brightness(100%) contrast(91%);
   }
 
   #mail-form {
@@ -248,23 +253,23 @@
       </div>
       <div class="contact-info">
         <h4>Contactos Adicionais</h4>
-        <ul class="flex flex-col gap-3">
+        <ul class="contact-list flex flex-col gap-3">
           <li class="flex gap-3">
-            <i class="fa-solid fa-location-dot"></i><a
+            <img src="assets/emojis/location-dot-solid.svg" class="size-4" /><a
               aria-label="Mapa local Póvoa"
               href="https://goo.gl/maps/cYxcvHsE3dmLaPj46"
               target="_blank">Póvoa de Santa Iria</a
             >
           </li>
           <li class="flex gap-3">
-            <i class="fa-solid fa-location-dot"></i><a
+            <img src="assets/emojis/location-dot-solid.svg" class="size-4" /><a
               aria-label="Mapa local Areeiro"
               href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
               target="_blank">Roma-Areeiro</a
             >
           </li>
           <li class="flex gap-3">
-            <img src="/phone-solid.svg" class="size-4" />
+            <img src="assets/know-me/phone-solid.svg" class="size-4" />
             <a
               aria-label="Whatsapp Angel"
               href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
@@ -272,7 +277,7 @@
             >
           </li>
           <li class="flex gap-3">
-            <i class="fas fa-envelope-open-text"></i><a
+            <img src="assets/know-me/email.svg" class="size-4" /><a
               aria-label="E-mail Angel"
               id="mail-form"
               href="mailto:angelbalcboniclinicamicropigme@gmail.com"

@@ -50,7 +50,7 @@
   }
 
   body h2 {
-    font-size: calc(1.5vw + 1em);
+    font-size: calc(1.5vw + .6em);
   }
 
   body h3 {

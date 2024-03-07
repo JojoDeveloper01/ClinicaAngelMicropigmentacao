@@ -2,6 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
+<style>
+  @media only screen and (max-width: 480px) {
+    .body p {
+      font-size: large;
+      overflow-wrap: anywhere;
+    }
+  }
+</style>
+
 <Layout
   title="Política de privacidade"
   description="Política de privacidade de Clínica Angel Micropigmentação"
@@ -22,7 +31,7 @@ import Layout from "../layouts/Layout.astro";
       Comprometemo-nos a cuidar dos seus dados pessoais, garantindo sua confidencialidade
       e segurança.
     </p>
-    <h3>Informações pessoais que recolhemos:</h3>
+    <h2>Informações pessoais que recolhemos:</h2>
     <p>
       Quando você visita angelmicropigmentacao.com, automaticamente coletamos
       informações sobre o seu dispositivo, incluindo detalhes do navegador,
@@ -33,7 +42,7 @@ import Layout from "../layouts/Layout.astro";
       Podemos também obter dados pessoais fornecidos por você durante o
       registro, como nome, sobrenome, endereço, informações de pagamento, etc.
     </p>
-    <h3>Porque processamos os seus dados?</h3>
+    <h2>Porque processamos os seus dados?</h2>
     <p>
       Nossa principal preocupação é a segurança dos dados do cliente. Portanto,
       processamos apenas dados mínimos do usuário, essenciais para a manutenção
@@ -46,7 +55,7 @@ import Layout from "../layouts/Layout.astro";
       email, nome, sobrenome, cidade de residência, etc. A não divulgação desses
       dados pode limitar o acesso a certos recursos do site.
     </p>
-    <h3>Seus direitos</h3>
+    <h2>Seus direitos</h2>
     <p>
       Residentes europeus têm direitos relacionados aos seus dados pessoais,
       incluindo ser informado, ter acesso, retificação, exclusão, restrição de
@@ -54,29 +63,30 @@ import Layout from "../layouts/Layout.astro";
       direitos, entre em contato conosco através das informações fornecidas
       abaixo.
     </p>
-    <h3>Links para outros sites:</h3>
+    <h2>Links para outros sites:</h2>
     <p>
       Nosso site pode conter links para sites não controlados por nós. Não somos
       responsáveis pelas práticas de privacidade desses sites e recomendamos
       verificar as declarações de privacidade de cada um.
     </p>
-    <h3>Segurança da informação:</h3>
+    <h2>Segurança da informação:</h2>
     <p>
       As informações fornecidas são protegidas em servidores seguros, com
       salvaguardas administrativas, técnicas e físicas para prevenir acesso não
       autorizado. No entanto, nenhuma transmissão de dados pela Internet pode
       ser garantida.
     </p>
-    <h3>Divulgação legal:</h3>
+    <h2>Divulgação legal:</h2>
     <p>
       Divulgaremos informações coletadas apenas se exigido ou permitido por lei,
       como em resposta a uma intimação ou processo legal.
     </p>
-    <h3>Informações de contacto:</h3>
+    <h2>Informações de contacto:</h2>
     <p>
       Para esclarecimentos sobre esta Política ou questões relacionadas aos seus
       direitos individuais, entre em contato através do email:
       <a
+        style="overflow-wrap: anywhere;"
         aria-label="E-mail Angel"
         href="mailto:angelbalcboniclinicamicropigme@gmail.com"
         class="max-[317px]:text-[smaller]"
