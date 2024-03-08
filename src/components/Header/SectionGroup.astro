@@ -161,11 +161,13 @@ const { sections, dropdownServicos, dropdownPerguntas } = navData;
     {
       sections.map((item) => (
         <li class={`${item.name === 'Serviços' ? 'servicos' : ''} ${
-        item.name === 'Perguntas' ? 'perguntas' : ''
-        }`}>
-          <a href={item.path} aria-label={`Ir para ${item.name}`}>
+        item.name === 'Perguntas' ? 'perguntas' : ''}`}>
+          <a
+            href={item.path}
+            aria-label={`Ir para ${item.name}`}
+            {...(item.name === 'Sobre Nós' ? {'data-astro-reload': ''} : {})}>  
             {item.name}
-          </a>
+         </a>
           {item.name === "Serviços" && (
               <span class="arrow min-[992px]:hidden">></span>
               <input
