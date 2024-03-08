@@ -735,16 +735,18 @@ import "./_home.css";
 
 <script src="./slider.ts"></script>
 <script>
-  const openToggle = document.querySelector<HTMLElement>(".openToogle");
+  document.addEventListener("astro:page-load", () => {
+    const openToggle = document.querySelector<HTMLElement>(".openToogle");
 
-  if (openToggle) {
-    openToggle.addEventListener("click", () => {
-      openToggle.classList.toggle("open");
-      const activarS = document.querySelector<HTMLElement>(".activarS");
+    if (openToggle) {
+      openToggle.addEventListener("click", () => {
+        openToggle.classList.toggle("open");
+        const activarS = document.querySelector<HTMLElement>(".activarS");
 
-      if (activarS) {
-        activarS.classList.toggle("activeToogle");
-      }
-    });
-  }
+        if (activarS) {
+          activarS.classList.toggle("activeToogle");
+        }
+      });
+    }
+  });
 </script>

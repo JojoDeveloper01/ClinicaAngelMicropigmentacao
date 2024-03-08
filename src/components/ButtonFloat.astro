@@ -43,19 +43,21 @@
 </div>
 
 <script>
-  const btTop = document.getElementById("bt-top");
+  document.addEventListener("astro:page-load", () => {
+    const btTop = document.getElementById("bt-top");
 
-  if (btTop) {
-    window.addEventListener("scroll", () => {
-      btTop.style.display =
-        document.documentElement.scrollTop > 150 ? "flex" : "none";
-    });
-
-    btTop.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+    if (btTop) {
+      window.addEventListener("scroll", () => {
+        btTop.style.display =
+          document.documentElement.scrollTop > 150 ? "flex" : "none";
       });
-    });
-  }
+
+      btTop.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+  });
 </script>

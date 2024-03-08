@@ -237,8 +237,13 @@ import Layout from "../layouts/Layout.astro";
   <ToBook />
 </Layout>
 
-<script
-  is:inline
-  src="https://static.elfsight.com/platform/platform.js"
-  data-use-service-core
-  defer></script>
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const scriptElement = document.createElement("script");
+    scriptElement.src = "https://static.elfsight.com/platform/platform.js";
+    scriptElement.setAttribute("data-use-service-core", "");
+
+    // Adiciona o elemento script ao final do corpo do documento
+    document.body.appendChild(scriptElement);
+  });
+</script>

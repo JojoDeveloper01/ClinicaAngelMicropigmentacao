@@ -18,7 +18,7 @@ const { title, description, keywords, canonical } = Astro.props;
 
 <!doctype html>
 <html lang="pt-pt">
-  <>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="generator" content={Astro.generator} />
@@ -68,28 +68,30 @@ const { title, description, keywords, canonical } = Astro.props;
     <link rel="manifest" href="/site.webmanifest" />
     <!-- Google Tag Manager -->
     <script>
-      (function yourFunction(w: any, d: any, s: any, l: string, i: any) {
-        w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-        const script = d.createElement("script");
-        const f = d.getElementsByTagName(s)[0];
-        const dl = l != "dataLayer" ? "&l=" + l : "";
+      document.addEventListener("astro:page-load", () => {
+        (function yourFunction(w: any, d: any, s: any, l: string, i: any) {
+          w[l] = w[l] || [];
+          w[l].push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js",
+          });
+          const script = d.createElement("script");
+          const f = d.getElementsByTagName(s)[0];
+          const dl = l != "dataLayer" ? "&l=" + l : "";
 
-        script.async = true;
-        script.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          script.async = true;
+          script.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
 
-        if (f && f.parentNode) {
-          f.parentNode.insertBefore(script, f);
-        }
-      })(window, document, "script", "dataLayer", "GTM-WGS4GCL3");
+          if (f && f.parentNode) {
+            f.parentNode.insertBefore(script, f);
+          }
+        })(window, document, "script", "dataLayer", "GTM-WGS4GCL3");
+      });
     </script>
     <!-- Acaba o Tag Manager -->
     <title>{title}</title>
     <ViewTransitions />
-  </>
+  </head>
   <body>
     <Header />
     <main>
@@ -97,10 +99,6 @@ const { title, description, keywords, canonical } = Astro.props;
     </main>
     <Footer />
     <ButtonFloat />
-    <script
-      is:inline
-      src="https://kit.fontawesome.com/5e2d559914.js"
-      crossorigin="anonymous"></script>
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -110,18 +108,5 @@ const { title, description, keywords, canonical } = Astro.props;
         style="display:none;visibility:hidden"></iframe></noscript
     >
     <!-- End Google Tag Manager (noscript) -->
-  </body><!-- <script>
-  function scrollToElement() {
-    setTimeout(() => {
-      history.replaceState(
-        "",
-        document.title,
-        window.location.origin +
-          window.location.pathname +
-          window.location.search
-      );
-    }, 1);
-  }
-</script>
- -->
+  </body>
 </html>

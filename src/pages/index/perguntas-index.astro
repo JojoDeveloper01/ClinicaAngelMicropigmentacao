@@ -200,16 +200,18 @@ import "./_home.css";
 </section>
 
 <script>
-  const openToogle = document.querySelector<HTMLElement>(".ver-maisP");
+  document.addEventListener("astro:page-load", () => {
+    const openToogle = document.querySelector<HTMLElement>(".ver-maisP");
 
-  if (openToogle) {
-    openToogle.addEventListener("click", () => {
-      openToogle.classList.toggle("open");
-      const fqVerMais = document.querySelector<HTMLElement>(".fq-vermais");
+    if (openToogle) {
+      openToogle.addEventListener("click", () => {
+        openToogle.classList.toggle("open");
+        const fqVerMais = document.querySelector<HTMLElement>(".fq-vermais");
 
-      if (fqVerMais) {
-        fqVerMais.classList.toggle("activeToogle");
-      }
-    });
-  }
+        if (fqVerMais) {
+          fqVerMais.classList.toggle("activeToogle");
+        }
+      });
+    }
+  });
 </script>
