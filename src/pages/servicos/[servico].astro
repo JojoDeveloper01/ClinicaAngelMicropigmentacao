@@ -1,7 +1,8 @@
 ---
-import Form from "../../components/Form/form.astro";
-import ToBook from "../../components/ToBook.astro";
-import Layout from "../../layouts/Layout.astro";
+import Form from "@components/Form/form.astro";
+import ToBook from "@components/ToBook.astro";
+import Layout from "@layouts/Layout.astro";
+import dataServicos from "./dataServicos.json";
 
 const { servico } = Astro.params;
 export const prerender = true;
@@ -846,10 +847,272 @@ export function getStaticPaths() {
 </style>
 
 <Layout
+  title={(dataServicos.paginas as { [key: string]: any })[servico].titulo}
+  description={(dataServicos.paginas as { [key: string]: any })[servico]
+    .description}
+  canonical={(dataServicos.paginas as { [key: string]: any })[servico]
+    .canonical}
+  keywords={(dataServicos.paginas as { [key: string]: any })[servico].keywords}
+>
+  <section class="hero-sobrancelhas">
+    <img
+      src={(dataServicos.paginas as { [key: string]: any })[servico].imgHero}
+      alt={(dataServicos.paginas as { [key: string]: any })[servico].titulo}
+    />
+    <div class="shadowyHero">
+      <div class="ctroShadowlyHero">
+        <div class="shadowyTextBody">
+          <h1>
+            {(dataServicos.paginas as { [key: string]: any })[servico].titulo}
+          </h1>
+          <p>
+            {
+              (dataServicos.paginas as { [key: string]: any })[servico]
+                .descriptionHero
+            }
+          </p>
+        </div>
+        <div class="benefits">
+          <ol>
+            <li>✔</li>
+            <li>✔</li>
+            <li>✔</li>
+            <li>✔</li>
+          </ol>
+          <ol>
+            {
+              (dataServicos.paginas as { [key: string]: any })[
+                servico
+              ].beneficios.map((beneficio: string) => <li>{beneficio}</li>)
+            }
+            <!-- <li><span class="bold">1 - 4 anos</span> de duração</li>
+            <li><span class="bold">Técnicas</span> especializadas</li>
+            <li><span class="bold">realça</span> a sua aparência</li>
+            <li><span class="bold">PERSONALIZADAS</span> A SEU GOSTO</li> -->
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="reservarHero">
+      <button
+        ><a
+          href="https://zappysoftware.com/m/clinicamicropigmentacao"
+          target="_blank">Reserve com desconto</a
+        ></button
+      >
+      <div class="precoHero">
+        <p>
+          Preço antigo:
+          <span>120 €</span>
+        </p>
+        <p>
+          Preço Atual:
+          <span class="bold">95 €</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="flex w-full mt-[24vh] mb-32 *:object-[0_19%] *:w-1/2 *:h-[27rem] max-[768px]:mt-[10vh] max-[992px]:flex-col max-[992px]:*:w-full max-[430px]:*:h-1/2"
+  >
+    <video autoplay loop muted playsinline>
+      <source
+        src="https://res.cloudinary.com/dg6twczfr/video/upload/f_auto,q_auto:good/v1709755957/assets/videos/antes-micropigmentacao-sobrancelha_tm7kzg.mp4"
+        type="video/mp4"
+      />
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+    <video autoplay loop muted playsinline>
+      <source
+        src="https://res.cloudinary.com/dg6twczfr/video/upload/f_auto,q_auto:good/v1709726604/assets/videos/sobrancelhas-bonitas_fygghk.mp4"
+        type="video/mp4"
+      />
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+  </section>
+
+  <section class="askSection">
+    <article class="ask">
+      <img
+        src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716126/assets/image/servicos/sobrancelhas_antes_depois1.avif"
+        alt="Micropigmentação de Sobrancelhas"
+      />
+      <div>
+        <h2>O que é micropigmentação de sobrancelhas?</h2>
+        <p>
+          A <span class="bold">micropigmentação fio a fio</span> é uma técnica de
+          maquilhagem semi-permanente que utiliza pigmentos para depositar na pele,
+          criando a aparência de fios de cabelo naturais para preencher ou definir
+          sobrancelhas. É uma técnica de beleza popular que pode durar de 1 a 4 anos
+          com os cuidados adequados.
+        </p>
+      </div>
+    </article>
+    <article class="ask">
+      <img
+        src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas_antes_depois2.avif"
+        alt="Nanoblanding e Microblanding"
+      />
+      <div>
+        <h2>Nanoblanding e Microblanding</h2>
+        <p>
+          Utilizando lâminas finas, depositam pigmento na pele, criando fios de
+          cabelo naturais. O <span class="bold">Microblanding</span>
+          proporciona um aspeto definido que dura cerca de 1 a 2 anos. Já o <span
+            class="bold">Nanoblanding</span
+          >, com lâminas ainda mais finas, Oferece resultados mais detalhados,
+          com uma durabilidade de 6 meses a 1 ano.
+        </p>
+      </div>
+    </article>
+    <article class="ask">
+      <img
+        src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/microSobranHomem.avif"
+        alt="Micropigmentação de Sobrancelhas de Homem"
+      />
+      <div>
+        <h2>Técnica Especializada para Homens</h2>
+        <p>
+          Oferece um toque <span class="bold">natural</span> e personalizado à expressão
+          facial masculina, garantindo sobrancelhas harmoniosas e
+          <span class="bold">discretas</span>. Com um cuidado especial aos
+          traços masculinos, o procedimento realça a beleza original,
+          proporcionando <span class="bold">confiança</span> e autenticidade.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section class="incentive">
+    <article>
+      <h2>Identifica-se com isto?</h2>
+      <p>
+        <img class="size-12 mr-5" src="/assets/emojis/clock.svg" />
+        Passa muito tempo todas as manhãs em frente ao espelho a maquilhar-se?
+      </p>
+      <p>
+        <img class="size-12 mr-5" src="/assets/emojis/work.svg" /> Tem uma agenda
+        ocupada e não tem tempo para aplicar maquilhagem diariamente?
+      </p>
+      <p>
+        <img class="size-12 mr-5" src="/assets/emojis/seeding.svg" /> Tem perda de
+        pelos ou condição similar, mas deseja ter sobrancelhas novamente?
+      </p>
+      <p>
+        <img class="size-12 mr-5" src="/assets/emojis/star.svg" />Deseja realçar
+        a sua beleza de maneira natural e discreta, sem exageros?
+      </p>
+    </article>
+  </section>
+
+  <section class="incentive">
+    <article>
+      <h2>
+        Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias
+        para si!
+      </h2>
+      <p style="text-transform: inherit;">
+        A nossa abordagem à micropigmentação visa criar uma aparência natural e
+        realçar a sua beleza única. As cores e formas são personalizadas para
+        combinar perfeitamente com o seu rosto, proporcionando um visual
+        autêntico. <br /><br />
+        Imagine acordar todas as manhãs com sobrancelhas perfeitas, lábios vibrantes
+        e um delineador impecável, sem precisar gastar tempo aplicando maquilhagem.
+        A micropigmentação torna isso possível.
+      </p>
+    </article>
+  </section>
+
+  <section class="incentive">
+    <article class="card-group">
+      <h2>
+        Qual a opinião dos nossos clientes com a micropigmentação de
+        sobrancelhas?
+      </h2>
+      <div class="card">
+        <video playsinline controls>
+          <source
+            src="https://res.cloudinary.com/dg6twczfr/video/upload/f_auto,q_auto:good/v1706716786/assets/videos/clientSobran_td7mks.mp4"
+            type="video/mp4"
+          />
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+        <div class="card-body cb-body">
+          <h3 class="card-title">Marta</h3>
+          <h3 class="card-title">⭐⭐⭐⭐⭐</h3>
+          <p>
+            Fiz a micropigmentação, a primeira vez que fiz, correu lindamente.
+            Não doeu rigorosamente nada. A segunda vez ficou maravilhoso. Por
+            isso, não tenham medo, porque não dói nada, a anestesia é
+            fantástica, e irei voltar como cliente.
+          </p><br />
+        </div>
+      </div>
+      <div class="card">
+        <a
+          href="https://www.facebook.com/photo.php?fbid=1356026714868063&set=a.164134344057312&type=3"
+          target="_blank"
+          ><img
+            src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716527/assets/image/testemunhas/testemunhaOpiniao_mnn187.avif"
+            class="card-img-top"
+            alt="Cliente"
+          /></a
+        >
+        <div class="card-body cb-body">
+          <h3 class="card-title">
+            <a
+              href="https://www.facebook.com/photo.php?fbid=1356026714868063&set=a.164134344057312&type=3"
+              >Daniela Alexandra</a
+            >
+          </h3>
+          <h3 class="card-title">⭐⭐⭐⭐⭐</h3>
+          <p>
+            Muito bom serviço e sem dor!!! Muita atenção e delicadeza no
+            atendimento ao cliente!! Vou regressar mais vezes para retocar as
+            minhas sobrancelhas e fazer mais procedimentos estéticos, sem
+            dúvida!!!! 😊😊
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/reviews/@38.7423967,-9.1389141,17z/data=!3m1!4b1!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSURobDRMbmFREAE!2m1!1s0x0:0x3ed8bc3894b5ca15?hl=pt-PT&entry=ttu"
+        >
+          <img
+            src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706716126/assets/image/servicos/sobrancelhas_antes_depois1.avif"
+            class="card-img-top"
+            alt="Cliente"
+          />
+        </a>
+        <div class="card-body cb-body">
+          <h3 class="card-title">
+            <a
+              href="https://www.google.com/maps/reviews/@38.7423967,-9.1389141,17z/data=!3m1!4b1!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSURobDRMbmFREAE!2m1!1s0x0:0x3ed8bc3894b5ca15?hl=pt-PT&entry=ttu"
+              >Inês Jordão</a
+            >
+          </h3>
+          <h3 class="card-title">⭐⭐⭐⭐⭐</h3>
+          <p>
+            Profissional de excelência e uma pessoa muito humana. O resultado
+            foi extraordinário!! 🥰 Muito obrigada 🙌🙌
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <ToBook />
+  <h2 style="margin-bottom: 0;" class="marcar-perguntar">ou</h2>
+  <Form />
+</Layout>
+
+<!-- <Layout
   title={servico}
   description="Serviço de Micropigmentação de Sobrancelhas, informações das técnicas mais conhecidas de micropigmentação."
   keywords="Serviços Clínica Angel Micropigmentação, microblanding, nanoblanding, micropigmentação, micropigmentação preço, micropigmentação de sobrancelhas"
-  canonical="https://clinicamicropigmentacao.com/serivcos/micropigmentacao-sobrancelhas"
+  canonical="https://clinicamicropigmentacao.com/servicos/micropigmentacao-sobrancelhas"
 >
   <section class="hero-sobrancelhas">
     <img
@@ -1094,4 +1357,4 @@ export function getStaticPaths() {
   <ToBook />
   <h2 style="margin-bottom: 0;" class="marcar-perguntar">ou</h2>
   <Form />
-</Layout>
+</Layout> -->

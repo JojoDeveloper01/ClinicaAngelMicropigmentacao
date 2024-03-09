@@ -101,7 +101,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     const mailOptions = {
       from: config.EMAILS[1],
-      to: config.EMAILS[1],
+      to: [config.EMAILS[0], config.EMAILS[1]],
       subject: 'Comentario de um usuario de Micropigmentacao Angel',
       html: `<p><strong>Nome:</strong> ${nome}</p>
              <p><strong>Email:</strong> ${email}</p>

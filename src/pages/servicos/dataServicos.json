@@ -1,0 +1,46 @@
+{
+  "paginas": {
+    "micropigmentacao-sobrancelhas": {
+      "titulo": "Micropigmentação de Sobrancelhas",
+      "description": "Serviço de Micropigmentação de sobrancelhas, informações das técnicas mais conhecidas de micropigmentação.",
+      "keywords": "Serviços Clínica Angel Micropigmentação, microblanding, nanoblanding, micropigmentação, micropigmentação sobrancelhas preço, micropigmentação de sobrancelhas",
+      "canonical": "https://clinicamicropigmentacao.com/servicos/micropigmentacao-sobrancelhas",
+      "imgHero": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif",
+      "descriptionHero": "Aprimora a estética das sobrancelhas, realçando os traços faciais para um look mais natural.",
+      "beneficios": [
+        "Efeito natural",
+        "1 a 4 anos de duração",
+        "Aumenta a autoestima",
+        "Design personalizado"
+      ]
+    },
+    "micropigmentacao-labial": {
+      "titulo": "Micropigmentação Labial",
+      "description": "Serviço de Micropigmentação de labial, informações das técnicas mais conhecidas de micropigmentação.",
+      "canonical": "https://clinicamicropigmentacao.com/servicos/micropigmentacao-labial",
+      "keywords": "Serviços Clínica Angel Micropigmentação, micropigmentação, micropigmentação labial preço, micropigmentação labial",
+      "imgHero": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif",
+      "descriptionHero": "Realçamos a expressão única dos seus lábios, deixe seus lábios contar a história da sua autenticidade e confiança.",
+      "beneficios": [
+        "1 a 4 anos de duração",
+        "Corrige o contorno labial.",
+        "Aumenta o volume dos lábios.",
+        "Neutraliza os lábios apagados."
+      ]
+    },
+    "micropigmentacao-olhos": {
+      "titulo": "Micropigmentação de Olhos",
+      "description": "Serviço de Micropigmentação de olhos, informações das técnicas mais conhecidas de micropigmentação.",
+      "canonical": "https://clinicamicropigmentacao.com/servicos/micropigmentacao-olhos",
+      "keywords": "Serviços Clínica Angel Micropigmentação, micropigmentação, micropigmentação de olhos preço, micropigmentação olhos",
+      "imgHero": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif",
+      "descriptionHero": "Destaque a expressão do seu rosto e aproveite a confiança que vem com a liberdade de uma maquiagem labial natural.",
+      "beneficios": [
+        "1 a 4 anos de duração",
+        "Aparência natural.",
+        "Engrossamento da linha dos cílios.",
+        "Olhar mais marcante e expressivo."
+      ]
+    }
+  }
+}

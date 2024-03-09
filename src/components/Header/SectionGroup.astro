@@ -1,6 +1,6 @@
 ---
 import SocialMidia from "../SocialMidia.astro";
-import navData from "../../lib/navData";
+import navData from "@lib/navData";
 
 const { sections, dropdownServicos, dropdownPerguntas } = navData;
 ---
@@ -179,7 +179,7 @@ const { sections, dropdownServicos, dropdownPerguntas } = navData;
                   <li>
                     <a
                       aria-label={`Ir para ${servico.name}`}
-                      href={servico.path}
+                      href={`/servicos${servico.path}`}
                     >
                       {servico.name}
                     </a>

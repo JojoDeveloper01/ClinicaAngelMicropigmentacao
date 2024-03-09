@@ -28,15 +28,15 @@ const sections = [
 const dropdownServicos = [
   {
     name: 'Micropigmentação Sobrancelhas',
-    path: '/servicos/micropigmentacao-sobrancelhas',
+    path: '/micropigmentacao-sobrancelhas',
   },
   {
     name: 'Micropigmentação Labial',
-    path: '/servicos/micropigmentacao-labial',
+    path: '/micropigmentacao-labial',
   },
   {
     name: 'Micropigmentação Olhos',
-    path: '/servicos/micropigmentacao-olhos',
+    path: '/micropigmentacao-olhos',
   },
 ]
 
