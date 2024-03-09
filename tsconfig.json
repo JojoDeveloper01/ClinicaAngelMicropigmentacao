@@ -3,7 +3,7 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "allowJs": true,
-    "baseUrl": ".",
+    "baseUrl": "/home/seth-hot/O-Cantinho-do-Joseth/Sites/Mae/ClinicaAngelMicro",
     "paths": {
       "@assets/*": [
         "src/assets/*"
@@ -16,7 +16,9 @@
       ],
       "@lib/*": [
         "src/lib/*"
-      ],
-    }
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

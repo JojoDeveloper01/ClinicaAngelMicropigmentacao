@@ -8,10 +8,10 @@
       "imgHero": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif",
       "descriptionHero": "Aprimora a estética das sobrancelhas, realçando os traços faciais para um look mais natural.",
       "beneficios": [
-        "Efeito natural",
-        "1 a 4 anos de duração",
-        "Aumenta a autoestima",
-        "Design personalizado"
+        "<span class='bold'>1 a 4 anos</span> de duração",
+        "<span class='bold'>Efeito</span> natural",
+        "<span class='bold'>Aumenta</span> a autoestima",
+        "<span class='bold'>Design</span> personalizado"
       ]
     },
     "micropigmentacao-labial": {
@@ -22,10 +22,10 @@
       "imgHero": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif",
       "descriptionHero": "Realçamos a expressão única dos seus lábios, deixe seus lábios contar a história da sua autenticidade e confiança.",
       "beneficios": [
-        "1 a 4 anos de duração",
-        "Corrige o contorno labial",
-        "Aumenta o volume dos lábios",
-        "Neutraliza os lábios apagados"
+        "<span class='bold'>1 a 4 anos</span> de duração",
+        "<span class='bold'>Corrige</span> o contorno labial",
+        "<span class='bold'>Aumenta</span> o volume dos lábios",
+        "<span class='bold'>Neutraliza</span> os lábios apagados"
       ]
     },
     "micropigmentacao-olhos": {
@@ -36,10 +36,10 @@
       "imgHero": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif",
       "descriptionHero": "redefine o seu olhar, proporcionando destaque e intensidade de forma natural e duradoura.",
       "beneficios": [
-        "1 a 4 anos de duração",
-        "Aparência natural",
-        "Engrossamento da linha dos cílios",
-        "Olhar mais marcante e expressivo"
+        "<span class='bold'>1 a 4 anos</span> de duração",
+        "<span class='bold'>Aparência</span> natural",
+        "<span class='bold'>Engrossamento</span> da linha dos cílios",
+        "<span class='bold'>Olhar</span> mais marcante e expressivo"
       ]
     }
   }
