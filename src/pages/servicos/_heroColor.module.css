@@ -1,0 +1,40 @@
+/* _heroColor.module.css */
+.heroColor1 {
+  background-image: linear-gradient(269deg, #e9a0ec00 1.51%, #fcafff 7.24%, #fca2ff 51.55%, #fca3ffc4 92.59%, #fca1ff78 97.48%);
+
+  @media only screen and (max-width: 767px) {
+    background-image: linear-gradient(#fcafff 7.24%, #fca2ff 51.55%);
+  }
+}
+
+.heroColor2 {
+  background-image: linear-gradient(269deg, #ffb7b408 1.51%, #ff8d89 7.24%, #ff726d 51.55%, #ff9996 92.59%, #ffb4b1 97.48%);
+
+  @media only screen and (max-width: 767px) {
+    background-image: linear-gradient(#ff8d89 7.24%, #ff726d 51.55%);
+  }
+}
+
+.heroColor3 {
+  background-image: linear-gradient(269deg, rgb(236 198 160 / 0%) 1.51%, #ffb487 7.24%, #feac72 51.55%, rgb(255, 161, 93, 0.77) 92.59%, rgb(255 130 74 / 47%) 97.48%);
+
+  @media only screen and (max-width: 767px) {
+    background-image: linear-gradient(#ffb487 7.24%, #feac72 51.55%);
+  }
+}
+
+.heroColor11 {
+  background-image: none;
+
+  @media only screen and (max-width: 767px) {
+    background-color: #FCA2FF;
+  }
+}
+
+.heroColor22 {
+  background-image: none;
+
+  @media only screen and (max-width: 767px) {
+    background-color: #FF726D;
+  }
+}

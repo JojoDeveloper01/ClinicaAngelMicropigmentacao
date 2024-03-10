@@ -159,7 +159,7 @@ const { sections, dropdownServicos, dropdownPerguntas } = navData;
     class="nav-panel w-fit h-full justify-evenly overflow-hidden flex flex-col uppercase min-[1700px]:justify-start min-[1500px]:w-full min-[1500px]:justify-center min-[992px]:w-[29rem] min-[992px]:flex-row min-[992px]:flex-wrap min-[992px]:gap-y-2 max-[844px]:pl-[10%]"
   >
     {
-      sections.map((item) => (
+      sections.map((item: any) => (
         <li class={`${item.name === 'Serviços' ? 'servicos' : ''} ${
         item.name === 'Perguntas' ? 'perguntas' : ''}`}>
           <a
@@ -175,7 +175,7 @@ const { sections, dropdownServicos, dropdownPerguntas } = navData;
                 class="toogle absolute scale-x-[4] size-5 opacity-0 min-[992px]:hidden"
               />
               <ul class="dropdown min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250">
-                {dropdownServicos.map((servico) => (
+                {dropdownServicos.map((servico: any) => (
                   <li>
                     <a
                       aria-label={`Ir para ${servico.name}`}
@@ -195,7 +195,7 @@ const { sections, dropdownServicos, dropdownPerguntas } = navData;
                 class="toogle scale-x-[4] absolute size-5 opacity-0 min-[992px]:hidden"
               />
               <ul class="min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] dropdown min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250">
-                {dropdownPerguntas.map((pergunta) => (
+                {dropdownPerguntas.map((pergunta: any) => (
                   <li>
                     <a aria-label={pergunta.name} href={pergunta.path}>
                       {pergunta.name}

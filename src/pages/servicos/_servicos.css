@@ -10,13 +10,19 @@
     object-position: left 35%;
   }
 
+  img.positionObjetHero2 {
+    object-position: unset;
+  }
+
+  img.positionObjetHero3 {
+    object-position: 43%;
+  }
+
+  .positionObjetHero3 {
+    object-position: 43%;
+  }
+
   .shadowyHero {
-    background: linear-gradient(269deg,
-        rgba(233, 160, 236, 0.04) 0.51%,
-        #fcafff 7.24%,
-        #fca2ff 51.55%,
-        rgba(252, 163, 255, 0.77) 92.59%,
-        rgba(252, 161, 255, 0.47) 97.48%);
     display: flex;
     justify-content: center;
   }
@@ -25,7 +31,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 57%;
     height: 100%;
     gap: 44px;
   }
@@ -74,7 +79,7 @@
     height: 6px;
   }
 
-  .benefitsWords {
+  .benefits> :last-child {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,7 +88,7 @@
     text-transform: uppercase;
   }
 
-  .benefitsWords li {
+  .benefits> :last-child .convincing {
     font-size: calc(1vw + 0.5em);
     margin-bottom: 2.4rem;
   }
@@ -202,7 +207,8 @@
   }
 
   .ask div span {
-    color: #494949;
+    color: #5d5d5d;
+    letter-spacing: 2px;
   }
 
   .incentive {
@@ -247,10 +253,17 @@
     padding: 0 17vw;
   }
 
-  .incentive .card-group img,
-  .incentive .card-group video {
+  .incentive .card-group img {
+    height: 16rem;
+  }
+
+  .reviewVideo {
     height: 16rem;
     object-position: top;
+  }
+
+  .positionObjet3 {
+    object-position: 0 40%;
   }
 
   .incentive .card-group {
@@ -273,6 +286,10 @@
 
   .card-title {
     font-weight: 600;
+  }
+
+  .positionObjectVideo23 * {
+    object-position: unset;
   }
 
   @media only screen and (min-width: 0) and (max-width: 600px) {
@@ -298,11 +315,11 @@
       justify-content: center;
     }
 
-    .benefitsWords {
-      gap: 5vh;
+    .benefits> :last-child {
+      gap: 4.5vh;
     }
 
-    .benefitsWords li {
+    .benefits> :last-child .convincing {
       font-size: 3vw;
       margin: 0;
     }
@@ -311,7 +328,6 @@
       position: relative;
       width: 100%;
       height: 40%;
-      background: linear-gradient(269deg, #fcafff 7.24%, #fca2ff 51.55%);
     }
 
     .ctroShadowlyHero {
@@ -411,11 +427,11 @@
       font-size: 1.5rem;
     }
 
-    .benefitsWords {
+    .benefits> :last-child {
       gap: 4.6vh;
     }
 
-    .benefitsWords li {
+    .benefits> :last-child .convincing {
       margin-bottom: 0;
       letter-spacing: 1px;
     }
@@ -472,7 +488,7 @@
 
   @media only screen and (min-width: 318px) and (max-width: 454px) {
     .hero-sobrancelhas {
-      height: 110dvh;
+      height: 114dvh;
     }
 
     .hero-sobrancelhas img {
@@ -487,19 +503,19 @@
       height: 1vw;
     }
 
-    .benefitsWords li {
+    .benefits> :last-child .convincing {
       letter-spacing: 1px;
     }
 
     .shadowyHero {
-      height: 50%;
+      height: 54%;
       padding-top: 2em;
     }
 
     .ctroShadowlyHero {
       width: 100%;
       padding: 0 4vw 0 10vw;
-      gap: 4vh;
+      gap: 2rem;
     }
 
     .shadowyTextBody {
@@ -546,6 +562,10 @@
 
   @media only screen and (min-width: 455px) and (max-width: 600px) {
 
+    .benefits> :last-child {
+      gap: 6vh;
+    }
+
     .shadowyTextBody h1,
     .shadowyTextBody p {
       color: #ffff;
@@ -575,20 +595,18 @@
       justify-content: center;
     }
 
-    .benefitsWords {
-      gap: 2.4rem;
+    .benefits> :last-child {
+      gap: 2.5rem;
     }
 
-    .benefitsWords li {
+    .benefits> :last-child .convincing {
       font-size: 3vw;
       margin: 0;
     }
 
     .shadowyHero {
-      position: relative;
       width: 100%;
       height: 38%;
-      background: linear-gradient(269deg, #fcafff 7.24%, #fca2ff 51.55%);
     }
 
     .ctroShadowlyHero {
@@ -599,7 +617,7 @@
       width: 44vw;
       height: 10.67rem;
       position: absolute;
-      inset: -72% 46%;
+      inset: 21% 45%;
     }
 
     .shadowyTextBody h1 {
@@ -669,11 +687,11 @@
       gap: 5vh;
     }
 
-    .benefitsWords {
+    .benefits> :last-child {
       gap: 3.4vh;
     }
 
-    .benefitsWords li {
+    .benefits> :last-child .convincing {
       font-size: calc(1vw + 0.5em);
     }
 
@@ -682,12 +700,6 @@
       left: 0;
       width: 57%;
       height: calc(84% - var(--tam));
-      background: linear-gradient(269deg,
-          rgb(233 160 236 / 0%) 1.51%,
-          #fcafff 7.24%,
-          #fca2ff 51.55%,
-          rgba(252, 163, 255, 0.77) 92.59%,
-          rgba(252, 161, 255, 0.47) 97.48%);
     }
 
     .ctroShadowlyHero {
