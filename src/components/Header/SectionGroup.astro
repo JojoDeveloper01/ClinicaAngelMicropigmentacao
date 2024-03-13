@@ -2,7 +2,7 @@
 import SocialMidia from "../SocialMidia.astro";
 import navData from "@lib/navData";
 
-const { sections, dropdownServicos, dropdownPerguntas } = navData;
+const { sections, Servicos, Perguntas } = navData;
 ---
 
 <style>
@@ -175,11 +175,11 @@ const { sections, dropdownServicos, dropdownPerguntas } = navData;
                 class="toogle absolute scale-x-[4] size-5 opacity-0 min-[992px]:hidden"
               />
               <ul class="dropdown min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250">
-                {dropdownServicos.map((servico: any) => (
+                {Servicos.map((servico: any) => (
                   <li>
                     <a
                       aria-label={`Ir para ${servico.name}`}
-                      href={`/servicos${servico.path}`}
+                      href={servico.path}
                     >
                       {servico.name}
                     </a>
@@ -195,7 +195,7 @@ const { sections, dropdownServicos, dropdownPerguntas } = navData;
                 class="toogle scale-x-[4] absolute size-5 opacity-0 min-[992px]:hidden"
               />
               <ul class="min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] dropdown min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250">
-                {dropdownPerguntas.map((pergunta: any) => (
+                {Perguntas.map((pergunta: any) => (
                   <li>
                     <a aria-label={pergunta.name} href={pergunta.path}>
                       {pergunta.name}

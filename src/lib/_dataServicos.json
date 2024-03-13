@@ -2,12 +2,12 @@
   "paginas": {
     "micropigmentacao-sobrancelhas": {
       "idPage": "1",
-      "titulo": "Micropigmentação de Sobrancelhas",
+      "titulo": "Micropigmentação Sobrancelhas",
       "description": "Serviço de Micropigmentação de sobrancelhas, informações das técnicas mais conhecidas de micropigmentação.",
       "keywords": "Serviços Clínica Angel Micropigmentação, microblanding, nanoblanding, micropigmentação, micropigmentação sobrancelhas preço, micropigmentação de sobrancelhas",
       "canonical": "https://clinicamicropigmentacao.com/servicos/micropigmentacao-sobrancelhas",
       "hero": {
-        "imgHero": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif",
+        "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif",
         "descriptionHero": "Aprimora a estética das sobrancelhas, realçando os traços faciais para um look mais natural.",
         "beneficios": [
           "<span class='bold'>1 a 4 anos</span> de duração",
@@ -100,7 +100,7 @@
       "canonical": "https://clinicamicropigmentacao.com/servicos/micropigmentacao-labial",
       "keywords": "Serviços Clínica Angel Micropigmentação, micropigmentação, micropigmentação labial preço, micropigmentação labial",
       "hero": {
-        "imgHero": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710073510/assets/image/servicos/herolabios1_vcfiqw.avif",
+        "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710073510/assets/image/servicos/herolabios1_vcfiqw.avif",
         "descriptionHero": "Realçamos a expressão única dos seus lábios, deixe seus lábios contar a história da sua autenticidade e confiança.",
         "beneficios": [
           "<span class='bold'>1 a 4 anos</span> de duração",
@@ -188,12 +188,12 @@
 
     "micropigmentacao-olhos": {
       "idPage": "3",
-      "titulo": "Micropigmentação de Olhos",
+      "titulo": "Micropigmentação Olhos",
       "description": "Serviço de Micropigmentação de olhos, informações das técnicas mais conhecidas de micropigmentação.",
       "canonical": "https://clinicamicropigmentacao.com/servicos/micropigmentacao-olhos",
       "keywords": "Serviços Clínica Angel Micropigmentação, micropigmentação, micropigmentação de olhos preço, micropigmentação olhos",
       "hero": {
-        "imgHero": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/microOlhosHero_eqicgz.avif",
+        "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/microOlhosHero_eqicgz.avif",
         "descriptionHero": "redefine o seu olhar, proporcionando destaque e intensidade de forma natural e duradoura.",
         "beneficios": [
           "<span class='bold'>1 a 5 anos</span> de duração",

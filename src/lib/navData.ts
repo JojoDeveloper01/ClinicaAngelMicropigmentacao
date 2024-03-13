@@ -25,22 +25,22 @@ const sections = [
   },
 ]
 
-const dropdownServicos = [
+const Servicos = [
   {
     name: 'Micropigmentação Sobrancelhas',
-    path: '/micropigmentacao-sobrancelhas',
+    path: '/servicos/micropigmentacao-sobrancelhas',
   },
   {
     name: 'Micropigmentação Labial',
-    path: '/micropigmentacao-labial',
+    path: '/servicos/micropigmentacao-labial',
   },
   {
     name: 'Micropigmentação Olhos',
-    path: '/micropigmentacao-olhos',
+    path: '/servicos/micropigmentacao-olhos',
   },
 ]
 
-const dropdownPerguntas = [
+const Perguntas = [
   {
     name: 'O que é micropigmentação?',
     path: '/#pg1',
@@ -55,4 +55,4 @@ const dropdownPerguntas = [
   },
 ]
 
-export default { sections, dropdownServicos, dropdownPerguntas }
+export default { sections, Servicos, Perguntas }

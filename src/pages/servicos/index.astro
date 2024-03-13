@@ -1,22 +1,15 @@
 ---
 import Card from "@components/CardServicos.astro";
 import Layout from "@layouts/Layout.astro";
-
-/* export const prerender = true;
-const pageServicos = (dataServicos.paginas as { [key: string]: any })[servicos];
-
-const servicos = [
-  { servico: "Micropigmentação Sobrancelhas" },
-  { servico: "Micropigmentação Labial" },
-  { servico: "Micropigmentação de Olhos" },
-]; */
+import dataServicos from "@lib/_dataServicos.json";
+import navData from "@lib/navData"
 ---
 
 <style>
   section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(min(292px, 100%), 1fr));
+    gap: 6vh;
   }
 </style>
 
@@ -28,13 +21,28 @@ const servicos = [
 >
   <h1>Serviços</h1>
 
-  <section>
-    <Card
-      title="Micropigmentação Sobrancelhas"
-      body="askfsçasfn eigs ewijgr9 euisghui9ern euibngfuibnwg euwhfgu9pewbn askfsçasfn eigs ewijgr9 euisghui9ern euibngfuibnwg euwhfgu9pewbnaskfsçasfn eigs ewijgr9 euisghui9ern euibngfuibnwg euwhfgu9pewbn"
-      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg"
-      alt="sample92"
-      href="/servicos/micropigmentacao-sobrancelhas"
-    />
-  </section>
+<section class="m-[6vw] max-[705px]:m-[10vw] max-[400px]:mx-0">
+  {Object.entries(dataServicos.paginas).map(function([key, item]) {
+
+    const serviceInfo = navData.Servicos.find(function(service) {
+      return service.name === item.titulo
+    });
+
+    if (serviceInfo) {
+      return (
+        <Card
+          key={key}
+          title={item.titulo}
+          body={item.description}
+          src={item.hero.img}
+          alt={item.titulo}
+          href={serviceInfo.path}
+        />
+      );
+    }
+    return null;
+  })}
+</section>
+
+  
 </Layout>

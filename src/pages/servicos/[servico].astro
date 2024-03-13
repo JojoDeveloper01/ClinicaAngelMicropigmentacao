@@ -7,7 +7,7 @@ import dataServicos from "@lib/_dataServicos.json";
 import styles from "./_heroColor.module.css";
 import "./_servicos.css";
 
-const { servico } = Astro.params;
+const servico: string = Astro.params?.servico || "default-service";
 export const prerender = true;
 const pageServicos = (dataServicos.paginas as { [key: string]: any })[servico];
 
@@ -33,7 +33,7 @@ export function getStaticPaths() {
         : pageServicos.idPage === "3"
           ? "positionObjetHero3"
           : ""}
-      src={pageServicos.hero.imgHero}
+      src={pageServicos.hero.img}
       alt={pageServicos.titulo}
     />
     <div
