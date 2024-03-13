@@ -38,3 +38,11 @@
     background-color: #FF726D;
   }
 }
+
+.heroColor33 {
+  background-image: none;
+
+  @media only screen and (max-width: 767px) {
+    background-color: #FEAC72;
+  }
+}

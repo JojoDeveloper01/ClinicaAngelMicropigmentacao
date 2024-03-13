@@ -9,11 +9,11 @@ const sections = [
   },
   {
     name: 'Contactos',
-    path: '/contactos',
+    path: '/#contactos',
   },
   {
     name: 'Serviços',
-    path: '/servicos',
+    path: '/#servicos',
   },
   {
     name: 'Perguntas',

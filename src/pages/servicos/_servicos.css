@@ -296,7 +296,7 @@
     .hero-sobrancelhas {
       flex-direction: column;
       justify-content: flex-start;
-      height: 100dvh;
+      height: 100vh;
       background-color: transparent;
     }
 
@@ -411,7 +411,7 @@
 
   @media only screen and (max-width: 317px) {
     .hero-sobrancelhas {
-      height: 110dvh;
+      height: 110vh;
     }
 
     .hero-sobrancelhas img {
@@ -488,7 +488,7 @@
 
   @media only screen and (min-width: 318px) and (max-width: 454px) {
     .hero-sobrancelhas {
-      height: 114dvh;
+      height: 114vh;
     }
 
     .hero-sobrancelhas img {
@@ -576,7 +576,7 @@
     .hero-sobrancelhas {
       flex-direction: column;
       justify-content: flex-start;
-      height: 100dvh;
+      height: 100vh;
       background-color: transparent;
     }
 

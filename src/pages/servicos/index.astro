@@ -1,6 +1,24 @@
 ---
+import Card from "@components/CardServicos.astro";
 import Layout from "@layouts/Layout.astro";
+
+/* export const prerender = true;
+const pageServicos = (dataServicos.paginas as { [key: string]: any })[servicos];
+
+const servicos = [
+  { servico: "Micropigmentação Sobrancelhas" },
+  { servico: "Micropigmentação Labial" },
+  { servico: "Micropigmentação de Olhos" },
+]; */
 ---
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+</style>
 
 <Layout
   title="Servicos"
@@ -10,9 +28,13 @@ import Layout from "@layouts/Layout.astro";
 >
   <h1>Serviços</h1>
 
-  <a href="/servicos/micropigmentacao-sobrancelhas"
-    >Micropigmentação sobrancelhas</a
-  >
-  <a href="/servicos/micropigmentacao-labial">Micropigmentação Labial</a>
-  <a href="/servicos/micropigmentacao-olhos">Micropigmentação Olhos</a>
+  <section>
+    <Card
+      title="Micropigmentação Sobrancelhas"
+      body="askfsçasfn eigs ewijgr9 euisghui9ern euibngfuibnwg euwhfgu9pewbn askfsçasfn eigs ewijgr9 euisghui9ern euibngfuibnwg euwhfgu9pewbnaskfsçasfn eigs ewijgr9 euisghui9ern euibngfuibnwg euwhfgu9pewbn"
+      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg"
+      alt="sample92"
+      href="/servicos/micropigmentacao-sobrancelhas"
+    />
+  </section>
 </Layout>
