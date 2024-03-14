@@ -2,7 +2,7 @@
 import SocialMidia from "../SocialMidia.astro";
 import navData from "@lib/navData";
 
-const { sections, Servicos, Perguntas } = navData;
+const { Sections, Servicos, Perguntas } = navData;
 ---
 
 <style>
@@ -159,7 +159,7 @@ const { sections, Servicos, Perguntas } = navData;
     class="nav-panel w-fit h-full justify-evenly overflow-hidden flex flex-col uppercase min-[1700px]:justify-start min-[1500px]:w-full min-[1500px]:justify-center min-[992px]:w-[29rem] min-[992px]:flex-row min-[992px]:flex-wrap min-[992px]:gap-y-2 max-[844px]:pl-[10%]"
   >
     {
-      sections.map((item: any) => (
+      Sections.map((item: any) => (
         <li class={`${item.name === 'Serviços' ? 'servicos' : ''} ${
         item.name === 'Perguntas' ? 'perguntas' : ''}`}>
           <a

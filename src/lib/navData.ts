@@ -1,4 +1,4 @@
-const sections = [
+const Sections = [
   {
     name: 'Início',
     path: '/',
@@ -55,4 +55,4 @@ const Perguntas = [
   },
 ]
 
-export default { sections, Servicos, Perguntas }
+export default { Sections, Servicos, Perguntas }

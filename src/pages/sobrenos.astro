@@ -1,6 +1,9 @@
 ---
 import ToBook from "@components/ToBook.astro";
 import Layout from "@layouts/Layout.astro";
+import navData from '@lib/navData'
+
+const { Sections } = navData;
 ---
 
 <style>
@@ -119,7 +122,7 @@ import Layout from "@layouts/Layout.astro";
       micropigmentação de olhos, capilar e labial, além de oferecer serviços
       especializados em remoção de manchas e correções de micropigmentação.
     </p>
-    <a aria-label="Saber mais sobre serviços" href="/#servicos"
+    <a aria-label="Saber mais sobre serviços" href={Sections[3].path}
       >Saber mais sobre serviços</a
     >
 
@@ -179,7 +182,7 @@ import Layout from "@layouts/Layout.astro";
             <small class="text-body-secondary"
               ><a
                 aria-label="Ver serviços de Angel"
-                href="/#servicos"
+                href={Sections[3].path}
                 class="text-base">Ver serviços de Angel</a
               ></small
             >
@@ -209,7 +212,7 @@ import Layout from "@layouts/Layout.astro";
             <small class="text-body-secondary"
               ><a
                 aria-label="Ver serviços de Esperanza"
-                href="/#servicos"
+                href={Sections[3].path}
                 class="text-base">Ver serviços de Esperanza</a
               ></small
             >
