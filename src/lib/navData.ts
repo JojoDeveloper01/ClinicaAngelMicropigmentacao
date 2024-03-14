@@ -13,7 +13,7 @@ const sections = [
   },
   {
     name: 'Serviços',
-    path: '/#servicos',
+    path: '/servicos',
   },
   {
     name: 'Perguntas',
