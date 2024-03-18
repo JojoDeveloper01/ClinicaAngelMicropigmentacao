@@ -21,31 +21,31 @@ export function getStaticPaths() {
 ---
 
 <Layout
-  title={pageServicos.titulo}
-  description={pageServicos.metaDescription}
-  canonical={pageServicos.canonical}
-  keywords={pageServicos.keywords}
+  title={pageServicos.title}
+  description=`Serviço de ${pageServicos.title}, informações das técnicas mais conhecidas de micropigmentação.`
+  canonical=`https://clinicamicropigmentacao.com/servicos/${servico}`
+  keywords=`Serviços Clínica Angel Micropigmentação, ${pageServicos.title} preço, ${pageServicos.title}, ${pageServicos.keywords}`
 >
   <section class="hero-sobrancelhas">
     <img
-      class={pageServicos.idPage === "2"
+      class={pageServicos.id === "2"
         ? "positionObjetHero2"
-        : pageServicos.idPage === "3"
+        : pageServicos.id === "3"
           ? "positionObjetHero3"
           : ""}
       src={pageServicos.hero.img}
-      alt={pageServicos.titulo}
+      alt={pageServicos.title}
     />
     <div
-      class=`shadowyHero ${pageServicos.idPage === '1' ? styles.heroColor1 : pageServicos.idPage === '2' ? styles.heroColor2 : styles.heroColor3}`
+      class=`shadowyHero ${pageServicos.id === '1' ? styles.heroColor1 : pageServicos.id === '2' ? styles.heroColor2 : styles.heroColor3}`
     >
       <div class="ctroShadowlyHero">
         <div class="shadowyTextBody">
           <h1>
-            {pageServicos.titulo}
+            {pageServicos.title}
           </h1>
           <p>
-            {pageServicos.hero.descriptionHero}
+            {pageServicos.hero.description}
           </p>
         </div>
         <div class="benefits">
@@ -57,7 +57,7 @@ export function getStaticPaths() {
           </ol>
           <ol class="benefitsWords">
             {
-              pageServicos.hero.beneficios.map((item: string[] | undefined) => (
+              pageServicos.hero.benefits.map((item: string[] | undefined) => (
                 <ToJSON tag="li" className="convincing" add={item} />
               ))
             }
@@ -66,7 +66,7 @@ export function getStaticPaths() {
       </div>
     </div>
     <div
-      class=`reservarHero ${pageServicos.idPage === '1' ? styles.heroColor11 : pageServicos.idPage === '2' ? styles.heroColor22 : styles.heroColor33}`
+      class=`reservarHero ${pageServicos.id === '1' ? styles.heroColor11 : pageServicos.id === '2' ? styles.heroColor22 : styles.heroColor33}`
     >
       <button
         ><a
@@ -77,20 +77,20 @@ export function getStaticPaths() {
       <div class="precoHero">
         <p>
           Preço antigo:
-          <span>{pageServicos.hero.preco_Antigo}</span>
+          <span>{pageServicos.hero.old_Price} €</span>
         </p>
         <p>
           Preço Atual:
-          <span class="bold">{pageServicos.hero.preco_Atual}</span>
+          <span class="bold">{pageServicos.hero.new_Price} €</span>
         </p>
       </div>
     </div>
   </section>
 
   <section
-    class=`flex w-full mt-[24vh] mb-32 *:object-[0_19%] ${pageServicos.idPage === "2"
+    class=`flex w-full mt-[24vh] mb-32 *:object-[0_19%] ${pageServicos.id === "2"
     ? "positionObjectVideo23"
-    : pageServicos.idPage === "3"
+    : pageServicos.id === "3"
       ? "positionObjectVideo23"
       : ""} *:w-1/2 *:h-[27rem] max-[767px]:mt-[10vh] max-[992px]:flex-col max-[992px]:*:w-full max-[430px]:*:h-1/2`
   >
@@ -108,7 +108,7 @@ export function getStaticPaths() {
 
   <section class="askSection">
     {
-      Object.values(pageServicos.ask).map((item: any) => (
+      Object.values(pageServicos.knowledge).map((item: any) => (
         <article class="ask">
           <img src={item.img} alt={item.alt} />
           <div>
@@ -122,7 +122,7 @@ export function getStaticPaths() {
 
   <section class="incentive">
     <article>
-      <h2>{pageServicos.incentive.title}</h2>
+      <h2>Identifica-se com isto?</h2>
       {
         Object.values(pageServicos.incentive.questions).map((item: any) => (
           <p>
@@ -136,7 +136,7 @@ export function getStaticPaths() {
 
   <section class="incentive">
     <article>
-      <h2>{pageServicos.incentive.titleExtra}</h2>
+      <h2>Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!</h2>
       <ToJSON add={pageServicos.incentive.textExtra} tag="p" />
     </article>
   </section>
@@ -150,7 +150,7 @@ export function getStaticPaths() {
             {item.midia &&
               (item.midia.endsWith(".mp4") ? (
                 <video
-                  class={`reviewVideo ${pageServicos.idPage === "3" ? "positionObjet3" : ""}`}
+                  class={`reviewVideo ${pageServicos.id === "3" ? "positionObjet3" : ""}`}
                   playsinline
                   controls
                 >
@@ -159,7 +159,7 @@ export function getStaticPaths() {
                 </video>
               ) : (
                 <a href={item.link} target="_blank">
-                  <img src={item.midia} class="card-img-top" alt=`${item.alt}${pageServicos.titulo}` />
+                  <img src={item.midia} class="card-img-top" alt=`${item.alt}${pageServicos.title}` />
                 </a>
               ))}
             <div class="card-body cb-body">

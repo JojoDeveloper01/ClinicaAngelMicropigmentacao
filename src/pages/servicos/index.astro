@@ -15,10 +15,9 @@ import navData from "@lib/navData";
   @media only screen and (min-width: 1500px) {
     section {
       justify-content: center;
-      grid-template-columns: repeat(auto-fit, minmax(min(292px, 100%), .29fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(292px, 100%), 0.29fr));
     }
   }
-
 </style>
 
 <Layout
@@ -33,17 +32,17 @@ import navData from "@lib/navData";
     {
       Object.entries(dataServicos.paginas).map(function ([key, item]) {
         const serviceInfo = navData.Servicos.find(function (service) {
-          return service.name === item.titulo;
+          return service.name === item.title;
         });
 
         if (serviceInfo) {
           return (
             <Card
               key={key}
-              title={item.titulo}
+              title={item.title}
               body={item.description}
               src={item.hero.img}
-              alt={item.titulo}
+              alt={item.title}
               href={serviceInfo.path}
             />
           );

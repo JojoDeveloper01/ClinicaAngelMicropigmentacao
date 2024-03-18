@@ -20,7 +20,7 @@ import navData from "@lib/navData";
     opacity: 0.8;
     margin: 5% 0 3% 0;
   }
-  
+
   .dimension-total-ser {
     position: relative;
     display: flex;
@@ -83,17 +83,17 @@ import navData from "@lib/navData";
   {
     Object.entries(dataServicos.paginas).map(function ([key, item]) {
       const serviceInfo = navData.Servicos.find(function (service) {
-        return service.name === item.titulo;
+        return service.name === item.title;
       });
 
       if (serviceInfo) {
         return (
           <Card
             key={key}
-            title={item.titulo}
+            title={item.title}
             body={item.description}
             src={item.hero.img}
-            alt={item.titulo}
+            alt={item.title}
             href={serviceInfo.path}
           />
         );

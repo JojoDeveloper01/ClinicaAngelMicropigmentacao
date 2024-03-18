@@ -1,33 +1,31 @@
 {
   "paginas": {
     "micropigmentacao-sobrancelhas": {
-      "idPage": "1",
-      "titulo": "Micropigmentação Sobrancelhas",
+      "id": "1",
+      "title": "Micropigmentação Sobrancelhas",
       "description": "A micropigmentação fio a fio é uma técnica de maquilhagem semi-permanente que utiliza pigmentos para depositar na pele, criando a aparência de fios de cabelo naturais para preencher ou definir sobrancelhas. É uma técnica de beleza popular que pode durar de 1 a 4 anos com os cuidados adequados.",
-      "metaDescription": "Serviço de Micropigmentação de sobrancelhas, informações das técnicas mais conhecidas de micropigmentação.",
-      "keywords": "Serviços Clínica Angel Micropigmentação, microblanding, nanoblanding, micropigmentação, micropigmentação sobrancelhas preço, micropigmentação de sobrancelhas",
-      "canonical": "https://clinicamicropigmentacao.com/servicos/micropigmentacao-sobrancelhas",
+      "keywords": "microblanding, nanoblanding",
       "hero": {
         "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716123/assets/image/servicos/sobrancelhas11.avif",
-        "descriptionHero": "Aprimora a estética das sobrancelhas, realçando os traços faciais para um look mais natural.",
-        "beneficios": [
+        "description": "Aprimora a estética das sobrancelhas, realçando os traços faciais para um look mais natural.",
+        "benefits": [
           "<span class='bold'>1 a 4 anos</span> de duração",
           "<span class='bold'>Efeito</span> natural",
           "<span class='bold'>Aumenta</span> a autoestima",
           "<span class='bold'>Design</span> personalizado"
         ],
-        "preco_Antigo": "120 €",
-        "preco_Atual": "99 €"
+        "old_Price": "120",
+        "new_Price": "99"
       },
       "exhibitionVideo": {
         "1": "https://res.cloudinary.com/dg6twczfr/video/upload/f_auto,q_auto:good/v1709755957/assets/videos/antes-micropigmentacao-sobrancelha_tm7kzg.mp4",
         "2": "https://res.cloudinary.com/dg6twczfr/video/upload/f_auto,q_auto:good/v1709726604/assets/videos/sobrancelhas-bonitas_fygghk.mp4"
       },
-      "ask": {
+      "knowledge": {
         "1": {
           "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1706716126/assets/image/servicos/sobrancelhas_antes_depois1.avif",
           "alt": "Micropigmentação de Sobrancelhas",
-          "title": "O que é micropigmentação de sobrancelhas?",
+          "title": "Micropigmentação de sobrancelhas",
           "p": "A <span class='bold'>micropigmentação fio a fio</span> é uma técnica de maquilhagem semi-permanente que utiliza pigmentos para depositar na pele, criando a aparência de fios de cabelo naturais para preencher ou definir sobrancelhas. É uma técnica de beleza popular que pode durar de <span class='bold'>1 a 4 anos</span> com os cuidados adequados."
         },
         "2": {
@@ -95,33 +93,31 @@
     },
 
     "micropigmentacao-labial": {
-      "idPage": "2",
-      "titulo": "Micropigmentação Labial",
+      "id": "2",
+      "title": "Micropigmentação Labial",
       "description": "Procedimento estético que aplica pigmentos nos lábios para alterar o tom da pele, definir o contorno, corrigir assimetrias e disfarçar sinais de envelhecimento. Indicado para lábios finos, o processo é semipermanente, durando de 1 a 5 anos. Após a cicatrização, os lábios ficam mais vistosos. Cuidados pós-procedimento incluem evitar fumar, maquilhagem entre outros.",
-      "metaDescription": "Serviço de Micropigmentação de labial, informações das técnicas mais conhecidas de micropigmentação.",
-      "canonical": "https://clinicamicropigmentacao.com/servicos/micropigmentacao-labial",
-      "keywords": "Serviços Clínica Angel Micropigmentação, micropigmentação, micropigmentação labial preço, micropigmentação labial",
+      "keywords": "",
       "hero": {
         "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710073510/assets/image/servicos/herolabios1_vcfiqw.avif",
-        "descriptionHero": "Realçamos a expressão única dos seus lábios, deixe seus lábios contar a história da sua autenticidade e confiança.",
-        "beneficios": [
+        "description": "Realçamos a expressão única dos seus lábios, deixe seus lábios contar a história da sua autenticidade e confiança.",
+        "benefits": [
           "<span class='bold'>1 a 4 anos</span> de duração",
           "<span class='bold'>Corrige</span> o contorno labial",
           "<span class='bold'>Aumenta</span> o volume dos lábios",
           "<span class='bold'>Neutraliza</span> os lábios apagados"
         ],
-        "preco_Antigo": "175 €",
-        "preco_Atual": "110 €"
+        "old_Price": "175",
+        "new_Price": "110"
       },
       "exhibitionVideo": {
         "1": "https://res.cloudinary.com/dg6twczfr/video/upload/v1710113526/assets/videos/microLabialAntes_vhu8ho.mp4",
         "2": "https://res.cloudinary.com/dg6twczfr/video/upload/v1710113528/assets/videos/microLabialDepois_xb3bt1.mp4"
       },
-      "ask": {
+      "knowledge": {
         "1": {
           "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113700/assets/image/servicos/antes-depoisLabiaos_dqgeqm.avif",
           "alt": "Micropigmentação Labial",
-          "title": "O que é micropigmentação labial?",
+          "title": "Micropigmentação Labial",
           "p": "Procedimento estético que aplica pigmentos nos lábios para alterar o tom da <span class='bold'>pele</span>, definir o <span class='bold'>contorno</span>, corrigir <span class='bold'>assimetrias</span> e disfarçar sinais de <span class='bold'>envelhecimento</span>. Indicado para lábios finos, o processo é semipermanente, durando de <span class='bold'>1 a 5 anos</span>. Após a cicatrização, os lábios ficam mais <span class='bold'>vistosos</span>. Cuidados pós-procedimento incluem evitar alimentos quentes e maquilhagem na primeira semana. O preço pode variar de pessoa em pessoa"
         },
         "2": {
@@ -189,33 +185,31 @@
     },
 
     "micropigmentacao-olhos": {
-      "idPage": "3",
-      "titulo": "Micropigmentação Olhos",
+      "id": "3",
+      "title": "Micropigmentação Olhos",
       "description": "Neste processo inovador, pigmentos especiais são aplicados suavemente na pele, resultando num delineador que mantém a sua elegância ao longo do tempo. É como se tivesse acabado de aplicar um delineador incrível, mas sem a preocupação de retocar constantemente. A micropigmentação eyeliner é a resposta para um visual sofisticado e definido, realçando naturalmente o brilho dos seus olhos.",
-      "metaDescription": "Serviço de Micropigmentação de olhos, informações das técnicas mais conhecidas de micropigmentação.",
-      "canonical": "https://clinicamicropigmentacao.com/servicos/micropigmentacao-olhos",
-      "keywords": "Serviços Clínica Angel Micropigmentação, micropigmentação, micropigmentação de olhos preço, micropigmentação olhos",
+      "keywords": "eyerline",
       "hero": {
         "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/microOlhosHero_eqicgz.avif",
-        "descriptionHero": "redefine o seu olhar, proporcionando destaque e intensidade de forma natural e duradoura.",
-        "beneficios": [
+        "description": "redefine o seu olhar, proporcionando destaque e intensidade de forma natural e duradoura.",
+        "benefits": [
           "<span class='bold'>1 a 5 anos</span> de duração",
           "<span class='bold'>Aparência</span> natural",
           "<span class='bold'>Engrossamento</span> da linha dos cílios",
           "<span class='bold'>Olhar</span> mais marcante e expressivo"
         ],
-        "preco_Antigo": "110 €",
-        "preco_Atual": "95 €"
+        "old_Price": "110",
+        "new_Price": "95"
       },
       "exhibitionVideo": {
         "1": "https://res.cloudinary.com/dg6twczfr/video/upload/v1710113534/assets/videos/microOlhosPocesso_v2uqen.mp4",
         "2": "https://res.cloudinary.com/dg6twczfr/video/upload/v1710113527/assets/videos/microOlhosResultado_fbjnp5.mp4"
       },
-      "ask": {
+      "knowledge": {
         "1": {
           "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos_qmmiig.avif",
           "alt": "Micropigmentação de olhos/eyeliner",
-          "title": "O que é micropigmentação de olhos/eyeliner?",
+          "title": "Micropigmentação de olhos/eyeliner",
           "p": "Neste processo inovador, pigmentos especiais são aplicados suavemente na pele, resultando num delineador que mantém a sua <span class='bold'>elegância ao longo do tempo</span>. É como se tivesse acabado de aplicar um delineador incrível, mas sem a preocupação de <span class='bold'>retocar constantemente</span>. A micropigmentação eyeliner é a resposta para um visual sofisticado e definido, realçando <span class='bold'>naturalmente</span> o brilho dos seus olhos."
         },
         "2": {
@@ -282,54 +276,1109 @@
       }
     },
 
-    "micropigmentação-capilar":{
-
-
+    "micropigmentacao-capilar": {
+      "id": "4",
+      "title": "Micropigmentação Capilar",
+      "description": ".",
+      "keywords": "",
+      "hero": {
+        "img": "",
+        "description": "",
+        "benefits": [
+          "<span class='bold'>1 a 4 anos</span> de duração",
+          "<span class='bold'>Aparência</span> natural",
+          "<span class='bold'>Engrossamento</span> da linha dos cílios",
+          "<span class='bold'>Olhar</span> mais marcante e expressivo"
+        ],
+        "old_Price": "190",
+        "new_Price": "130"
+      },
+      "exhibitionVideo": {
+        "1": "",
+        "2": ""
+      },
+      "knowledge": {
+        "1": {
+          "img": "",
+          "alt": "Micropigmentação Capilar",
+          "title": "Micropigmentação Capilar",
+          "p": "."
+        },
+        "2": {
+          "img": "",
+          "alt": "",
+          "title": "",
+          "p": ""
+        },
+        "3": {
+          "img": "",
+          "alt": "",
+          "title": "",
+          "p": ""
+        }
+      },
+      "incentive": {
+        "title": "Identifica-se com isto?",
+        "questions": {
+          "1": {
+            "img": "/assets/emojis/clock.svg",
+            "p": ""
+          },
+          "2": {
+            "img": "/assets/emojis/work.svg",
+            "p": ""
+          },
+          "3": {
+            "img": "/assets/emojis/seeding.svg",
+            "p": ""
+          },
+          "4": {
+            "img": "/assets/emojis/star.svg",
+            "p": ""
+          }
+        },
+        "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+        "textExtra": ""
+      },
+      "clientReviews": {
+        "title": "Qual a opinião dos nossos clientes com a micropigmentação capilar?",
+        "customers": {
+          "1": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "2": {
+            "link": "https://g.co/kgs/x44sKhK",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "3": {
+            "link": "https://g.co/kgs/xhsQowv",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": ""
+          }
+        }
+      }
     },
 
-    "micropigmentação-areola":{
-
+    "micropigmentação-areola": {
+      "id": "5",
+      "title": "Micropigmentação Aréola",
+      "description": ".",
+      "keywords": "",
+      "hero": {
+        "img": "",
+        "description": "",
+        "benefits": [
+          "<span class='bold'>1 a 4 anos</span> de duração",
+          "<span class='bold'>Aparência</span> natural",
+          "<span class='bold'>Engrossamento</span> da linha dos cílios",
+          "<span class='bold'>Olhar</span> mais marcante e expressivo"
+        ],
+        "old_Price": "190",
+        "new_Price": "130"
+      },
+      "exhibitionVideo": {
+        "1": "",
+        "2": ""
+      },
+      "knowledge": {
+        "1": {
+          "img": "",
+          "alt": "Micropigmentação Aréola",
+          "title": "Micropigmentação Aréola",
+          "p": "."
+        },
+        "2": {
+          "img": "",
+          "alt": "",
+          "title": "",
+          "p": ""
+        },
+        "3": {
+          "img": "",
+          "alt": "",
+          "title": "",
+          "p": ""
+        }
+      },
+      "incentive": {
+        "title": "Identifica-se com isto?",
+        "questions": {
+          "1": {
+            "img": "/assets/emojis/clock.svg",
+            "p": ""
+          },
+          "2": {
+            "img": "/assets/emojis/work.svg",
+            "p": ""
+          },
+          "3": {
+            "img": "/assets/emojis/seeding.svg",
+            "p": ""
+          },
+          "4": {
+            "img": "/assets/emojis/star.svg",
+            "p": ""
+          }
+        },
+        "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+        "textExtra": ""
+      },
+      "clientReviews": {
+        "title": "Qual a opinião dos nossos clientes com a micropigmentação Aréola?",
+        "customers": {
+          "1": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "2": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "3": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": ""
+          }
+        }
+      }
     },
 
-    "micropigmentação-cicatrizes":{
-      
+    "camuflar-cicatrizes": {
+      "id": "6",
+      "title": "Micropigmentação Para Camuflar Cicatrizes",
+      "description": ".",
+      "keywords": "remoção de cicatrizes, remoção de cicatrizes preço, camuflar cicatrizes",
+      "hero": {
+        "img": "",
+        "description": "",
+        "benefits": [
+          "<span class='bold'>1 a 4 anos</span> de duração",
+          "<span class='bold'>Aparência</span> natural",
+          "<span class='bold'>Engrossamento</span> da linha dos cílios",
+          "<span class='bold'>Olhar</span> mais marcante e expressivo"
+        ],
+        "old_Price": "190",
+        "new_Price": "130"
+      },
+      "exhibitionVideo": {
+        "1": "",
+        "2": ""
+      },
+      "knowledge": {
+        "1": {
+          "img": "",
+          "alt": "Micropigmentação Para Camuflar Cicatrizes",
+          "title": "Micropigmentação Para Camuflar Cicatrizes",
+          "p": "."
+        },
+        "2": {
+          "img": "",
+          "alt": "",
+          "title": "",
+          "p": ""
+        },
+        "3": {
+          "img": "",
+          "alt": "",
+          "title": "",
+          "p": ""
+        }
+      },
+      "incentive": {
+        "title": "Identifica-se com isto?",
+        "questions": {
+          "1": {
+            "img": "/assets/emojis/clock.svg",
+            "p": ""
+          },
+          "2": {
+            "img": "/assets/emojis/work.svg",
+            "p": ""
+          },
+          "3": {
+            "img": "/assets/emojis/seeding.svg",
+            "p": ""
+          },
+          "4": {
+            "img": "/assets/emojis/star.svg",
+            "p": ""
+          }
+        },
+        "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+        "textExtra": ""
+      },
+      "clientReviews": {
+        "title": "Qual a opinião dos nossos clientes com a Micropigmentação Para Camuflar Cicatrizes?",
+        "customers": {
+          "1": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "2": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "3": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": ""
+          }
+        }
+      }
     },
 
-    "remoção-micropigmentação":{
-      
+    "remoção-micropigmentação": {
+      "id": "7",
+      "title": "Remoção de Micropigmentação",
+      "description": ".",
+      "keywords": "camuflar micropigmentação",
+      "hero": {
+        "img": "",
+        "description": "",
+        "benefits": [
+          "<span class='bold'>1 a 4 anos</span> de duração",
+          "<span class='bold'>Aparência</span> natural",
+          "<span class='bold'>Engrossamento</span> da linha dos cílios",
+          "<span class='bold'>Olhar</span> mais marcante e expressivo"
+        ],
+        "old_Price": "210",
+        "new_Price": "150"
+      },
+      "exhibitionVideo": {
+        "1": "",
+        "2": ""
+      },
+      "knowledge": {
+        "1": {
+          "img": "",
+          "alt": "Remoção de Micropigmentação",
+          "title": "Remoção de Micropigmentação",
+          "p": "."
+        },
+        "2": {
+          "img": "",
+          "alt": "",
+          "title": "",
+          "p": ""
+        },
+        "3": {
+          "img": "",
+          "alt": "",
+          "title": "",
+          "p": ""
+        }
+      },
+      "incentive": {
+        "title": "Identifica-se com isto?",
+        "questions": {
+          "1": {
+            "img": "/assets/emojis/clock.svg",
+            "p": ""
+          },
+          "2": {
+            "img": "/assets/emojis/work.svg",
+            "p": ""
+          },
+          "3": {
+            "img": "/assets/emojis/seeding.svg",
+            "p": ""
+          },
+          "4": {
+            "img": "/assets/emojis/star.svg",
+            "p": ""
+          }
+        },
+        "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+        "textExtra": ""
+      },
+      "clientReviews": {
+        "title": "Qual a opinião dos nossos clientes com a Remoção de Micropigmentação?",
+        "customers": {
+          "1": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "2": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "3": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": ""
+          }
+        }
+      }
     },
 
-    "micropigmentação-tatuagens":{
-      
+    "micropigmentação-tatuagens": {
+      "id": "8",
+      "title": "Micropigmentação Aréola",
+      "description": ".",
+      "keywords": "",
+      "hero": {
+        "img": "",
+        "description": "",
+        "benefits": [
+          "<span class='bold'>1 a 4 anos</span> de duração",
+          "<span class='bold'>Aparência</span> natural",
+          "<span class='bold'>Engrossamento</span> da linha dos cílios",
+          "<span class='bold'>Olhar</span> mais marcante e expressivo"
+        ],
+        "old_Price": "190",
+        "new_Price": "130"
+      },
+      "exhibitionVideo": {
+        "1": "",
+        "2": ""
+      },
+      "knowledge": {
+        "1": {
+          "img": "",
+          "alt": "Micropigmentação Aréola",
+          "title": "Micropigmentação Aréola",
+          "p": "."
+        },
+        "2": {
+          "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+          "alt": "",
+          "title": "",
+          "p": ""
+        },
+        "3": {
+          "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+          "alt": "",
+          "title": "",
+          "p": ""
+        }
+      },
+      "incentive": {
+        "title": "Identifica-se com isto?",
+        "questions": {
+          "1": {
+            "img": "/assets/emojis/clock.svg",
+            "p": ""
+          },
+          "2": {
+            "img": "/assets/emojis/work.svg",
+            "p": ""
+          },
+          "3": {
+            "img": "/assets/emojis/seeding.svg",
+            "p": ""
+          },
+          "4": {
+            "img": "/assets/emojis/star.svg",
+            "p": ""
+          }
+        },
+        "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+        "textExtra": ""
+      },
+      "clientReviews": {
+        "title": "Qual a opinião dos nossos clientes com a micropigmentação Aréola?",
+        "customers": {
+          "1": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "2": {
+            "link": "https://g.co/kgs/x44sKhK",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "3": {
+            "link": "https://g.co/kgs/xhsQowv",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": ""
+          }
+        }
+      }
     },
 
-    "lifting-pestanas":{
-      
+    "lifting-pestanas": {
+      "id": "9",
+      "title": "Lifting de Pestanas",
+      "description": ".",
+      "keywords": "",
+      "hero": {
+        "img": "",
+        "description": "",
+        "benefits": [
+          "<span class='bold'>1 a 4 anos</span> de duração",
+          "<span class='bold'>Aparência</span> natural",
+          "<span class='bold'>Engrossamento</span> da linha dos cílios",
+          "<span class='bold'>Olhar</span> mais marcante e expressivo"
+        ],
+        "old_Price": "190",
+        "new_Price": "130"
+      },
+      "exhibitionVideo": {
+        "1": "",
+        "2": ""
+      },
+      "knowledge": {
+        "1": {
+          "img": "",
+          "alt": "Micropigmentação Aréola",
+          "title": "Micropigmentação Aréola",
+          "p": "."
+        },
+        "2": {
+          "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+          "alt": "",
+          "title": "",
+          "p": ""
+        },
+        "3": {
+          "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+          "alt": "",
+          "title": "",
+          "p": ""
+        }
+      },
+      "incentive": {
+        "title": "Identifica-se com isto?",
+        "questions": {
+          "1": {
+            "img": "/assets/emojis/clock.svg",
+            "p": ""
+          },
+          "2": {
+            "img": "/assets/emojis/work.svg",
+            "p": ""
+          },
+          "3": {
+            "img": "/assets/emojis/seeding.svg",
+            "p": ""
+          },
+          "4": {
+            "img": "/assets/emojis/star.svg",
+            "p": ""
+          }
+        },
+        "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+        "textExtra": ""
+      },
+      "clientReviews": {
+        "title": "Qual a opinião dos nossos clientes com a micropigmentação Aréola?",
+        "customers": {
+          "1": {
+            "link": "",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "2": {
+            "link": "https://g.co/kgs/x44sKhK",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": "."
+          },
+          "3": {
+            "link": "https://g.co/kgs/xhsQowv",
+            "midia": "",
+            "alt": "cliente contente com a ",
+            "name": "",
+            "review": ""
+          }
+        }
+      }
     },
 
-    "extra":{
-      "maquilhagem-facial":{
-
+    "extra": {
+      "maquilhagem-facial": {
+        "id": "10",
+        "title": "Micropigmentação Aréola",
+        "description": ".",
+        "keywords": "",
+        "hero": {
+          "img": "",
+          "description": "",
+          "benefits": [
+            "<span class='bold'>1 a 4 anos</span> de duração",
+            "<span class='bold'>Aparência</span> natural",
+            "<span class='bold'>Engrossamento</span> da linha dos cílios",
+            "<span class='bold'>Olhar</span> mais marcante e expressivo"
+          ],
+          "old_Price": "190",
+          "new_Price": "130"
+        },
+        "exhibitionVideo": {
+          "1": "",
+          "2": ""
+        },
+        "knowledge": {
+          "1": {
+            "img": "",
+            "alt": "Micropigmentação Aréola",
+            "title": "Micropigmentação Aréola",
+            "p": "."
+          },
+          "2": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          },
+          "3": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          }
+        },
+        "incentive": {
+          "title": "Identifica-se com isto?",
+          "questions": {
+            "1": {
+              "img": "/assets/emojis/clock.svg",
+              "p": ""
+            },
+            "2": {
+              "img": "/assets/emojis/work.svg",
+              "p": ""
+            },
+            "3": {
+              "img": "/assets/emojis/seeding.svg",
+              "p": ""
+            },
+            "4": {
+              "img": "/assets/emojis/star.svg",
+              "p": ""
+            }
+          },
+          "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+          "textExtra": ""
+        },
+        "clientReviews": {
+          "title": "Qual a opinião dos nossos clientes com a micropigmentação Aréola?",
+          "customers": {
+            "1": {
+              "link": "",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "2": {
+              "link": "https://g.co/kgs/x44sKhK",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "3": {
+              "link": "https://g.co/kgs/xhsQowv",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": ""
+            }
+          }
+        }
       },
 
-      "limpeza-facial":{
-
+      "limpeza-facial": {
+        "id": "11",
+        "title": "Micropigmentação Aréola",
+        "description": ".",
+        "keywords": "",
+        "hero": {
+          "img": "",
+          "description": "",
+          "benefits": [
+            "<span class='bold'>1 a 4 anos</span> de duração",
+            "<span class='bold'>Aparência</span> natural",
+            "<span class='bold'>Engrossamento</span> da linha dos cílios",
+            "<span class='bold'>Olhar</span> mais marcante e expressivo"
+          ],
+          "old_Price": "190",
+          "new_Price": "130"
+        },
+        "exhibitionVideo": {
+          "1": "",
+          "2": ""
+        },
+        "knowledge": {
+          "1": {
+            "img": "",
+            "alt": "Micropigmentação Aréola",
+            "title": "Micropigmentação Aréola",
+            "p": "."
+          },
+          "2": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          },
+          "3": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          }
+        },
+        "incentive": {
+          "title": "Identifica-se com isto?",
+          "questions": {
+            "1": {
+              "img": "/assets/emojis/clock.svg",
+              "p": ""
+            },
+            "2": {
+              "img": "/assets/emojis/work.svg",
+              "p": ""
+            },
+            "3": {
+              "img": "/assets/emojis/seeding.svg",
+              "p": ""
+            },
+            "4": {
+              "img": "/assets/emojis/star.svg",
+              "p": ""
+            }
+          },
+          "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+          "textExtra": ""
+        },
+        "clientReviews": {
+          "title": "Qual a opinião dos nossos clientes com a micropigmentação Aréola?",
+          "customers": {
+            "1": {
+              "link": "",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "2": {
+              "link": "https://g.co/kgs/x44sKhK",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "3": {
+              "link": "https://g.co/kgs/xhsQowv",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": ""
+            }
+          }
+        }
       },
 
-      "depilação-sobrancelhas-com-linha":{
-
+      "depilação-sobrancelhas-com-linha": {
+        "id": "12",
+        "title": "Micropigmentação Aréola",
+        "description": ".",
+        "keywords": "",
+        "hero": {
+          "img": "",
+          "description": "",
+          "benefits": [
+            "<span class='bold'>1 a 4 anos</span> de duração",
+            "<span class='bold'>Aparência</span> natural",
+            "<span class='bold'>Engrossamento</span> da linha dos cílios",
+            "<span class='bold'>Olhar</span> mais marcante e expressivo"
+          ],
+          "old_Price": "190",
+          "new_Price": "130"
+        },
+        "exhibitionVideo": {
+          "1": "",
+          "2": ""
+        },
+        "knowledge": {
+          "1": {
+            "img": "",
+            "alt": "Micropigmentação Aréola",
+            "title": "Micropigmentação Aréola",
+            "p": "."
+          },
+          "2": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          },
+          "3": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          }
+        },
+        "incentive": {
+          "title": "Identifica-se com isto?",
+          "questions": {
+            "1": {
+              "img": "/assets/emojis/clock.svg",
+              "p": ""
+            },
+            "2": {
+              "img": "/assets/emojis/work.svg",
+              "p": ""
+            },
+            "3": {
+              "img": "/assets/emojis/seeding.svg",
+              "p": ""
+            },
+            "4": {
+              "img": "/assets/emojis/star.svg",
+              "p": ""
+            }
+          },
+          "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+          "textExtra": ""
+        },
+        "clientReviews": {
+          "title": "Qual a opinião dos nossos clientes com a micropigmentação Aréola?",
+          "customers": {
+            "1": {
+              "link": "",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "2": {
+              "link": "https://g.co/kgs/x44sKhK",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "3": {
+              "link": "https://g.co/kgs/xhsQowv",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": ""
+            }
+          }
+        }
       },
 
-      "massagem-facial-japonesa":{
-
+      "massagem-facial-japonesa": {
+        "id": "13",
+        "title": "Micropigmentação Aréola",
+        "description": ".",
+        "keywords": "",
+        "hero": {
+          "img": "",
+          "description": "",
+          "benefits": [
+            "<span class='bold'>1 a 4 anos</span> de duração",
+            "<span class='bold'>Aparência</span> natural",
+            "<span class='bold'>Engrossamento</span> da linha dos cílios",
+            "<span class='bold'>Olhar</span> mais marcante e expressivo"
+          ],
+          "old_Price": "190",
+          "new_Price": "130"
+        },
+        "exhibitionVideo": {
+          "1": "",
+          "2": ""
+        },
+        "knowledge": {
+          "1": {
+            "img": "",
+            "alt": "Micropigmentação Aréola",
+            "title": "Micropigmentação Aréola",
+            "p": "."
+          },
+          "2": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          },
+          "3": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          }
+        },
+        "incentive": {
+          "title": "Identifica-se com isto?",
+          "questions": {
+            "1": {
+              "img": "/assets/emojis/clock.svg",
+              "p": ""
+            },
+            "2": {
+              "img": "/assets/emojis/work.svg",
+              "p": ""
+            },
+            "3": {
+              "img": "/assets/emojis/seeding.svg",
+              "p": ""
+            },
+            "4": {
+              "img": "/assets/emojis/star.svg",
+              "p": ""
+            }
+          },
+          "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+          "textExtra": ""
+        },
+        "clientReviews": {
+          "title": "Qual a opinião dos nossos clientes com a micropigmentação Aréola?",
+          "customers": {
+            "1": {
+              "link": "",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "2": {
+              "link": "https://g.co/kgs/x44sKhK",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "3": {
+              "link": "https://g.co/kgs/xhsQowv",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": ""
+            }
+          }
+        }
       },
 
-      "massagem-corpo-inteiro":{
-
+      "massagem-corpo-inteiro": {
+        "id": "14",
+        "title": "Micropigmentação Aréola",
+        "description": ".",
+        "keywords": "",
+        "hero": {
+          "img": "",
+          "description": "",
+          "benefits": [
+            "<span class='bold'>1 a 4 anos</span> de duração",
+            "<span class='bold'>Aparência</span> natural",
+            "<span class='bold'>Engrossamento</span> da linha dos cílios",
+            "<span class='bold'>Olhar</span> mais marcante e expressivo"
+          ],
+          "old_Price": "190",
+          "new_Price": "130"
+        },
+        "exhibitionVideo": {
+          "1": "",
+          "2": ""
+        },
+        "knowledge": {
+          "1": {
+            "img": "",
+            "alt": "Micropigmentação Aréola",
+            "title": "Micropigmentação Aréola",
+            "p": "."
+          },
+          "2": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          },
+          "3": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          }
+        },
+        "incentive": {
+          "title": "Identifica-se com isto?",
+          "questions": {
+            "1": {
+              "img": "/assets/emojis/clock.svg",
+              "p": ""
+            },
+            "2": {
+              "img": "/assets/emojis/work.svg",
+              "p": ""
+            },
+            "3": {
+              "img": "/assets/emojis/seeding.svg",
+              "p": ""
+            },
+            "4": {
+              "img": "/assets/emojis/star.svg",
+              "p": ""
+            }
+          },
+          "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+          "textExtra": ""
+        },
+        "clientReviews": {
+          "title": "Qual a opinião dos nossos clientes com a micropigmentação Aréola?",
+          "customers": {
+            "1": {
+              "link": "",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "2": {
+              "link": "https://g.co/kgs/x44sKhK",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "3": {
+              "link": "https://g.co/kgs/xhsQowv",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": ""
+            }
+          }
+        }
       },
 
-      "drenagem-linfática":{
-
+      "drenagem-linfática": {
+        "id": "15",
+        "title": "Micropigmentação Aréola",
+        "description": ".",
+        "keywords": "",
+        "hero": {
+          "img": "",
+          "description": "",
+          "benefits": [
+            "<span class='bold'>1 a 4 anos</span> de duração",
+            "<span class='bold'>Aparência</span> natural",
+            "<span class='bold'>Engrossamento</span> da linha dos cílios",
+            "<span class='bold'>Olhar</span> mais marcante e expressivo"
+          ],
+          "old_Price": "190",
+          "new_Price": "130"
+        },
+        "exhibitionVideo": {
+          "1": "",
+          "2": ""
+        },
+        "knowledge": {
+          "1": {
+            "img": "",
+            "alt": "Micropigmentação Aréola",
+            "title": "Micropigmentação Aréola",
+            "p": "."
+          },
+          "2": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          },
+          "3": {
+            "img": "https://res.cloudinary.com/dg6twczfr/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+            "alt": "",
+            "title": "",
+            "p": ""
+          }
+        },
+        "incentive": {
+          "title": "Identifica-se com isto?",
+          "questions": {
+            "1": {
+              "img": "/assets/emojis/clock.svg",
+              "p": ""
+            },
+            "2": {
+              "img": "/assets/emojis/work.svg",
+              "p": ""
+            },
+            "3": {
+              "img": "/assets/emojis/seeding.svg",
+              "p": ""
+            },
+            "4": {
+              "img": "/assets/emojis/star.svg",
+              "p": ""
+            }
+          },
+          "titleExtra": "Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!",
+          "textExtra": ""
+        },
+        "clientReviews": {
+          "title": "Qual a opinião dos nossos clientes com a micropigmentação Aréola?",
+          "customers": {
+            "1": {
+              "link": "",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "2": {
+              "link": "https://g.co/kgs/x44sKhK",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": "."
+            },
+            "3": {
+              "link": "https://g.co/kgs/xhsQowv",
+              "midia": "",
+              "alt": "cliente contente com a ",
+              "name": "",
+              "review": ""
+            }
+          }
+        }
       }
     }
   }
