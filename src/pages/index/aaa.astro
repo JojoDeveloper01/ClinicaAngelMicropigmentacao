@@ -79,24 +79,26 @@ import navData from "@lib/navData";
 
 <section id="servicos" class="nossos-servicos">
   <h2>NOSSOS SERVIÇOS</h2>
-
   {
     Object.entries(dataServicos.paginas).map(function ([key, item]) {
-      const serviceInfo = navData.Servicos.find(function (service) {
-        return service.name === item.title;
-      });
+      // Verificar se o item tem a propriedade 'title'
+      if ("title" in item) {
+        const serviceInfo = navData.Servicos.find(function (service) {
+          return service.name === item.title;
+        });
 
-      if (serviceInfo) {
-        return (
-          <Card
-            key={key}
-            title={item.title}
-            body={item.description}
-            src={item.hero.img}
-            alt={item.title}
-            href={serviceInfo.path}
-          />
-        );
+        if (serviceInfo) {
+          return (
+            <Card
+              key={key}
+              title={item.title}
+              body={item.description}
+              src={item.hero.img}
+              alt={item.title}
+              href={serviceInfo.path}
+            />
+          );
+        }
       }
       return null;
     })

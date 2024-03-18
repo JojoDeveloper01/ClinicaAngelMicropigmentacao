@@ -31,21 +31,23 @@ import navData from "@lib/navData";
   <section class="m-[6vw] max-[705px]:m-[10vw] max-[400px]:mx-0">
     {
       Object.entries(dataServicos.paginas).map(function ([key, item]) {
-        const serviceInfo = navData.Servicos.find(function (service) {
-          return service.name === item.title;
-        });
+        if ("title" in item) {
+          const serviceInfo = navData.Servicos.find(function (service) {
+            return service.name === item.title;
+          });
 
-        if (serviceInfo) {
-          return (
-            <Card
-              key={key}
-              title={item.title}
-              body={item.description}
-              src={item.hero.img}
-              alt={item.title}
-              href={serviceInfo.path}
-            />
-          );
+          if (serviceInfo) {
+            return (
+              <Card
+                key={key}
+                title={item.title}
+                body={item.description}
+                src={item.hero.img}
+                alt={item.title}
+                href={serviceInfo.path}
+              />
+            );
+          }
         }
         return null;
       })
