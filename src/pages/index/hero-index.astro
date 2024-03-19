@@ -1,5 +1,6 @@
 ---
 import "./_home.css";
+import { Icon } from 'astro-icon/components'
 ---
 
 <style>
@@ -436,14 +437,14 @@ import "./_home.css";
       class="carousel-control-prev prev"
       type="button"
     >
-      <img src="/assets/emojis/arrow-left.svg" class="size-8 opacity-80" />
+      <Icon name="arrow-left" size={32} class="opacity-80" />
     </button>
     <button
       aria-label="Anterior slide"
       class="carousel-control-next next"
       type="button"
     >
-      <img src="/assets/emojis/arrow-right.svg" class="size-8 opacity-80" />
+      <Icon name="arrow-right" size={32} class="opacity-80" />
     </button>
   </aside>
 </section>

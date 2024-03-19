@@ -1,3 +1,7 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
 <style>
   .formulario {
     padding: 2vh 0 3vh 0;
@@ -114,9 +118,13 @@
     margin: 0 0 1rem 0;
   }
 
-  .contact-list li:hover img {
-    filter: invert(82%) sepia(25%) saturate(5763%) hue-rotate(242deg)
-      brightness(100%) contrast(91%);
+  [data-icon]{
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .contact-list li:hover [data-icon] {
+    color: var(--corRoxo);
   }
 
   #mail-form {
@@ -251,50 +259,37 @@
         <h4>Contactos Adicionais</h4>
         <ul class="contact-list flex flex-col gap-3">
           <li class="flex gap-3">
-            <img
-              src="/assets/emojis/location-dot-solid.svg"
-              alt="Location Icon"
-              class="size-4"
-            /><a
+            <Icon name="location"/>
+            <a
               aria-label="Mapa local Póvoa"
               href="https://goo.gl/maps/cYxcvHsE3dmLaPj46"
-              target="_blank">Póvoa de Santa Iria</a
-            >
+              target="_blank">Póvoa de Santa Iria
+            </a>
           </li>
           <li class="flex gap-3">
-            <img
-              src="/assets/emojis/location-dot-solid.svg"
-              alt="Location Icon"
-              class="size-4"
-            /><a
+            <Icon name="location"/>
+            <a
               aria-label="Mapa local Areeiro"
               href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
-              target="_blank">Roma-Areeiro</a
-            >
+              target="_blank">Roma-Areeiro
+            </a>
           </li>
           <li class="flex gap-3">
-            <img
-              src="/assets/know-me/phone-solid.svg"
-              alt="Telephone Icon"
-              class="size-4"
-            />
+            <Icon name="phone"/>
             <a
               aria-label="Whatsapp Angel"
               href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
-              target="_blank">(+351) 935 407 895</a
-            >
+              target="_blank">(+351) 935 407 895
+            </a>
           </li>
           <li class="flex gap-3">
-            <img
-              src="/assets/know-me/email.svg"
-              alt="Email Icon"
-              class="size-4"
-            /><a
+            <Icon name="email"/>
+            <a
               aria-label="E-mail Angel"
               id="mail-form"
               href="mailto:angelbalcboniclinicamicropigme@gmail.com"
-              target="_blank">angelbalcboniclinicamicropigme@gmail.com</a
-            >
+              target="_blank">angelbalcboniclinicamicropigme@gmail.com
+            </a>
           </li>
         </ul>
         <p>

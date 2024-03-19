@@ -1,11 +1,14 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
 <style>
   li {
     list-style: none;
     margin: 0 7px;
   }
   li:hover {
-    filter: invert(82%) sepia(25%) saturate(5763%) hue-rotate(242deg)
-      brightness(100%) contrast(91%);
+    color: var(--corRoxo);
   }
 </style>
 
@@ -14,45 +17,29 @@
     <a
       aria-label="Instagram"
       href="https://www.instagram.com/aangelmicropigmentacao/"
-      target="_blank"
-      ><img
-        class="size-[29px]"
-        src="/assets/know-me/instagram.svg"
-        alt="Instagram"
-      /></a
-    >
+      target="_blank">
+      <Icon name="instagram" size={25}/>
+    </a>
   </li>
   <li>
     <a
       aria-label="Facebook"
       href="https://www.facebook.com/aangelmicropigmentacao"
-      target="_blank"
-      ><img
-        class="size-[29px]"
-        src="/assets/know-me/facebook.svg"
-        alt="Facebook"
-      /></a
-    >
+      target="_blank">
+      <Icon name="facebook" size={25}/>
+    </a>
   </li>
   <li>
-    <a aria-label="TikTok" href="/" target="_blank"
-      ><img
-        class="size-[29px]"
-        src="/assets/know-me/tiktok.svg"
-        alt="TikTok"
-      /></a
-    >
+    <a aria-label="TikTok" href="/" target="_blank">
+      <Icon name="tiktok" size={25}/>
+    </a>
   </li>
   <li>
     <a
       aria-label="Youtube"
       href="https://www.youtube.com/@angelmicropigmentacion4389"
-      target="_blank"
-      ><img
-        class="size-[29px]"
-        src="/assets/know-me/youtube.svg"
-        alt="Youtube"
-      /></a
-    >
+      target="_blank">
+      <Icon name="youtube" size={25}/>
+    </a>
   </li>
 </ul>

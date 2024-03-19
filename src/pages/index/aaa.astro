@@ -6,45 +6,17 @@ import navData from "@lib/navData";
 ---
 
 <style>
-  .nossos-servicos {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 7vh;
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(292px, 100%), 1fr));
+    gap: 6vh;
   }
 
-  .nossos-servicos h2 {
-    text-align: center;
-    opacity: 0.8;
-    margin: 5% 0 3% 0;
-  }
-
-  .dimension-total-ser {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 99%;
-  }
-
-  .card-servicos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-
-    padding: 0;
-  }
-
-  .card-servicos h3 a {
-    color: #000;
-  }
-
-  .card-text-servicos {
-    font-size: 14px;
-    opacity: 0.8;
-    text-align: center;
+  @media only screen and (min-width: 1500px) {
+    section {
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(min(292px, 100%), 0.29fr));
+    }
   }
 
   .activarS {
@@ -57,31 +29,13 @@ import navData from "@lib/navData";
     margin: 0;
     padding: 1vh 0 5vh 0;
   }
-
-  @media only screen and (min-width: 0) and (max-width: 600px) {
-    .nossos-servicos h2 {
-      margin: 0 0 4vh 0;
-    }
-  }
-
-  @media only screen and (min-width: 601px) {
-    .nossos-servicos h2 {
-      margin: 0 0 4vh 0;
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    .nossos-servicos h2 {
-      margin: 0 0 6vh 0;
-    }
-  }
 </style>
 
-<section id="servicos" class="nossos-servicos">
-  <h2>NOSSOS SERVIÇOS</h2>
+<h1 class="text-center mt-48 mb-36">NOSSO SERVIÇOS</h1>
+
+<section class="m-[6vw] max-[705px]:m-[10vw] max-[400px]:mx-0">
   {
     Object.entries(dataServicos.paginas).map(function ([key, item]) {
-      // Verificar se o item tem a propriedade 'title'
       if ("title" in item) {
         const serviceInfo = navData.Servicos.find(function (service) {
           return service.name === item.title;

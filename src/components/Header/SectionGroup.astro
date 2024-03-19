@@ -1,6 +1,7 @@
 ---
 import SocialMidia from "../SocialMidia.astro";
 import navData from "@lib/navData";
+import { Icon } from 'astro-icon/components'
 
 const { Sections, Servicos, Perguntas } = navData;
 ---
@@ -150,10 +151,7 @@ const { Sections, Servicos, Perguntas } = navData;
     class="flex self-end mr-[9%] size-4 min-[992px]:hidden"
     aria-label="Fechar painel de navegação"
   >
-    <img
-      src="/assets/emojis/x-solid.svg"
-      class="size-8 relative translate-y-[-46%] block max-w-none"
-    />
+    <Icon name="close" size={32} class="relative translate-y-[-46%] block max-w-none"/>
   </button>
   <ul
     class="nav-panel w-fit h-full justify-evenly overflow-hidden flex flex-col uppercase min-[1700px]:justify-start min-[1500px]:w-full min-[1500px]:justify-center min-[992px]:w-[29rem] min-[992px]:flex-row min-[992px]:flex-wrap min-[992px]:gap-y-2 max-[844px]:pl-[10%]"

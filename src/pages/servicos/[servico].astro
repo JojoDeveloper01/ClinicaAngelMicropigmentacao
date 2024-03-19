@@ -6,6 +6,7 @@ import ToJSON from "@lib/ToJSON";
 import dataServicos from "@lib/_dataServicos.json";
 import styles from "./_heroColor.module.css";
 import "./_servicos.css";
+import { Icon } from 'astro-icon/components'
 
 const servico: string = Astro.params?.servico || "default-service";
 export const prerender = true;
@@ -110,7 +111,7 @@ export function getStaticPaths() {
     {
       Object.values(pageServicos.knowledge).map((item: any) => (
         <article class="ask">
-          <img src={item.img} alt={item.alt} />
+          <img src={item.img} alt={item.title} />
           <div>
             <h2>{item.title}</h2>
             <ToJSON tag="p" add={item.p} />
@@ -124,9 +125,9 @@ export function getStaticPaths() {
     <article>
       <h2>Identifica-se com isto?</h2>
       {
-        Object.values(pageServicos.incentive.questions).map((item: any) => (
+        Object.values(pageServicos.incentive.questions).map((item: any, index: number) => (
           <p>
-            <img class="size-12 mr-5" alt="icon" src={item.img} />
+            <Icon name={index === 0 ? 'clock' : index === 1 ? 'work' : index === 2 ? 'seeding' : 'star'} class="size-12 mr-5" />
             {item.p}
           </p>
         ))
@@ -136,7 +137,7 @@ export function getStaticPaths() {
 
   <section class="incentive">
     <article>
-      <h2>Se respondeu 'sim' a todas estas perguntas, tenho excelentes notícias para si!</h2>
+      <h2>Se respondeu 'sim' a alguma destas perguntas, tenho excelentes notícias para si!</h2>
       <ToJSON add={pageServicos.incentive.textExtra} tag="p" />
     </article>
   </section>
@@ -159,7 +160,7 @@ export function getStaticPaths() {
                 </video>
               ) : (
                 <a href={item.link} target="_blank">
-                  <img src={item.midia} class="card-img-top" alt=`${item.alt}${pageServicos.title}` />
+                  <img src={item.midia} class="card-img-top" alt=`Cliente contente com a ${pageServicos.title}` />
                 </a>
               ))}
             <div class="card-body cb-body">
