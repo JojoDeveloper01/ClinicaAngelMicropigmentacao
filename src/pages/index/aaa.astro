@@ -104,7 +104,7 @@ import { Icon } from 'astro-icon/components'
 <section class="nossos-servicos">
   <div class="pcSlide">
     <ol class="carousel_viewport">
-        {Object.entries(dataServicos.paginas).map(function ([key, item], index) {
+        {Object.entries(dataServicos.paginas).map(function (item, index) {
             if ("title" in item) {
               const serviceInfo = navData.Servicos.find(function (service) {
                 return service.name === item.title;
