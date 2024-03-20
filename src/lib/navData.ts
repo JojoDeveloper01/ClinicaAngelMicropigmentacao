@@ -38,6 +38,7 @@ const Servicos = [
     name: 'Micropigmentação Olhos',
     path: '/servicos/micropigmentacao-olhos',
   },
+  
 /*  {
     name: 'Micropigmentação Capilar',
     path: '/servicos/micropigmentacao-capilar',
@@ -53,8 +54,7 @@ const Servicos = [
   {
     name: 'Remoção de Micropigmentação',
     path: '/servicos/remocao-de-micropigmentacao',
-  }
-  */
+  }*/
 ]
 
 const Perguntas = [

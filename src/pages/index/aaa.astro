@@ -1,22 +1,55 @@
 ---
 import "./_home.css";
-import Card from "@components/CardServicos.astro";
+import Card from "@components/cardNormal.astro";
 import dataServicos from "@lib/_dataServicos.json";
 import navData from "@lib/navData";
+import { Icon } from 'astro-icon/components'
 ---
 
 <style>
-  section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(292px, 100%), 1fr));
-    gap: 6vh;
+  .nossos-servicos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7vh;
   }
 
-  @media only screen and (min-width: 1500px) {
-    section {
-      justify-content: center;
-      grid-template-columns: repeat(auto-fit, minmax(min(292px, 100%), 0.29fr));
-    }
+  .nossos-servicos h2 {
+    text-align: center;
+    opacity: 0.8;
+    margin: 5% 0 3% 0;
+  }
+
+  .pcSlide,
+  .mobileSlide {
+    width: 100%;
+  }
+
+  .slides{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-servicos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+
+    padding: 0;
+  }
+
+  .card-servicos h3 a {
+    color: #000;
+  }
+
+  .card-text-servicos {
+    font-size: 14px;
+    opacity: 0.8;
+    text-align: center;
   }
 
   .activarS {
@@ -29,34 +62,102 @@ import navData from "@lib/navData";
     margin: 0;
     padding: 1vh 0 5vh 0;
   }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    .nossos-servicos h2 {
+      margin: 0 0 4vh 0;
+    }
+
+    .pcSlide {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .pcSlide {
+      display: none;
+    }
+
+    .nossos-servicos h2 {
+      margin: 0 0 4vh 0;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .nossos-servicos h2 {
+      margin: 0 0 6vh 0;
+    }
+
+    .mobileSlide {
+      display: none;
+    }
+
+    .pcSlide {
+      display: block;
+    }
+  }
+  
 </style>
 
 <h1 class="text-center mt-48 mb-36">NOSSO SERVIÇOS</h1>
 
-<section class="m-[6vw] max-[705px]:m-[10vw] max-[400px]:mx-0">
-  {
-    Object.entries(dataServicos.paginas).map(function ([key, item]) {
-      if ("title" in item) {
-        const serviceInfo = navData.Servicos.find(function (service) {
-          return service.name === item.title;
-        });
+<section class="nossos-servicos">
+  <div class="pcSlide">
+    <ol class="carousel_viewport">
+        {Object.entries(dataServicos.paginas).map(function ([key, item], index) {
+            if ("title" in item) {
+              const serviceInfo = navData.Servicos.find(function (service) {
+                return service.name === item.title;
+              });
+        
+              if (serviceInfo) {
+                if (index % 3 === 0) {
+                  return (
+                  <li class="slides slide1">
+                      {[...Array(3)].map((_, i) => {
+                        const currentIndex = index + i;
+                        if (currentIndex < Object.entries(dataServicos.paginas).length) {
+                          const [currentKey, currentItem] = Object.entries(dataServicos.paginas)[currentIndex];
+                          return (
+                            <Card
+                              key={currentKey}
+                              title={currentItem.title}
+                              src={currentItem.hero.img}
+                              alt={currentItem.title}
+                              href={serviceInfo.path}
+                            />
+                          );
+                        } else {
+                          return null;
+                        }
+                      })}
+                  </li>
+                  );
+                } else {
+                  return null;
+                }}}
+            return null;
+          })}
+      </>
+    </ol>
 
-        if (serviceInfo) {
-          return (
-            <Card
-              key={key}
-              title={item.title}
-              body={item.description}
-              src={item.hero.img}
-              alt={item.title}
-              href={serviceInfo.path}
-            />
-          );
-        }
-      }
-      return null;
-    })
-  }
+    <aside>
+      <button
+        aria-label="Seguinte slide"
+        class="carousel-control-prev prev1"
+        type="button"
+      >
+        <Icon name="arrow-left" size={32} class="opacity-80" />
+      </button>
+      <button
+        aria-label="Anterior slide"
+        class="carousel-control-next next1"
+        type="button"
+      >
+        <Icon name="arrow-right" size={32} class="opacity-80" />
+      </button>
+    </aside>
+  </div>
 </section>
 
 <script src="./slider.ts"></script>
