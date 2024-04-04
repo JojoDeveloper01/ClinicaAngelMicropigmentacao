@@ -1,0 +1,15 @@
+---
+const { title, body, src, alt, href } = Astro.props;
+---
+
+<a href={href} class="card w-[30vw] max-[768px]:w-[60vw] max-[600px]:w-[unset]">
+  <picture>
+    <source srcset={src} />
+    <img src={src} class="card-img-top" alt={alt} />
+  </picture>
+  <div
+    class="card-servicos flex justify-center items-center h-16 border-[#0000001f]"
+  >
+    <h3 class="card-text-servicos text-sm text-center">{title}</h3>
+  </div>
+</a>

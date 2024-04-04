@@ -1,8 +1,9 @@
 ---
-import Card from "@components/CardServicos.astro";
+import Card from "@components/Card/CardServicos.astro";
 import Layout from "@layouts/Layout.astro";
-import dataServicos from "@lib/_dataServicos.json";
-import navData from "@lib/navData";
+import dataServicos from "@lib/_dataServicos";
+
+const { InfoServicos } = dataServicos;
 ---
 
 <style>
@@ -30,26 +31,21 @@ import navData from "@lib/navData";
 
   <section class="m-[6vw] max-[705px]:m-[10vw] max-[400px]:mx-0">
     {
-      Object.entries(dataServicos.paginas).map(function ([key, item]) {
-        if ("title" in item) {
-          const serviceInfo = navData.Servicos.find(function (service) {
-            return service.name === item.title;
-          });
-
-          if (serviceInfo) {
-            return (
-              <Card
-                key={key}
-                title={item.title}
-                body={item.description}
-                src={item.hero.img}
-                alt={item.title}
-                href={serviceInfo.path}
-              />
-            );
-          }
+      InfoServicos.map((item) => {
+        if (!item || !item.id) {
+          return null;
+        } else {
+          return (
+            <Card
+              key={item.id}
+              title={item.title}
+              body={item.description}
+              src={item.hero.img}
+              alt={item.title}
+              href={`/servicos/${item.path}`}
+            />
+          );
         }
-        return null;
       })
     }
   </section>

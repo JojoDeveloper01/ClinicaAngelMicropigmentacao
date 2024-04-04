@@ -1,5 +1,5 @@
 ---
-import SocialMidia from "../SocialMidia.astro";
+import SocialMidia from "@components/SocialMidia.astro";
 import navData from "@lib/navData";
 import { Icon } from 'astro-icon/components'
 
@@ -58,7 +58,7 @@ const { Sections, Servicos, Perguntas } = navData;
     max-height: 0;
     overflow: hidden;
 
-    background-color: var(--corBranca);
+    background-color: var(--White);
     transition: max-height 0.4s ease;
     transform-origin: top;
   }
@@ -144,7 +144,7 @@ const { Sections, Servicos, Perguntas } = navData;
 </style>
 
 <div
-  class="sectionGroup flex fixed h-full w-2/4 overflow-hidden flex-col items-center pt-[2em] top-0 bg-[color:var(--corBranca)] z-[4] max-[734px]:w-[67%] max-[454px]:w-full"
+  class="sectionGroup flex fixed h-full w-2/4 overflow-hidden flex-col items-center pt-[2em] top-0 bg-[color:var(--White)] z-[4] max-[734px]:w-[67%] max-[454px]:w-full"
 >
   <button
     type="button"
@@ -173,13 +173,13 @@ const { Sections, Servicos, Perguntas } = navData;
                 class="toogle absolute scale-x-[4] size-5 opacity-0 min-[992px]:hidden"
               />
               <ul class="dropdown min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250">
-                {Servicos.map((servico: any) => (
+                {Servicos.map((item:any) => (
                   <li>
                     <a
-                      aria-label={`Ir para ${servico.name}`}
-                      href={servico.path}
+                      aria-label={`Ir para ${item.name}`}
+                      href={item.path}
                     >
-                      {servico.name}
+                      {item.name}
                     </a>
                   </li>
                 ))}

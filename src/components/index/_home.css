@@ -5,51 +5,47 @@
   width: 100vw;
 }
 
-button.carousel-control-prev,
-button.carousel-control-next {
-  background: transparent;
-  opacity: 0.2;
-  position: absolute;
-  top: 64%;
-  transform: translateY(-50%);
+/*Isto tirar quando o servicos seja subtituido*/
+
+aside {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  position: inherit;
 }
 
-button.carousel-control-prev {
+.prev,
+.next {
+  background: #000;
+  position: absolute;
+  opacity: 0.3;
+  border-radius: 20%;
+  padding: 2px;
+  z-index: 0;
+}
+
+.prev svg,
+.next svg {
+  color: #fff
+}
+
+.prev {
   left: 1%;
 }
 
-button.carousel-control-next {
+.next {
   right: 1%;
 }
 
-button.carousel-control-next:hover,
-button.carousel-control-prev:hover {
-  opacity: 0.7;
+.next:hover,
+.prev:hover {
+  opacity: 0.3;
   cursor: pointer;
 }
 
-button.prev,
-button.next {
-  top: 50%;
-}
-
 .slides {
-  position: relative;
-  flex: 0 0 100%;
   width: 100vw;
-  transition: right 0.3s ease;
-}
-
-.slide {
-  right: var(--slides);
-}
-
-.slide1 {
-  right: var(--slides1);
-}
-
-.slide2 {
-  right: var(--slides2);
+  transition: 200ms opacity ease-in-out;
 }
 
 .ver-maisP,
@@ -64,14 +60,15 @@ button.next {
 
 .fq-vermais,
 .activarS {
-  display: none;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease, opacity 0.6s ease;
+  opacity: 0;
 }
 
 .activeToogle {
   max-height: 86rem;
+  opacity: 1;
 }
 
 #pfq1 {

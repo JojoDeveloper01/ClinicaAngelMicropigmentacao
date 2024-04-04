@@ -1,7 +1,7 @@
 ---
 import ToBook from "@components/ToBook.astro";
 import Layout from "@layouts/Layout.astro";
-import navData from '@lib/navData'
+import navData from "@lib/navData";
 
 const { Sections } = navData;
 ---
@@ -44,7 +44,7 @@ const { Sections } = navData;
   }
 
   .red {
-    background-color: var(--corBranca);
+    background-color: var(--White);
     box-shadow: 0px -4px 26px rgb(221 221 221 / 99%);
     width: min-content;
     height: min-content;
@@ -57,6 +57,10 @@ const { Sections } = navData;
 
   .card-body p {
     font-size: medium;
+  }
+
+  .card-group > .card {
+    flex: 1 0 0%;
   }
 
   @media only screen and (max-width: 317px) {
@@ -96,7 +100,7 @@ const { Sections } = navData;
   <section class="sobrenos">
     <video class="sobrenos-video" autoplay loop muted playsinline>
       <source
-        src="https://res.cloudinary.com/dg6twczfr/video/upload/f_auto,q_auto:good/v1703727130/assets/videos/micro-sobrancelhasFeitinhas_cujdxb.mp4"
+        src="https://res.cloudinary.com/thing/video/upload/f_auto,q_auto:good/v1703727130/assets/videos/micro-sobrancelhasFeitinhas_cujdxb.mp4"
         type="video/mp4"
       />
       Seu navegador não suporta a tag de vídeo.
@@ -162,10 +166,10 @@ const { Sections } = navData;
       <div class="card">
         <picture>
           <source
-            srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/AngelFotodePerfil1.avif"
+            srcset="https://res.cloudinary.com/thing/image/upload/v1712267464/assets/image/profissionais/profissionalAngel_bxwwyd.avif"
           />
           <img
-            src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/AngelFotodePerfil1.webp"
+            src="https://res.cloudinary.com/thing/image/upload/v1712267559/assets/image/profissionais/profissionalAngel_mrdku4.webp"
             class="card-img-top"
             alt="Profissional Angel"
           />
@@ -192,10 +196,10 @@ const { Sections } = navData;
       <div class="card">
         <picture>
           <source
-            srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/EsperanzaFotodePerfil.avif"
+            srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/EsperanzaFotodePerfil.avif"
           />
           <img
-            src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/EsperanzaFotodePerfil.webp"
+            src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/EsperanzaFotodePerfil.webp"
             class="card-img-top"
             alt="Profissional Esperanza"
           />

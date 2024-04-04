@@ -1,7 +1,7 @@
 import '@pages/servicos/_servicos.css';
 
 interface ToJSONProps {
-  add?: string[]
+  add: string
   tag: React.ElementType
   className?: string;
 }

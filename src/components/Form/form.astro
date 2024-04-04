@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 ---
 
 <style>
@@ -27,7 +27,7 @@ import { Icon } from 'astro-icon/components'
 
   .formulario h2 {
     text-align: center;
-    color: var(--corRoxo);
+    color: var(--Pink);
     margin: 60px 0;
   }
 
@@ -40,7 +40,7 @@ import { Icon } from 'astro-icon/components'
   }
 
   .contact-form {
-    background-color: var(--corRoxo);
+    background-color: var(--Pink);
   }
 
   .contact-form h3 {
@@ -82,16 +82,20 @@ import { Icon } from 'astro-icon/components'
     border-bottom: 1px solid #4b4b4b;
   }
 
+  .contact-form form textarea {
+    field-sizing: content;
+  }
+
   .contact-form form button {
     background: #4b4b4b;
-    color: var(--corBranca);
+    color: var(--White);
     border: 0;
     text-transform: uppercase;
     padding: 1em;
   }
 
   .contact-form form button:hover {
-    background-color: var(--corBranca);
+    background-color: var(--White);
     color: #4b4b4b;
     transition: background-color 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     outline: 0;
@@ -118,13 +122,13 @@ import { Icon } from 'astro-icon/components'
     margin: 0 0 1rem 0;
   }
 
-  [data-icon]{
+  [data-icon] {
     width: 1rem;
     height: 1rem;
   }
 
   .contact-list li:hover [data-icon] {
-    color: var(--corRoxo);
+    color: var(--Pink);
   }
 
   #mail-form {
@@ -259,36 +263,40 @@ import { Icon } from 'astro-icon/components'
         <h4>Contactos Adicionais</h4>
         <ul class="contact-list flex flex-col gap-3">
           <li class="flex gap-3">
-            <Icon name="location"/>
+            <Icon name="location" />
             <a
               aria-label="Mapa local Póvoa"
               href="https://goo.gl/maps/cYxcvHsE3dmLaPj46"
-              target="_blank">Póvoa de Santa Iria
+              target="_blank"
+              >Póvoa de Santa Iria
             </a>
           </li>
           <li class="flex gap-3">
-            <Icon name="location"/>
+            <Icon name="location" />
             <a
               aria-label="Mapa local Areeiro"
               href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
-              target="_blank">Roma-Areeiro
+              target="_blank"
+              >Roma-Areeiro
             </a>
           </li>
           <li class="flex gap-3">
-            <Icon name="phone"/>
+            <Icon name="phone" />
             <a
               aria-label="Whatsapp Angel"
               href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
-              target="_blank">(+351) 935 407 895
+              target="_blank"
+              >(+351) 935 407 895
             </a>
           </li>
           <li class="flex gap-3">
-            <Icon name="email"/>
+            <Icon name="email" />
             <a
               aria-label="E-mail Angel"
               id="mail-form"
               href="mailto:angelbalcboniclinicamicropigme@gmail.com"
-              target="_blank">angelbalcboniclinicamicropigme@gmail.com
+              target="_blank"
+              >angelbalcboniclinicamicropigme@gmail.com
             </a>
           </li>
         </ul>

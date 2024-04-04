@@ -1,0 +1,38 @@
+---
+import Layout from "@layouts/Layout.astro";
+---
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,800&family=Montserrat:ital,wght@0,723;1,723&family=Philosopher&display=swap");
+</style>
+
+<Layout
+  title="Blog da Clínica Angel Micropigmentação"
+  description="Aprende sobre todo o mundo da micropigmentação, as novidades recentes, desde explicações simples até aprofundações mais complexas."
+  keywords="Micropigmentação blog, o que é a Micropigmentação?, como funciona a micropigmentação?"
+  canonical="https://clinicamicropigmentacao.com/blog"
+>
+  <section
+    class="h-screen flex flex-col gap-16 px-[20%] justify-center items-center max-[1000px]:px-[5%]"
+  >
+    <h1 class="*:mx-3 flex items-center flex-wrap">
+      <span class="opacity-80">Blog</span>
+      <span class="bg-[color:var(--Pink)] p-4 opacity-100"
+        ><span class="opacity-80">Micropigmentação</span>
+      </span>
+    </h1>
+    <p
+      class="normal-case text-3xl text-center leading-[2.7rem] opacity-80 max-[600px]:text-2xl max-[320px]:text-xl"
+    >
+      <span>Em processo...</span><br />
+      Esta página está a ser feita, se deseja saber mais sobre a micropigmentação,
+      por favor clique no botão inferior para contactar-nos.
+    </p>
+    <a
+      href="https://api.whatsapp.com/send/?phone=351935407895&text=Ola%21+Tenho+uma+duvida%21&type=phone_number&app_absent=0"
+      target="_blank"
+      class="px-14 py-6 bg-[color:var(--Pink)] text-2xl hover:animate-pop hover:animate-delay-50 hover:animate-duration-800 max-[375px]:text-base max-[375px]:leading-[unset]"
+      >Contactar</a
+    >
+  </section>
+</Layout>

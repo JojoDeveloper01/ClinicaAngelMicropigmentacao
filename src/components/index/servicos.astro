@@ -1,0 +1,316 @@
+---
+import "./_home.css";
+import Card from "../Card/cardNormal.astro";
+import { Icon } from "astro-icon/components";
+import dataServicos from "@lib/_dataServicos";
+
+const { InfoServicos, Extra } = dataServicos;
+---
+
+<style>
+  .slides {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    opacity: 0;
+  }
+
+  .slides[data-active] {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  article {
+    height: 30rem;
+  }
+
+  ol {
+    position: relative;
+  }
+
+  .prev {
+    left: 5%;
+  }
+  .next {
+    right: 5%;
+  }
+
+  aside {
+    align-items: center;
+    position: inherit;
+  }
+
+  .ver-maisExtra {
+    margin: unset;
+    margin-bottom: 5vh;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .prev {
+      left: 34vw;
+    }
+    .next {
+      right: 34vw;
+    }
+  }
+
+  @media only screen and (min-width: 998px) {
+    ol {
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: 1500px) {
+    .prev {
+      left: 18vw;
+    }
+    .next {
+      right: 18vw;
+    }
+
+    aside {
+      align-items: flex-end;
+    }
+  }
+</style>
+
+<section class="ServicosSection relative mt-[10rem]">
+  <h2 class="text-center mb-[6vh] max-[768px]:mb-[4vh]">NOSSO SERVIÇOS</h2>
+
+  <article
+    class="carouselPC flex overflow-hidden w-screen max-[768px]:hidden"
+    data-carousel
+  >
+    <ol data-slides>
+      {
+        InfoServicos.map((_, index: any) => {
+          if (index % 3 === 0) {
+            return (
+              <li
+                class="slides"
+                {...(index === 0 ? { "data-active": "true" } : {})}
+              >
+                {[...Array(3)].map((_, i) => {
+                  const currentIndex = index + i;
+
+                  if (currentIndex < InfoServicos.length) {
+                    const currentItem: any = InfoServicos[currentIndex];
+                    if (!currentItem || !currentItem.id) {
+                      return null;
+                    }
+                    return (
+                      <Card
+                        title={currentItem.title}
+                        src={currentItem.hero.img}
+                        alt={currentItem.title}
+                        href={`/servicos/${currentItem.path}`}
+                      />
+                    );
+                  } else {
+                    return null;
+                  }
+                })}
+              </li>
+            );
+          }
+          return null;
+        })
+      }
+    </ol>
+    <aside>
+      <button
+        aria-label="Seguinte slide"
+        class="prev"
+        type="button"
+        data-carousel-button="prev"
+      >
+        <Icon name="arrow-left" size={32} />
+      </button>
+      <button
+        aria-label="Anterior slide"
+        class="next"
+        type="button"
+        data-carousel-button="next"
+      >
+        <Icon name="arrow-right" size={32} />
+      </button>
+    </aside>
+  </article>
+
+  <article
+    class="carouselMobile hidden overflow-hidden w-screen max-[768px]:flex"
+    data-carousel
+  >
+    <ol data-slides>
+      {
+        InfoServicos.map((item: any, index: any) => (
+          <li
+            class="slides"
+            {...(index === 0 ? { "data-active": "true" } : {})}
+          >
+            <Card
+              title={item.title}
+              src={item.hero.img}
+              alt={item.title}
+              href={item.path}
+            />
+          </li>
+        ))
+      }
+    </ol>
+    <aside>
+      <button
+        aria-label="Seguinte slide"
+        class="prev"
+        type="button"
+        data-carousel-button="prev"
+      >
+        <Icon name="arrow-left" size={32} />
+      </button>
+      <button
+        aria-label="Anterior slide"
+        class="next"
+        type="button"
+        data-carousel-button="next"
+      >
+        <Icon name="arrow-right" size={32} />
+      </button>
+    </aside>
+  </article>
+</section>
+
+<div
+  class="relative w-44 translate-y-[-23%] m-auto pb-[5vh] opacity-50 text-center z-[3] min-[1500px]:translate-y-[unset] max-[400px]:translate-y-[24%]"
+  id="cVerT"
+>
+  <span class="ver-maisExtra openToogle"
+    >Ver serviços extra <div id="pfq1">></div></span
+  >
+  <a href="#reservar" class="relative w-44 m-auto pb-[5vh] hover:underline"
+    >Mais informações</a
+  >
+</div>
+
+<section class="activarS text-center mb-20">
+  <h2 class="mt-[1%] mb-[3%] mx-0">SERVIÇOS EXTRAS</h2>
+
+  <article
+    class="carouselPC flex overflow-hidden w-screen max-[768px]:hidden"
+    data-carousel
+  >
+    <ol data-slides>
+      {
+        Extra.map((_, index: any) => {
+          if (index % 3 === 0) {
+            return (
+              <li
+                class="slides"
+                {...(index === 0 ? { "data-active": "true" } : {})}
+              >
+                {[...Array(3)].map((_, i) => {
+                  const currentIndex = index + i;
+                  if (currentIndex < Extra.length) {
+                    const currentItem: any = Extra[currentIndex];
+                    if (!currentItem || !currentItem.id) {
+                      return null;
+                    }
+                    return (
+                      <Card
+                        title={currentItem.title}
+                        src={currentItem.hero.img}
+                        alt={currentItem.title}
+                        href="#reservar"
+                      />
+                    );
+                  } else {
+                    return null;
+                  }
+                })}
+              </li>
+            );
+          }
+          return null;
+        })
+      }
+    </ol>
+    <aside>
+      <button
+        aria-label="Seguinte slide"
+        class="prev"
+        type="button"
+        data-carousel-button="prev"
+      >
+        <Icon name="arrow-left" size={32} />
+      </button>
+      <button
+        aria-label="Anterior slide"
+        class="next"
+        type="button"
+        data-carousel-button="next"
+      >
+        <Icon name="arrow-right" size={32} />
+      </button>
+    </aside>
+  </article>
+
+  <article
+    class="carouselMobile hidden overflow-hidden w-screen max-[768px]:flex"
+    data-carousel
+  >
+    <ol data-slides>
+      {
+        Extra.map((item: any, index: any) => (
+          <li
+            class="slides"
+            {...(index === 0 ? { "data-active": "true" } : {})}
+          >
+            <Card
+              title={item.title}
+              src={item.hero.img}
+              alt={item.title}
+              href={item.path}
+            />
+          </li>
+        ))
+      }
+    </ol>
+    <aside>
+      <button
+        aria-label="Seguinte slide"
+        class="prev"
+        type="button"
+        data-carousel-button="prev"
+      >
+        <Icon name="arrow-left" size={32} />
+      </button>
+      <button
+        aria-label="Anterior slide"
+        class="next"
+        type="button"
+        data-carousel-button="next"
+      >
+        <Icon name="arrow-right" size={32} />
+      </button>
+    </aside>
+  </article>
+</section>
+
+<script src="./slider.ts"></script>
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const openToggle = document.querySelector<HTMLElement>(".openToogle");
+
+    if (openToggle) {
+      openToggle.addEventListener("click", () => {
+        openToggle.classList.toggle("open");
+        const activarS = document.querySelector<HTMLElement>(".activarS");
+
+        if (activarS) {
+          activarS.classList.toggle("activeToogle");
+        }
+      });
+    }
+  });
+</script>

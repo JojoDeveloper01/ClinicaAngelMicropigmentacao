@@ -1,22 +1,27 @@
 ---
 import "./_home.css";
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 ---
 
 <style>
-  .ctro-itemS {
-    height: calc(100vh - var(--tam));
+  .slideHome {
+    height: calc(100vh - var(--headerHeight));
   }
 
-  .ctro-itemS picture {
+  .ctro-itemS {
+    width: 100%;
+    height: 100%;
+  }
+
+  picture {
     display: block;
     width: 100%;
     height: 50%;
   }
 
-  picture .simg,
-  picture .simg2,
-  picture .simg3 {
+  .simg,
+  .simg2,
+  .simg3 {
     object-fit: cover;
   }
 
@@ -93,8 +98,8 @@ import { Icon } from 'astro-icon/components'
       margin: 0;
     }
 
-    picture .simg,
-    picture .simg1 {
+    .simg,
+    .simg1 {
       transform: scaleX(-1);
     }
 
@@ -121,7 +126,7 @@ import { Icon } from 'astro-icon/components'
     }
 
     .texto-carousel {
-      padding: 20px 6vw;
+      padding-inline: 2.5vw;
     }
 
     .texto-carousel h2 {
@@ -174,13 +179,14 @@ import { Icon } from 'astro-icon/components'
   }
 
   @media only screen and (min-width: 601px) {
-    picture .slide-img {
-      width: 100vw;
-      height: 100vh;
+    picture,
+    .slide-img {
+      width: 100%;
+      height: 100%;
     }
 
-    picture .simg,
-    picture .simg2 {
+    .simg,
+    .simg2 {
       transform: scaleX(-1);
       margin-left: 1px;
     }
@@ -197,7 +203,6 @@ import { Icon } from 'astro-icon/components'
 
     div.texto-carousel p {
       line-height: 19px;
-      font-weight: 600;
     }
 
     #fd,
@@ -248,7 +253,7 @@ import { Icon } from 'astro-icon/components'
     }
 
     .fondo-distor,
-    div.ctro-itemS picture {
+    picture {
       position: relative;
       width: 50%;
       height: 100%;
@@ -257,7 +262,7 @@ import { Icon } from 'astro-icon/components'
       transform: inherit;
     }
 
-    img.slide-img {
+    .slide-img {
       width: 100%;
       height: 100%;
     }
@@ -272,7 +277,7 @@ import { Icon } from 'astro-icon/components'
       width: -webkit-fill-available;
     }
 
-    div.texto-carousel h2 {
+    .texto-carousel h2 {
       font-weight: 600;
     }
 
@@ -281,13 +286,13 @@ import { Icon } from 'astro-icon/components'
       width: fit-content;
     }
 
-    div.texto-carousel p {
+    .texto-carousel p {
       font-weight: inherit;
       line-height: 26px;
       width: 25rem;
     }
 
-    button.border-slide {
+    .border-slide {
       background-color: transparent;
       padding: 30px;
       transition: padding 0.3s ease;
@@ -297,18 +302,35 @@ import { Icon } from 'astro-icon/components'
       padding: 35px;
     }
   }
+
+  .slides {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+  }
+
+  .slides[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+  }
 </style>
 
-<section class="slideHome carousel" aria-label="Gallery">
-  <ol class="carousel_viewport">
-    <li tabindex="0" class="slides slide">
+<article class="slideHome relative" aria-label="Carousel" data-carousel>
+  <ol class="flex overflow-hidden w-screen h-1/2" data-slides>
+    <li tabindex="0" class="slides" data-active>
       <div class="ctro-itemS">
         <picture>
           <source
-            srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.avif"
+            srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.avif"
           />
           <img
-            src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.webp"
+            src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.webp"
             alt="Mulher com uma linda micropigmentação de sobrancelhas"
             class="slide-img simg"
           />
@@ -335,14 +357,14 @@ import { Icon } from 'astro-icon/components'
         </div>
       </div>
     </li>
-    <li tabindex="1" class="slides slide">
+    <li tabindex="1" class="slides">
       <div class="ctro-itemS">
         <picture>
           <source
-            srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_labial.avif"
+            srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_labial.avif"
           />
           <img
-            src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_labial.webp"
+            src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_labial.webp"
             alt="Mulher com uma linda micropigmentação labial"
             class="slide-img simg1"
           />
@@ -368,11 +390,11 @@ import { Icon } from 'astro-icon/components'
         </div>
       </div>
     </li>
-    <li tabindex="2" class="slides slide">
+    <li tabindex="2" class="slides">
       <div class="ctro-itemS">
         <picture>
           <img
-            src="https://res.cloudinary.com/dg6twczfr/image/upload/v1706791566/assets/image/servicos/micropigmentacaoCapilar_dpckgr.avif"
+            src="https://res.cloudinary.com/thing/image/upload/v1706791566/assets/image/servicos/micropigmentacaoCapilar_dpckgr.avif"
             alt="Homem a fazer-se uma limpeza facial"
             class="slide-img simg2"
           />
@@ -398,14 +420,14 @@ import { Icon } from 'astro-icon/components'
         </div>
       </div>
     </li>
-    <li tabindex="3" class="slides slide">
+    <li tabindex="3" class="slides">
       <div class="ctro-itemS">
         <picture>
           <source
-            srcset="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.avif"
+            srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.avif"
           />
           <img
-            src="https://res.cloudinary.com/dg6twczfr/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.webp"
+            src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.webp"
             alt="Mulher a fazer-se um lifting de Pestanas"
             class="slide-img simg3"
           />
@@ -434,19 +456,21 @@ import { Icon } from 'astro-icon/components'
   <aside>
     <button
       aria-label="Seguinte slide"
-      class="carousel-control-prev prev"
+      class="prev"
       type="button"
+      data-carousel-button="prev"
     >
       <Icon name="arrow-left" size={32} class="opacity-80" />
     </button>
     <button
       aria-label="Anterior slide"
-      class="carousel-control-next next"
+      class="next"
       type="button"
+      data-carousel-button="next"
     >
       <Icon name="arrow-right" size={32} class="opacity-80" />
     </button>
   </aside>
-</section>
+</article>
 
 <script src="./slider.ts"></script>

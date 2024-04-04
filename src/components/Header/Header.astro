@@ -1,6 +1,6 @@
 ---
 import SectionGroup from "./SectionGroup.astro";
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 ---
 
 <style>
@@ -10,8 +10,8 @@ import { Icon } from 'astro-icon/components'
 </style>
 
 <header
-  style=`background-color: var(--corBranca);`
-  class="fixed flex justify-between items-center w-screen top-[0] z-[3] [box-shadow:0px_3px_5px_rgba(0,_0,_0,_0.178)] min-[992px]:h-[110px] min-[992px]:px-[2em] max-[992px]:pl-[20px] max-[991px]:h-[100px] max-[600px]:h-[70px]"
+  style=`background-color: var(--White);`
+  class="fixed flex justify-between items-center w-screen top-[0] z-[5] [box-shadow:0px_3px_5px_rgba(0,_0,_0,_0.178)] min-[992px]:h-[110px] min-[992px]:px-[2em] max-[992px]:pl-[20px] max-[991px]:h-[100px] max-[600px]:h-[70px]"
 >
   <a
     aria-label="início"
@@ -27,12 +27,13 @@ import { Icon } from 'astro-icon/components'
       href="tel:+351935407895"
       target="_blank"
       aria-label="Chamar Angel"
-      class="flex items-center justify-center bg-[#a0a0a02c] min-[768px]:w-[110px] min-[601px]:w-[100px] max-[600px]:w-[70px]">
-     <Icon name="phone" size={32} class="opacity-80"/>
+      class="flex items-center justify-center bg-[#a0a0a02c] min-[768px]:w-[110px] min-[601px]:w-[100px] max-[600px]:w-[70px]"
+    >
+      <Icon name="phone" size={32} class="opacity-80" />
     </a>
     <button
       aria-label="Abrir painel de navegação"
-      style="background-color:var(--corRoxo)"
+      style="background-color:var(--Pink)"
       class="flex items-center justify-center min-[768px]:w-[110px] min-[601px]:w-[100px] max-[600px]:w-[70px]"
     >
       <Icon name="menu" size={32} class="opacity-80" />
