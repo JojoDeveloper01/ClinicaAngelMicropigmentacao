@@ -989,4 +989,120 @@ const Extra = [
   }
 ]
 
-export default { InfoServicos, Extra }
+const Curso = [
+  {
+    id: 1,
+    title: "Curso Microblanding",
+    path: "curso-microblanding",
+    description: "Microblading é uma técnica essencial, quando queremos oferecer um serviço superior de sobrancelhas perfeitas à/ao cliente, um serviço que visa a correção, preenchimento, design das sobrancelhas de uma forma natural, com técnica fio-a-fio ou mais intensa, com o tão requisitado shadow, tal como com a sua junção para um resultado impecável.",
+    modality: "Presencial 3 dias de aula",
+    workload: "16 horas",
+    curseDate: {
+      1: "22-23/04 das 10H às 14H",
+      2: "24/04 das 10h às 18h"
+    },
+    local: "Clínica micropigmentacão Póvoa de Santa Iría",
+    availableDate: {
+      1: "Maio",
+      2: "Junho",
+      3: "Julho",
+    },
+    kitIncluded: {
+      1: "1 teborif",
+      2: "4 agulhas",
+      3: "4 anéis",
+      4: "1 pele sintética",
+      5: "1 bolsa",
+      6: "<u>Último dia incluirá almoço</u>",
+    },
+    contentCourse: {
+      1: {
+        name: "Módulo 1 - Início",
+        module: {
+          1: "Introdução à Técnica",
+          2: "Manual para download",
+          3: "Indicações e dúvidas frequentes"
+        }
+      },
+      2: {
+        name: "Módulo 2 - A Pele e estrutura do rosto",
+        module: {
+          1: "Estrutura da pele",
+          2: "Tipos de sobrancelhas",
+          3: "Tipos de olhos"
+        }
+      },
+      3: {
+        name: "Módulo 3 - Material",
+        module: {
+          1: "Tebori - História e desempenho",
+          2: "Agulhas - Diversidade",
+          3: "Produtos para o pré e pós procedimento",
+          4: "Pigmentos",
+        }
+      },
+      4: {
+        name: "Módulo 4 - Design de Sobrancelhas",
+        module: {
+          1: "Design de Sobrancelhas e simetria facial",
+          2: "Design de Sobrancelhas com Visagismo",
+          3: "Colometria",
+          4: "Higiene e segurança"
+        },
+      },
+      5: {
+        name: "Módulo 5 - Pré Procedimento",
+        module: {
+          1: "Ficha de Anamnese",
+          2: "Termo de Consentimento",
+        },
+      },
+      6: {
+        name: "Módulo 6 - Pós Procedimento",
+        module: {
+          1: "Cuidados a ter no pré e pós procedimento",
+          2: "Sequência do procedimento",
+        },
+      },
+      7: {
+        name: "Módulo 7 - Prática",
+        module: {
+          1: "Prática das técnicas fio-a-fio e shadow em pele sintética",
+          2: "Prática das técnicas fio-a-fio e shadow em modelos reais",
+          3: "Esclarecimento de dúvidas",
+        },
+      },
+    },
+    goals: {
+      1: "Reconhecer o mercado de trabalho, postura profissional, indicações e contraindicações, bem como os instrumentos necessários para realização do Microblading;",
+      2: "Medir e formatar sobrancelhas, de acordo com o formato de cada rosto, de forma a preparar a sobrancelha para o Microblading;",
+      3: "Preparar o ambiente de trabalho e a pele do/a cliente com base na biossegurança, de forma a evitar possíveis contaminações durante a realização do Microblading;",
+      4: "Identificar pigmentos adequados para cada tipo de pele, o seu tom e subtom aplicá-los com o Tebori, através da técnica do Microblanding de fio-a-fio ou shadow",
+    },
+    workOutings: {
+      1: {
+        icon: "work",
+        p: "Empresária em nome individual",
+      },
+      2: {
+        icon: "massage",
+        p: "Centros de Estética e espaços de bem-estar no geral",
+      },
+    },
+    certificate: {
+      img: "",
+    },
+    clientReviews: {
+      customers: {
+        1: {
+          link: "/",
+          midia: "/",
+          name: "Eliana Carvalho",
+          review: "Foi gratificante conhecer a Angel e tambem concluir o curso de microblanding com essa profissional especial obrigado ♥️."
+        },
+      }
+    }
+  },
+]
+
+export default { InfoServicos, Extra, Curso }

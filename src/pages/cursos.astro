@@ -1,38 +1,346 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import dataServicos from "@lib/_dataServicos";
+import { Icon } from "astro-icon/components";
+import ToJSON from "@lib/ToJSON";
+
+export const prerender = true;
+const { InfoServicos, Curso } = dataServicos;
+const path: string = Astro.params?.servico || "curso-microblanding";
+
+const cursos = Curso.find((servico) => servico.path === path)!;
+
+export function getStaticPaths() {
+  return [{ params: { servico: "curso-microblanding" } }];
+}
 ---
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,800&family=Montserrat:ital,wght@0,723;1,723&family=Philosopher&display=swap");
+   h1{
+     margin-top: 3rem;
+   }
+
+  .col-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .moduleName {
+    border: 1px solid #0000001a;
+    padding: 6px 10px;
+  }
+
+  .slides {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    opacity: 0;
+  }
+
+  .slides[data-active] {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  li,
+  .kit {
+    list-style: disc;
+    margin-left: 53px;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .prev {
+    left: 5%;
+  }
+  .next {
+    right: 5%;
+  }
+
+  p {
+    font-size: larger;
+  }
+
+  .chest {
+    display: flex;
+    margin: 2rem 8rem;
+  }
+
+  .arrow {
+    font-size: 18px;
+    font-weight: bolder;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    margin-left: 13px;
+    transform: rotate(90deg);
+  }
+
+  .open {
+    transform: rotate(270deg);
+  }
+
+  .openModule{
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+    }
+
+  @media only screen and (max-width: 432px) {
+    .kit {
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .chest {
+      margin-inline: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .chest {
+      margin-inline: 7%;
+    }
+  }
 </style>
 
 <Layout
-  title="Cursos da Clínica Angel Micropigmentação"
+  title="Curso Microblanding - Clínica Angel Micropigm  entação"
   description="Aprende a fazer as melhores técnicas de micropigmentação, usar os melhores pigmentos e gestionar a tua empresa de micropigmentação!"
-  keywords="Cursos Micropigmentação, curso de microblanding, curso de micropigmentação labial, curso de eyeliner, curso de micropigmentação capilar, curso de remoção de micropigmentação"
-  canonical="https://clinicamicropigmentacao.com/cursos"
+  keywords="Cursos Micropigmentação, curso de microblanding"
+  canonical="https://clinicamicropigmentacao.com/curso-microblanding"
 >
-  <section
-    class="h-screen flex flex-col gap-16 px-[20%] justify-center items-center max-[1000px]:px-[5%]"
-  >
-    <h1 class="*:mx-3 flex items-center flex-wrap">
-      <span class="opacity-80">Cursos</span>
-      <span class="bg-[color:var(--Pink)] p-4 opacity-100"
-        ><span class="opacity-80">Micropigmentação</span>
-      </span>
-    </h1>
-    <p
-      class="normal-case text-3xl text-center leading-[2.7rem] opacity-80 max-[600px]:text-2xl max-[320px]:text-xl"
-    >
-      <span>Em processo...</span><br />
-      Esta página está a ser feita, se deseja fazer um curso de micropigmentação,
-      por favor clique no botão inferior para contactar-nos.
-    </p>
-    <a
-      href="https://api.whatsapp.com/send/?phone=351935407895&text=Ola%21+Tenho+uma+duvida%21&type=phone_number&app_absent=0"
-      target="_blank"
-      class="px-14 py-6 bg-[color:var(--Pink)] text-2xl hover:animate-pop hover:animate-delay-50 hover:animate-duration-800 max-[375px]:text-base max-[375px]:leading-[unset]"
-      >Curso de micropigmentação</a
-    >
+  <section class="flex flex-col items-baseline">
+    <h1 class="w-min">{cursos.title}</h1>
+    <section class="chest gap-12 max-[998px]:flex-col">
+      <div class="*:my-4 max-w-[50%] max-[998px]:max-w-none">
+        <p>{cursos.description}</p>
+        <p><span class="bold">Modalidade: </span>{cursos.modality}</p>
+        <p><span class="bold">Carga Horaria: </span>{cursos.workload}</p>
+        <p><span class="bold">Preço: </span>280€</p>
+        <p>
+          <span class="bold">Data do próximo curso: </span>
+          <ul>
+            {
+              Object.values(cursos.curseDate).map((item: any) => (
+                <li>{item}</li>
+              ))
+            }
+          </ul>
+        </p>
+        <p>
+          <span class="bold">Localização:</span>
+          <ul>
+            <li>{cursos.local}</li>
+          </ul>
+        </p>
+      </div>
+      <article
+        class="flex overflow-hidden w-1/2 max-[998px]:w-full max-[998px]:h-[22rem]"
+        data-carousel
+      >
+        <ol class="w-full relative" data-slides>
+          {
+            InfoServicos.map((item: any, index: any) => {
+              const currentItem = item.id
+                ? item
+                : InfoServicos.slice(index + 1).find((i: { id: any }) => i.id);
+              return (
+                currentItem && (
+                  <li
+                    style="margin:0;"
+                    class="slides"
+                    data-active={index === 0 ? "true" : undefined}
+                  >
+                    <img src={item.hero.img} alt="" />
+                  </li>
+                )
+              );
+            })
+          }
+        </ol>
+      </article>
+    </section>
   </section>
+  <article
+    class="chest flex gap-4 justify-around *:flex *:gap-2 *:items-center *:justify-center *:px-8 *:py-4 *:text-white *:font-bold *:w-[27%] max-[998px]:flex-col max-[998px]:*:w-full"
+  >
+    <a
+      class="bg-[#34ce95]"
+      href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
+      target="_blank"
+    >
+      <Icon name="whatsapp" size={32} />
+      WhatsApp
+    </a>
+<!--     <button class="register bg-black hover:bg-[var(--White)] hover:text-black transition-[background-color] duration-[0.5s] ease">
+      <Icon name="calendar" size={32} />
+      Inscriver-se
+    </button> -->
+    <a
+      class="bg-[#E95F52]"
+      href="mailto:angelbalcboniclinicamicropigme@gmail.com"
+      target="_blank"
+    >
+      <Icon name="email" size={32} />
+      Email
+    </a>
+  </article>
+
+  <div class="moduleBackground hidden fixed w-screen h-screen inset-0 opacity-0 bg-[#0000003d] z-[5]">
+    <dialog class="block w-[30rem] h-[30rem] m-auto"> 
+      <form>
+        <h3>Module</h3>
+        <p>sklf,df fdkmfsd fidmsfk dsnfkmd ndkj </p>
+        <button>Close</button>
+      </form>
+    </dialog>
+  </div>
+
+  <div class="chest flex-col gap-12 max-[998px]:flex-col">
+    <section class="m-auto mt-16 mb-8 *:my-4">
+      <span class="bold text-2xl">Poximas datas disponíveis:</span>
+      <ul class="flex max-[600px]:flex-col *:text-xl">
+        {
+          Object.values(cursos.availableDate).map((item: any) => (
+            <li>{item}</li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section
+      class="flex *:w-1/2 h-20rem max-[1137px]:*:w-full max-[1137px]:flex-col max-[1137px]:items-center max-[1137px]:gap-20"
+    >
+      <ul class="kit col-flex" style="gap:1.6rem">
+        <span class="bold text-2xl">Kit Incluído</span>
+        {
+          Object.values(cursos.kitIncluded).map((item: any) => (
+            <ToJSON tag="li" className="ml-12 kit" add={item} />
+          ))
+        }
+      </ul>
+      <div class="flex flex-col">
+        <span class="mb-4 bold text-2xl">Conteúdos do Curso</span>
+        {
+          Object.values(cursos.contentCourse).map((item: any) => (
+            <div class="flex flex-col">
+              <p class="moduleName flex cursor-pointer">
+                {item.name}
+                <span class="arrow max-[500px]:hidden">></span>
+              </p>
+              <ul class="ativar flex flex-col *:my-3">
+                {item.module &&
+                  Object.values(item.module).map((moduleItem: any) => (
+                    <li style="font-size:medium">{moduleItem}</li>
+                  ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section>
+      <h2 class="mt-32 mb-20">Objetivos</h2>
+      <h3 class="bold mb-6">
+        No final do curso, o/a formando/a será capaz de:
+      </h3>
+      {
+        Object.values(cursos.goals).map((item: any, index: number) => (
+          <p class=`border px-8 py-[0.4rem] border-solid border-[#0000001a]` style={{ backgroundColor: index % 2 === 0 ? "#ef83f317" : "" }}>
+            {item}
+          </p>
+        ))
+      }
+    </section>
+
+    <section class="flex flex-col gap-24 mt-32">
+      <h2>Saidas Profissionais</h2>
+      <ul class="flex justify-between gap-12 *:flex *:gap-4 *:w-full max-[1050px]:flex-col max-[750px]:*:w-full">  
+       {Object.values(cursos.workOutings).map((item: any) => <li style="margin-left: 16px"><Icon name={item.icon} size={42} />{item.p}</li>)}
+      </ul>
+    </section>
+
+<!--     <section class="flex flex-col gap-16 mt-32">
+      <h2>Certificação</h2>
+      <p>
+        A conclusão com aproveitamento do curso de formação, confere a emissão
+        do Certificado.
+      </p>
+      <img src={cursos.certificate.img} alt="" />
+    </section> -->
+
+    <section class="flex flex-col gap-16 mt-20">
+      <h2>Qual a opinião dos nossos clientes?</h2>
+      <div class="card-body cb-body">
+        <h3 class="card-title">
+          {
+            Object.values(cursos.clientReviews.customers).map((item: any) => (
+              <div class="card w-[28rem]">
+                <div class="card-body cb-body">
+                  <h3 class="card-title">
+                    {item.link ? (
+                      <a href={item.link} target="_blank">
+                        {item.name}
+                      </a>
+                    ) : (
+                      item.name
+                    )}
+                  </h3>
+                  <h3 class="card-title">⭐⭐⭐⭐⭐</h3>
+                  <p style="font-size:medium; font-weight: 500;">{item.review}</p>
+                </div>
+              </div>
+            ))
+          }
+        </h3>
+      </div>
+    </section>
+
+    <script src="/src/components/index/slider.ts"></script>
+  </div>
 </Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const moduleBackground = document.querySelector(".moduleBackground") as HTMLElement;
+    const dialog = document.querySelector("dialog") as HTMLElement;
+
+    document.querySelector(".register")?.addEventListener("click", () => {
+        moduleBackground.classList.toggle("openModule");
+    });
+
+    moduleBackground?.addEventListener("click", (event) => {
+        if (!dialog.contains(event.target as Node)) {
+            moduleBackground.classList.remove("openModule");
+        }
+    });
+
+    document
+      .querySelectorAll<HTMLElement>(".moduleName")
+      .forEach((moduleName) => {
+        moduleName.addEventListener("click", () => {
+          if (moduleName) {
+            const arrow = moduleName.querySelector<HTMLElement>(".arrow");
+            if (arrow) arrow.classList.toggle("open");
+
+            const list = moduleName.nextElementSibling;
+            if (list && list.classList.contains("ativar")) {
+              list.classList.toggle("activeToogle");
+            }
+          }
+        });
+      });
+  });
+</script>

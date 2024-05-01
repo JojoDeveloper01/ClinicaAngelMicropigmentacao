@@ -21,7 +21,7 @@ const { Sections } = navData;
     opacity: 0.7;
   }
 
-  section .sobrenos-texto {
+  .sobrenos-texto {
     position: absolute;
     left: 8vw;
     margin: 0;
@@ -63,10 +63,21 @@ const { Sections } = navData;
     flex: 1 0 0%;
   }
 
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 7vw;
+      line-height: normal;
+    }
+  }
+
   @media only screen and (max-width: 317px) {
+    .body {
+      margin-left: 10px;
+    }
+
     section div.sobrenos-texto {
       width: -webkit-fill-available;
-      margin: 0 20px;
+      margin-right: 20px;
     }
 
     .sobrenos-texto p,

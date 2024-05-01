@@ -474,6 +474,10 @@ img.positionObjetHero3 {
     font-size: 2em;
     letter-spacing: 4px;
   }
+
+  .card-group h2 {
+    font-size: larger;
+  }
 }
 
 @media only screen and (min-width: 318px) and (max-width: 454px) {
@@ -547,6 +551,10 @@ img.positionObjetHero3 {
 
   .card {
     width: 100%;
+  }
+
+  .card-group h2 {
+    font-size: larger;
   }
 }
 
@@ -701,7 +709,6 @@ img.positionObjetHero3 {
 
   .shadowyTextBody h1 {
     color: #000000;
-    font-size: calc(2vw + 0.4em);
   }
 
   .shadowyTextBody p {

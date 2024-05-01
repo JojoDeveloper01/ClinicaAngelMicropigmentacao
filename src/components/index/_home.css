@@ -57,29 +57,3 @@ aside {
   align-items: center;
   margin: 5vh 0;
 }
-
-.fq-vermais,
-.activarS {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.6s ease;
-  opacity: 0;
-}
-
-.activeToogle {
-  max-height: 86rem;
-  opacity: 1;
-}
-
-#pfq1 {
-  font-size: 18px;
-  font-weight: bolder;
-  transition: transform 0.3s ease;
-  z-index: 1;
-  margin-left: 13px;
-  transform: rotate(90deg);
-}
-
-.open #pfq1 {
-  transform: rotate(270deg);
-}

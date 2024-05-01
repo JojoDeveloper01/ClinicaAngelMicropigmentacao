@@ -30,8 +30,8 @@
     overflow-y: auto;
   }
 
-  body h1,
-  body h2 {
+  h1,
+  h2 {
     position: relative;
     color: black;
     font-weight: bolder;
@@ -41,29 +41,29 @@
     margin: 0;
   }
 
-  body h1 {
+  h1 {
     font-size: xxx-large;
   }
 
-  body h2 {
-    font-size: calc(1.5vw + .6em);
+  h2 {
+    font-size: xx-large;
   }
 
-  body h3 {
+  h3 {
     font-size: x-large;
   }
 
-  body a {
+  a {
     color: #000000;
     text-decoration: none;
     cursor: pointer;
   }
 
-  body a:hover {
+  a:hover {
     text-decoration: none;
   }
 
-  body p {
+  p {
     text-align: left;
     line-height: 1.7em;
     text-wrap: pretty;
@@ -191,13 +191,35 @@
     color: #000;
   }
 
+  .fq-vermais,
+  .ativar {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+
+  .activeToogle {
+    max-height: 86rem;
+    opacity: 1;
+  }
+
+  #pfq1 {
+    font-size: 18px;
+    font-weight: bolder;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    margin-left: 13px;
+    transform: rotate(90deg);
+  }
+
+  .open #pfq1 {
+    transform: rotate(270deg);
+  }
+
   @media only screen and (min-width: 0) and (max-width: 600px) {
     main {
       --headerHeight: 70px;
-    }
-
-    body h1 {
-      font-size: 7vw;
     }
 
     .card img {
@@ -222,6 +244,13 @@
     .body {
       margin-left: 7%;
       margin-right: 5%;
+    }
+  }
+
+  @media only screen and (max-width: 432px) {
+    body h1 {
+      font-size: 11vw;
+      line-height: 5vh;
     }
   }
 

@@ -8,9 +8,9 @@ import { Icon } from "astro-icon/components";
 import styles from "./_heroColor.module.css";
 import "./_servicos.css";
 
+export const prerender = true;
 const { InfoServicos } = dataServicos;
 const path: string = Astro.params?.servico || "micropigmentacao-sobrancelhas";
-export const prerender = true;
 
 const currentPage = InfoServicos.find((servico) => servico.path === path)!;
 

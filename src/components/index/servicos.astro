@@ -145,19 +145,23 @@ const { InfoServicos, Extra } = dataServicos;
   >
     <ol data-slides>
       {
-        InfoServicos.map((item: any, index: any) => (
-          <li
-            class="slides"
-            {...(index === 0 ? { "data-active": "true" } : {})}
-          >
-            <Card
-              title={item.title}
-              src={item.hero.img}
-              alt={item.title}
-              href={item.path}
-            />
-          </li>
-        ))
+        InfoServicos.map((item: any, index: any) => {
+          const currentItem = item.id
+            ? item
+            : InfoServicos.slice(index + 1).find((i: { id: any }) => i.id);
+          return (
+            currentItem && (
+              <li class="slides" data-active={index === 0 ? "true" : undefined}>
+                <Card
+                  title={currentItem.title}
+                  src={currentItem.hero.img}
+                  alt={currentItem.title}
+                  href={`/servicos/${currentItem.path}`}
+                />
+              </li>
+            )
+          );
+        })
       }
     </ol>
     <aside>
@@ -193,7 +197,7 @@ const { InfoServicos, Extra } = dataServicos;
   >
 </div>
 
-<section class="activarS text-center mb-20">
+<section class="ativar text-center mb-20">
   <h2 class="mt-[1%] mb-[3%] mx-0">SERVIÇOS EXTRAS</h2>
 
   <article
@@ -305,10 +309,10 @@ const { InfoServicos, Extra } = dataServicos;
     if (openToggle) {
       openToggle.addEventListener("click", () => {
         openToggle.classList.toggle("open");
-        const activarS = document.querySelector<HTMLElement>(".activarS");
+        const ativar = document.querySelector<HTMLElement>(".ativar");
 
-        if (activarS) {
-          activarS.classList.toggle("activeToogle");
+        if (ativar) {
+          ativar.classList.toggle("activeToogle");
         }
       });
     }

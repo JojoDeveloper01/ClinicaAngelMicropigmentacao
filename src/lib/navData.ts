@@ -20,7 +20,7 @@ const Sections = [
     path: '/blog',
   },
   {
-    name: 'Cursos',
+    name: 'Curso',
     path: '/cursos',
   },
 ]
