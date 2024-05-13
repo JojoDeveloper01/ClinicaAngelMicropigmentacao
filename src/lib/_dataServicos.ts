@@ -254,7 +254,8 @@ const InfoServicos = [
     description: "Procedimento inovador que consiste na aplicação de pigmentos na pele do couro cabeludo para criar a ilusão de cabelo mais denso e cobrir áreas com falta de cabelo. Esta técnica tiliza pigmentos especialmente formulados para se assemelhar à cor e textura do cabelo natural, resultando em um visual mais completo e uniforme. É uma solução eficaz para disfarçar a calvície e criar uma aparência mais jovem e confiante.",
     keywords: "tatuagem capilar",
     hero: {
-      img: "https://res.cloudinary.com/thing/image/upload/v1705631999/assets/image/servicos/micro-capilar.avif",
+/*       img: "https://res.cloudinary.com/thing/image/upload/v1705631999/assets/image/servicos/micro-capilar.avif",
+ */      img: "https://res.cloudinary.com/thing/image/upload/v1715634088/assets/image/servicos/carballoImagem_nlsafs.avif",
       description: "Transforme sua confiança sem cirurgia, com uma técnica simples e eficaz.",
       benefits: [
         "<span class='bold'>1 a 4 anos</span> de duração",
@@ -262,34 +263,45 @@ const InfoServicos = [
         "<span class='bold'>Cobertura</span> e áreas com falta de cabelo",
         "<span class='bold'>Resultados</span> discretos e eficazes"
       ],
-      old_Price: "190",
-      new_Price: "130"
+      /* old_Price: "190",
+      new_Price: "130" */
     },
     exhibitionVideo: {
-      1: "https://res.cloudinary.com/thing/video/upload/v1712166117/assets/videos/capilarVideo1_zs9jrt.mp4",
-      2: "https://res.cloudinary.com/thing/video/upload/v1712166117/assets/videos/capilarVideo2_nzh3ti.mp4"
+      /* 1: "https://res.cloudinary.com/thing/video/upload/v1712166117/assets/videos/capilarVideo1_zs9jrt.mp4",
+      2: "https://res.cloudinary.com/thing/video/upload/v1712166117/assets/videos/capilarVideo2_nzh3ti.mp4" */
+      1: "https://res.cloudinary.com/thing/image/upload/v1715632226/assets/image/servicos/capilarHomem2Carballo_u0hi6r.avif",
+      2: "https://res.cloudinary.com/thing/video/upload/v1715633495/assets/image/servicos/carballoVideoPromociona_kxy7ro.mp4"
     },
     knowledge: {
       1: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1712267668/assets/image/servicos/capilarMulher_grfhid.avif",
+/*         img: "https://res.cloudinary.com/thing/image/upload/v1712267668/assets/image/servicos/capilarMulher_grfhid.avif",
+ */        img: "https://res.cloudinary.com/thing/image/upload/v1715632225/assets/image/servicos/capilarHomemCarballo_glhf9n.avif",
         title: "Micropigmentação Capilar",
-        p: "Procedimento inovador que consiste na aplicação de pigmentos na pele do couro cabeludo para criar a ilusão de cabelo mais <span class='bold'>denso</span> e cobrir áreas com falta de cabelo. Esta técnica tiliza pigmentos especialmente formulados para se assemelhar à cor e textura do cabelo <span class='bold'>natural</span>, resultando em um visual mais completo e uniforme. É uma solução eficaz para <span class='bold'>disfarçar a calvície</span> e criar uma aparência mais jovem e confiante."
+        p: `Venha fazer parte deste maravilhoso mundo da micropigmentação! Se você é barbeiro/Cabeleireiro ou se deseja ser independente e aumentar sua renda, oferecer um excelente atendimento aos seus clientes e resolver um dos grandes problemas da calvície, ou simplesmente busca independência financeira e sucesso em uma carreira promissora, junte-se a nós neste aprendizado. 
+        <br><br> 
+        Aprenda com os melhores micropigmentadores de Madrid! <span class='bold'>O Sr. Carballo</span> estará em Lisboa para um grande evento internacional, trazendo consigo todo o seu conhecimento em micropigmentação capilar hiper-realista.
+         <br><br> 
+         <span class='bold'>Apresentamos:</span> <br> Carballo Scalp <a style='color:#0052c7;' href='https://www.instagram.com/carballo_scalp_microcapilar/' >@carballo_scalp_microcapilar</a>
+         <br> 
+         Asociada com Angel Balcboni <a style='color:#0052c7;' href='https://www.instagram.com/aangelmicropigmentacao/' >@aangelmicropigmentacao</a> 
+         <br><br>
+        <span class='bold'>Em Clinica Micropigmentação:</span> <br> Treinamento de Micropigmentação Capilar <br><br> <span class='bold'>Data: 13 e 14 de julho</span> <br><br> Não perca esta oportunidade de se tornar um especialista em micropigmentação capilar! Garanta já o seu lugar neste curso e dê um grande passo para o sucesso profissional.`
       },
       /*       2: {
               img: "",
               title: "Técnica de Sombreamento ou Esfumado",
               p: "Esta técnica envolve a aplicação de pigmentos de forma mais densa e contínua, resultando em uma aparência mais <span class='bold'>sombreada</span> e uniforme. É especialmente eficaz para cobrir áreas maiores de falta de cabelo e criar a ilusão de maior <span class='bold'>densidade capilar</span>."
             }, */
-      2: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1712267666/assets/image/servicos/capilarHomem1_kfet3b.avif",
-        title: "Cabelos Realistas",
-        p: "Nesta abordagem, os pigmentos são aplicados de maneira a imitar não apenas a cor, mas também a textura e direção do cabelo natural. Isso é alcançado através da criação de linhas finas e irregularidades que se assemelham aos folículos capilares reais, proporcionando um resultado extremamente natural."
-      },
-      3: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1712267665/assets/image/servicos/capilar3_y9zxcw.avif",
-        title: "Combinação de Técnicas:",
-        p: "Alguns profissionais podem optar por combinar diferentes técnicas, como pontilhismo e sombreado, para obter resultados personalizados de acordo com as necessidades e preferências do cliente. Esta abordagem permite uma maior versatilidade e precisão na criação de uma aparência natural e esteticamente agradável."
-      }
+      /*       2: {
+              img: "https://res.cloudinary.com/thing/image/upload/v1712267666/assets/image/servicos/capilarHomem1_kfet3b.avif",
+              title: "Cabelos Realistas",
+              p: "Nesta abordagem, os pigmentos são aplicados de maneira a imitar não apenas a cor, mas também a textura e direção do cabelo natural. Isso é alcançado através da criação de linhas finas e irregularidades que se assemelham aos folículos capilares reais, proporcionando um resultado extremamente natural."
+            },
+            3: {
+              img: "https://res.cloudinary.com/thing/image/upload/v1712267665/assets/image/servicos/capilar3_y9zxcw.avif",
+              title: "Combinação de Técnicas:",
+              p: "Alguns profissionais podem optar por combinar diferentes técnicas, como pontilhismo e sombreado, para obter resultados personalizados de acordo com as necessidades e preferências do cliente. Esta abordagem permite uma maior versatilidade e precisão na criação de uma aparência natural e esteticamente agradável."
+            } */
     },
     incentive: {
       title: "",
@@ -1077,7 +1089,7 @@ const Curso = [
       1: "Reconhecer o mercado de trabalho, postura profissional, indicações e contraindicações, bem como os instrumentos necessários para realização do Microblading;",
       2: "Medir e formatar sobrancelhas, de acordo com o formato de cada rosto, de forma a preparar a sobrancelha para o Microblading;",
       3: "Preparar o ambiente de trabalho e a pele do/a cliente com base na biossegurança, de forma a evitar possíveis contaminações durante a realização do Microblading;",
-      4: "Identificar pigmentos adequados para cada tipo de pele, o seu tom e subtom aplicá-los com o Tebori, através da técnica do Microblanding de fio-a-fio ou shadow",
+      4: "Identificar pigmentos adequados para cada tipo de pele, o seu tom e subtom aplicá-los com o Tebori, através da técnica do Microblanding",
     },
     workOutings: {
       1: {

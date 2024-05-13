@@ -77,7 +77,7 @@ export function getStaticPaths() {
           </ol>
           <ol class="benefitsWords">
             {
-              currentPage.hero.benefits.map((item: any) => (
+              currentPage.hero.benefits?.map((item: any) => (
                 <ToJSON tag="li" className="convincing" add={item} />
               ))
             }
@@ -108,36 +108,48 @@ export function getStaticPaths() {
           target="_blank">Reserve com desconto</a
         >
       </button>
-      <div class="precoHero">
-        <p>
-          Preço antigo:
-          <span>{currentPage.hero.old_Price} €</span>
-        </p>
-        <p>
-          Preço Atual:
-          <span class="bold">{currentPage.hero.new_Price} €</span>
-        </p>
-      </div>
+      {
+        currentPage.id === 4 ? null : (
+          <divc class="precoHero">
+            <p>
+              Preço antigo:
+              <span>{currentPage.hero.old_Price} €</span>
+            </p>
+            <p>
+              Preço Atual:
+              <span class="bold">{currentPage.hero.new_Price} €</span>
+            </p>
+          </divc>
+        )
+      }
     </div>
   </section>
 
-  <section
-    class=`flex w-full mt-[24vh] mb-32 *:object-[0_19%] *:w-1/2 *:h-[27rem] max-[767px]:mt-[10vh] max-[992px]:flex-col max-[992px]:*:w-full max-[430px]:*:h-1/2
-    ${currentPage.id !== 1
-    ? "positionObjectVideo23"
-    : ""}`
-  >
-    {
-      Object.values(currentPage.exhibitionVideo).map((item) => (
-        <video autoplay loop muted playsinline>
-          {typeof item === "string" ? (
-            <source src={item} type="video/mp4" />
-          ) : null}
+  {
+    currentPage.id === 4 ? (
+      <section class="grid place-content-center w-full mt-[24vh] mb-32">
+        <video playsinline controls>
+          <source src={currentPage.exhibitionVideo[2]} type="video/mp4" />
           Seu navegador não suporta a tag de vídeo.
         </video>
-      ))
-    }
-  </section>
+      </section>
+    ) : (
+      <section
+        class={`flex w-full mt-[24vh] mb-32 *:object-[0_19%] *:object-cover *:w-1/2 *:h-[27rem] max-[767px]:mt-[10vh] max-[992px]:flex-col max-[992px]:*:w-full max-[430px]:*:h-1/2 ${currentPage.id !== 1 ? "positionObjectVideo23" : ""}`}
+      >
+        {Object.values(currentPage.exhibitionVideo).map((item) =>
+          item.endsWith(".mp4") || item.endsWith(".webp") ? (
+            <video autoplay loop muted playsinline>
+              <source src={item} type="video/mp4" />
+              Seu navegador não suporta a tag de vídeo.
+            </video>
+          ) : (
+            <img src={item} alt="Imagem" />
+          )
+        )}
+      </section>
+    )
+  }
 
   <section class="askSection">
     {

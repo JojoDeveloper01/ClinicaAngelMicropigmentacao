@@ -199,11 +199,11 @@ export function getStaticPaths() {
   </article>
 
   <div class="moduleBackground hidden fixed w-screen h-screen inset-0 opacity-0 bg-[#0000003d] z-[5]">
-    <dialog class="block w-[30rem] h-[30rem] m-auto"> 
-      <form>
-        <h3>Module</h3>
-        <p>sklf,df fdkmfsd fidmsfk dsnfkmd ndkj </p>
-        <button>Close</button>
+    <dialog class="block w-[30rem] h-[30rem] m-auto max-[600px]:w-[90vw] max-[400px]:w-screen"> 
+      <form class="flex flex-col justify-between items-center size-full py-4">
+        <h3>Reservar</h3>
+        <span class="closeModule bold top-4 right-4 absolute cursor-pointer">X</span>
+        <p></p>
       </form>
     </dialog>
   </div>
@@ -273,14 +273,14 @@ export function getStaticPaths() {
       </ul>
     </section>
 
-<!--     <section class="flex flex-col gap-16 mt-32">
+    <section class="flex flex-col gap-16 mt-32">
       <h2>Certificação</h2>
       <p>
         A conclusão com aproveitamento do curso de formação, confere a emissão
         do Certificado.
       </p>
       <img src={cursos.certificate.img} alt="" />
-    </section> -->
+    </section>
 
     <section class="flex flex-col gap-16 mt-20">
       <h2>Qual a opinião dos nossos clientes?</h2>
@@ -315,16 +315,24 @@ export function getStaticPaths() {
 
 <script>
   document.addEventListener("astro:page-load", () => {
+
     const moduleBackground = document.querySelector(".moduleBackground") as HTMLElement;
     const dialog = document.querySelector("dialog") as HTMLElement;
 
     document.querySelector(".register")?.addEventListener("click", () => {
         moduleBackground.classList.toggle("openModule");
+        document.body.classList.toggle("no-scroll");
     });
+
+    document.querySelector(".closeModule")?.addEventListener("click", () => {
+      moduleBackground.classList.remove("openModule");
+      document.body.classList.remove("no-scroll");
+    })
 
     moduleBackground?.addEventListener("click", (event) => {
         if (!dialog.contains(event.target as Node)) {
             moduleBackground.classList.remove("openModule");
+            document.body.classList.remove("no-scroll");
         }
     });
 
