@@ -1,5 +1,24 @@
 ---
 import ImgData from "@lib/media";
+
+const local = [
+  {
+    areeiro: {
+      name: "Areeiro",
+      aria: "Mapa do local Areeiro",
+      href: "https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6",
+      src: "localVilaLisboa",
+      address: "Avenida João XXI 49B, Areeiro",
+    },
+    povoa: {
+      name: "Povóa",
+      aria: "Mapa do local Povoa",
+      href: "https://goo.gl/maps/7LJNApWVJKzsMmUH8",
+      src: "localPovoa",
+      address: "Rua José Nogueira Vaz 16, Póvoa de Santa Iria",
+    },
+  },
+];
 ---
 
 <style>
@@ -45,15 +64,8 @@ import ImgData from "@lib/media";
   }
 
   .img-Local {
-    height: 50%;
-  }
-
-  .localCtro picture,
-  .localCtro img {
     display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    height: 50%;
   }
 
   .box-p {
@@ -91,17 +103,17 @@ import ImgData from "@lib/media";
       align-items: center;
     }
 
-    article.localCtro {
+    .localCtro {
       width: 22rem;
       height: 39rem;
     }
 
-    article.localCtro {
+    .localCtro {
       width: 91vw;
       margin: 16px 0;
     }
 
-    article.localCtro img {
+    .localCtro img {
       object-position: top;
     }
   }
@@ -175,101 +187,59 @@ import ImgData from "@lib/media";
       >
     </h2>
   </div>
-  <div class="position-local">
-    <article class="localCtro">
-      <div class="img-Local">
-        <a
-          aria-label="Mapa local Areeiro"
-          href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
-          target="_blank"
-        >
-          <picture>
-            <source
-              srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727135/assets/image/local/localVilaLisboa.avif"
-            />
-            <img
-              src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727135/assets/image/local/localVilaLisboa.webp"
-              alt="Local Areeiro"
-            />
-          </picture>
-        </a>
-      </div>
-      <div class="box-p">
-        <strong
-          >*Antes de visitar nossas instalações, entre em contato conosco</strong
-        >
-        <br />
-        <p>Morada:</p>
-        <a
-          aria-label="Mapa local Areeiro"
-          href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
-          target="_blank">Avenida João XXI 49B, Areeiro</a
-        >
-        <br />
-        <p>Telemóvel:</p>
-        <a
-          aria-label="Whatsapp Angel"
-          href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
-          target="_blank">935 407 895</a
-        >
-        <br />
-        <p>E-mail:</p>
-        <a
-          aria-label="E-mail Angel"
-          href="mailto:angelbalcboniclinicamicropigme@gmail.com"
-          target="_blank">angelbalcboniclinicamicropigme@gmail.com</a
-        >
-      </div>
-    </article>
 
-    <article class="localCtro">
-      <div class="img-Local">
-        <a
-          aria-label="Local Póvoa"
-          href="https://goo.gl/maps/R4RpzfBGRcL3p5jV8"
-          target="_blank"
-        >
-          <picture>
-            <source
-              srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727135/assets/image/local/localPovoa.avif"
-            />
-            <img
-              src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727135/assets/image/local/localPovoa.webp"
-              alt="Local Póvoa"
-            />
-          </picture>
-        </a>
-      </div>
-      <div class="box-p">
-        <strong
-          >*Antes de visitar nossas instalações, entre em contato conosco</strong
-        >
-        <br />
-        <p>Morada:</p>
-        <a
-          aria-label="Mapa local Póvoa"
-          href="https://goo.gl/maps/locaR4RpzfBGRcL3p5jV8"
-          target="_blank">Rua José Nogueira Vaz 16, Póvoa de Santa Iria</a
-        >
-        <br />
-        <p>Telemóvel:</p>
-        <a
-          aria-label="Whatsapp Angel"
-          href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
-          target="_blank"
-          >935 407 895
-        </a>
-        <br />
-        <p>E-mail:</p>
-        <a
-          aria-label="E-mail Angel"
-          href="mailto:angelbalcboniclinicamicropigme@gmail.com"
-          target="_blank"
-          class="phone-tiny"
-        >
-          angelbalcboniclinicamicropigme@gmail.com</a
-        >
-      </div>
-    </article>
+  <div class="position-local">
+    {
+      local.map((item) =>
+        Object.values(item).map((location) => (
+          <article class="localCtro">
+            <a
+              class="img-Local"
+              aria-label={location.name}
+              href={location.href}
+              target="_blank"
+            >
+              <ImgData
+                className="extra-class"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                src={location.src}
+              />
+            </a>
+            <div class="box-p">
+              <strong>
+                *Antes de visitar nossas instalações, entre em contato conosco
+              </strong>
+              <br />
+              <p>Morada:</p>
+              <a
+                aria-label={location.name}
+                href={location.href}
+                target="_blank"
+              >
+                {location.address}
+              </a>
+              <br />
+              <p>Telemóvel:</p>
+              <a
+                aria-label="Whatsapp Angel"
+                href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
+                target="_blank"
+              >
+                935 407 895
+              </a>
+              <br />
+              <p>E-mail:</p>
+              <a
+                aria-label="E-mail Angel"
+                href="mailto:angelbalcboniclinicamicropigme@gmail.com"
+                target="_blank"
+              >
+                angelbalcboniclinicamicropigme@gmail.com
+              </a>
+            </div>
+          </article>
+        ))
+      )
+    }
   </div>
 </section>
