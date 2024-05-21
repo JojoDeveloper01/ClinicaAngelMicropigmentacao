@@ -29,6 +29,11 @@ aside {
   color: #fff
 }
 
+.slide-img {
+  width: 50%;
+  height: 100%;
+}
+
 .prev {
   left: 1%;
 }

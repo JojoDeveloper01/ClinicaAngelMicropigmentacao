@@ -1,341 +1,15 @@
 ---
 import "./_home.css";
+import "./hero.css";
 import { Icon } from "astro-icon/components";
+import ImgData from "@lib/media";
 ---
-
-<style>
-  .slideHome {
-    height: calc(100vh - var(--headerHeight));
-  }
-
-  .ctro-itemS {
-    width: 100%;
-    height: 100%;
-  }
-
-  picture {
-    display: block;
-    width: 100%;
-    height: 50%;
-  }
-
-  .simg,
-  .simg2,
-  .simg3 {
-    object-fit: cover;
-  }
-
-  .ctro-itemS .text-contra {
-    left: inherit;
-    right: 51%;
-  }
-
-  .ctro-itemS span {
-    color: #9e5b31;
-    opacity: 0.7;
-    position: absolute;
-    left: 51%;
-    bottom: 1%;
-    width: 110px;
-    height: 20px;
-  }
-
-  .ctro-itemS span a {
-    color: #44342a;
-    opacity: 0.7;
-  }
-
-  .fondo-distor {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .texto-carousel {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    user-select: none;
-    opacity: 0.9;
-  }
-
-  .texto-carousel h2 {
-    color: #ffffff;
-    align-self: flex-start;
-    text-transform: uppercase;
-  }
-
-  .texto-carousel p {
-    color: #ffffff;
-    margin: 13px 28px 23px 0;
-  }
-
-  .texto-carousel a {
-    height: 50px;
-    width: fit-content;
-  }
-
-  .texto-carousel a:hover {
-    text-decoration: none;
-  }
-
-  .border-slide {
-    position: relative;
-    display: flex;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-  }
-
-  .reser-buttonS {
-    color: #ffffff;
-  }
-
-  @media only screen and (min-width: 0) and (max-width: 600px) {
-    .slide-img {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-    }
-
-    .simg,
-    .simg1 {
-      transform: scaleX(-1);
-    }
-
-    .fondo-distor {
-      position: relative;
-      width: 100%;
-      height: 50%;
-    }
-
-    #fd {
-      background-image: linear-gradient(#ff9763, #ffc5a5);
-    }
-
-    #fd1 {
-      background-image: linear-gradient(#972c27, #f5cecc);
-    }
-
-    #fd2 {
-      background-image: linear-gradient(#018979, #a6ede5);
-    }
-
-    #fd3 {
-      background-image: linear-gradient(#9d2a58, #f7b8d2);
-    }
-
-    .texto-carousel {
-      padding-inline: 2.5vw;
-    }
-
-    .texto-carousel h2 {
-      font-size: x-large;
-    }
-
-    div.texto-carousel p {
-      font-size: medium;
-      padding: 5px 0;
-      margin: 4px 0 8px 0;
-    }
-
-    .border-slide {
-      position: relative;
-      padding: 20px;
-    }
-  }
-
-  @media only screen and (max-width: 317px) {
-    .texto-carousel h2 {
-      font-size: larger;
-    }
-
-    div.texto-carousel p {
-      font-size: small;
-      margin: 6px 0 6px 0;
-    }
-
-    .border-slide {
-      padding: 15px;
-    }
-  }
-
-  @media only screen and (min-width: 318px) and (max-width: 454px) {
-    .border-slide {
-      padding: 13px;
-    }
-  }
-
-  @media only screen and (min-width: 455px) and (max-width: 600px) {
-    .texto-carousel {
-      align-items: center;
-      text-align: center;
-      padding: 0 76px;
-    }
-
-    .texto-carousel p {
-      text-align: left;
-    }
-  }
-
-  @media only screen and (min-width: 601px) {
-    picture,
-    .slide-img {
-      width: 100%;
-      height: 100%;
-    }
-
-    .simg,
-    .simg2 {
-      transform: scaleX(-1);
-      margin-left: 1px;
-    }
-
-    .fondo-distor {
-      position: absolute;
-      left: 11%;
-      bottom: 13%;
-    }
-
-    div.texto-carousel h2 {
-      font-weight: 900;
-    }
-
-    div.texto-carousel p {
-      line-height: 19px;
-    }
-
-    #fd,
-    #fd1 {
-      background-image: none;
-    }
-
-    #fd2,
-    #fd3 {
-      background-image: none;
-      left: 31%;
-      bottom: 62%;
-    }
-
-    .texto-carousel {
-      max-width: 300px;
-    }
-
-    button.border-slide {
-      padding: 40px;
-      background-color: #5353531f;
-    }
-  }
-
-  @media only screen and (min-width: 992px) {
-    .ctro-itemS {
-      display: flex;
-    }
-
-    #fd {
-      background-image: linear-gradient(#ffede3, #b75321);
-    }
-
-    #fd1 {
-      background-image: linear-gradient(#ffe6e5, #83110c);
-    }
-
-    #fd2 {
-      left: inherit;
-      bottom: inherit;
-      background-image: linear-gradient(#eefffd, #007f70);
-    }
-
-    #fd3 {
-      left: inherit;
-      bottom: inherit;
-      background-image: linear-gradient(#ffebf3, #c10854);
-    }
-
-    .fondo-distor,
-    picture {
-      position: relative;
-      width: 50%;
-      height: 100%;
-      left: inherit;
-      bottom: inherit;
-      transform: inherit;
-    }
-
-    .slide-img {
-      width: 100%;
-      height: 100%;
-    }
-
-    .texto-carousel {
-      margin-left: 5vw;
-    }
-
-    .texto-carousel h2,
-    .texto-carousel p,
-    .texto-carousel a {
-      width: -webkit-fill-available;
-    }
-
-    .texto-carousel h2 {
-      font-weight: 600;
-    }
-
-    #fd2 h2,
-    #fd3 h2 {
-      width: fit-content;
-    }
-
-    .texto-carousel p {
-      font-weight: inherit;
-      line-height: 26px;
-      width: 25rem;
-    }
-
-    .border-slide {
-      background-color: transparent;
-      padding: 30px;
-      transition: padding 0.3s ease;
-    }
-
-    .border-slide:hover {
-      padding: 35px;
-    }
-  }
-
-  .slides {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
-  }
-
-  .slides[data-active] {
-    opacity: 1;
-    z-index: 1;
-    transition-delay: 0ms;
-  }
-</style>
 
 <article class="slideHome relative" aria-label="Carousel" data-carousel>
   <ol class="flex overflow-hidden w-screen h-1/2" data-slides>
     <li tabindex="0" class="slides" data-active>
       <div class="ctro-itemS">
-        <picture>
-          <source
-            srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.avif"
-          />
-          <img
-            src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_sobran.webp"
-            alt="Mulher com uma linda micropigmentação de sobrancelhas"
-            class="slide-img simg"
-          />
-        </picture>
-
+        <ImgData src="micro_sobran" className="slide-img simg1" />
         <div class="fondo-distor" id="fd">
           <div class="texto-carousel">
             <h2>MICROPIGMENTAÇÃO SOBRANCELHAS</h2>
@@ -359,17 +33,7 @@ import { Icon } from "astro-icon/components";
     </li>
     <li tabindex="1" class="slides">
       <div class="ctro-itemS">
-        <picture>
-          <source
-            srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_labial.avif"
-          />
-          <img
-            src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/micro_labial.webp"
-            alt="Mulher com uma linda micropigmentação labial"
-            class="slide-img simg1"
-          />
-        </picture>
-
+        <ImgData src="micro_labial" className="slide-img simg1" />
         <div class="fondo-distor" id="fd1">
           <div class="texto-carousel">
             <h2>MICROPIGMENTAÇÃO LABIAL</h2>
@@ -392,13 +56,10 @@ import { Icon } from "astro-icon/components";
     </li>
     <li tabindex="2" class="slides">
       <div class="ctro-itemS">
-        <picture>
-          <img
-            src="https://res.cloudinary.com/thing/image/upload/v1706791566/assets/image/servicos/micropigmentacaoCapilar_dpckgr.avif"
-            alt="Homem a fazer-se uma limpeza facial"
-            class="slide-img simg2"
-          />
-        </picture>
+        <ImgData
+          src="micropigmentacaoCapilar_dpckgr"
+          className="slide-img simg2"
+        />
         <div class="fondo-distor" id="fd2">
           <div class="texto-carousel">
             <h2>Micropigmentação Capilar</h2>
@@ -422,16 +83,7 @@ import { Icon } from "astro-icon/components";
     </li>
     <li tabindex="3" class="slides">
       <div class="ctro-itemS">
-        <picture>
-          <source
-            srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.avif"
-          />
-          <img
-            src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727133/assets/image/servicos/lifting_pestanas.webp"
-            alt="Mulher a fazer-se um lifting de Pestanas"
-            class="slide-img simg3"
-          />
-        </picture>
+        <ImgData src="lifting_pestanas" className="slide-img simg3" />
         <div class="fondo-distor" id="fd3">
           <div class="texto-carousel">
             <h2>LIFTING DE PESTANAS</h2>

@@ -1,6 +1,7 @@
 ---
 import ToBook from "@components/ToBook.astro";
 import Layout from "@layouts/Layout.astro";
+import ImgData from "@lib/media";
 import navData from "@lib/navData";
 
 const { Sections } = navData;
@@ -175,16 +176,7 @@ const { Sections } = navData;
     <h2>Profissionais</h2>
     <div class="card-group">
       <div class="card">
-        <picture>
-          <source
-            srcset="https://res.cloudinary.com/thing/image/upload/v1712267464/assets/image/profissionais/profissionalAngel_bxwwyd.avif"
-          />
-          <img
-            src="https://res.cloudinary.com/thing/image/upload/v1712267559/assets/image/profissionais/profissionalAngel_mrdku4.webp"
-            class="card-img-top"
-            alt="Profissional Angel"
-          />
-        </picture>
+        <ImgData src="profissionalAngel_bxwwyd" className="card-img-top" />
         <div class="card-body">
           <h3 class="card-title">Angel</h3>
           <p>
@@ -205,16 +197,7 @@ const { Sections } = navData;
         </div>
       </div>
       <div class="card">
-        <picture>
-          <source
-            srcset="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/EsperanzaFotodePerfil.avif"
-          />
-          <img
-            src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703727134/assets/image/profissionais/EsperanzaFotodePerfil.webp"
-            class="card-img-top"
-            alt="Profissional Esperanza"
-          />
-        </picture>
+        <ImgData src="EsperanzaFotodePerfil" className="card-img-top" />
         <div class="card-body">
           <h3 class="card-title">Esperanza</h3>
           <p>
@@ -235,25 +218,25 @@ const { Sections } = navData;
         </div>
       </div>
     </div>
-
-    <h2 id="titulo-social">Redes Sociais</h2>
-    <section class="social">
-      <div
-        class="elfsight-app-58d93203-58c5-488c-b481-339ff1a3d60f red max-w-[25rem]"
-        style="z-index: 0;"
-        data-elfsight-app-lazy
-      >
-      </div>
-      <div
-        class="elfsight-app-900c2f93-c423-42c1-b6fc-4bcabe0bf42b red max-w-[25rem]"
-        style="z-index: 0;"
-        data-elfsight-app-lazy
-      >
-      </div>
-    </section>
   </section>
-  <ToBook />
+
+  <h2 id="titulo-social">Redes Sociais</h2>
+  <section class="social">
+    <div
+      class="elfsight-app-58d93203-58c5-488c-b481-339ff1a3d60f red max-w-[25rem]"
+      style="z-index: 0;"
+      data-elfsight-app-lazy
+    >
+    </div>
+    <div
+      class="elfsight-app-900c2f93-c423-42c1-b6fc-4bcabe0bf42b red max-w-[25rem]"
+      style="z-index: 0;"
+      data-elfsight-app-lazy
+    >
+    </div>
+  </section>
 </Layout>
+<ToBook />
 
 <script>
   document.addEventListener("astro:page-load", () => {

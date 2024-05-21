@@ -1,3 +1,7 @@
+---
+import ImgData from "@lib/media";
+---
+
 <style>
   .testemunhas {
     background-color: var(--Pink);
@@ -91,11 +95,11 @@
         aria-label="Ver comentário da testemunha Soraia"
         href="https://goo.gl/maps/TeFJimsdnqERmXu47"
         target="_blank"
-        class="ctro-img-nome"
+        class="ctro-img-nome *:h-[60px] *:w-[60px] *:object-cover *:mr-5 *:rounded-full"
       >
-        <img
-          src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703790669/assets/image/testemunhas/cliente1.webp"
-          alt="Foto da clienta Soraia Araujo que fez Micropigmentação"
+        <ImgData
+          src="cliente1"
+          className="h-[60px] w-[60px] object-cover mr-5 rounded-full"
         />
         <strong>Soraia Araujo<br />⭐⭐⭐⭐⭐</strong>
       </a>
@@ -116,9 +120,9 @@
         target="_blank"
         class="ctro-img-nome"
       >
-        <img
-          src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703790669/assets/image/testemunhas/cliente2.png"
-          alt="Foto da clienta Lia Mercado que fez Micropigmentação"
+        <ImgData
+          src="cliente2"
+          className="h-[60px] w-[60px] object-cover mr-5 rounded-full"
         />
         <strong>Lia Mercado<br />⭐⭐⭐⭐⭐</strong>
       </a>
@@ -141,9 +145,9 @@
         target="_blank"
         class="ctro-img-nome"
       >
-        <img
-          src="https://res.cloudinary.com/thing/image/upload/f_auto,q_auto:good/v1703790669/assets/image/testemunhas/cliente3.png"
-          alt="Foto da clienta Liliana Monteiro que fez Micropigmentação"
+        <ImgData
+          src="cliente3"
+          className="h-[60px] w-[60px] object-cover mr-5 rounded-full"
         />
         <strong>Liliana Monteiro<br />⭐⭐⭐⭐⭐</strong>
       </a>

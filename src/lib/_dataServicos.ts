@@ -117,7 +117,6 @@ const InfoServicos = [
       },
       3: {
         img: "https://res.cloudinary.com/thing/image/upload/v1710113697/assets/image/servicos/antes-depoisLabiaosHomem_qjlze4.avif",
-        "alt": "Micropigmentação de lábios de Homem",
         title: "Técnica Especializada para Homens",
         p: "Este procedimento utiliza pigmentos suaves para realçar a forma e a cor dos lábios <span class='bold'>masculinos</span>, proporcionando uma aparência <span class='bold'>natural</span> e <span class='bold'>impecável</span>. Corrija detalhes, defina contornos e adicione vitalidade aos seus lábios, destacando sua beleza de maneira sutil e <span class='bold'>duradoura</span>. Uma solução única, especialmente desenvolvida para <span class='bold'>homens</span> que desejam realçar sua expressão com estilo."
       }
@@ -541,12 +540,12 @@ const Extra = [
         p: "."
       },
       2: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+        img: "",
         title: "",
         p: ""
       },
       3: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+        img: "",
         title: "",
         p: ""
       }
@@ -622,12 +621,12 @@ const Extra = [
         p: "."
       },
       2: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+        img: "",
         title: "",
         p: ""
       },
       3: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+        img: "",
         title: "",
         p: ""
       }
@@ -703,12 +702,12 @@ const Extra = [
         p: "."
       },
       2: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+        img: "",
         title: "",
         p: ""
       },
       3: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+        img: "",
         title: "",
         p: ""
       }
@@ -784,12 +783,12 @@ const Extra = [
         p: "."
       },
       2: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+        img: "",
         title: "",
         p: ""
       },
       3: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+        img: "",
         title: "",
         p: ""
       }
@@ -865,12 +864,12 @@ const Extra = [
         p: "."
       },
       2: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+        img: "",
         title: "",
         p: ""
       },
       3: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+        img: "",
         title: "",
         p: ""
       }
@@ -946,12 +945,12 @@ const Extra = [
         p: "."
       },
       2: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos2_asqe1n.avif",
+        img: "",
         title: "",
         p: ""
       },
       3: {
-        img: "https://res.cloudinary.com/thing/image/upload/v1710113696/assets/image/servicos/antes-depoisOlhos3_ecs2kq.avif",
+        img: "",
         title: "",
         p: ""
       }

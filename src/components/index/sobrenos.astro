@@ -1,3 +1,7 @@
+---
+import ImgData from "@lib/media";
+---
+
 <style>
   .nossoTeam {
     position: relative;
@@ -19,11 +23,6 @@
     flex-wrap: wrap;
   }
 
-  .dimension-total img {
-    position: relative;
-    object-fit: cover;
-  }
-
   .dimension-total .caption p {
     margin-bottom: 1rem;
   }
@@ -32,12 +31,6 @@
     .nossoTeam h2 {
       font-size: larger;
     }
-    
-    .dimension-total img {
-      width: 60vw;
-      height: 22rem;
-      margin-bottom: 34px;
-    }
 
     .dimension-total .caption {
       margin: 0 10vw;
@@ -45,24 +38,12 @@
   }
 
   @media only screen and (min-width: 601px) {
-    .dimension-total img {
-      width: 60vw;
-      height: 22rem;
-      margin-bottom: 34px;
-    }
-
     .dimension-total .caption {
       margin: 0 10vw;
     }
   }
 
   @media only screen and (min-width: 768px) {
-    .dimension-total img {
-      width: 23rem;
-      height: 30rem;
-      margin-left: 23px;
-    }
-
     .dimension-total .caption {
       width: 40vw;
       margin: 0 34.7px;
@@ -78,18 +59,12 @@
 <section id="sobre-nos" class="nossoTeam">
   <h2>ESPECIALISTA EM MICROPIGMENTAÇÃO</h2>
   <div class="dimension-total">
-    <picture>
-      <source
-        srcset="https://res.cloudinary.com/thing/image/upload/v1712267464/assets/image/profissionais/profissionalAngel_bxwwyd.avif"
-      />
-      <img
-        src="https://res.cloudinary.com/thing/image/upload/v1712267559/assets/image/profissionais/profissionalAngel_mrdku4.webp"
-        alt="Foto da profissional Angel"
-        class="fickleHere"
-        id="imgTeam"
-        data-animation="fade"
-      />
-    </picture>
+    <ImgData
+      src="profissionalAngel_bxwwyd"
+      className="relative object-cover min-[768px]:w-[23rem] min-[768px]:h-[30rem] min-[768px]:ml-[23px] max-[767px]:w-[60vw] max-[767px]:h-[22rem] max-[767px]:mb-[34px]"
+      id="imgTeam"
+      data-animation="fade"
+    />
     <div class="caption">
       <p>
         Sou a <b>Angel</b>, da Colômbia, e há 9 anos escolhi Portugal como a

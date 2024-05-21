@@ -23,10 +23,11 @@ export function getImage(src: string): ImageData | null {
 interface ImageProps {
   src: string;
   className?: string;
+  id?: string;
   style?: React.CSSProperties;
 }
 
-const ImgData: React.FC<ImageProps> = ({ src, className, style }) => {
+const ImgData: React.FC<ImageProps> = ({ src, className, style, id }) => {
   const image = getImage(src);
 
   if (!image) {
@@ -36,7 +37,7 @@ const ImgData: React.FC<ImageProps> = ({ src, className, style }) => {
 
   const { path, alt } = image;
 
-  return <img src={path} alt={alt} className={className} style={style} />;
+  return <img src={path} alt={alt} className={className} style={style} id={id} />;
 };
 
 export default ImgData;
