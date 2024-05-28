@@ -63,7 +63,7 @@ const InfoServicos = [
       customers: {
         1: {
           link: "",
-          midia: "https://res.cloudinary.com/thing/video/upload/f_auto,q_auto:good/v1706716786/assets/videos/clientSobran_td7mks.mp4",
+          /* midia: "https://res.cloudinary.com/thing/video/upload/f_auto,q_auto:good/v1706716786/assets/videos/clientSobran_td7mks.mp4", */
           name: "Marta",
           review: "Fiz a micropigmentação, a primeira vez que fiz, correu lindamente. Não doeu rigorosamente nada. A segunda vez ficou maravilhoso. Por isso, não tenham medo, porque não dói nada, a anestesia é fantástica, e irei voltar como cliente."
         },
