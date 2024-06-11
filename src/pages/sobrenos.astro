@@ -37,23 +37,12 @@ const { Sections } = navData;
     opacity: 1;
   }
 
-  .social {
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    flex-wrap: wrap;
-  }
-
   .red {
     background-color: var(--White);
     box-shadow: 0px -4px 26px rgb(221 221 221 / 99%);
     width: min-content;
     height: min-content;
-    margin: 20px;
-  }
-
-  #titulo-social {
-    margin-top: 100px;
+    margin: 20px 0;
   }
 
   .card-body p {
@@ -62,6 +51,14 @@ const { Sections } = navData;
 
   .card-group > .card {
     flex: 1 0 0%;
+  }
+
+  #titulo-social {
+    margin-top: 8rem;
+  }
+
+  #eapps-instagram-feed-1 {
+    margin-left: 0;
   }
 
   @media only screen and (max-width: 600px) {
@@ -218,25 +215,27 @@ const { Sections } = navData;
         </div>
       </div>
     </div>
-  </section>
 
-  <h2 id="titulo-social">Redes Sociais</h2>
-  <section class="social">
-    <div
-      class="elfsight-app-58d93203-58c5-488c-b481-339ff1a3d60f red max-w-[25rem]"
-      style="z-index: 0;"
-      data-elfsight-app-lazy
-    >
-    </div>
-    <div
-      class="elfsight-app-900c2f93-c423-42c1-b6fc-4bcabe0bf42b red max-w-[25rem]"
-      style="z-index: 0;"
-      data-elfsight-app-lazy
-    >
-    </div>
+    <section class="social">
+      <h2 id="titulo-social">Redes Sociais</h2>
+      <div class="flex flex-wrap min-[1650px]:justify-between">
+        <div
+          class="elfsight-app-58d93203-58c5-488c-b481-339ff1a3d60f red max-w-[25rem]"
+          style="z-index: 0;"
+          data-elfsight-app-lazy
+        >
+        </div>
+        <div
+          class="elfsight-app-900c2f93-c423-42c1-b6fc-4bcabe0bf42b red max-w-[25rem]"
+          style="z-index: 0;"
+          data-elfsight-app-lazy
+        >
+        </div>
+      </div>
+    </section>
   </section>
+  <ToBook />
 </Layout>
-<ToBook />
 
 <script>
   document.addEventListener("astro:page-load", () => {

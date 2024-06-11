@@ -204,6 +204,13 @@
     opacity: 1;
   }
 
+  span.customAlert {
+    display: none;
+    font-size: 0.9em;
+    color: #a72727;
+    font-weight: 400;
+  }
+
   #pfq1 {
     font-size: 18px;
     font-weight: bolder;

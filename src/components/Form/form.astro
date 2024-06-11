@@ -136,13 +136,6 @@ import { Icon } from "astro-icon/components";
     overflow-wrap: anywhere;
   }
 
-  span.customAlert {
-    display: none;
-    font-size: 0.9em;
-    color: #a72727;
-    font-weight: 400;
-  }
-
   @media only screen and (min-width: 0) and (max-width: 600px) {
     .contact-form form > :first-child,
     .contact-form form > :nth-child(2) {
@@ -197,7 +190,7 @@ import { Icon } from "astro-icon/components";
           </p>
           <p>
             <label for="telemovel"
-              ><span style="color:#a72727">*</span> Número de Telemóvel</label
+              ><span style="color:#a72727">*</span> Número de Contacto</label
             >
             <input
               type="tel"
@@ -210,13 +203,13 @@ import { Icon } from "astro-icon/components";
               >Preencher o campo.</span
             >
             <span class="customAlert" id="phoneSpaceAlert">
-              Por favor, remova os espaços no número de telemóvel.
+              Por favor, remova os espaços no número de Contacto.
             </span>
             <span class="customAlert" id="phoneStringAlert">
-              O número de telemóvel não deve conter caracteres não numéricos.
+              O campo só deve conter números.
             </span>
             <span class="customAlert" id="phoneNumMinAlert">
-              O número de telemóvel deve ter pelo menos 9 dígitos.
+              O campo só deve ter pelo menos 9 dígitos.
             </span>
           </p>
           <p class="block">
