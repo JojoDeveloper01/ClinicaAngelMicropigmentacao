@@ -196,8 +196,16 @@ import { Icon } from "astro-icon/components";
           </tr>
           <tr>
             <th class="w-24">Localidade</th>
-            <td id="location">Póvoa de Santa Iría</td>
-            <td><Icon name="map" size={20} /></td>
+            <td id="location">
+              <a
+                href="https://maps.app.goo.gl/DACLVze9sKgT2sRu8"
+                class="inline-flex gap-4 text-[#0045be]"
+                target="_blank"
+              >
+                Póvoa de Santa Iría
+                <Icon name="map" size={20} />
+              </a>
+            </td>
           </tr>
           <tr>
             <th class="w-24">Data:</th>
@@ -217,8 +225,3 @@ import { Icon } from "astro-icon/components";
 </div>
 
 <script src="./form.ts"></script>
-<!-- <script>
-  document.addEventListener("astro:page-load", () => {
-
-  });
-</script> -->
