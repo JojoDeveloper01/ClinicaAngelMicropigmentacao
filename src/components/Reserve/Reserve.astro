@@ -32,8 +32,25 @@ import { Icon } from "astro-icon/components";
     transition: opacity 0.4s ease;
   }
 
+  .payOnSiteContainer .resend {
+    font-size: smaller;
+    font-weight: bolder;
+    width: 6rem;
+    background-color: #dfdfdf;
+    color: #767676;
+  }
+
+  .payNowContainer button {
+    background: #d6d6d6;
+    color: #000;
+    font-weight: bold;
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
+
   .mt-8 {
-    margin-top: 3rem !important;
+    margin-top: 2rem !important;
   }
 
   .py-2 {
@@ -81,23 +98,24 @@ import { Icon } from "astro-icon/components";
   }
 
   form button {
-    background: #4b4b4b;
-    color: var(--White);
     border: 0;
     text-transform: uppercase;
     padding: 1em;
   }
 
-  form button:hover,
-  #payNow:hover {
+  form button:hover {
     background-color: var(--White);
     color: #4b4b4b;
-    transition: background-color 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition: background-color 0.3s ease-in-out;
     outline: 0;
   }
 
   #payNow {
-    background: #000;
+    background: #f5f5f5;
+    color: #000;
+    &:hover {
+      background-color: #ebebeb;
+    }
   }
 
   @media only screen and (min-width: 0) and (max-width: 600px) {
@@ -113,7 +131,7 @@ import { Icon } from "astro-icon/components";
 >
   <dialog
     id="reserva-dialog"
-    class="block w-[30rem] m-auto p-4 max-[600px]:w-[90vw] max-[400px]:w-screen"
+    class="hidden w-[30rem] m-auto p-4 max-[600px]:w-[90vw] max-[400px]:w-screen"
   >
     <div class="text-center py-4">
       <span class="closeModal bold top-4 right-4 absolute cursor-pointer"
@@ -141,7 +159,7 @@ import { Icon } from "astro-icon/components";
           ><span style="color:#a72727">*</span> Número de Contacto</label
         >
         <input
-          type="tel"
+          type="number"
           name="contact"
           id="contact"
           autocomplete="tel"
@@ -175,7 +193,7 @@ import { Icon } from "astro-icon/components";
 
   <dialog
     id="pay-dialog"
-    class="hidden block w-[27rem] m-auto p-4 max-[600px]:w-[90vw] max-[400px]:w-screen"
+    class="block w-[27rem] m-auto p-4 max-[600px]:w-[90vw] max-[400px]:w-screen"
   >
     <div class="text-center py-4">
       <span class="closeModal bold top-4 right-4 absolute cursor-pointer"
@@ -213,15 +231,107 @@ import { Icon } from "astro-icon/components";
           </tr>
         </tbody>
       </table>
-      <p style="margin-top: 2rem; padding:0" class="maxSpace">
+      <p style="padding:0" class="maxSpace">
         Valor a Pagar: <strong>280€</strong>
       </p>
+
+      <hr class="maxSpace w-3/4 opacity-20 mx-auto my-8 border-solid" />
+
+      <div class="payNowContainer maxSpace mb-8 hidden">
+        <div class="mb-4">
+          <div class="mb-1">Informação de pagamento</div>
+          <small
+            >Coloque suas informações de pagamento para realizar a reserva</small
+          >
+        </div>
+        <div class="maxSpace grid gap-2">
+          <input
+            type="number"
+            placeholder="1234 1234 1234 1234"
+            title="Coloque aqui o IBAN"
+            class="maxSpace bg-[#4b4b4b08]"
+          />
+          <div class="flex gap-8">
+            <input
+              type="number"
+              placeholder="MM/YY"
+              title="Coloque aqui a Data de validade"
+            />
+            <input type="number" placeholder="CVC" title="Coloque aqui o CVC" />
+          </div>
+        </div>
+        <div class="maxSpace my-4">
+          <input
+            type="text"
+            placeholder="Nome no Cartão"
+            title="Coloque o nome no cartão aqui"
+          />
+        </div>
+        <button class="maxSpace w-1/2 mt-4">pagar</button>
+      </div>
+      <div class="payOnSiteContainer maxSpace mt-4 mb-12 hidden">
+        <div class="mb-2">
+          <div class="mb-1">Verificar Código SMS</div>
+          <small
+            >Mandamos um código SMS para verificar o seu número de contacto</small
+          >
+        </div>
+        <div class="flex">
+          <input
+            type="number"
+            placeholder="Coloque o código SMS aqui"
+            title="Coloque o código SMS aqui"
+            class="bg-[#4b4b4b08]"
+          />
+          <span class="customAlert" id="phoneStringAlert">
+            Verificação feita com sucesso
+          </span>
+          <span class="customAlert" id="phoneStringAlert">
+            O campo só deve conter números
+          </span>
+          <span class="customAlert" id="phoneNumMinAlert">
+            O campo deve ser preenchido
+          </span>
+          <button class="resend">Reenviar</button>
+        </div>
+      </div>
       <div class="maxSpace flex gap-2 mt-4 *:font-black">
-        <button id="payNow">Pagar Agora</button>
-        <button>Pagar no local</button>
+        <button type="button" id="payNow">Pagar Agora</button>
+        <button type="button" id="payOnsite" class="payOnsiteButton"
+          >Pagar no local</button
+        >
       </div>
     </form>
   </dialog>
 </div>
 
 <script src="./form.ts"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const payNowButton = document.getElementById("payNow");
+    const payOnsiteButton = document.getElementById("payOnsite");
+    const payNowContainer = document.querySelector(".payNowContainer");
+    const payOnSiteContainer = document.querySelector(".payOnSiteContainer");
+
+    payNowButton?.addEventListener("click", () => {
+      const isPayNowHidden = payNowContainer?.classList.contains("hidden");
+      if (isPayNowHidden) {
+        payNowContainer?.classList.remove("hidden");
+        payOnSiteContainer?.classList.add("hidden");
+      } else {
+        payNowContainer?.classList.add("hidden");
+      }
+    });
+
+    payOnsiteButton?.addEventListener("click", () => {
+      const isPayOnSiteHidden =
+        payOnSiteContainer?.classList.contains("hidden");
+      if (isPayOnSiteHidden) {
+        payOnSiteContainer?.classList.remove("hidden");
+        payNowContainer?.classList.add("hidden");
+      } else {
+        payOnSiteContainer?.classList.add("hidden");
+      }
+    });
+  });
+</script>

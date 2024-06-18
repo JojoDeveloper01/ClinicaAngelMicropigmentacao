@@ -132,8 +132,7 @@
     overflow: hidden;
   }
 
-  button,
-  input {
+  button {
     cursor: pointer;
   }
 
