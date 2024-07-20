@@ -11,9 +11,6 @@ function gtag(
     ad_user_data: string;
     ad_personalization: string;
     analytics_storage: string;
-    functionality_storage: string;
-    personalization_storage: string;
-    security_storage: string;
   },
 ) {
   window.dataLayer.push(arguments);
@@ -42,9 +39,6 @@ document.addEventListener("astro:page-load", () => {
       'ad_user_data': 'granted',
       'ad_personalization': 'granted',
       'analytics_storage': 'granted',
-      'functionality_storage': 'granted',
-      'personalization_storage': 'granted',
-      'security_storage': 'granted',
     });
   }
 
@@ -64,9 +58,6 @@ document.addEventListener("astro:page-load", () => {
         'ad_user_data': 'granted',
         'ad_personalization': 'granted',
         'analytics_storage': 'granted',
-        'functionality_storage': 'granted',
-        'personalization_storage': 'granted',
-        'security_storage': 'granted',
       });
     } else {
       localStorage.setItem('cookies-rejected', 'true');
@@ -77,9 +68,6 @@ document.addEventListener("astro:page-load", () => {
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
         'analytics_storage': 'denied',
-        'functionality_storage': 'denied',
-        'personalization_storage': 'denied',
-        'security_storage': 'denied',
       });
     }
   }
