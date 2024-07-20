@@ -1,7 +1,9 @@
 <style>
   .notice-Cookies {
+    display: none;
     width: calc(100% - 2.5rem);
     box-shadow: 0 3px 20px 0 rgb(169 167 167 / 25%);
+    z-index: 7;
   }
 
   .notice-Cookies.active {
@@ -14,10 +16,25 @@
     margin-bottom: 1rem;
     text-wrap: wrap;
   }
+
+  .bgCookie {
+    display: none;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 6;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+
+  .bgCookie.active {
+    display: block;
+  }
 </style>
 
 <section
-  class="notice-Cookies hidden fixed left-[5%] bottom-[3%] text-center pt-8 p-5 max-w-[307px] rounded-[5px] bg-white z-10"
+  class="notice-Cookies fixed left-[5%] bottom-[3%] text-center pt-8 p-5 max-w-[307px] rounded-[5px] bg-white z-10"
   id="notice-Cookies"
 >
   <h3>Cookies</h3>
@@ -25,12 +42,17 @@
     Utilizamos cookies próprios e de terceiros para melhorar nossos serviços.
   </p>
   <button
-    class="w-full font-[bold] bg-black hover:bg-gray-500 text-white transition-[0.3s] duration-[ease] px-5 py-[15px]"
-    id="btn-accept-cookies">Aceitar</button
+    class="w-full bg-[#fc97ff] text-[#00000094] font-bold hover:font-thin hover:bg-[#facbfb] hover:text-black border-black border-[1px] border-solid transition-[0.3s] duration-[ease] px-5 py-[15px]"
+    id="btn-accept-cookies">Aceitar Tudo</button
+  >
+  <button
+    class="w-full border-black border-[1px] border-solid px-5 py-[15px]"
+    id="btn-reject-cookies">Rejeitar</button
   >
   <a href="/politica-de-privacidade" class="text-[#0080c8] hover:underline">
     Aviso de Cookies</a
   >
 </section>
+<div class="bgCookie" id="bgCookie"></div>
 
 <script src="./cookie"></script>
