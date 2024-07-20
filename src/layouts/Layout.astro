@@ -50,29 +50,6 @@ const { title, description, keywords, canonical } = Astro.props;
     <!-- Google Tag Manager -->
    <script>
       document.addEventListener("astro:page-load", () => {
-
-        window.dataLayer = window.dataLayer || [];
-        
-        function gtag(
-          p0: string,
-          p1: string,
-          p2: {
-            ad_storage: string;
-            ad_user_data: string;
-            ad_personalization: string;
-            analytics_storage: string;
-          },
-        ) {
-          window.dataLayer.push(arguments);
-        }
-
-        gtag("consent", "default", {
-          ad_storage: "denied",
-          ad_user_data: "denied",
-          ad_personalization: "denied",
-          analytics_storage: "denied",
-        });
-
         (function (w: any, d: any, s: any, l: string, i: any) {
           w[l] = w[l] || [];
           w[l].push({
