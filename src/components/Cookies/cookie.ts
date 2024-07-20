@@ -1,6 +1,13 @@
 interface Window {
   dataLayer: any[];
+  gtag?: (...args: any[]) => void;
 }
+
+// Certifique-se de definir a função gtag globalmente
+window.gtag = function() {
+  window.dataLayer.push(arguments);
+};
+
 
 document.addEventListener("astro:page-load", () => {
   const $ = document.getElementById.bind(document);
@@ -19,6 +26,12 @@ document.addEventListener("astro:page-load", () => {
     }
   } else if (localStorage.getItem('cookies-accepted')) {
     window.dataLayer.push({ 'event': 'cookies-accepted' });
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted',
+    });
   }
 
   function handleCookieAcceptance(isAccepted: boolean) {
@@ -32,10 +45,22 @@ document.addEventListener("astro:page-load", () => {
       localStorage.setItem('cookies-accepted', 'true');
       localStorage.removeItem('cookies-rejected');
       window.dataLayer.push({ 'event': 'cookies-accepted' });
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted',
+      });
     } else {
       localStorage.setItem('cookies-rejected', 'true');
       localStorage.removeItem('cookies-accepted');
       window.dataLayer.push({ 'event': 'cookies-rejected' });
+      gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+      });
     }
   }
 
