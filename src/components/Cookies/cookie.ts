@@ -1,12 +1,20 @@
 interface Window {
   dataLayer: any[];
-  gtag?: (...args: any[]) => void;
 }
 
 // Certifique-se de definir a função gtag globalmente
-window.gtag = function() {
+function gtag(
+  p0: string,
+  p1: string,
+  p2: {
+    ad_storage: string;
+    ad_user_data: string;
+    ad_personalization: string;
+    analytics_storage: string;
+  },
+) {
   window.dataLayer.push(arguments);
-};
+}
 
 
 document.addEventListener("astro:page-load", () => {
