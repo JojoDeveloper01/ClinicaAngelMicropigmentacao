@@ -25,12 +25,7 @@ document.addEventListener("astro:page-load", () => {
   const noticeCookies = $('notice-Cookies');
   const bgCookie = $('bgCookie');
 
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied'
-  });
+  window.dataLayer = window.dataLayer || [];
 
   if (!localStorage.getItem('cookies-rejected') && !localStorage.getItem('cookies-accepted')) {
     if (noticeCookies && bgCookie) {
@@ -39,11 +34,12 @@ document.addEventListener("astro:page-load", () => {
       bgCookie.classList.add('active');
     }
   } else if (localStorage.getItem('cookies-accepted')) {
+    window.dataLayer.push({ 'event': 'cookies-accepted' });
     gtag('consent', 'update', {
       'ad_storage': 'granted',
       'ad_user_data': 'granted',
       'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
+      'analytics_storage': 'granted',
     });
   }
 
@@ -57,20 +53,22 @@ document.addEventListener("astro:page-load", () => {
     if (isAccepted) {
       localStorage.setItem('cookies-accepted', 'true');
       localStorage.removeItem('cookies-rejected');
+      window.dataLayer.push({ 'event': 'cookies-accepted' });
       gtag('consent', 'update', {
         'ad_storage': 'granted',
         'ad_user_data': 'granted',
         'ad_personalization': 'granted',
-        'analytics_storage': 'granted'
+        'analytics_storage': 'granted',
       });
     } else {
       localStorage.setItem('cookies-rejected', 'true');
       localStorage.removeItem('cookies-accepted');
+      window.dataLayer.push({ 'event': 'cookies-rejected' });
       gtag('consent', 'update', {
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+        'analytics_storage': 'denied',
       });
     }
   }
