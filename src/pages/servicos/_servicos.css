@@ -183,8 +183,8 @@ img.positionObjetHero3 {
 .ask img {
   width: 100%;
   object-fit: cover;
-  object-position: top;
-  height: auto;
+  object-position: center;
+  height: 19rem;
 }
 
 .ask div {
@@ -772,7 +772,7 @@ img.positionObjetHero3 {
   .ask img {
     align-self: stretch;
     object-fit: cover;
-    width: 27rem;
+    width: 43rem;
   }
 
   .incentive p {
