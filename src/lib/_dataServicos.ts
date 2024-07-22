@@ -253,7 +253,8 @@ const InfoServicos = [
     description: "Procedimento inovador que consiste na aplicação de pigmentos na pele do couro cabeludo para criar a ilusão de cabelo mais denso e cobrir áreas com falta de cabelo. Esta técnica tiliza pigmentos especialmente formulados para se assemelhar à cor e textura do cabelo natural, resultando em um visual mais completo e uniforme. É uma solução eficaz para disfarçar a calvície e criar uma aparência mais jovem e confiante.",
     keywords: "tatuagem capilar",
     hero: {
-      img: "https://res.cloudinary.com/thing/image/upload/v1705631999/assets/image/servicos/micro-capilar.avif",
+      img: "https://res.cloudinary.com/thing/image/upload/v1721647350/assets/image/servicos/oldman_capilar2_lbxyq4.avif",
+      //img: "https://res.cloudinary.com/thing/image/upload/v1705631999/assets/image/servicos/micro-capilar.avif",
       //img: "https://res.cloudinary.com/thing/image/upload/v1715634088/assets/image/servicos/carballoImagem_nlsafs.avif",
       description: "Transforme sua confiança sem cirurgia, com uma técnica simples e eficaz.",
       benefits: [
