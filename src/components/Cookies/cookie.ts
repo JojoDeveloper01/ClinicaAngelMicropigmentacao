@@ -3,7 +3,6 @@ interface Window {
 
 }
 
-// Certifique-se de definir a função gtag globalmente
 function gtag(
   p0: string,
   p1: string,
@@ -27,19 +26,17 @@ document.addEventListener("astro:page-load", () => {
 
   window.dataLayer = window.dataLayer || [];
 
-  if (!localStorage.getItem('cookies-rejected') && !localStorage.getItem('cookies-accepted')) {
+  if (localStorage.getItem('cookies-accepted') === null) {
     if (noticeCookies && bgCookie) {
       document.body.classList.add("no-scroll");
       noticeCookies.classList.add('active');
       bgCookie.classList.add('active');
     }
-  } else if (localStorage.getItem('cookies-accepted')) {
-    window.dataLayer.push({ 'event': 'cookies-accepted' });
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted',
+  } else {
+    const cookiesAccepted = localStorage.getItem('cookies-accepted') === 'true';
+    window.dataLayer.push({
+      'event': cookiesAccepted ? 'cookies-accepted' : 'cookies-rejected',
+      'CookieConsent': cookiesAccepted ? 'advertisement=yes analytics=yes' : 'advertisement=no analytics=no'
     });
   }
 
@@ -50,27 +47,11 @@ document.addEventListener("astro:page-load", () => {
       document.body.classList.remove("no-scroll");
     }
 
-    if (isAccepted) {
-      localStorage.setItem('cookies-accepted', 'true');
-      localStorage.removeItem('cookies-rejected');
-      window.dataLayer.push({ 'event': 'cookies-accepted' });
-      gtag('consent', 'update', {
-        'ad_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted',
-        'analytics_storage': 'granted',
-      });
-    } else {
-      localStorage.setItem('cookies-rejected', 'true');
-      localStorage.removeItem('cookies-accepted');
-      window.dataLayer.push({ 'event': 'cookies-rejected' });
-      gtag('consent', 'update', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied',
-      });
-    }
+    localStorage.setItem('cookies-accepted', isAccepted.toString());
+    window.dataLayer.push({
+      'event': isAccepted ? 'cookies-accepted' : 'cookies-rejected',
+      'CookieConsent': isAccepted ? 'advertisement=yes analytics=yes' : 'advertisement=no analytics=no'
+    });
   }
 
   if (btnAcceptCookies) {
