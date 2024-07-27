@@ -267,8 +267,8 @@ const InfoServicos = [
       new_Price: "290"
     },
     exhibitionVideo: {
-      1: "https://res.cloudinary.com/thing/video/upload/v1712166117/assets/videos/capilarVideo1_zs9jrt.mp4",
-      2: "https://res.cloudinary.com/thing/video/upload/v1712166117/assets/videos/capilarVideo2_nzh3ti.mp4"
+     // 1: "https://res.cloudinary.com/thing/video/upload/v1712166117/assets/videos/capilarVideo1_zs9jrt.mp4",
+      //2: "https://res.cloudinary.com/thing/video/upload/v1712166117/assets/videos/capilarVideo2_nzh3ti.mp4"
       //1: "https://res.cloudinary.com/thing/image/upload/v1715632226/assets/image/servicos/capilarHomem2Carballo_u0hi6r.avif",
       //2: "https://res.cloudinary.com/thing/video/upload/v1715633495/assets/image/servicos/carballoVideoPromociona_kxy7ro.mp4"
     },
