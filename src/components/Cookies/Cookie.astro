@@ -4,6 +4,9 @@
     width: calc(100% - 2.5rem);
     box-shadow: 0 3px 20px 0 rgb(169 167 167 / 25%);
     z-index: 7;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 94dvh;
 
     h3 {
       font-weight: bold;
@@ -64,6 +67,7 @@
 
   .aside-Consents {
     display: grid;
+    width: 100%;
     background-color: #f1f1f1;
 
     p {
@@ -88,9 +92,8 @@
 >
   <h4 class="bold">O que são cookies?</h4>
   <p>
-    Cookies são pequenos fragmentos de texto que os sites que visitas guardam no
-    teu navegador para lembrar certas informações da tua visita e personalizar a
-    tua navegação.
+    Pequenos textos que os sites guardam no teu navegador para lembrar
+    informações da sua visita e personalizar a navegação.
   </p>
   <h4 class="bold mt-4">Para que as usamos?</h4>
   <div class="text-start mt-2">
@@ -108,17 +111,19 @@
     Podes aceitar as cookies para uma experiência ótima no site, rejeitar todas,
     ou configurar quais tipos de cookies desejas permitir ou rejeitar.
   </p>
-  <div class="flex max-[500px]:flex-wrap max-[500px]:p-2 max-[500px]:gap-0 gap-4 mt-8">
+  <div
+    class="flex max-[500px]:flex-wrap max-[500px]:p-2 max-[500px]:gap-0 gap-4 mt-8"
+  >
     <button
-      class="w-full bg-[#fc97ff] text-[#00000094] font-bold hover:font-thin hover:bg-[#facbfb] hover:text-black border-black border-[1px] border-solid transition-[0.3s] duration-[ease] px-5 py-[15px]"
+      class="w-full bg-[#fc97ff] text-[#00000094] font-bold hover:font-thin hover:bg-[#facbfb] hover:text-black border-black border-[1px] border-solid transition-[0.3s] duration-[ease] px-5 py-[15px] max-[500px]:p-2"
       id="btn-accept-cookies">Aceitar Todas</button
     >
     <button
-      class="w-full border-black border-[1px] border-solid px-5 py-[15px] hover:bg-[#e7e7e7]"
+      class="w-full border-black border-[1px] border-solid px-5 py-[15px] hover:bg-[#e7e7e7] max-[500px]:p-2"
       id="btn-manage-cookies">Opções</button
     >
     <button
-      class="w-full border-black border-[1px] border-solid px-5 py-[15px] hover:bg-[#e7e7e7]"
+      class="w-full border-black border-[1px] border-solid px-5 py-[15px] hover:bg-[#e7e7e7] max-[500px]:p-2"
       id="btn-reject-cookies">Rejeitar</button
     >
   </div>
@@ -127,11 +132,11 @@
 <div id="manage-Cookies" style="display: none;">
   <h4
     style="padding-bottom: .8rem; border-bottom: #9f9f9f 1px solid;"
-    class="text-start text-lg ml-4"
+    class="bold text-start text-lg ml-4"
   >
     Gerenciar Consentimento de Cookies
   </h4>
-  <div class="flex gap-4 ml-4 mb-4 h-72">
+  <div class="flex gap-4 ml-4 mb-4 max-[716px]:flex-wrap max-[716px]:gap-0 max-[716px]:ml-0">
     <div
       class="my-4 fle
     flex-direction: column;
@@ -143,9 +148,9 @@
         <p class="text-base">
           As cookies são fragmentos de texto armazenados no seu navegador quando
           visita websites, guardando informações sobre a sua visita. <br /> Pode
-          consultar as cookies que usamos, consentir ou rejeitar todas (exceto as
-          técnicas) e personalizar o seu consentimento. Para mais informações, visite
-          a nossa seção "Política de cookies".
+          consultar as cookies que usamos, consentir ou rejeitar todas e personalizar
+          o seu consentimento. Para mais informações, visite a nossa seção "Política
+          e privacidade".
         </p>
       </div>
 
@@ -178,23 +183,25 @@
         </p>
       </div>
     </div>
-    <aside class="aside-Consents">
+    <aside class="aside-Consents max-[716px]:*:p-2">
       <p data-target="definition">Definição</p>
       <p data-target="behavioral">Comportamentais</p>
       <p data-target="analytics">Analíticas</p>
     </aside>
   </div>
-  <div class="flex max-w-[500px]:flex-wrap gap-8">
+  <div
+    class="flex gap-8 max-[716px]:flex-wrap max-[716px]:gap-0"
+  >
     <button
-      class="w-full bg-[#fc97ff] text-[#00000094] font-bold hover:font-thin hover:bg-[#facbfb] hover:text-black border-black border-[1px] border-solid transition-[0.3s] duration-[ease] px-5 py-[15px]"
+      class="w-full bg-[#fc97ff] text-[#00000094] font-bold hover:font-thin hover:bg-[#facbfb] hover:text-black border-black border-[1px] border-solid transition-[0.3s] duration-[ease] px-5 py-[15px] max-[716px]:p-2"
       id="btn-accept-cookies1">Aceitar Todas</button
     >
     <button
-      class="w-full border-black border-[1px] border-solid hover:bg-[#e7e7e7] px-5 py-[15px]"
+      class="w-full border-black border-[1px] border-solid hover:bg-[#e7e7e7] px-5 py-[15px] max-[716px]:p-2"
       id="btn-accept-selected-cookies">Aceitar Escolhidas</button
     >
     <button
-      class="w-full border-black border-[1px] border-solid hover:bg-[#e7e7e7] px-5 py-[15px]"
+      class="w-full border-black border-[1px] border-solid hover:bg-[#e7e7e7] px-5 py-[15px] max-[716px]:p-2"
       id="btn-reject-cookies1">Rejeitar Todas</button
     >
   </div>
