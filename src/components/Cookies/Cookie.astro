@@ -4,6 +4,16 @@
     width: calc(100% - 2.5rem);
     box-shadow: 0 3px 20px 0 rgb(169 167 167 / 25%);
     z-index: 7;
+
+    h3 {
+      font-weight: bold;
+      font-size: large;
+      text-align: left;
+    }
+  }
+
+  .max-43 {
+    max-width: 43rem;
   }
 
   .notice-Cookies.active {
@@ -13,7 +23,7 @@
   h3,
   p,
   button {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-wrap: wrap;
   }
 
@@ -31,28 +41,182 @@
   .bgCookie.active {
     display: block;
   }
+
+  .option {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 79%;
+
+    div {
+      width: 1rem;
+    }
+
+    input {
+      margin-right: 19rem;
+      width: 1rem;
+    }
+  }
+
+  #definition {
+    display: block;
+  }
+
+  .aside-Consents {
+    display: grid;
+    background-color: #f1f1f1;
+
+    p {
+      display: grid;
+      align-items: center;
+      height: 100%;
+      margin: 0;
+      padding-inline: 1rem;
+      cursor: pointer;
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    p:hover {
+      background-color: #dfdfdf;
+    }
+  }
 </style>
 
 <section
-  class="notice-Cookies fixed left-[5%] bottom-[3%] text-center pt-8 p-5 max-w-[307px] rounded-[5px] bg-white z-10"
+  class="notice-Cookies fixed left-[5%] bottom-[3%] text-base pt-8 p-5 max-w-[43rem] rounded-[5px] bg-white z-10"
   id="notice-Cookies"
 >
-  <h3>Cookies</h3>
+  <h4 class="bold">O que são cookies?</h4>
   <p>
-    Utilizamos cookies próprios e de terceiros para melhorar nossos serviços.
+    Cookies são pequenos fragmentos de texto que os sites que visitas guardam no
+    teu navegador para lembrar certas informações da tua visita e personalizar a
+    tua navegação.
   </p>
-  <button
-    class="w-full bg-[#fc97ff] text-[#00000094] font-bold hover:font-thin hover:bg-[#facbfb] hover:text-black border-black border-[1px] border-solid transition-[0.3s] duration-[ease] px-5 py-[15px]"
-    id="btn-accept-cookies">Aceitar Tudo</button
-  >
-  <button
-    class="w-full border-black border-[1px] border-solid px-5 py-[15px]"
-    id="btn-reject-cookies">Rejeitar</button
-  >
-  <a href="/politica-de-privacidade" class="text-[#0080c8] hover:underline">
-    Aviso de Cookies</a
-  >
+  <h4 class="bold mt-4">Para que as usamos?</h4>
+  <div class="text-start mt-2">
+    <p>
+      <b class="text-[#313131e8]">Técnicas:</b> Para que o site funcione corretamente.
+    </p>
+    <p>
+      <b class="text-[#313131e8]">Analíticas:</b> Para fins de análise estatística
+      do tráfego.
+    </p>
+    <p>
+      <b class="text-[#313131e8]">Comportamentais:</b> Para mostrar anúncios personalizados
+      em vez de genéricos, caso haja campanhas de publicidade.
+    </p>
+  </div>
+  <h4 class="bold mt-4">O que podes fazer?</h4>
+  <p>
+    Podes aceitar as cookies para uma experiência ótima no site, rejeitar todas,
+    ou configurar quais tipos de cookies desejas permitir ou rejeitar.
+  </p>
+  <div class="flex gap-4 mt-8">
+    <button
+      class="w-full bg-[#fc97ff] text-[#00000094] font-bold hover:font-thin hover:bg-[#facbfb] hover:text-black border-black border-[1px] border-solid transition-[0.3s] duration-[ease] px-5 py-[15px]"
+      id="btn-accept-cookies">Aceitar Todas</button
+    >
+    <button
+      class="w-full border-black border-[1px] border-solid px-5 py-[15px] hover:bg-[#e7e7e7]"
+      id="btn-manage-cookies">Opções</button
+    >
+    <button
+      class="w-full border-black border-[1px] border-solid px-5 py-[15px] hover:bg-[#e7e7e7]"
+      id="btn-reject-cookies">Rejeitar</button
+    >
+  </div>
 </section>
+
+<div id="manage-Cookies" style="display: none;">
+  <h4
+    style="padding-bottom: .8rem; border-bottom: #9f9f9f 1px solid;"
+    class="text-start text-lg ml-4"
+  >
+    Gerenciar Consentimento de Cookies
+  </h4>
+  <div class="flex gap-4 ml-4 mb-4 h-72">
+    <div
+      class="my-4 fle
+    flex-direction: column;
+    justify-content: space-between;
+    height: 79%;"
+    >
+      <div class="option my-4 text-start" id="definition">
+        <h4 class="mb-4 bold">Definição</h4>
+        <p class="text-base">
+          As cookies são fragmentos de texto armazenados no seu navegador quando
+          visita websites, guardando informações sobre a sua visita. <br /> Pode
+          consultar as cookies que usamos, consentir ou rejeitar todas (exceto as
+          técnicas) e personalizar o seu consentimento. Para mais informações, visite
+          a nossa seção "Política de cookies".
+        </p>
+      </div>
+
+      <div id="behavioral" class="option grid my-4 text-start gap-4">
+        <div class="flex justify-between gap-4">
+          <h4 class="bold">Comportamentais</h4>
+          <input id="cookies-behavioral" type="checkbox" />
+        </div>
+        <p class="text-base">
+          Também chamadas de publicitárias, estas cookies ajudam-nos a verificar
+          se as campanhas publicitárias estão bem direcionadas e a personalizar
+          a publicidade que vê noutros sites. Mostram anúncios mais relevantes
+          com base no conteúdo que visitou, em vez de anúncios aleatórios. Podem
+          ser fornecidas pelos nossos parceiros publicitários (Google, Meta,
+          etc.). Pode apagar estas cookies do seu navegador quando quiser.
+        </p>
+      </div>
+
+      <div id="analytics" class="option grid my-4 text-start gap-4">
+        <div class="flex justify-between gap-4">
+          <h4 class="bold">Analíticas</h4>
+          <input id="cookies-analytics" type="checkbox" />
+        </div>
+        <p class="text-base">
+          Estas cookies registam dados da sua visita, como a origem, fonte,
+          páginas visitadas e secções de interesse, para fins estatísticos e de
+          análise. Ajudam-nos a melhorar o negócio, compreendendo a sua
+          proveniência e comportamento na web, com ferramentas como o Google
+          Analytics.
+        </p>
+      </div>
+
+      <div id="personalization" class="option grid my-4 text-start gap-4">
+        <div class="flex justify-between gap-4">
+          <h4 class="bold">Personalização</h4>
+          <input id="cookies-personalization" type="checkbox" />
+        </div>
+        <p class="text-base">
+          Este tipo de cookies serve para guardar informações relativas a certas
+          personalizações do utilizador nos sites que visita, como as
+          preferências de idioma. Neste site, não usamos este tipo de cookies,
+          por isso não oferecemos a opção de as configurar.
+        </p>
+      </div>
+    </div>
+    <aside class="aside-Consents">
+      <p data-target="definition">Definição</p>
+      <p data-target="behavioral">Comportamentais</p>
+      <p data-target="analytics">Analíticas</p>
+      <p data-target="personalization">Personalização</p>
+    </aside>
+  </div>
+  <div class="flex gap-8">
+    <button
+      class="w-full bg-[#fc97ff] text-[#00000094] font-bold hover:font-thin hover:bg-[#facbfb] hover:text-black border-black border-[1px] border-solid transition-[0.3s] duration-[ease] px-5 py-[15px]"
+      id="btn-accept-cookies1">Aceitar Todas</button
+    >
+    <button
+      class="w-full border-black border-[1px] border-solid hover:bg-[#e7e7e7] px-5 py-[15px]"
+      id="btn-accept-selected-cookies">Aceitar Escolhidas</button
+    >
+    <button
+      class="w-full border-black border-[1px] border-solid hover:bg-[#e7e7e7] px-5 py-[15px]"
+      id="btn-reject-cookies1">Rejeitar Todas</button
+    >
+  </div>
+</div>
+
 <div class="bgCookie" id="bgCookie"></div>
 
 <script src="./cookie"></script>
