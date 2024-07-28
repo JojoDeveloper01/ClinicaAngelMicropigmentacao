@@ -60,7 +60,7 @@ document.addEventListener("astro:page-load", () => {
     const consentDetails = JSON.parse(consentDetailsString);
     window.dataLayer.push({
       event: consentDetails.accepted ? 'cookies-accepted' : 'cookies-rejected',
-      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics}`
+      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics} personalization=${consentDetails.personalization}`
     });
   } else {
     if (noticeCookies && bgCookie) {
@@ -71,19 +71,29 @@ document.addEventListener("astro:page-load", () => {
   }
 
   function handleCookieAcceptance(acceptAll: boolean) {
+    const isBehavioralAccepted = acceptAll || ($('cookies-behavioral') as HTMLInputElement)?.checked || false;
+    const isAnalyticsAccepted = acceptAll || ($('cookies-analytics') as HTMLInputElement)?.checked || false;
+    const isPersonalizationAccepted = acceptAll || ($('cookies-personalization') as HTMLInputElement)?.checked || false;
+
+    const isAccepted = isBehavioralAccepted || isAnalyticsAccepted || isPersonalizationAccepted;
+
     const consentDetails = {
-      accepted: acceptAll,
-      advertisement: acceptAll || ($('cookies-behavioral') as HTMLInputElement)?.checked ? 'yes' : 'no',
-      analytics: acceptAll || ($('cookies-analytics') as HTMLInputElement)?.checked ? 'yes' : 'no',
+      accepted: isAccepted,
+      advertisement: isBehavioralAccepted ? 'yes' : 'no',
+      analytics: isAnalyticsAccepted ? 'yes' : 'no',
+      personalization: isPersonalizationAccepted ? 'yes' : 'no'
     };
 
+    // Armazenar informações detalhadas sob a chave 'cookies-accepted'
     localStorage.setItem('cookies-accepted', JSON.stringify(consentDetails));
 
+    // Empurrar informações detalhadas para o dataLayer
     window.dataLayer.push({
-      event: consentDetails.accepted ? 'cookies-accepted' : 'cookies-rejected',
-      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics}}`
+      event: isAccepted ? 'cookies-accepted' : 'cookies-rejected',
+      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics} personalization=${consentDetails.personalization}`
     });
 
+    // Atualizar a interface
     if (noticeCookies && bgCookie) {
       noticeCookies.classList.remove('active');
       bgCookie.classList.remove('active');
