@@ -8,7 +8,6 @@ function gtag(
   p2: {
     ad_storage: string;
     ad_user_data: string;
-    ad_personalization: string;
     analytics_storage: string;
   },
 ) {
@@ -56,50 +55,49 @@ document.addEventListener("astro:page-load", () => {
 
   window.dataLayer = window.dataLayer || []
 
-const consentDetailsString = localStorage.getItem('cookies-accepted');
-if (consentDetailsString) {
-  const consentDetails = JSON.parse(consentDetailsString);
-  window.dataLayer.push({
-    event: consentDetails.accepted ? 'cookies-accepted' : 'cookies-rejected',
-    CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics} personalization=${consentDetails.personalization}`
-  });
-} else {
-  if (noticeCookies && bgCookie) {
-    document.body.classList.add("no-scroll");
-    noticeCookies.classList.add('active');
-    bgCookie.classList.add('active');
+  const consentDetailsString = localStorage.getItem('cookies-accepted');
+  if (consentDetailsString) {
+    const consentDetails = JSON.parse(consentDetailsString);
+    window.dataLayer.push({
+      event: consentDetails.accepted ? 'cookies-accepted' : 'cookies-rejected',
+      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics}`
+    });
+  } else {
+    if (noticeCookies && bgCookie) {
+      document.body.classList.add("no-scroll");
+      noticeCookies.classList.add('active');
+      bgCookie.classList.add('active');
+    }
   }
-}
 
-function handleCookieAcceptance(acceptAll: boolean) {
-  const consentDetails = {
-    accepted: acceptAll,
-    advertisement: acceptAll || ($('cookies-behavioral') as HTMLInputElement)?.checked ? 'yes' : 'no',
-    analytics: acceptAll || ($('cookies-analytics') as HTMLInputElement)?.checked ? 'yes' : 'no',
-    personalization: acceptAll || ($('cookies-personalization') as HTMLInputElement)?.checked ? 'yes' : 'no'
-  };
+  function handleCookieAcceptance(acceptAll: boolean) {
+    const consentDetails = {
+      accepted: acceptAll,
+      advertisement: acceptAll || ($('cookies-behavioral') as HTMLInputElement)?.checked ? 'yes' : 'no',
+      analytics: acceptAll || ($('cookies-analytics') as HTMLInputElement)?.checked ? 'yes' : 'no',
+    };
 
-  localStorage.setItem('cookies-accepted', JSON.stringify(consentDetails));
+    localStorage.setItem('cookies-accepted', JSON.stringify(consentDetails));
 
-  window.dataLayer.push({
-    event: consentDetails.accepted ? 'cookies-accepted' : 'cookies-rejected',
-    CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics} personalization=${consentDetails.personalization}`
+    window.dataLayer.push({
+      event: consentDetails.accepted ? 'cookies-accepted' : 'cookies-rejected',
+      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics}}`
+    });
+
+    if (noticeCookies && bgCookie) {
+      noticeCookies.classList.remove('active');
+      bgCookie.classList.remove('active');
+      document.body.classList.remove("no-scroll");
+    }
+  }
+
+  [btnAcceptCookies, btnAcceptCookies1].forEach(button => {
+    button?.addEventListener('click', () => handleCookieAcceptance(true));
   });
 
-  if (noticeCookies && bgCookie) {
-    noticeCookies.classList.remove('active');
-    bgCookie.classList.remove('active');
-    document.body.classList.remove("no-scroll");
-  }
-}
+  [btnRejectCookies, btnRejectCookies1].forEach(button => {
+    button?.addEventListener('click', () => handleCookieAcceptance(false));
+  });
 
-[btnAcceptCookies, btnAcceptCookies1].forEach(button => {
-  button?.addEventListener('click', () => handleCookieAcceptance(true));
-});
-
-[btnRejectCookies, btnRejectCookies1].forEach(button => {
-  button?.addEventListener('click', () => handleCookieAcceptance(false));
-});
-
-btnChooseCookies?.addEventListener('click', () => handleCookieAcceptance(false));
+  btnChooseCookies?.addEventListener('click', () => handleCookieAcceptance(false));
 })
