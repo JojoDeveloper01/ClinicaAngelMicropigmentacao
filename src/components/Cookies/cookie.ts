@@ -50,8 +50,8 @@ document.addEventListener("astro:page-load", () => {
         });
         ($(targetId) as HTMLElement).style.display = "flex";
       }
-    });
-  });
+    })
+  })
 
   window.dataLayer = window.dataLayer || []
 
@@ -60,8 +60,8 @@ document.addEventListener("astro:page-load", () => {
     const consentDetails = JSON.parse(consentDetailsString);
     window.dataLayer.push({
       event: consentDetails.accepted ? 'cookies-accepted' : 'cookies-rejected',
-      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics} personalization=${consentDetails.personalization}`
-    });
+      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics}`
+    })
   } else {
     if (noticeCookies && bgCookie) {
       document.body.classList.add("no-scroll");
@@ -73,16 +73,14 @@ document.addEventListener("astro:page-load", () => {
   function handleCookieAcceptance(acceptAll: boolean) {
     const isBehavioralAccepted = acceptAll || ($('cookies-behavioral') as HTMLInputElement)?.checked || false;
     const isAnalyticsAccepted = acceptAll || ($('cookies-analytics') as HTMLInputElement)?.checked || false;
-    const isPersonalizationAccepted = acceptAll || ($('cookies-personalization') as HTMLInputElement)?.checked || false;
 
-    const isAccepted = isBehavioralAccepted || isAnalyticsAccepted || isPersonalizationAccepted;
+    const isAccepted = isBehavioralAccepted || isAnalyticsAccepted;
 
     const consentDetails = {
       accepted: isAccepted,
       advertisement: isBehavioralAccepted ? 'yes' : 'no',
       analytics: isAnalyticsAccepted ? 'yes' : 'no',
-      personalization: isPersonalizationAccepted ? 'yes' : 'no'
-    };
+    }
 
     // Armazenar informações detalhadas sob a chave 'cookies-accepted'
     localStorage.setItem('cookies-accepted', JSON.stringify(consentDetails));
@@ -90,8 +88,8 @@ document.addEventListener("astro:page-load", () => {
     // Empurrar informações detalhadas para o dataLayer
     window.dataLayer.push({
       event: isAccepted ? 'cookies-accepted' : 'cookies-rejected',
-      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics} personalization=${consentDetails.personalization}`
-    });
+      CookieConsent: `advertisement=${consentDetails.advertisement} analytics=${consentDetails.analytics}`
+    })
 
     // Atualizar a interface
     if (noticeCookies && bgCookie) {
