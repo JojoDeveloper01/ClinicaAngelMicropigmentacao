@@ -109,8 +109,8 @@ export function getStaticPaths() {
         >
       </button>
       {
-        currentPage.id === 4 ? null : (
-          <divc class="precoHero">
+        (
+          <div class="precoHero">
             <p>
               Preço antigo:
               <span>{currentPage.hero.old_Price} €</span>
@@ -119,7 +119,7 @@ export function getStaticPaths() {
               Preço Atual:
               <span class="bold">{currentPage.hero.new_Price} €</span>
             </p>
-          </divc>
+          </div>
         )
       }
     </div>
