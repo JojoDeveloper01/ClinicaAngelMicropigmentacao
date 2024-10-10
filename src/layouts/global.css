@@ -1,0 +1,304 @@
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&family=Montserrat&family=Philosopher&display=swap");
+
+  :root {
+    --Pink: #ef83f3;
+    --White: #f4f4f4;
+    --DifferentBlack: #494949;
+    --VariableColor: #;
+    --headerHeight: 100px;
+  }
+
+  * {
+    font-family: "Montserrat", sans-serif;
+    border: 0;
+    margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  html body {
+    /*  background-color: var(--White); */
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  h1,
+  h2 {
+    position: relative;
+    color: black;
+    font-weight: bolder;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+
+    margin: 0;
+  }
+
+  h1 {
+    font-size: xxx-large;
+  }
+
+  h2 {
+    font-size: xx-large;
+  }
+
+  h3 {
+    font-size: x-large;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  p {
+    text-align: left;
+    line-height: 1.7em;
+    text-wrap: pretty;
+  }
+
+  main {
+    margin-top: var(--headerHeight);
+  }
+
+  main .body {
+    padding-top: 50px;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: var(--headerHeight);
+  }
+
+  .body h1,
+  .body h2,
+  .body h3,
+  .body h4,
+  .body h5 {
+    text-align: left;
+    font-weight: bold;
+    margin: 50px 0;
+  }
+
+  .body p {
+    font-size: x-large;
+    margin: 10px 0;
+  }
+
+  .body a {
+    color: #3366cc;
+  }
+
+  .body a:hover {
+    text-decoration: underline;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul a:hover {
+    color: var(--Pink);
+  }
+
+  video {
+    object-fit: cover;
+  }
+
+  .bold {
+    font-weight: bold;
+    background-color: var(--VariableColor);
+    padding: 4px;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  .marcar-perguntar {
+    margin: 8vh 0;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  .card {
+    margin: 0 7px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.178);
+  }
+
+  .card {
+    margin: 0 7px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.178);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(0, 0, 0, 0.175);
+  }
+
+  .card img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    padding: 1rem;
+  }
+
+  .card-body h3 {
+    font-size: larger;
+    margin: 10px 0;
+  }
+
+  .marcar-perguntar {
+    margin: 8vh 0;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  .fq-vermais,
+  .ativar {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+
+  .activeToogle {
+    max-height: 86rem;
+    opacity: 1;
+  }
+
+  span.customAlert {
+    display: none;
+    font-size: 0.9em;
+    color: #a72727;
+    font-weight: 400;
+  }
+
+  #pfq1 {
+    font-size: 18px;
+    font-weight: bolder;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    margin-left: 13px;
+    transform: rotate(90deg);
+  }
+
+  .open #pfq1 {
+    transform: rotate(270deg);
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    main {
+      --headerHeight: 70px;
+    }
+
+    .card img {
+      height: 250px;
+    }
+
+    .body {
+      margin-left: 10%;
+      margin-right: 5%;
+    }
+
+    .card-group {
+      display: block;
+    }
+
+    .card {
+      margin: 15px 0;
+    }
+  }
+
+  @media only screen and (max-width: 317px) {
+    .body {
+      margin-left: 7%;
+      margin-right: 5%;
+    }
+  }
+
+  @media only screen and (max-width: 432px) {
+    body h1 {
+      font-size: 11vw;
+      line-height: 5vh;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .card img {
+      position: inherit;
+      height: 30vh;
+    }
+
+    .body {
+      margin-left: 10%;
+      margin-right: 5%;
+    }
+
+  }
+
+  @media only screen and (min-width: 992px) {
+    main {
+      --headerHeight: 111px;
+    }
+
+    .card {
+      width: 30vw;
+    }
+
+    .card img {
+      height: 35vh;
+    }
+
+    .body {
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .card {
+      width: 20vw;
+    }
+
+    .card img {
+      height: 30vh;
+    }
+  }

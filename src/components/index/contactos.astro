@@ -1,0 +1,245 @@
+---
+import ImgData from "@lib/media";
+
+const local = [
+  {
+    areeiro: {
+      name: "Areeiro",
+      aria: "Mapa do local Areeiro",
+      href: "https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6",
+      src: "localVilaLisboa",
+      address: "Avenida João XXI 49B, Areeiro",
+    },
+    povoa: {
+      name: "Povóa",
+      aria: "Mapa do local Povoa",
+      href: "https://goo.gl/maps/7LJNApWVJKzsMmUH8",
+      src: "localPovoa",
+      address: "Rua José Nogueira Vaz 16, Póvoa de Santa Iria",
+    },
+  },
+];
+---
+
+<style>
+  .locais {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 9rem 0;
+  }
+
+  .separar-titu {
+    display: flex;
+  }
+
+  .locais h2 {
+    opacity: 0.7;
+    z-index: 1;
+  }
+
+  .locais h2 a {
+    color: #000;
+  }
+
+  .locais h2 a:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .position-local {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: 60px 0 0 0;
+  }
+
+  .localCtro {
+    width: 22rem;
+    height: 39rem;
+    margin: 16px;
+  }
+
+  .img-Local {
+    display: block;
+    height: 50%;
+  }
+
+  .box-p {
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+    padding: 0 30px;
+  }
+
+  .box-p a {
+    color: rgb(37, 56, 109);
+  }
+
+  .box-p a:hover {
+    color: rgb(0, 0, 0);
+  }
+
+  .box-p > :first-child {
+    opacity: 0.9;
+  }
+
+  .box-p > :last-child {
+    font-size: smaller;
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    .locais h3 {
+      transform: rotate(90deg);
+    }
+
+    .separar-titu {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .localCtro {
+      width: 22rem;
+      height: 39rem;
+    }
+
+    .localCtro {
+      width: 91vw;
+      margin: 16px 0;
+    }
+
+    .localCtro img {
+      object-position: top;
+    }
+  }
+
+  @media only screen and (max-width: 317px) {
+    .localCtro .box-p {
+      padding: 0 12px;
+      font-size: 85%;
+    }
+
+    div.box-p > :last-child {
+      font-size: 72%;
+    }
+  }
+
+  @media only screen and (min-width: 318px) and (max-width: 454px) {
+    .localCtro .box-p {
+      padding: 0 12px;
+      font-size: 85%;
+    }
+
+    article.localCtro {
+      width: 91vw;
+      margin: 16px 0;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .separar-titu {
+      justify-content: center;
+      align-items: center;
+    }
+    .locais h3 {
+      margin: 0 1.5vw;
+    }
+
+    article.localCtro {
+      width: 28rem;
+      height: 41rem;
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    article.localCtro {
+      width: 27rem;
+      height: 42rem;
+      margin: 0 16px;
+    }
+
+    .localCtro div.box-p > :last-child {
+      font-size: inherit;
+    }
+  }
+</style>
+
+<section id="contactos" class="locais">
+  <div class="separar-titu">
+    <h2>
+      <a
+        aria-label="Local Areeiro"
+        href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
+        target="_blank">AREEIRO</a
+      >
+    </h2>
+    <h3>|</h3>
+    <h2>
+      <a
+        aria-label="Local Póvoa"
+        href="https://goo.gl/maps/7LJNApWVJKzsMmUH8"
+        target="_blank">PÓVOA</a
+      >
+    </h2>
+  </div>
+
+  <div class="position-local">
+    {
+      local.map((item) =>
+        Object.values(item).map((location) => (
+          <article class="localCtro">
+            <a
+              class="img-Local"
+              aria-label={location.name}
+              href={location.href}
+              target="_blank"
+            >
+              <ImgData
+                className="extra-class"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                src={location.src}
+              />
+            </a>
+            <div class="box-p">
+              <strong>
+                *Antes de visitar nossas instalações, entre em contato conosco
+              </strong>
+              <br />
+              <p>Morada:</p>
+              <a
+                aria-label={location.name}
+                href={location.href}
+                target="_blank"
+              >
+                {location.address}
+              </a>
+              <br />
+              <p>Telemóvel:</p>
+              <a
+                aria-label="Whatsapp Angel"
+                href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
+                target="_blank"
+              >
+                935 407 895
+              </a>
+              <br />
+              <p>E-mail:</p>
+              <a
+                aria-label="E-mail Angel"
+                href="mailto:angelbalcboniclinicamicropigme@gmail.com"
+                target="_blank"
+              >
+                angelbalcboniclinicamicropigme@gmail.com
+              </a>
+            </div>
+          </article>
+        ))
+      )
+    }
+  </div>
+</section>

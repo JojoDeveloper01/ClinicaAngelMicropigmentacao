@@ -1,0 +1,167 @@
+---
+import ImgData from "@lib/media";
+---
+
+<style>
+  .testemunhas {
+    background-color: var(--Pink);
+    position: relative;
+    padding: 50px 0;
+  }
+
+  .testemunhas h2 {
+    color: var(--White);
+    text-align: center;
+    margin: 5vh 0;
+  }
+
+  .testemunhas a:hover {
+    text-decoration: none;
+  }
+
+  .ctro-testbox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .box-test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+
+  .box-test a {
+    color: #4b4b4b;
+  }
+
+  .ctro-img-nome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ctro-img-nome img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .linha-test {
+    margin: 2rem 0;
+    border: 1px solid #000000;
+    opacity: 0.2;
+    width: 150px;
+  }
+
+  .ctro-test-p {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ctro-test-p p {
+    opacity: 0.8;
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    .box-test {
+      margin: 4vh 3vw;
+    }
+  }
+
+  @media only screen and (max-width: 317px) {
+    .box-test {
+      margin-bottom: 10vh;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .box-test {
+      margin: 4vh 3vw;
+    }
+  }
+</style>
+
+<section id="testemunhas" class="testemunhas">
+  <h2>TESTEMUNHAS</h2>
+
+  <div class="ctro-testbox">
+    <div class="box-test">
+      <a
+        aria-label="Ver comentário da testemunha Soraia"
+        href="https://goo.gl/maps/TeFJimsdnqERmXu47"
+        target="_blank"
+        class="ctro-img-nome *:h-[60px] *:w-[60px] *:object-cover *:mr-5 *:rounded-full"
+      >
+        <ImgData
+          src="cliente1"
+          className="h-[60px] w-[60px] object-cover mr-5 rounded-full"
+        />
+        <strong>Soraia Araujo<br />⭐⭐⭐⭐⭐</strong>
+      </a>
+      <hr class="linha-test" />
+      <div class="ctro-test-p">
+        <p>
+          <b>Recomendo a todos os clientes interessados!</b><br /><br />
+          "Já tive o privilégio de ser atendida pela Angel duas vezes e recomendo
+          a todos os clientes interessados em tratamentos.<br /><br /> Além de muito
+          simpática, é uma profissional excelente. Parabéns 🩷🙏👏"
+        </p>
+      </div>
+    </div>
+    <div class="box-test">
+      <a
+        aria-label="Ver comentário da testemunha Lia"
+        href="https://goo.gl/maps/ggPsTNNPZAiW8avq8"
+        target="_blank"
+        class="ctro-img-nome"
+      >
+        <ImgData
+          src="cliente2"
+          className="h-[60px] w-[60px] object-cover mr-5 rounded-full"
+        />
+        <strong>Lia Mercado<br />⭐⭐⭐⭐⭐</strong>
+      </a>
+      <hr class="linha-test" />
+      <div class="ctro-test-p">
+        <p>
+          <b>Recomendo-a a 100%, vão adorar!</b><br /><br />
+          "Angel, uma profissional excelente e maravilhosa. Graças a ela, agora tenho
+          pestanas e estou totalmente satisfeita. Recomendo-a a 100%! É excepcional...
+          Deu vida ao meu rosto com as pestanas, e sinto-me feliz e satisfeita. As
+          suas mãos são maravilhosas na micropigmentação de lábios, sobrancelhas
+          e delineado de olhos. Recomendo-a a 100%! Vão adorar!"
+        </p>
+      </div>
+    </div>
+    <div class="box-test">
+      <a
+        aria-label="Ver comentário da testemunha Liliana"
+        href="https://goo.gl/maps/BvkGtjoKuqNhbyyK9"
+        target="_blank"
+        class="ctro-img-nome"
+      >
+        <ImgData
+          src="cliente3"
+          className="h-[60px] w-[60px] object-cover mr-5 rounded-full"
+        />
+        <strong>Liliana Monteiro<br />⭐⭐⭐⭐⭐</strong>
+      </a>
+      <hr class="linha-test" />
+      <div class="ctro-test-p">
+        <p>
+          <b>A Angel é brilhante e muito querida!</b><br /><br />
+          "Um trabalho excelente e um atendimento também de 5 estrelas. Adorei. Aconselho
+          a marcarem uma sessão.
+          <br /><br />
+          Eu fiz Micropigmentação das sobrancelhas e ficou perfeito e muito natural,
+          todos me elogiaram."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

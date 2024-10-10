@@ -1,0 +1,85 @@
+---
+import ImgData from "@lib/media";
+---
+
+<style>
+  .nossoTeam {
+    position: relative;
+    padding: 5vh 0 13vh 0;
+    width: 100vw;
+  }
+
+  .nossoTeam h2 {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 60px;
+  }
+
+  .dimension-total {
+    background-color: #4b4b4b00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .dimension-total .caption p {
+    margin-bottom: 1rem;
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    .nossoTeam h2 {
+      font-size: larger;
+    }
+
+    .dimension-total .caption {
+      margin: 0 10vw;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .dimension-total .caption {
+      margin: 0 10vw;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .dimension-total .caption {
+      width: 40vw;
+      margin: 0 34.7px;
+    }
+  }
+  @media only screen and (min-width: 1500px) {
+    .dimension-total .caption {
+      width: 26vw;
+    }
+  }
+</style>
+
+<section id="sobre-nos" class="nossoTeam">
+  <h2>ESPECIALISTA EM MICROPIGMENTAÇÃO</h2>
+  <div class="dimension-total">
+    <ImgData
+      src="profissionalAngel_bxwwyd"
+      className="relative object-cover min-[768px]:w-[23rem] min-[768px]:h-[30rem] min-[768px]:ml-[23px] max-[767px]:w-[60vw] max-[767px]:h-[22rem] max-[767px]:mb-[34px]"
+      id="imgTeam"
+      data-animation="fade"
+    />
+    <div class="caption">
+      <p>
+        Sou a <b>Angel</b>, da Colômbia, e há 9 anos escolhi Portugal como a
+        minha casa. Sou casada e mãe de 3 rapazes. Inicialmente, formei-me em
+        Técnico em Enfermagem em 2010, mas em 2014 decidi seguir a área da
+        micropigmentação e apaixonei-me pela profissão. Investi em diversos
+        cursos, incluindo com profissionais conceituados, como o curso com o Dr.
+        James Olaya, renomado micropigmentador realista, e com Andrea
+        Casagrande.
+        <br /><br />
+        Descobri que a minha verdadeira paixão é realçar a beleza natural das pessoas
+        com maquilhagem semipermanente. Espero poder ajudar-te a sentires-te mais
+        confiante e bonito(a) com os meus procedimentos de micropigmentação. Vem
+        conhecer o meu trabalho em breve!
+      </p>
+    </div>
+  </div>
+</section>

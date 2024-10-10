@@ -1,0 +1,246 @@
+---
+import Form from "@components/Form/form.astro";
+import ToBook from "@components/ToBook.astro";
+import Layout from "@layouts/Layout.astro";
+import ToJSON from "@lib/ToJSON";
+import dataServicos from "@lib/_dataServicos";
+import { Icon } from "astro-icon/components";
+import styles from "./_heroColor.module.css";
+import "./_servicos.css";
+
+export const prerender = true;
+const { InfoServicos } = dataServicos;
+const path: string = Astro.params?.servico || "micropigmentacao-sobrancelhas";
+
+const currentPage = InfoServicos.find((servico) => servico.path === path)!;
+
+export function getStaticPaths() {
+  return [
+    { params: { servico: "micropigmentacao-sobrancelhas" } },
+    { params: { servico: "micropigmentacao-labial" } },
+    { params: { servico: "micropigmentacao-olhos" } },
+    { params: { servico: "micropigmentacao-capilar" } },
+    /*     { params: { servico: "micropigmentacao-areola" } },
+    { params: { servico: "remocao-tatuagem" } }, */
+  ];
+}
+---
+
+<Layout
+  title={currentPage.title}
+  description=`Serviço de ${currentPage.title}, informações das técnicas mais conhecidas de micropigmentação.`
+  canonical=`https://clinicamicropigmentacao.com/servicos/${path}`
+  keywords=`Serviços Clínica Angel Micropigmentação, ${currentPage.title} preço, ${currentPage.title}, ${currentPage.keywords}`
+>
+  <section class="hero-sobrancelhas">
+    <img
+      class={currentPage.id === 2
+        ? "positionObjetHero2"
+        : currentPage.id === 3
+          ? "positionObjetHero3"
+          : ""}
+      src={currentPage.hero.img}
+      alt={currentPage.title}
+    />
+    <div
+      class={`shadowyHero ${
+        currentPage.id === 1
+          ? styles.heroColor1
+          : currentPage.id === 2
+            ? styles.heroColor2
+            : currentPage.id === 3
+              ? styles.heroColor3
+              : currentPage.id === 4
+                ? styles.heroColor4
+                : currentPage.id === 5
+                  ? styles.heroColor5
+                  : currentPage.id === 6
+                    ? styles.heroColor6
+                    : ""
+      }`}
+    >
+      <div class="ctroShadowlyHero">
+        <div class="shadowyTextBody">
+          <h1>
+            {currentPage.title}
+          </h1>
+          <p>
+            {currentPage.hero.description}
+          </p>
+        </div>
+        <div class="benefits">
+          <ol>
+            <li>✔</li>
+            <li>✔</li>
+            <li>✔</li>
+            <li>✔</li>
+          </ol>
+          <ol class="benefitsWords">
+            {
+              currentPage.hero.benefits?.map((item: any) => (
+                <ToJSON tag="li" className="convincing" add={item} />
+              ))
+            }
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div
+      class={`reservarHero ${
+        currentPage.id === 1
+          ? styles.heroColor11
+          : currentPage.id === 2
+            ? styles.heroColor22
+            : currentPage.id === 3
+              ? styles.heroColor33
+              : currentPage.id === 4
+                ? styles.heroColor44
+                : currentPage.id === 5
+                  ? styles.heroColor55
+                  : currentPage.id === 6
+                    ? styles.heroColor66
+                    : ""
+      }`}
+    >
+      <button
+        ><a
+          href="https://zappysoftware.com/m/clinicamicropigmentacao"
+          target="_blank">Reserve com desconto</a
+        >
+      </button>
+      {
+        (
+          <div class="precoHero">
+            <p>
+              Preço antigo:
+              <span>{currentPage.hero.old_Price} €</span>
+            </p>
+            <p>
+              Preço Atual:
+              <span class="bold">{currentPage.hero.new_Price} €</span>
+            </p>
+          </div>
+        )
+      }
+    </div>
+  </section>
+
+  {
+ /*    currentPage.id === 4 ? (
+      <section class="grid place-content-center w-full mt-[24vh] mb-32">
+        <video playsinline controls>
+          <source src={currentPage.exhibitionVideo[2]} type="video/mp4" />
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+      </section>
+    ) : */ (
+      <section
+        class={`flex w-full mt-[24vh] mb-32 *:object-[0_19%] *:object-cover *:w-1/2 *:h-[27rem] max-[767px]:mt-[10vh] max-[992px]:flex-col max-[992px]:*:w-full max-[430px]:*:h-1/2 ${currentPage.id !== 1 ? "positionObjectVideo23" : ""}`}
+      >
+        {Object.values(currentPage.exhibitionVideo).map((item) =>
+          item.endsWith(".mp4") || item.endsWith(".webp") ? (
+            <video autoplay loop muted playsinline>
+              <source src={item} type="video/mp4" />
+              Seu navegador não suporta a tag de vídeo.
+            </video>
+          ) : (
+            <img src={item} alt="Imagem" />
+          )
+        )}
+      </section>
+    )
+  }
+
+  <section class="askSection">
+    {
+      Object.values(currentPage.knowledge).map((item: any) => (
+        <article class="ask">
+          <img src={item.img} alt={item.title} />
+          <div>
+            <h2>{item.title}</h2>
+            <ToJSON tag="p" add={item.p} />
+          </div>
+        </article>
+      ))
+    }
+  </section>
+
+  <section class="incentive">
+    <article>
+      <h2>Identifica-se com isto?</h2>
+      {
+        Object.values(currentPage.incentive.questions).map(
+          (item: any, index: number) => (
+            <p>
+              <Icon
+                name={
+                  index === 0
+                    ? "clock"
+                    : index === 1
+                      ? "work"
+                      : index === 2
+                        ? "seeding"
+                        : "star"
+                }
+                class="size-12 mr-5"
+              />
+              {item.p}
+            </p>
+          )
+        )
+      }
+    </article>
+  </section>
+
+  <section class="incentive">
+    <article>
+      <h2>
+        Se respondeu 'sim' a alguma destas perguntas, tenho excelentes notícias
+        para si!
+      </h2>
+      <ToJSON add={currentPage.incentive.textExtra} tag="p" />
+    </article>
+  </section>
+
+  <section class="incentive">
+    <article class="card-group">
+      <h2>{currentPage.clientReviews.title}</h2>
+      {
+        Object.values(currentPage.clientReviews.customers).map((item: any) => (
+          <div class="card w-[28rem]">
+            {item.midia &&
+              (item.midia.endsWith(".mp4" || ".webp") ? (
+                <video
+                  class={`${currentPage.id === 3 ? "costumerVideo3" : ""}`}
+                  playsinline
+                  controls
+                >
+                  <source src={item.midia} type="video/mp4" />
+                  Seu navegador não suporta a tag de vídeo.
+                </video>
+              ) : (
+                ""
+              ))}
+            <div class="card-body cb-body">
+              <h3 class="card-title">
+                {item.link ? (
+                  <a href={item.link} target="_blank">
+                    {item.name}
+                  </a>
+                ) : (
+                  item.name
+                )}
+              </h3>
+              <h3 class="card-title">⭐⭐⭐⭐⭐</h3>
+              <p>{item.review}</p>
+            </div>
+          </div>
+        ))
+      }
+    </article>
+  </section>
+
+  <ToBook />
+  <h2 style="margin-bottom: 0;" class="marcar-perguntar">ou</h2>
+  <Form />
+</Layout>

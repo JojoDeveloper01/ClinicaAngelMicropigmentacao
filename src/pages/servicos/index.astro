@@ -1,0 +1,52 @@
+---
+import Card from "@components/Card/CardServicos.astro";
+import Layout from "@layouts/Layout.astro";
+import dataServicos from "@lib/_dataServicos";
+
+const { InfoServicos } = dataServicos;
+---
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(292px, 100%), 1fr));
+    gap: 6vh;
+  }
+
+  @media only screen and (min-width: 1500px) {
+    section {
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(min(292px, 100%), 0.29fr));
+    }
+  }
+</style>
+
+<Layout
+  title="Servicos"
+  description="Explore técnicas como microblading, micropigmentação de olhos, labial, capilar, aréola"
+  keywords="clínica micropigmentação lisboa, angel micropigmentação, microblanding, micropigmentação, micropigmentação preço, micropigmentação de sobrancelhas, micropigmentação labial, micropigmentação capilar, micropigmentação facial, micropigmentação de olhos, micropigmentação para cicatrizes, remoção de micropigmentação, camuflagem de estrias, remoção de pigmento, remoção de tatuagens, remoção de manchas"
+  canonical="https://clinicamicropigmentacao.com/servicos"
+>
+  <h1 class="text-center mt-48 mb-36">Serviços</h1>
+
+  <section class="m-[6vw] max-[705px]:m-[10vw] max-[400px]:mx-0">
+    {
+      InfoServicos.map((item) => {
+        if (!item || !item.id) {
+          return null;
+        } else {
+          return (
+            <Card
+              key={item.id}
+              title={item.title}
+              body={item.description}
+              src={item.hero.img}
+              alt={item.title}
+              href={`/servicos/${item.path}`}
+            />
+          );
+        }
+      })
+    }
+  </section>
+</Layout>

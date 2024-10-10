@@ -1,0 +1,64 @@
+.carousel_viewport {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
+  width: 100vw;
+}
+
+/*Isto tirar quando o servicos seja subtituido*/
+
+aside {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  position: inherit;
+}
+
+.prev,
+.next {
+  background: #000;
+  position: absolute;
+  opacity: 0.3;
+  border-radius: 20%;
+  padding: 2px;
+  z-index: 0;
+}
+
+.prev svg,
+.next svg {
+  color: #fff
+}
+
+.slide-img {
+  width: 50%;
+  height: 100%;
+}
+
+.prev {
+  left: 1%;
+}
+
+.next {
+  right: 1%;
+}
+
+.next:hover,
+.prev:hover {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.slides {
+  width: 100vw;
+  transition: 200ms opacity ease-in-out;
+}
+
+.ver-maisP,
+.ver-maisExtra {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0;
+}

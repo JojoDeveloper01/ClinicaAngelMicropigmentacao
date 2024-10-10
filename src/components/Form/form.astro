@@ -1,0 +1,306 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<style>
+  .formulario {
+    padding: 2vh 0 3vh 0;
+  }
+
+  .formulario a {
+    color: #4b4b4b;
+  }
+
+  .formulario a:hover {
+    color: #000000;
+  }
+
+  .form-box {
+    background-color: transparent;
+
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    padding-bottom: 100px;
+  }
+
+  .formulario h2 {
+    text-align: center;
+    color: var(--Pink);
+    margin: 60px 0;
+  }
+
+  .contact-wrapperF {
+    box-shadow: 0 0 20px 0 #a1a1a196;
+  }
+
+  .contact-wrapperF > * {
+    padding: 1em;
+  }
+
+  .contact-form {
+    background-color: var(--Pink);
+  }
+
+  .contact-form h3 {
+    color: #161616cb;
+    font-size: 25px;
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+  }
+
+  .contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-form form label {
+    display: block;
+  }
+
+  .contact-form form p {
+    margin: 0;
+    padding: 1em;
+  }
+
+  .contact-form form .block {
+    grid-column: 1 / 3;
+  }
+
+  .contact-form form button,
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 100%;
+    padding: 0.7em 0;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #4b4b4b;
+    border-bottom: 1px solid #4b4b4b;
+  }
+
+  .contact-form form textarea {
+    field-sizing: content;
+  }
+
+  .contact-form form button {
+    background: #4b4b4b;
+    color: var(--White);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+  }
+
+  .contact-form form button:hover {
+    background-color: var(--White);
+    color: #4b4b4b;
+    transition: background-color 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    outline: 0;
+  }
+
+  .contact-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .contact-info i {
+    margin-right: 10px;
+  }
+
+  .contact-info h4,
+  .contact-info ul,
+  .contact-info p {
+    text-align: left;
+    margin: 0 0 1rem 0;
+  }
+
+  [data-icon] {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .contact-list li:hover [data-icon] {
+    color: var(--Pink);
+  }
+
+  #mail-form {
+    font-size: smaller;
+    overflow-wrap: anywhere;
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    .contact-form form > :first-child,
+    .contact-form form > :nth-child(2) {
+      grid-column: 1/3;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .contact-wrapperF {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+
+    .contact-wrapperF > * {
+      padding: 2em;
+    }
+
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+      text-align: left;
+    }
+
+    .contact-form form > :first-child,
+    .contact-form form > :nth-child(2) {
+      grid-column: inherit;
+    }
+  }
+</style>
+
+<section class="formulario" id="reservar">
+  <div class="form-box">
+    <h2 style="color: #000;" class="marcar-perguntar">
+      Pergunte-nos a sua dúvida
+    </h2>
+    <div class="contact-wrapperF">
+      <div class="contact-form">
+        <form id="form-reserva" novalidate>
+          <p>
+            <label for="nome"><span style="color:#a72727">*</span> Nome</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              autocomplete="given-name"
+              class="cursor-text"
+            />
+            <span class="customAlert" id="nomeAlert">Preencher o campo.</span>
+            <span class="customAlert" id="nameStringAlert"
+              >O nome não deve conter números.</span
+            >
+          </p>
+          <p>
+            <label for="telemovel"
+              ><span style="color:#a72727">*</span> Número de Contacto</label
+            >
+            <input
+              type="tel"
+              name="telemovel"
+              id="telemovel"
+              autocomplete="tel"
+              class="cursor-text"
+            />
+            <span class="customAlert" id="telemovelAlert"
+              >Preencher o campo.</span
+            >
+            <span class="customAlert" id="phoneSpaceAlert">
+              Por favor, remova os espaços no número de Contacto.
+            </span>
+            <span class="customAlert" id="phoneStringAlert">
+              O campo só deve conter números.
+            </span>
+            <span class="customAlert" id="phoneNumMinAlert">
+              O campo só deve ter pelo menos 9 dígitos.
+            </span>
+          </p>
+          <p class="block">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              class="cursor-text"
+            />
+            <span class="customAlert" id="emailAlert"
+              >Preencher este campo ou telemovel.
+            </span>
+            <span class="customAlert" id="formatEmail">
+              Formato de email não aceite.</span
+            >
+          </p>
+          <p class="block">
+            <label for="mensagem"
+              ><span style="color:#a72727">*</span> Mensagem</label
+            >
+            <textarea name="mensagem" id="mensagem" rows="3"></textarea>
+            <span class="customAlert" id="mensagemAlert"
+              >Preencher o campo.</span
+            >
+          </p>
+          <p class="block">
+            <button aria-label="Enviar formulario" type="submit" class="">
+              Enviar
+            </button>
+            <span
+              class="customAlert"
+              id="successAlert"
+              style="color: rgb(0 131 75);">Mensagem enviada com sucesso!</span
+            >
+            <span class="customAlert" id="errorAlert"
+              >Sua mensagem não foi enviada. Tente novamente mais tarde.</span
+            >
+          </p>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h4>Contactos Adicionais</h4>
+        <ul class="contact-list flex flex-col gap-3">
+          <li class="flex gap-3">
+            <Icon name="location" />
+            <a
+              aria-label="Mapa local Póvoa"
+              href="https://goo.gl/maps/cYxcvHsE3dmLaPj46"
+              target="_blank"
+              >Póvoa de Santa Iria
+            </a>
+          </li>
+          <li class="flex gap-3">
+            <Icon name="location" />
+            <a
+              aria-label="Mapa local Areeiro"
+              href="https://maps.app.goo.gl/VUkSMQNkDc8G7wqD6"
+              target="_blank"
+              >Roma-Areeiro
+            </a>
+          </li>
+          <li class="flex gap-3">
+            <Icon name="phone" />
+            <a
+              aria-label="Whatsapp Angel"
+              href="https://wa.me/351935407895?text=Ola!%20Tenho%20uma%20duvida!"
+              target="_blank"
+              >(+351) 935 407 895
+            </a>
+          </li>
+          <li class="flex gap-3">
+            <Icon name="email" />
+            <a
+              aria-label="E-mail Angel"
+              id="mail-form"
+              href="mailto:angelbalcboniclinicamicropigme@gmail.com"
+              target="_blank"
+              >angelbalcboniclinicamicropigme@gmail.com
+            </a>
+          </li>
+        </ul>
+        <p>
+          Para qualquer dúvida, não hesite em enviar-nos uma mensagem através de
+          qualquer um destes contactos. Estamos aqui para esclarecer e oferecer
+          toda a assistência necessária. Contamos consigo!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="./form.js"></script>

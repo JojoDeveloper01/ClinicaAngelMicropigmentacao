@@ -1,0 +1,74 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Contactoss from "@components/index/contactos.astro";
+import Form from "@components/Form/form.astro";
+import dataServicos from "@lib/_dataServicos";
+import { Icon } from "astro-icon/components";
+import ToJSON from "@lib/ToJSON";
+import ImgData from "@lib/media";
+---
+
+<style>
+    #hero-contactos {
+        background-image: url(https://res.cloudinary.com/thing/image/upload/v1703948773/assets/image/servicos/maquilhagemFacial.avif);
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        height: 35dvh;
+        background-size: 129%;
+        background-position-y: 20%;
+        background-position-x: -46%;
+
+        #background-hero {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #8e54b3;
+            opacity: 0.8;
+            width: 100%;
+            height: 100%;
+            padding: 4rem;
+
+            * {
+                color: #fff;
+                font-size: xx-large;
+                text-transform: uppercase;
+                width: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        #background-hero {
+            padding: 2rem !important;
+
+            * {
+                font-size: 110% !important;
+                line-height: 4vh;
+            }
+        }
+    }
+
+    .sobrenos-video {
+        width: 100vw;
+        height: 100%;
+        opacity: 0.7;
+    }
+</style>
+
+<Layout
+    title="Contactos - Clínica Angel Micropigmentação"
+    description="Contactos da Clínica Angel Micropigmentação. Se tiver alguma dúvida, entre em contacto connosco."
+    keywords="Contactos, Micropigmentação, marcar consulta, reservar sessão, Clínica Angel"
+    canonical="https://clinicamicropigmentacao.com/contactos"
+>
+    <section id="hero-contactos">
+        <span id="background-hero">
+            <h1>Clínica micropigmentação<div>Lisboa/Póvoa</div></h1>
+            <h2>Contactos</h2>
+        </span>
+    </section>
+    <Contactoss />
+    <Form />
+</Layout>

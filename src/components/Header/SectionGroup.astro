@@ -1,0 +1,223 @@
+---
+import SocialMidia from "@components/SocialMidia.astro";
+import navData from "@lib/navData";
+import { Icon } from 'astro-icon/components'
+
+const { Sections, Servicos, Perguntas } = navData;
+---
+
+<style>
+  .sectionGroup {
+    animation: openPanel 0.4s ease-out both;
+  }
+
+  .openSideBar {
+    display: block;
+  }
+
+  @keyframes openPanel {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0%;
+    }
+  }
+
+  .nav-panel li a {
+    color: rgb(0, 0, 0);
+    margin-right: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-panel li span {
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 25px;
+    position: relative;
+    writing-mode: vertical-rl;
+    transition: transform 0.4s ease;
+  }
+
+  .open {
+    transform: rotate(180deg);
+  }
+
+  .toogle:checked + .dropdown {
+    display: flex;
+    max-height: max-content;
+  }
+
+  .dropdown {
+    display: none;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 3vh;
+    gap: 2rem;
+    max-height: 0;
+    overflow: hidden;
+
+    background-color: var(--White);
+    transition: max-height 0.4s ease;
+    transform-origin: top;
+  }
+
+  .dropdown li a {
+    text-transform: initial;
+    text-align: left;
+    opacity: 0.5;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .opensideBar:checked + .sideBar {
+      display: none;
+    }
+
+    .sectionGroup {
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      padding: 0;
+      width: 100%;
+      animation: unset;
+    }
+
+    .nav-panel li {
+      width: 8.5rem;
+      text-align: center;
+    }
+
+    .nav-panel li a {
+      text-align: center;
+      margin: 0;
+    }
+
+    .dropdown {
+      position: fixed;
+      gap: 0;
+      width: 19rem;
+      margin-top: 0;
+      padding: 33px 0 0;
+    }
+
+    .dropdown li {
+      width: 100%;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dropdown li a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 0 14px;
+    }
+
+    .toogle:checked + .dropdown {
+      display: none;
+    }
+
+    .servicos:hover .dropdown,
+    .perguntas:hover .dropdown,
+    .dropdown:hover {
+      display: flex;
+      max-height: max-content;
+    }
+
+    .servicos:hover .dropdown li:hover,
+    .perguntas:hover .dropdown li:hover,
+    .dropdown:hover li:hover {
+      background-color: #ef83f352;
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .dropdown {
+      padding: 46px 0 0;
+    }
+  }
+</style>
+
+<div
+  class="sectionGroup flex fixed h-full w-2/4 overflow-hidden flex-col items-center pt-[2em] top-0 bg-[color:var(--White)] z-[4] max-[734px]:w-[67%] max-[454px]:w-full"
+>
+  <button
+    type="button"
+    class="flex self-end mr-[9%] size-4 min-[992px]:hidden"
+    aria-label="Fechar painel de navegação"
+  >
+    <Icon name="close" size={32} class="relative translate-y-[-46%] block max-w-none"/>
+  </button>
+  <ul
+    class="nav-panel w-fit h-full justify-evenly overflow-hidden flex flex-col uppercase min-[1700px]:justify-start min-[1500px]:w-full min-[1500px]:justify-center min-[992px]:w-[29rem] min-[992px]:flex-row min-[992px]:flex-wrap min-[992px]:gap-y-2 max-[844px]:pl-[10%]"
+  >
+    {
+      Sections.map((item: any) => (
+        <li class={`${item.name === 'Serviços' ? 'servicos' : ''} ${
+        item.name === 'Perguntas' ? 'perguntas' : ''}`}>
+          <a
+            href={item.path}
+            aria-label={`Ir para ${item.name}`}
+            {...(item.name === 'Sobre Nós' ? {'data-astro-reload': ''} : {})}>  
+            {item.name}
+         </a>
+          {item.name === "Serviços" && (
+              <span class="arrow min-[992px]:hidden">></span>
+              <input
+                type="checkbox"
+                class="toogle absolute scale-x-[4] size-5 opacity-0 min-[992px]:hidden"
+              />
+              <ul class="dropdown min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250">
+                {Servicos.map((item:any) => (
+                  <li>
+                    <a
+                      aria-label={`Ir para ${item.name}`}
+                      href={item.path}
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+          )}
+          {item.name === "Perguntas" && (
+
+              <span class="arrow min-[992px]:hidden">></span>
+              <input
+                type="checkbox"
+                class="toogle scale-x-[4] absolute size-5 opacity-0 min-[992px]:hidden"
+              />
+              <ul class="min-[1700px]:-ml-[4%] min-[1500px]:-ml-[5%] dropdown min-[992px]:-ml-[8vh] animate-slide-in-top animate-duration-250">
+                {Perguntas.map((pergunta: any) => (
+                  <li>
+                    <a aria-label={pergunta.name} href={pergunta.path}>
+                      {pergunta.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+  <SocialMidia />
+</div>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+  document
+    .querySelectorAll<HTMLElement>(".nav-panel li")
+    .forEach((liSection: HTMLElement) => {
+      const arrowEffect = liSection.querySelector<HTMLElement>(".arrow");
+      liSection.addEventListener("click", () =>
+        arrowEffect?.classList.toggle("open")
+      );
+    });
+  })
+</script>

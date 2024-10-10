@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<style>
+  li {
+    list-style: none;
+    margin: 0 7px;
+  }
+  li:hover {
+    color: var(--Pink);
+  }
+</style>
+
+<ul class="flex justify-center py-[6%] min-[992px]:py-2">
+  <li>
+    <a
+      aria-label="Instagram"
+      href="https://www.instagram.com/aangelmicropigmentacao/"
+      target="_blank"
+    >
+      <Icon name="instagram" size={25} />
+    </a>
+  </li>
+  <li>
+    <a
+      aria-label="Facebook"
+      href="https://www.facebook.com/aangelmicropigmentacao"
+      target="_blank"
+    >
+      <Icon name="facebook" size={25} />
+    </a>
+  </li>
+  <li>
+    <a aria-label="TikTok" href="/" target="_blank">
+      <Icon name="tiktok" size={25} />
+    </a>
+  </li>
+  <li>
+    <a
+      aria-label="Youtube"
+      href="https://www.youtube.com/@angelmicropigmentacion4389"
+      target="_blank"
+    >
+      <Icon name="youtube" size={25} />
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,128 @@
+---
+import "./_home.css";
+import "./hero.css";
+import { Icon } from "astro-icon/components";
+import ImgData from "@lib/media";
+---
+
+<article class="slideHome relative" aria-label="Carousel" data-carousel>
+  <ol class="flex overflow-hidden w-screen h-1/2" data-slides>
+    <li tabindex="0" class="slides" data-active>
+      <div class="ctro-itemS">
+        <ImgData src="micro_sobran" className="slide-img simg1" />
+        <div class="fondo-distor" id="fd">
+          <div class="texto-carousel">
+            <h2>MICROPIGMENTAÇÃO SOBRANCELHAS</h2>
+            <p>
+              Um processo delicado que realça não apenas a aparência, mas também
+              a autoconfiança, deixando um rasto de beleza autêntica.
+            </p>
+
+            <a
+              aria-label="Marcar reserva"
+              href="https://zappysoftware.com/m/clinicamicropigmentacao"
+              target="_blank"
+            >
+              <button aria-label="Marcar reserva" class="border-slide">
+                <div class="reser-buttonS">MARCAR RESERVA</div>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li tabindex="1" class="slides">
+      <div class="ctro-itemS">
+        <ImgData src="micro_labial" className="slide-img simg1" />
+        <div class="fondo-distor" id="fd1">
+          <div class="texto-carousel">
+            <h2>MICROPIGMENTAÇÃO LABIAL</h2>
+            <p>
+              A simplicidade de lábios perfeitamente desenhados, adicionando um
+              toque de elegância à sua beleza natural.
+            </p>
+            <a
+              aria-label="Marcar reserva"
+              href="https://zappysoftware.com/m/clinicamicropigmentacao"
+              target="_blank"
+            >
+              <button aria-label="Marcar reserva" class="border-slide">
+                <div class="reser-buttonS">MARCAR RESERVA</div>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li tabindex="2" class="slides">
+      <div class="ctro-itemS">
+        <ImgData
+          src="oldman_capilar2_lbxyq4"
+          className="slide-img"
+        />
+        <div class="fondo-distor" id="fd2">
+          <div class="texto-carousel">  
+            <h2>Micropigmentação Capilar</h2>
+            <p>
+              Solução natural e indolor para disfarçar a calvície. Com duração
+              de 1 a 4 anos, proporciona uma aparência renovada e sem a
+              necessidade de cuidados diários.
+            </p>
+            <a
+              aria-label="Marcar reserva"
+              href="https://zappysoftware.com/m/clinicamicropigmentacao"
+              target="_blank"
+            >
+              <button aria-label="Marcar reserva" class="border-slide">
+                <div class="reser-buttonS">MARCAR RESERVA</div>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li tabindex="3" class="slides">
+      <div class="ctro-itemS">
+        <ImgData src="lifting_pestanas" className="slide-img simg3" />
+        <div class="fondo-distor" id="fd3">
+          <div class="texto-carousel">
+            <h2>LIFTING DE PESTANAS</h2>
+            <p>
+              Experimente a simplicidade de cílios incrivelmente levantados,
+              realçando a expressão dos seus olhos de maneira encantadora.
+            </p>
+            <a
+              aria-label="Marcar reserva"
+              href="https://zappysoftware.com/m/clinicamicropigmentacao"
+              target="_blank"
+            >
+              <button aria-label="Marcar reserva" class="border-slide">
+                <div class="reser-buttonS">MARCAR RESERVA</div>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ol>
+  <aside>
+    <button
+      aria-label="Seguinte slide"
+      class="prev"
+      type="button"
+      data-carousel-button="prev"
+    >
+      <Icon name="arrow-left" size={32} class="opacity-80" />
+    </button>
+    <button
+      aria-label="Anterior slide"
+      class="next"
+      type="button"
+      data-carousel-button="next"
+    >
+      <Icon name="arrow-right" size={32} class="opacity-80" />
+    </button>
+  </aside>
+</article>
+
+<script src="./slider.ts"></script>

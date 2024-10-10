@@ -1,0 +1,368 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<style>
+  input[type="date"] {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    border: 1px #4b4b4b solid;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  h3 {
+    color: #161616cb;
+    font-size: 25px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .openModal,
+  .openModal2 {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+
+  .payOnSiteContainer .send {
+    font-size: smaller;
+    font-weight: bolder;
+    width: 13rem;
+    background-color: #dfdfdf;
+    color: #767676;
+  }
+
+  .payOnSiteContainer button,
+  .payNowContainer button,
+  form button.confirmReser {
+    background: #d6d6d6;
+    color: #000;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
+
+  .mt-8 {
+    margin-top: 2rem !important;
+  }
+
+  .py-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .px-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  form label {
+    display: block;
+  }
+
+  form p {
+    margin: 0;
+    padding: 1em;
+  }
+
+  form .maxSpace {
+    grid-column: 1 / 3;
+  }
+
+  form button,
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 0.7em 0;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #4b4b4b;
+    border-bottom: 1px solid #4b4b4b;
+  }
+
+  form textarea {
+    field-sizing: content;
+  }
+
+  form button {
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+  }
+
+  form button:hover {
+    background-color: var(--White);
+    color: #4b4b4b;
+    transition: background-color 0.2s ease-in-out;
+    outline: 0;
+  }
+
+  #payNow {
+    background: #f5f5f5;
+    color: #000;
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 600px) {
+    form > :first-child,
+    form > :nth-child(2) {
+      grid-column: 1/3;
+    }
+  }
+</style>
+
+<div
+  class="modalBackground hidden fixed w-screen h-screen inset-0 opacity-0 bg-[#0000003d] z-[5]"
+>
+  <dialog
+    id="reserva-dialog"
+    class="block w-[30rem] m-auto p-4 max-[600px]:w-[90vw] max-[400px]:w-screen"
+  >
+    <div class="text-center py-4">
+      <span class="closeModal bold top-4 right-4 absolute cursor-pointer"
+        >X</span
+      >
+      <h2>Reservar</h2>
+    </div>
+    <form id="form-reserva">
+      <p class="maxSpace">
+        <label for="name"><span style="color:#a72727">*</span> Nome</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          autocomplete="given-name"
+          class="cursor-text"
+        />
+        <span class="customAlert" id="nameAlert">Preencher o campo.</span>
+        <span class="customAlert" id="nameStringAlert"
+          >O nome não deve conter números.</span
+        >
+      </p>
+      <p class="maxSpace">
+        <label for="contact"
+          ><span style="color:#a72727">*</span> Número de Contacto</label
+        >
+        <input
+          type="number"
+          name="contact"
+          id="contact"
+          autocomplete="tel"
+          class="cursor-text"
+        />
+        <span class="customAlert" id="contactAlert">Preencher o campo.</span>
+        <span class="customAlert" id="phoneSpaceAlert">
+          Por favor, remova os espaços no contacto.
+        </span>
+        <span class="customAlert" id="phoneStringAlert">
+          O campo só deve conter números
+        </span>
+        <span class="customAlert" id="phoneNumMinAlert">
+          O campo só deve ter pelo menos 9 dígitos.
+        </span>
+      </p>
+      <p class="maxSpace">
+        <label for="email"><span style="color:#a72727">*</span> Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          class="cursor-text"
+        />
+        <span class="customAlert" id="emailAlert">Preencher o campo. </span>
+        <span class="customAlert" id="formatEmail">
+          Formato de email não aceite.</span
+        >
+      </p>
+      <p class="maxSpace">
+        <label for="date">Data</label>
+        <input type="date" id="date" name="date" />
+        <span class="customAlert" id="dateAlert">Preencher o campo.</span>
+      </p>
+      <button
+        type="submit"
+        class="confirmReser maxSpace mt-4"
+        aria-label="Enviar formulario"
+      >
+        Confirmar
+      </button>
+    </form>
+  </dialog>
+
+  <dialog
+    id="pay-dialog"
+    class="block hidden w-[30rem] m-auto p-4 max-[600px]:w-[90vw] max-[400px]:w-screen"
+  >
+    <div class="text-center py-4">
+      <span class="closeModal bold top-4 right-4 absolute cursor-pointer"
+        >X</span
+      >
+      <h2>Reservar</h2>
+    </div>
+    <form class="p-4" id="form-pay-method">
+      <table class="maxSpace">
+        <tbody class="text-left *:py-2 *:flex *:gap-4">
+          <tr>
+            <th class="w-24">Nome:</th>
+            <td id="name"></td>
+          </tr>
+          <tr>
+            <th class="w-24">Contato:</th>
+            <td id="contact"></td>
+          </tr>
+          <tr>
+            <th class="w-24">Email:</th>
+            <td id="email"></td>
+          </tr>
+          <tr>
+            <th class="w-24">Localidade</th>
+            <td id="location">
+              <a
+                href="https://maps.app.goo.gl/DACLVze9sKgT2sRu8"
+                class="inline-flex gap-4 text-[#0045be]"
+                target="_blank"
+              >
+                Póvoa de Santa Iría
+                <Icon name="map" size={20} />
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th class="w-24">Data:</th>
+            <td id="date"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr class="maxSpace opacity-20 border-solid mt-8 mb-12" />
+
+      <div class="maxSpace grid gap-4 *:font-black">
+        <button type="button" id="payNow">
+          PAGAR 50€ AGORA E 320€ DEPOIS
+        </button>
+        <button type="button" id="payOnSite" class="payOnsiteButton"
+          >PAGAR 342€ (10% DESCONTO)
+        </button>
+      </div>
+      <div class="payNowContainer maxSpace hidden">
+        <div class="mb-4">
+          <div class="mb-1">Informação de pagamento</div>
+          <small
+            >Coloque suas informações de pagamento para realizar a reserva</small
+          >
+        </div>
+        <div class="maxSpace grid gap-2">
+          <label for="">Informação do Cartão</label>
+          <input
+            type="number"
+            placeholder="1234 1234 1234 1234"
+            title="Coloque aqui o IBAN"
+            class="maxSpace bg-[#4b4b4b08]"
+          />
+          <div class="flex gap-8">
+            <input
+              type="number"
+              placeholder="MM/YY"
+              title="Coloque aqui a Data de validade"
+            />
+            <input type="number" placeholder="CVC" title="Coloque aqui o CVC" />
+          </div>
+        </div>
+        <div class="maxSpace my-4">
+          <input
+            type="text"
+            placeholder="Nome no Cartão"
+            title="Coloque o nome no cartão aqui"
+          />
+        </div>
+        <button class="maxSpace w-1/2">pagar</button>
+      </div>
+      <div class="payOnSiteContainer maxSpace hidden">
+        <div class="mb-4">
+          <div class="mb-2 font-black">Verificação de Código de Email</div>
+          <span
+            >Enviámos um código para o seu endereço de email para verificar a
+            sua conta.</span
+          >
+        </div>
+        <div class="flex">
+          <input
+            type="number"
+            placeholder="Coloque o código aqui"
+            title="Coloque o código aqui"
+            id="code"
+            class="bg-[#4b4b4b08]"
+          />
+          <button id="send" class="send">Enviar Código</button>
+        </div>
+        <div class="mt-2">
+          <div id="counterCode"></div>
+          <span class="customAlert" id="invalidCode">Código Inválido</span>
+          <span
+            style="color: rgb(0 131 75);"
+            class="customAlert"
+            id="successAlert"
+          >
+            Verificação feita com sucesso
+          </span>
+        </div>
+        <button id="subscribe" class="subscribe mt-8">Confirmar</button>
+      </div>
+    </form>
+  </dialog>
+</div>
+
+<script src="./form.ts"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    /* Content visibility */
+
+    const toggleVisibility = (
+      targetToShow: HTMLElement,
+      targetToHide: HTMLElement,
+    ) => {
+      const isHidden = targetToShow.classList.contains("hidden");
+      targetToShow.classList.toggle("hidden", !isHidden);
+      targetToHide.classList.add("hidden");
+    };
+
+    const containerMapping: Record<string, HTMLElement | null> = {
+      payNow: document.querySelector(".payNowContainer"),
+      payOnSite: document.querySelector(".payOnSiteContainer"),
+    };
+
+    document.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      if (target.id in containerMapping) {
+        const targetToShow = containerMapping[target.id];
+        const targetToHide =
+          target.id === "payNow"
+            ? containerMapping.payOnSite
+            : containerMapping.payNow;
+
+        if (targetToShow && targetToHide) {
+          toggleVisibility(targetToShow, targetToHide);
+        }
+      }
+    });
+  });
+</script>
