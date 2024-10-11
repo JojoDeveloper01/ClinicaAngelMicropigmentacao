@@ -6,24 +6,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
 
-  .reserve-ja h2 {
-    color: var(--White);
-    font-weight: bold;
+    h2 {
+      color: var(--White);
+      font-weight: bold;
 
-    position: relative;
-    margin: 2vw 0 0 0;
-  }
+      position: relative;
+      margin: 2vw 0 0 0;
+    }
 
-  .reserve-ja a:hover {
-    text-decoration: none;
-  }
+    a:hover {
+      text-decoration: none;
+    }
 
-  .reserve-ja p {
-    color: var(--White);
-    opacity: 0.9;
-    margin: 1.5vh 0 3vh 0;
+    p {
+      color: var(--White);
+      opacity: 0.9;
+      margin: 1.5vh 0 3vh 0;
+    }
   }
 
   .border-rb {
@@ -33,10 +33,10 @@
     border: 1px solid var(--White);
     transition: padding 0.3s ease;
     padding: min(3.5vh, 9vh);
-  }
 
-  .border-rb:hover {
-    padding: min(4vh, 10vw);
+    &:hover {
+      padding: min(4vh, 10vw);
+    }
   }
 
   .reser-button {
@@ -48,19 +48,19 @@
     .reserve-ja {
       flex-direction: column;
       padding: 5vw;
-    }
 
-    .reserve-ja h2,
-    .reserve-ja p {
-      text-align: center;
-    }
+      h2,
+      p {
+        text-align: center;
+      }
 
-    .reserve-ja h2 {
-      font-size: 1.5em;
-    }
+      h2 {
+        font-size: 1.5em;
+      }
 
-    .reserve-ja p {
-      font-size: 1em;
+      p {
+        font-size: 1em;
+      }
     }
   }
 
@@ -68,57 +68,59 @@
     .reserve-ja {
       flex-direction: column;
       padding: 5vw;
-    }
 
-    .reserve-ja h2,
-    .reserve-ja p {
-      text-align: center;
-      padding: 0 2.5em;
+      h2,
+      p {
+        text-align: center;
+        padding: 0 2.5em;
+      }
     }
   }
+  
   @media only screen and (min-width: 768px) {
     .reserve-ja {
       flex-direction: inherit;
-      padding: 0 15vw;
-      height: 20vh;
-    }
+      padding: 0 12vw;
+      height: 26vh;
 
-    .reserve-ja h2,
-    .reserve-ja p {
-      text-align: left;
-      padding: 0;
-    }
+      h2,
+      p {
+        text-align: left;
+        padding: 0;
+      }
 
-    .border-rb {
-      margin-left: 5vw;
+      .border-rb {
+        margin-left: 5vw;
+      }
     }
   }
 
   @media only screen and (min-width: 992px) {
-    .reserve-ja h2 {
-      font-size: 1.9vw;
-    }
-
-    .reserve-ja p {
-      font-size: 1vw;
+    .reserve-ja {
+      h2 {
+        font-size: calc(1vw + 1em);
+      }
+      p {
+        font-size: calc(1vw + 0.4em);
+      }
     }
   }
 
   @media only screen and (min-width: 1500px) {
     .reserve-ja {
       height: 24vh;
-      padding: 0 20vw;
+      padding: 0 16vw;
     }
     .reser-button {
       font-size: 1vw;
     }
 
-    button.border-rb {
+    .border-rb {
       padding: 4vh 3vw;
-    }
 
-    button.border-rb:hover {
-      padding: 4.5vh 3.5vw;
+      &:hover {
+        padding: 4.5vh 3.5vw;
+      }
     }
   }
 </style>

@@ -3,11 +3,11 @@
   justify-content: flex-end;
   align-items: center;
   width: 100vw;
-}
 
-.hero-sobrancelhas img {
-  object-fit: cover;
-  object-position: left 35%;
+  img {
+    object-fit: cover;
+    object-position: left 35%;
+  }
 }
 
 img.positionObjetHero2 {
@@ -40,18 +40,18 @@ img.positionObjetHero3 {
   width: 100%;
   flex-direction: column;
   align-self: flex-start;
-}
 
-.shadowyTextBody h1 {
-  font-size: calc(2vw + 0.7em);
-  color: var(--White);
-  text-transform: uppercase;
-}
+  h1 {
+    font-size: calc(2vw + 0.7em);
+    color: var(--White);
+    text-transform: uppercase;
+  }
 
-.shadowyTextBody p {
-  font-size: calc(1vw + 0.3em);
-  text-transform: uppercase;
-  margin-top: 2.5rem;
+  p {
+    font-size: calc(1vw + 0.3em);
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+  }
 }
 
 .benefits {
@@ -66,31 +66,31 @@ img.positionObjetHero3 {
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #000;
+    text-shadow: 4px 6px 4px rgb(73 73 73 / 24%);
+    font-size: 1.6rem;
+    line-height: normal;
+    height: 6px;
+  }
 }
 
-.benefits> :first-child li {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: #000;
-  text-shadow: 4px 6px 4px rgb(73 73 73 / 24%);
-  font-size: 1.6rem;
-  line-height: normal;
-  height: 6px;
-}
-
-.benefits> :last-child {
+.benefits>:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1 0 0;
 
   text-transform: uppercase;
-}
 
-.benefits> :last-child .convincing {
-  font-size: calc(1vw + 0.5em);
-  margin-bottom: 2.4rem;
+  .convincing {
+    font-size: calc(1vw + 0.5em);
+    margin-bottom: 2.4rem;
+  }
 }
 
 .reservarHero {
@@ -99,56 +99,57 @@ img.positionObjetHero3 {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-}
 
-.reservarHero button {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  background: var(--DifferentBlack);
-  box-shadow: 0 9px 11px 0 rgba(0, 0, 0, 0.3);
-  font-size: 1.4rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  transition: background-color 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-}
 
-.reservarHero a {
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  button {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--DifferentBlack);
+    box-shadow: 0 9px 11px 0 rgba(0, 0, 0, 0.3);
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: background-color 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
 
-.reservarHero a:hover {
-  text-decoration: none;
-}
+  a {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.reservarHero button:hover {
-  background: #fff;
-}
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
-.reservarHero button:hover a {
-  color: var(--DifferentBlack);
+  button:hover {
+    background: #fff;
+
+    a {
+      color: var(--DifferentBlack);
+    }
+  }
 }
 
 .precoHero {
   display: flex;
   width: 100%;
-}
 
-.precoHero p {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.4rem;
-  width: 100%;
-  text-align: center;
+  p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .precoHero> :first-child span {
@@ -169,117 +170,113 @@ img.positionObjetHero3 {
 }
 
 .ask {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 3rem 4.2rem 0;
-  gap: 1rem;
   width: 29rem;
   border-radius: 0.125rem;
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 5px 9px 14px 0px rgba(0, 0, 0, 0.2);
-}
 
-.ask img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  height: 19rem;
-}
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 26rem;
+  }
 
-.ask div {
-  display: flex;
-  width: 84%;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem 0;
-}
+  div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
 
-.ask div h2 {
-  text-transform: unset;
-  font-size: 1.1rem;
-}
+    h2 {
+      text-transform: unset;
+      font-size: 1.1rem;
+    }
 
-.ask div p {
-  letter-spacing: 0.077em;
-}
+    p {
+      letter-spacing: 0.077em;
+    }
 
-.ask div span {
-  color: #000;
-  letter-spacing: 2px;
+    span {
+      color: #000;
+      letter-spacing: 2px;
+    }
+  }
 }
 
 .incentive {
   display: flex;
   justify-content: center;
   margin: 10rem 0;
-}
 
-.incentive article {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  width: 66%;
-}
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 66%;
+  }
 
-.incentive h2 {
-  margin-bottom: 2rem;
-  width: 100%;
-  text-transform: math-auto;
-}
+  h2 {
+    margin-bottom: 2rem;
+    width: 100%;
+    text-transform: math-auto;
+  }
 
-.incentive p {
-  display: flex;
-  font-size: larger;
-  align-items: center;
-}
+  p {
+    display: flex;
+    font-size: larger;
+    align-items: center;
 
-.incentive p i {
-  margin-right: 1.5rem;
+    i {
+      margin-right: 1.5rem;
+    }
+  }
+
+  .card {
+    margin: 0;
+  }
 }
 
 .tes-Sobran {
   background-color: transparent;
   margin-top: 4rem;
-}
 
-.tes-Sobran h2 {
-  text-transform: math-auto;
-  text-align: left;
-  color: #000;
-  width: 100%;
-  padding: 0 17vw;
-}
-
-.card-group img {
-  height: 16rem;
+  h2 {
+    text-transform: math-auto;
+    text-align: left;
+    color: #000;
+    width: 100%;
+    padding: 0 17vw;
+  }
 }
 
 .costumerVideo3 {
   object-position: 0 33%;
 }
 
+.card-title {
+  font-weight: 600;
+}
+
 .card-group {
   justify-content: center;
   align-items: flex-start;
+
+  h3 a {
+    color: #000;
+  }
+
+  img {
+    height: 16rem;
+  }
 }
 
 .card {
   flex: inherit;
   justify-content: center;
-}
-
-.incentive .card {
-  margin: 0;
-}
-
-.card-group h3 a {
-  color: #000;
-}
-
-.card-title {
-  font-weight: 600;
 }
 
 .positionObjectVideo23 * {
@@ -292,30 +289,30 @@ img.positionObjetHero3 {
     justify-content: flex-start;
     height: 100vh;
     background-color: transparent;
-  }
 
-  .hero-sobrancelhas img {
-    width: 100%;
-    height: 36%;
+    img {
+      width: 100%;
+      height: 36%;
+    }
   }
 
   .benefits> :first-child {
     gap: 7vh;
     padding: 0;
-  }
 
-  .benefits> :first-child li {
-    font-size: 2rem;
-    justify-content: center;
+    li {
+      font-size: 2rem;
+      justify-content: center;
+    }
   }
 
   .benefits> :last-child {
     gap: 4.5vh;
-  }
 
-  .benefits> :last-child .convincing {
-    font-size: 3vw;
-    margin: 0;
+    .convincing {
+      font-size: 3vw;
+      margin: 0;
+    }
   }
 
   .shadowyHero {
@@ -333,16 +330,16 @@ img.positionObjetHero3 {
     position: absolute;
     top: -74%;
     right: 5%;
-  }
 
-  .shadowyTextBody h1 {
-    color: #000000;
-    font-size: calc(3vw + 0.3em);
-  }
+    h1 {
+      color: #000000;
+      font-size: calc(3vw + 0.3em);
+    }
 
-  .shadowyTextBody p {
-    font-size: 2.5vw;
-    margin-top: 1.5rem;
+    p {
+      font-size: 2.5vw;
+      margin-top: 1.5rem;
+    }
   }
 
   .reservarHero {
@@ -352,28 +349,29 @@ img.positionObjetHero3 {
     height: 12rem;
     transform: translateY(-0.1%);
     background: linear-gradient(269deg, #fcafff 7.24%, #fca2ff 51.55%);
-  }
 
-  .reservarHero button {
-    height: 38%;
-    width: 71%;
+    button {
+      height: 38%;
+      width: 71%;
+    }
   }
 
   .precoHero {
     justify-content: center;
-  }
 
-  .precoHero p {
-    width: 25%;
-    gap: 12px;
-    font-size: 1em;
+    p {
+      width: 25%;
+      gap: 12px;
+      font-size: 1em;
+    }
+
   }
 
   .precoHero> :first-child span {
     font-size: 1.4em;
   }
 
-  .precoHero> :last-child span {
+  .precoHero>:last-child span {
     font-size: 1.7em;
   }
 
@@ -382,16 +380,14 @@ img.positionObjetHero3 {
     flex-direction: column;
   }
 
-  .incentive article {
-    width: 88%;
-  }
+  .incentive {
+    article {
+      width: 88%;
 
-  .incentive p {
-    font-size: medium;
-  }
-
-  .card {
-    width: 76%;
+      p {
+        font-size: medium;
+      }
+    }
   }
 
   .card {
@@ -402,28 +398,28 @@ img.positionObjetHero3 {
 @media only screen and (max-width: 317px) {
   .hero-sobrancelhas {
     height: 110vh;
-  }
 
-  .hero-sobrancelhas img {
-    height: 27%;
+    img {
+      height: 27%;
+    }
   }
 
   .benefits> :first-child {
     gap: 5.5vh;
+
+    li {
+      height: 1vw;
+      font-size: 1.5rem;
+    }
   }
 
-  .benefits> :first-child li {
-    height: 1vw;
-    font-size: 1.5rem;
-  }
-
-  .benefits> :last-child {
+  .benefits>:last-child {
     gap: 4.6vh;
-  }
 
-  .benefits> :last-child .convincing {
-    margin-bottom: 0;
-    letter-spacing: 1px;
+    .convincing {
+      margin-bottom: 0;
+      letter-spacing: 1px;
+    }
   }
 
   .shadowyHero {
@@ -442,37 +438,39 @@ img.positionObjetHero3 {
     position: relative;
     top: inherit;
     right: inherit;
-  }
 
-  .shadowyTextBody h1 {
-    font-size: calc(2vw + 0.7em);
-  }
+    h1 {
+      font-size: calc(2vw + 0.7em);
+    }
 
-  .shadowyTextBody p {
-    font-size: 4vw;
-    margin-top: 1.5em;
+    p {
+      font-size: 4vw;
+      margin-top: 1.5em;
+    }
   }
 
   .reservarHero {
     height: 22%;
     padding: 1em 0;
+
+    button {
+      height: 10vh;
+      width: 92vw;
+    }
   }
 
-  .reservarHero button {
-    height: 10vh;
-    width: 92vw;
-  }
+  .precoHero {
+    p {
+      width: 37%;
+      width: 44%;
+      gap: 12px;
+      font-size: 1em;
 
-  .precoHero p {
-    width: 37%;
-    width: 44%;
-    gap: 12px;
-    font-size: 1em;
-  }
-
-  .precoHero p span {
-    font-size: 2em;
-    letter-spacing: 4px;
+      span {
+        font-size: 2em;
+        letter-spacing: 4px;
+      }
+    }
   }
 
   .card-group h2 {
@@ -483,18 +481,18 @@ img.positionObjetHero3 {
 @media only screen and (min-width: 318px) and (max-width: 454px) {
   .hero-sobrancelhas {
     height: 114vh;
-  }
 
-  .hero-sobrancelhas img {
-    height: 18%;
+    img {
+      height: 18%;
+    }
   }
 
   .benefits> :first-child {
     gap: 5.5vh;
-  }
 
-  .benefits> :first-child li {
-    height: 1vw;
+    li {
+      height: 1vw;
+    }
   }
 
   .benefits> :last-child .convincing {
@@ -517,36 +515,38 @@ img.positionObjetHero3 {
     position: relative;
     top: inherit;
     right: inherit;
-  }
 
-  .shadowyTextBody h1 {
-    font-size: calc(2vw + 0.7em);
-  }
+    h1 {
+      font-size: calc(2vw + 0.7em);
+    }
 
-  .shadowyTextBody p {
-    font-size: 4vw;
-    margin-top: 1.5em;
+    p {
+      font-size: 4vw;
+      margin-top: 1.5em;
+    }
   }
 
   .reservarHero {
     height: 22%;
+
+    button {
+      height: 10vh;
+      width: 92vw;
+    }
   }
 
-  .reservarHero button {
-    height: 10vh;
-    width: 92vw;
-  }
+  .precoHero {
+    p {
+      width: 37%;
+      width: 44%;
+      gap: 12px;
+      font-size: 1em;
 
-  .precoHero p {
-    width: 37%;
-    width: 44%;
-    gap: 12px;
-    font-size: 1em;
-  }
-
-  .precoHero p span {
-    font-size: 2em;
-    letter-spacing: 4px;
+      span {
+        font-size: 2em;
+        letter-spacing: 4px;
+      }
+    }
   }
 
   .card {
@@ -576,30 +576,30 @@ img.positionObjetHero3 {
     justify-content: flex-start;
     height: 100vh;
     background-color: transparent;
-  }
 
-  .hero-sobrancelhas img {
-    width: 100%;
-    height: 36%;
+    img {
+      width: 100%;
+      height: 36%;
+    }
   }
 
   .benefits> :first-child {
     gap: 3.4rem;
     padding: 0;
-  }
 
-  .benefits> :first-child li {
-    font-size: 2rem;
-    justify-content: center;
+    li {
+      font-size: 2rem;
+      justify-content: center;
+    }
   }
 
   .benefits> :last-child {
     gap: 2.5rem;
-  }
 
-  .benefits> :last-child .convincing {
-    font-size: 3vw;
-    margin: 0;
+    .convincing {
+      font-size: 3vw;
+      margin: 0;
+    }
   }
 
   .shadowyHero {
@@ -616,15 +616,15 @@ img.positionObjetHero3 {
     height: 10.67rem;
     position: absolute;
     inset: 21% 45%;
-  }
 
-  .shadowyTextBody h1 {
-    color: #ffffff;
-  }
+    h1 {
+      color: #ffffff;
+    }
 
-  .shadowyTextBody p {
-    color: #ffff;
-    font-size: 2vw;
+    p {
+      color: #ffff;
+      font-size: 2vw;
+    }
   }
 
   .reservarHero {
@@ -634,21 +634,21 @@ img.positionObjetHero3 {
     height: 12rem;
     transform: translateY(-0.1%);
     background: linear-gradient(269deg, #fcafff 7.24%, #fca2ff 51.55%);
-  }
 
-  .reservarHero button {
-    height: 38%;
-    width: 71%;
+    button {
+      height: 38%;
+      width: 71%;
+    }
   }
 
   .precoHero {
     justify-content: center;
-  }
 
-  .precoHero p {
-    width: 25%;
-    gap: 7px;
-    font-size: 1em;
+    p {
+      width: 25%;
+      gap: 7px;
+      font-size: 1em;
+    }
   }
 
   .precoHero> :first-child span {
@@ -670,11 +670,11 @@ img.positionObjetHero3 {
     justify-content: flex-end;
     height: calc(84vh - var(--headerHeight));
     margin-bottom: 5rem;
-  }
 
-  .hero-sobrancelhas img {
-    width: 50%;
-    height: 100%;
+    img {
+      width: 50%;
+      height: 100%;
+    }
   }
 
   .benefits> :first-child {
@@ -705,16 +705,16 @@ img.positionObjetHero3 {
     position: relative;
     inset: inherit;
     height: unset;
-  }
 
-  .shadowyTextBody h1 {
-    color: #000000;
-  }
+    h1 {
+      color: #000000;
+    }
 
-  .shadowyTextBody p {
-    color: #000000;
-    font-size: calc(1vw + 0.3em);
-    margin-top: 3.5vh;
+    p {
+      color: #000000;
+      font-size: calc(1vw + 0.3em);
+      margin-top: 3.5vh;
+    }
   }
 
   .reservarHero {
@@ -744,48 +744,43 @@ img.positionObjetHero3 {
     width: 42vw;
   }
 
-  .reservarHero {
-    width: 35%;
-  }
-
   .precoHero p {
     gap: 3px;
   }
 
   .reservarHero {
     width: 50%;
+
+    .reservarHero button {
+      width: 60%;
+    }
   }
 
-  .reservarHero button {
-    width: 60%;
-  }
 
   .ask {
     flex-direction: unset;
-    width: 100vw;
+
+    img {
+      align-self: stretch;
+      object-fit: cover;
+      width: 43rem;
+    }
   }
 
-  .ask div {
-    padding: 1rem;
-  }
+  .incentive {
+    p {
+      font-size: x-large;
+    }
 
-  .ask img {
-    align-self: stretch;
-    object-fit: cover;
-    width: 43rem;
-  }
-
-  .incentive p {
-    font-size: x-large;
+    .card-body {
+      justify-content: flex-start;
+    }
   }
 
   .cb-body p {
     font-size: large;
   }
 
-  .incentive .card-body {
-    justify-content: flex-start;
-  }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -802,25 +797,24 @@ img.positionObjetHero3 {
 
   .ask {
     flex-direction: unset;
-    width: 66vw;
+    width: 37rem;
+
+    div {
+      h2 {
+        text-transform: unset;
+        font-size: 1.5rem;
+      }
+    }
   }
 
-  .ask div {
-    padding: 1rem;
-    padding-right: 3.5rem;
-  }
+  .incentive {
+    h2 {
+      margin-bottom: 3rem;
+    }
 
-  .ask div h2 {
-    text-transform: unset;
-    font-size: 1.5rem;
-  }
-
-  .incentive h2 {
-    margin-bottom: 3rem;
-  }
-
-  .incentive .card-group {
-    justify-content: space-around;
-    gap: 1rem;
+    .card-group {
+      justify-content: space-around;
+      gap: 1rem;
+    }
   }
 }
